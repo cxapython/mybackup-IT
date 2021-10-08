@@ -3350,9 +3350,3 @@ jni 的基本类型要通过调用 jni 相关的 api 转化成 c++ 对象，才�
 jni 主动调用的时候，参数构造有两种方式，一种是`Java.vm.getenv`，另一种是 hook 获取 env 之后来调用 jni 相关的 api 构造参数。
 
 ### [](#C-C-编成so并引入Frida调用其中的函数 "C/C++编成so并引入Frida调用其中的函数")C/C++ 编成 so 并引入 Frida 调用其中的函数
-
-[](#致谢 "致谢")致谢
---------------
-
-本篇文章学到的内容来自且完全来自 r0ysue 的知识星球，推荐一下。  
-[![](https://sakura-1252236262.cos.ap-beijing.myqcloud.com/2020-07-07-061015.png)](https://sakura-1252236262.cos.ap-beijing.myqcloud.com/2020-07-07-061015.png)

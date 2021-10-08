@@ -1,13 +1,5 @@
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [eternalsakura13.com](https://eternalsakura13.com/2020/07/04/frida/)
 
-> 建了一个知识星球：天问之路如果想学习二进制安全，或者和我交流，欢迎来这里找我 w Frida 环境 https://github.com/frida/frida pyenvpython 全版本随机切换，这里提供......
-
-[](#建了一个知识星球：天问之路 "建了一个知识星球：天问之路")建了一个知识星球：天问之路
------------------------------------------------
-
-如果想学习二进制安全，或者和我交流，欢迎来这里找我 w  
-[![](https://sakura-1252236262.cos.ap-beijing.myqcloud.com/2021-06-22-034815.jpg)](https://sakura-1252236262.cos.ap-beijing.myqcloud.com/2021-06-22-034815.jpg)
-
 [](#Frida环境 "Frida环境")Frida 环境
 ------------------------------
 

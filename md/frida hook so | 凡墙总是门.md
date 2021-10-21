@@ -1,10 +1,10 @@
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [kevinspider.github.io](https://kevinspider.github.io/fridahookso/)
 
-> 感谢 frida envhttps://github.com/frida/frida-java-bridge/blob/master/lib/env.js IDA 判断 Thumb 指令集和 Arm 指......
+frida env
 
-![](https://kevinspider-1258012111.cos.ap-shanghai.myqcloud.com/2021-08-09-054336.png)
+`https://github.com/frida/frida-java-bridge/blob/master/lib/env.js`
 
-[https://github.com/frida/frida-java-bridge/blob/master/lib/env.js](https://github.com/frida/frida-java-bridge/blob/master/lib/env.js)
+### IDA 判断 Thumb 指令集和 Arm 指令集
 
 *   IDA - Options - General - number of opcode bytes - 设置为 4
 *   此时查看 IDA VIew 中 opcode 的长度, 如果出现 2 个字节和 4 个字节的, 说明为 thumb 指令集

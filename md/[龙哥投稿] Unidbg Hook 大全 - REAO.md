@@ -4,12 +4,6 @@
 
 Loading...
 
-龙哥投稿，这里推荐一下龙哥的星球，干货多多
-
-[![](https://reao.io/usr/uploads/2021/10/3605859095.png)](https://reao.io/usr/uploads/2021/10/3605859095.png)
-
-[image.png](https://reao.io/usr/uploads/2021/10/3605859095.png)
-
 * * *
 
 文章采用 Frida + Unidbg 代码对照的方式，帮助熟悉 Frida 的读者尽快理解 Unidbg Hook。

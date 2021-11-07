@@ -1,0 +1,8726 @@
+> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [blog.csdn.net](https://blog.csdn.net/hui12581/article/details/44832651?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0.no_search_link&spm=1001.2101.3001.4242.1) ﻿﻿
+
+[Chap1:JNI 完全手册... 3](http://write.blog.csdn.net/postedit#_Toc245089320)
+
+[Chap2:JNI - 百度百科... 11](http://write.blog.csdn.net/postedit#_Toc245089321)
+
+[Chap 3：javah 命令帮助信息... 16](http://write.blog.csdn.net/postedit#_Toc245089322)
+
+[Chap 4：用 javah 产生一个. h 文件... 17](http://write.blog.csdn.net/postedit#_Toc245089323)
+
+[Chap5:jni 教程 (very very good) 19](http://write.blog.csdn.net/postedit#_Toc245089324)
+
+[Chap6: JNI 传递返回值... 26](http://write.blog.csdn.net/postedit#_Toc245089325)
+
+[15.2.2.3 传递字符串... 28](http://write.blog.csdn.net/postedit#_Toc245089326)
+
+[**15.2.2.4 传递整型数组**... 29](http://write.blog.csdn.net/postedit#_Toc245089327)
+
+[**15.2.2.5 传递字符串数组**... 30](http://write.blog.csdn.net/postedit#_Toc245089328)
+
+[**15.2.2.6 传递对象数组**... 31](http://write.blog.csdn.net/postedit#_Toc245089329)
+
+[Chap7:Jni 中 C++ 和 Java 的参数传递... 33](http://write.blog.csdn.net/postedit#_Toc245089330)
+
+[Chap8: 如何将 java 传递过来的 jbyteArray 转换成 C/C++ 中的 BYTE 数组... 47](http://write.blog.csdn.net/postedit#_Toc245089331)
+
+[Chap5: 使用 JNI 技术实现 java 程序调用第三方 dll(c/c++) 文件的功能... 47](http://write.blog.csdn.net/postedit#_Toc245089332)
+
+[Chap9: 如何编写 jni 方法（转载）... 55](http://write.blog.csdn.net/postedit#_Toc245089333)
+
+[1、实例一：在 jni 中调用标准 c 中自带的函数 printf(): 57](http://write.blog.csdn.net/postedit#_Toc245089334)
+
+[2、实例二、调用 c 语言用户定义的函数... 58](http://write.blog.csdn.net/postedit#_Toc245089335)
+
+[3、实例三、在 jni 函数中访问 java 类中的对象实例域... 58](http://write.blog.csdn.net/postedit#_Toc245089336)
+
+[4、实例四：在 jni 函数中访问类的静态实例域... 60](http://write.blog.csdn.net/postedit#_Toc245089337)
+
+[5、实例五：在 jni 函数中调用 java 对象的方法... 60](http://write.blog.csdn.net/postedit#_Toc245089338)
+
+[6、实例六：在 jni 函数中调用 java 类的静态方法... 61](http://write.blog.csdn.net/postedit#_Toc245089339)
+
+[7、实例七：jni 函数中传递基本数据类型参数... 62](http://write.blog.csdn.net/postedit#_Toc245089340)
+
+[8、实例八：在 jni 函数中传递对象类型参数... 62](http://write.blog.csdn.net/postedit#_Toc245089341)
+
+[9、实例九：在 jni 函数中处理字符串... 63](http://write.blog.csdn.net/postedit#_Toc245089342)
+
+[10、实例十：在 jni 函数中处理数组... 64](http://write.blog.csdn.net/postedit#_Toc245089343)
+
+[11、实例十一：在 jni 中的返回值问题... 65](http://write.blog.csdn.net/postedit#_Toc245089344)
+
+[12、实例十二：在 jni 中创建 java 类对象：... 66](http://write.blog.csdn.net/postedit#_Toc245089345)
+
+[Chap10: 在 Windows 中实现 Java 本地方法... 66](http://write.blog.csdn.net/postedit#_Toc245089346)
+
+[1.Java 调用 C. 67](http://write.blog.csdn.net/postedit#_Toc245089347)
+
+[2. 调试... 76](http://write.blog.csdn.net/postedit#_Toc245089348)
+
+[3. 其他信息... 79](http://write.blog.csdn.net/postedit#_Toc245089349)
+
+[Chap11: 如何在 C/C++ 中调用 Java. 80](http://write.blog.csdn.net/postedit#_Toc245089350)
+
+[1. 环境搭建... 81](http://write.blog.csdn.net/postedit#_Toc245089351)
+
+[2. 初始化虚拟机... 83](http://write.blog.csdn.net/postedit#_Toc245089352)
+
+[3. 访问类方法... 85](http://write.blog.csdn.net/postedit#_Toc245089353)
+
+[4 访问类属性... 87](http://write.blog.csdn.net/postedit#_Toc245089354)
+
+[5. 访问构造函数... 88](http://write.blog.csdn.net/postedit#_Toc245089355)
+
+[6. 数组处理... 89](http://write.blog.csdn.net/postedit#_Toc245089356)
+
+[7. 中文处理... 89](http://write.blog.csdn.net/postedit#_Toc245089357)
+
+[8. 异常... 91](http://write.blog.csdn.net/postedit#_Toc245089358)
+
+[9. 线程和同步访问... 91](http://write.blog.csdn.net/postedit#_Toc245089359)
+
+[10. 时间... 92](http://write.blog.csdn.net/postedit#_Toc245089360)
+
+[Chap12：基本 JNI 调用技术 (c/c++ 与 java 互调) 93](http://write.blog.csdn.net/postedit#_Toc245089361)
+
+[Chap13：JNI 的 c 代码中，另外一个线程获取 JNIEnv. 96](http://write.blog.csdn.net/postedit#_Toc245089362)
+
+[chap 14：当 JNI 遇到多线程－－java 对象如何被 C++ 中的多个线程访问?. 97](http://write.blog.csdn.net/postedit#_Toc245089363)
+
+[chap 15：JNI 在多线程中的应用... 101](http://write.blog.csdn.net/postedit#_Toc245089364)
+
+[chap 16：JNI 限制（多线程）... 105](http://write.blog.csdn.net/postedit#_Toc245089365)
+
+[chap 17：使用 Java Native Interface 的最佳实践... 106](http://write.blog.csdn.net/postedit#_Toc245089366)
+
+[1. 性能缺陷... 107](http://write.blog.csdn.net/postedit#_Toc245089367)
+
+[2. 正确性缺陷... 117](http://write.blog.csdn.net/postedit#_Toc245089368)
+
+[3. 避免常见缺陷... 121](http://write.blog.csdn.net/postedit#_Toc245089369)
+
+[4. 结束语... 128](http://write.blog.csdn.net/postedit#_Toc245089370)
+
+[Chap18:JNI 设计实践之路... 129](http://write.blog.csdn.net/postedit#_Toc245089371)
+
+[一、       前言... 129](http://write.blog.csdn.net/postedit#_Toc245089372)
+
+[二、       JNI 基础知识简介... 130](http://write.blog.csdn.net/postedit#_Toc245089373)
+
+[三、       Java 程序调用非 Java 程序... 131](http://write.blog.csdn.net/postedit#_Toc245089374)
+
+[四、       C/C++ 访问 Java 成员变量和成员方法... 138](http://write.blog.csdn.net/postedit#_Toc245089375)
+
+[五、       异常处理... 140](http://write.blog.csdn.net/postedit#_Toc245089376)
+
+[六、       MFC 程序中嵌入 Java 虚拟机... 142](http://write.blog.csdn.net/postedit#_Toc245089377)
+
+[Chap19:JNI 编程系列之基础篇... 148](http://write.blog.csdn.net/postedit#_Toc245089378)
+
+[System.loadLibrary("HelloWorld"); 149](http://write.blog.csdn.net/postedit#_Toc245089379)
+
+[JNIEXPORT void JNICALL Java_HelloWorld_print (JNIEnv *, jobject); 150](http://write.blog.csdn.net/postedit#_Toc245089380)
+
+[Chap20:JNI 编程系列之中级篇（上）... 151](http://write.blog.csdn.net/postedit#_Toc245089381)
+
+[1. Java 基本类型的传递... 151](http://write.blog.csdn.net/postedit#_Toc245089382)
+
+[2. String 参数的传递... 151](http://write.blog.csdn.net/postedit#_Toc245089383)
+
+[3. 数组类型的传递... 153](http://write.blog.csdn.net/postedit#_Toc245089384)
+
+[4. 二维数组和 String 数组... 154](http://write.blog.csdn.net/postedit#_Toc245089385)
+
+[Chap21:JNI 编程系列之高级篇... 155](http://write.blog.csdn.net/postedit#_Toc245089386)
+
+[1. 在一般的 Java 类中定义 native 方法... 156](http://write.blog.csdn.net/postedit#_Toc245089387)
+
+[2. 访问 Java 类的域和方法... 156](http://write.blog.csdn.net/postedit#_Toc245089388)
+
+[3. 在 native 方法中使用用户定义的类... 157](http://write.blog.csdn.net/postedit#_Toc245089389)
+
+[4. 异常处理... 158](http://write.blog.csdn.net/postedit#_Toc245089390)
+
+注：chap1~13,  JNI 函数编写教程，其中 chap5 讲得好；
+
+Chap14~， JNIEnv 和多线程，其中 chap17 讲得好。  
+
+Chap1:JNI 完全手册
+==============
+
+　　最近在公司里做了一个手机的项目，需要 JAVA 程序在发送短信的时候和第三方的短信服务器连接。短信接口是用 [C++](http://www.jcwcn.com/html/C++) 写的。琢磨了三天，大致搞懂了 JNI 的主体部分。先将心得整理，希望各位朋友少走弯路。  
+　　首先引用一篇文章，介绍一个简单的 JNI 的调用的过程。  
+　　JAVA 以其跨平台的特性深受人们喜爱，而又正由于它的跨平台的目的，使得它和本地机器的各种内部联系变得很少，约束了它的功能。解决 JAVA 对本地操作的一种方法就是 JNI。  
+　　JAVA 通过 JNI 调用本地方法，而本地方法是以库文件的形式存放的（在 WINDOWS 平台上是 DLL 文件形式，在 UNIX 机器上是 SO 文件形式）。通过调用本地的库文件的内部方法，使 JAVA 可以实现和本地机器的紧密联系，调用系统级的各接口方法。  
+　　简单介绍及应用如下：  
+　　一、JAVA 中所需要做的工作  
+　　在 JAVA 程序中，首先需要在类中声明所调用的库名称，如下：  
+　　static {  
+　　System.loadLibrary(“goodluck”);  
+　　}  
+  
+　　在这里，库的扩展名字可以不用写出来，究竟是 DLL 还是 SO，由系统自己判断。  
+　　还需要对将要调用的方法做本地声明，关键字为 native。并且只需要声明，而不需要具 体实现。如下：  
+　　public native static void set(int i);  
+　　public native static int get();  
+　　然后编译该 JAVA 程序文件，生成 CLASS，再用 JAVAH 命令，JNI 就会生成 C/[C++](http://www.jcwcn.com/html/C++) 的头文件。  
+　　例如程序 testdll.java，内容为：  
+　　public class testdll  
+　　{  
+　　static  
+　　{  
+　　System.loadLibrary("goodluck");  
+　　}  
+　　public native static int get();  
+　　public native static void set(int i);  
+　　public static void main(String[] args)  
+　　{  
+　　testdll test = new testdll();  
+　　test.set(10);  
+　　System.out.println(test.get());  
+　　}  
+　　}  
+  
+　　用 javac testdll.java 编译它，会生成 testdll.class。  
+　　再用 javah testdll，则会在当前目录下生成 testdll.h 文件，这个文件需要被 C/[C++](http://www.jcwcn.com/html/C++) 程序调用来生成所需的库文件。  
+　　二、C/[C++](http://www.jcwcn.com/html/C++) 中所需要做的工作  
+　　对于已生成的. h 头文件，C/[C++](http://www.jcwcn.com/html/C++) 所需要做的，就是把它的各个方法具体的实现。然后编译连接成库文件即可。再把库文件拷贝到 JAVA 程序的路径下面，就可以用 JAVA 调用 C/[C++](http://www.jcwcn.com/html/C++) 所实现的功能了。  
+　　接上例子。我们先看一下 testdll.h 文件的内容：  
+　　/* DO NOT EDIT THIS FILE - it is machine generated */  
+　　#include  
+　　/* Header for class testdll */  
+　　#ifndef _Included_testdll  
+　　#define _Included_testdll  
+　　#ifdef __cplusplus  
+　　extern "C" {  
+　　#endif  
+　　/*  
+　　* Class: testdll  
+　　* Method: get  
+　　* Signature: ()I  
+　　*/  
+　　JNIEXPORT jint JNICALL [Java](http://www.jcwcn.com/html/Java)_testdll_get (JNIEnv *, jclass);  
+　　/*  
+　　* Class: testdll  
+　　* Method: set  
+　　* Signature: (I)V  
+　　*/  
+　　JNIEXPORT void JNICALL [Java](http://www.jcwcn.com/html/Java)_testdll_set (JNIEnv *, jclass, jint);  
+　　#ifdef __cplusplus  
+　　}  
+　　#endif  
+　　#endif  
+　　在具体实现的时候，我们只关心两个函数原型  
+　　JNIEXPORT jint JNICALL [Java](http://www.jcwcn.com/html/Java)_testdll_get (JNIEnv *, jclass); 和  
+　　JNIEXPORT void JNICALL [Java](http://www.jcwcn.com/html/Java)_testdll_set (JNIEnv *, jclass, jint);  
+　　这里 JNIEXPORT 和 JNICALL 都是 JNI 的关键字，表示此函数是要被 JNI 调用的。而 jint 是以 JNI 为中介使 JAVA 的 int 类型与本地的 int 沟通的一种类型，我们可以视而不见，就当做 int 使用。函数的名称是 JAVA_再加上 java 程序的 package 路径再加函数名组成的。参数中，我们也只需要关心在 JAVA 程序中存在的参数，至于 JNIEnv * 和 jclass 我们一般没有必要去碰它。  
+　　好，下面我们用 testdll.cpp 文件具体实现这两个函数：  
+　　#include "testdll.h"  
+　　int i = 0;  
+　　JNIEXPORT jint JNICALL [Java](http://www.jcwcn.com/html/Java)_testdll_get (JNIEnv *, jclass)  
+　　{  
+　　return i;  
+　　}  
+　　JNIEXPORT void JNICALL [Java](http://www.jcwcn.com/html/Java)_testdll_set (JNIEnv *, jclass, jint j)  
+　　{  
+　　i = j;  
+　　}  
+　　编译连接成库文件，本例是在 WINDOWS 下做的，生成的是 DLL 文件。并且名称要与 JAVA 中需要调用的一致，这里就是 goodluck.dll 。把 goodluck.dll 拷贝到 testdll.class 的目录下，java testdll 运行它，就可以观察到结果了。  
+　　我的项目比较复杂，需要调用动态链接库，这样在 JNI 传送参数到 C 程序时，需要对参数进行处理转换。才可以被 C 程序识别。  
+　　大体程序如下：  
+　　public class SendSMS {  
+　　static  
+　　{  
+　　System.out.println(System.getProperty("java.library.path"));  
+　　System.loadLibrary("sms");  
+　　}  
+　　public native static int SmsInit();  
+　　public native static int SmsSend(byte[] mobileNo, byte[] smContent);  
+　　}  
+　　在这里要注意的是，path 里一定要包含类库的路径，否则在程序运行时会抛出异常：  
+　　java.lang.UnsatisfiedLinkError: no sms in java.library.path  
+　　at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1491)  
+　　at java.lang.Runtime.loadLibrary0(Runtime.java:788)  
+　　at java.lang.System.loadLibrary(System.java:834)  
+　　at com.mobilesoft.sms.mobilesoftinfo.SendSMS.(SendSMS.java:14)  
+　　at com.mobilesoft.sms.mobilesoftinfo.test.main(test.java:18)  
+　　Exception in thread "main"  
+　　指引的路径应该到. dll 文件的上一级，如果指到. dll，则会报：  
+　　java.lang.UnsatisfiedLinkError: C:\sms.dll: Can't find dependent libraries  
+　　at java.lang.ClassLoader$NativeLibrary.load(Native Method)  
+　　at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1560)  
+　　at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1485)  
+　　at java.lang.Runtime.loadLibrary0(Runtime.java:788)  
+　　at java.lang.System.loadLibrary(System.java:834)  
+　　at com.mobilesoft.sms.mobilesoftinfo.SendSMS.(SendSMS.java:14)  
+　　at com.mobilesoft.sms.mobilesoftinfo.test.main(test.java:18)  
+　　Exception in thread "main"  
+  
+
+  
+　　通过编译，生成 com_mobilesoft_sms_mobilesoftinfo_SendSMS.h 头文件。（建议使用 Jbuilder 进行编译，操作比较简单！）这个头文件就是 [Java](http://www.jcwcn.com/html/Java) 和 C 之间的纽带。要特别注意的是方法中传递的参数 jbyteArray，这在接下来的过程中会重点介绍。  
+　　/* DO NOT EDIT THIS FILE - it is machine generated */  
+　　#include  
+　　/* Header for class com_mobilesoft_sms_mobilesoftinfo_SendSMS */  
+　　#ifndef _Included_com_mobilesoft_sms_mobilesoftinfo_SendSMS  
+　　#define _Included_com_mobilesoft_sms_mobilesoftinfo_SendSMS  
+　　#ifdef __cplusplus  
+　　extern "C" {  
+　　#endif  
+　　/*  
+　　* Class: com_mobilesoft_sms_mobilesoftinfo_SendSMS  
+　　* Method: SmsInit  
+　　* Signature: ()I  
+　　*/  
+　　JNIEXPORT jint JNICALL [Java](http://www.jcwcn.com/html/Java)_com_mobilesoft_sms_mobilesoftinfo_SendSMS_SmsInit  
+　　(JNIEnv *, jclass);  
+　　/*  
+　　* Class: com_mobilesoft_sms_mobilesoftinfo_SendSMS  
+　　* Method: SmsSend  
+　　* Signature: ([B[B)I  
+　　*/  
+　　JNIEXPORT jint JNICALL [Java](http://www.jcwcn.com/html/Java)_com_mobilesoft_sms_mobilesoftinfo_SendSMS_SmsSend  
+　　(JNIEnv *, jclass, jbyteArray, jbyteArray);  
+　　#ifdef __cplusplus  
+　　}  
+　　#endif  
+　　#endif  
+  
+　　对于我要调用的 C 程序的动态链接库，C 程序也要提供一个头文件，sms.h。这个文件将要调用的方法罗列了出来。  
+　　/*  
+　　* SMS API  
+　　* Author: yippit  
+　　* Date: 2004.6.8  
+　　*/  
+　　#ifndef MCS_SMS_H  
+　　#define MCS_SMS_H  
+　　#define DLLEXPORT __declspec(dllexport)  
+　　/*sms storage*/  
+　　#define SMS_SIM 0  
+　　#define SMS_MT 1  
+　　/*sms states*/  
+　　#define SMS_UNREAD 0  
+　　#define SMS_READ 1  
+　　/*sms type*/  
+　　#define SMS_NOPARSE -1  
+　　#define SMS_NORMAL 0  
+　　#define SMS_FLASH 1  
+　　#define SMS_MMSNOTI 2  
+　　typedef struct tagSmsEntry {  
+　　int index; /*index, start from 1*/  
+　　int status; /*read, unread*/  
+　　int type; /*-1-can't parser 0-normal, 1-flash, 2-mms*/  
+　　int storage; /*SMS_SIM, SMS_MT*/  
+　　char date[24];  
+　　char number[32];  
+　　char text[144];  
+　　} SmsEntry;  
+　　DLLEXPORT int SmsInit(void);  
+　　DLLEXPORT int SmsSend(char *phonenum, char *content);  
+　　DLLEXPORT int SmsSetSCA(char *sca);  
+　　DLLEXPORT int SmsGetSCA(char *sca);  
+　　DLLEXPORT int SmsSetInd(int ind);  
+　　DLLEXPORT int SmsGetInd(void);  
+　　DLLEXPORT int SmsGetInfo(int storage, int *max, int *used);  
+　　DLLEXPORT int SmsSave[Flash](http://www.jcwcn.com/html/Flash)(int flag);  
+　　DLLEXPORT int SmsRead(SmsEntry *entry, int storage, int index);  
+　　DLLEXPORT int SmsDelete(int storage, int index);  
+　　DLLEXPORT int SmsModifyStatus(int storage, int index); /*unread -> read*/  
+　　#endif  
+  
+　　在有了这两个头文件之后，就可以进行 C 程序的编写了。也就是实现对 JNI 调用的两个方法。在网上的资料中，由于调用的方法实现的都比较简单，（大多是打印字符串等）所以避开了 JNI 中最麻烦的部分，也是最关键的部分，参数的传递。由于 [Java](http://www.jcwcn.com/html/Java) 和 C 的编码是不同的，所以传递的参数是要进行再处理，否则 C 程序是会对参数在编译过程中提出警告，例如；warning C4024: 'SmsSend' : different types for formal and actual parameter 2 等。  
+　　Sms.c 的程序如下：  
+　　#include "sms.h"  
+　　#include "com_mobilesoft_sms_mobilesoftinfo_SendSMS.h"  
+　　JNIEXPORT jint JNICALL [Java](http://www.jcwcn.com/html/Java)_com_mobilesoft_sms_mobilesoftinfo_SendSMS_SmsInit(JNIEnv * env, jclass jobject)  
+　　{  
+　　return SmsInit();  
+　　}  
+  
+　　JNIEXPORT jint JNICALL [Java](http://www.jcwcn.com/html/Java)_com_mobilesoft_sms_mobilesoftinfo_SendSMS_SmsSend(JNIEnv * env, jclass jobject, jbyteArray mobileno, jbyteArray smscontent)  
+　　{  
+　　char * pSmscontent ;  
+　　//jsize theArrayLengthJ = (*env)->GetArrayLength(env,mobileno);  
+　　jbyte * arrayBody = (*env)->GetByteArrayElements(env,mobileno,0);  
+　　char * pMobileNo = (char *)arrayBody;  
+　　printf("[%s]\n", pMobileNo);  
+　　//jsize size = (*env)->GetArrayLength(env,smscontent);  
+　　arrayBody = (*env)->GetByteArrayElements(env,smscontent,0);  
+　　pSmscontent = (char *)arrayBody;  
+　　printf("  
+
+Chap2:JNI - 百度百科
+================
+
+目录
+
+[定义](http://baike.baidu.com/view/1272329.htm#1)
+
+[设计目的](http://baike.baidu.com/view/1272329.htm#2)
+
+[书写步骤](http://baike.baidu.com/view/1272329.htm#3)
+
+[简要使用例子](http://baike.baidu.com/view/1272329.htm#4)
+
+[调用中考虑的问题](http://baike.baidu.com/view/1272329.htm#5)
+
+[对 JAVA 传入数据的处理](http://baike.baidu.com/view/1272329.htm#6)
+
+**定义**
+
+　　JNI 是 Java Native [Interface](http://baike.baidu.com/view/334756.htm) 的缩写，中文为 JAVA 本地调用。从 [Java](http://baike.baidu.com/view/29.htm) 1.1 开始，Java Native Interface (JNI) 标准成为 java 平台的一部分，它允许 Java 代码和其他语言写的代码进行交互。JNI 一开始是为了本地已编译语言，尤其是 C 和 C++ 而设计的，但是它并不妨碍你使用其他语言，只要调用约定受支持就可以了。
+
+　　使用 java 与本地已编译的代码交互，通常会丧失平台可移植性。但是，有些情况下这样做是可以接受的，甚至是必须的，比如，使用一些旧的库，与硬件、操作系统进行交互，或者为了提高程序的性能。JNI 标准至少保证本地代码能工作在任何 Java [虚拟机](http://baike.baidu.com/view/1132.htm)实现下。
+
+**设计目的**
+
+　　· 标准的 java 类库可能不支持你的程序所需的特性。
+
+　　· 或许你已经有了一个用其他语言写成的库或程序，而你希望在 java 程序中使用它。
+
+· 你可能需要用底层语言实现一个小型的时间敏感代码，比如汇编，然后在你的 java 程序中调用这些功能。
+
+**书写步骤**
+
+　　· 编写带有 native 声明的方法的 java 类
+
+　　· 使用 [javac](http://baike.baidu.com/view/1006557.htm) 命令编译所编写的 java 类
+
+　　· 使用 “javah -jni java 类名”  生成扩展名为 h 的头文件
+
+　　· 使用 C/C++ 实现本地方法
+
+　　· 将 C/C++ 编写的文件生成动态连接库
+
+　　·ok
+
+　　**1) 编写 java 程序：这里以 HelloWorld 为例。**
+
+　　代码 1：
+
+　　class HelloWorld {
+
+　　public native void displayHelloWorld();
+
+　　static {
+
+　　System.loadLibrary("hello");
+
+　　}
+
+　　public static void main(String[] args) {
+
+　　new HelloWorld().displayHelloWorld();
+
+　　}
+
+　　}
+
+　　声明 native 方法：如果你想将一个方法做为一个本地方法的话，那么你就必须声明改方法为 native 的，并且不能实现。其中方法的参数和返回值在后面讲述。 Load 动态库：System.loadLibrary("hello"); 加载动态库（我们可以这样理解：我们的方法 displayHelloWorld() 没有实现，但是我们在下面就直接使用了，所以必须在使用之前对它进行初始化）这里一般是以 static 块进行加载的。同时需要注意的是 [System](http://baike.baidu.com/view/627587.htm).loadLibrary(); 的参数 “hello” 是动态库的名字。
+
+　　**2) 编译**
+
+　　没有什么好说的了 javac HelloWorld.java
+
+**3) 生成扩展名为 h 的头文件**
+
+javah -jni HelloWorld
+
+头文件的内容：
+
+ /* DO NOT EDIT THIS FILE - it is machine generated */
+
+　　1. include
+
+　　/* Header for class HelloWorld */
+
+　　1. ifndef _Included_HelloWorld
+
+　　2. define _Included_HelloWorld
+
+　　3. ifdef __cplusplus
+
+　　extern "C" {
+
+　　1. endif
+
+　　/*
+
+　　* Class: HelloWorld
+
+　　* Method: displayHelloWorld
+
+　　* Signature: ()V
+
+　　* /
+
+　　JNIEXPORT void JNICALL Java_HelloWorld_displayHelloWorld (JNIEnv *, jobject);
+
+　　1. ifdef __cplusplus
+
+　　}
+
+　　1. endif
+
+　　2. endif
+
+　　（这里我们可以这样理解：这个 h 文件相当于我们在 java 里面的接口，这里声明了一个 Java_HelloWorld_displayHelloWorld (JNIEnv *, jobject); 方法，然后在我们的本地方法里面实现这个方法，也就是说我们在编写 [C/C++](http://baike.baidu.com/view/1107274.htm) 程序的时候所使用的方法名必须和这里的一致）。
+
+　　**4) 编写本地方法实现和由 javah 命令生成的头文件里面声明的方法名相同的方法。**
+
+　　代码 2：
+
+　　1 #include "jni.h"
+
+　　2 #include "HelloWorld.h"
+
+　　3 //#include other headers
+
+　　4 JNIEXPORT void JNICALL Java_HelloWorld_displayHelloWorld(JNIEnv *env, jobject obj)
+
+　　{
+
+　　printf("Hello world!\n");
+
+　　return;
+
+　　}
+
+　　注意代码 2 中的第 1 行，需要将 jni.h（该文件可以在 %JAVA_HOME%/include 文件夹下面找到）文件引入，因为在程序中的 JNIEnv、 jobject 等类型都是在该头文件中定义的；另外在第 2 行需要将 HelloWorld.h 头文件引入（我是这么理解的：相当于我们在编写 java 程序的时候，实现一个接口的话需要声明才可以，这里就是将 HelloWorld.h 头文件里面声明的方法加以实现。当然不一定是这样）。然后保存为 HelloWorldImpl.c 就 ok 了。
+
+　　**5) 生成动态库**
+
+　　这里以在 Windows 中为例，需要生成 dll 文件。在保存 HelloWorldImpl.c 文件夹下面，使用 VC 的编译器 cl 成。 cl -I%java_home%\include -I%java_home%\include\win32 -LD HelloWorldImp.c -Fehello.dll 注意：生成的 dll 文件名在选项 - Fe 后面配置，这里是 hello，因为在 HelloWorld.java 文件中我们 loadLibary 的时候使用的名字是 hello。当然这里修改之后那里也需要修改。另外需要将 - I%java_home%\include -I%java_home%\include\win32 参数加上，因为在第四步里面编写本地方法的时候引入了 jni.h 文件。
+
+**6) 运行程序 java HelloWorld 就 ok.**
+
+**简要使用例子**
+
+　　下面是一个简单的例子实现打印一句话的功能，但是用的 c 的 printf 最终实现。一般提供给 java 的 jni 接口包括一个 so 文件（封装了 c 函数的实现）和一个 java 文件（需要调用 path 的类）。
+
+　　1． JNI 的目的是使 java 方法中能够调用 c 实现的一些函数，比如以下的 java 类，就需要调用一个本地函数 testjni（一般声明为 private native 类型），首先需要创建文件 weiqiong.java，内容如下：
+
+class weiqiong {
+
+static {System.loadLibrary("testjni");// 载入静态库，test 函数在其中实现
+
+ }
+
+private native void testjni(); // 声明本地调用
+
+public void test()
+
+{
+
+ testjni();
+
+}
+
+public static void main(String args[])
+
+{
+
+ weiqiong haha = new weiqiong(); haha.test();
+
+}
+
+}
+
+　　2．然后执行 javac weiqiong.java，如果没有报错，会生成一个 weiqiong.class。
+
+　　3．然后设置 classpath 为你当前的工作目录，如直接输入命令行：set classpath = weiqiong.class 所在的完整目录（如 c:\test) 再执行 javah weiqiong，会生成一个文件 weiqiong.h 文件，其中有一个函数的声明如下：
+
+　　JNIEXPORT void JNICALL Java_weiqiong_testjni (JNIEnv *, jobject);
+
+　　4．创建文件 testjni.c 将上面那个函数实现，内容如下：
+
+　　1. include
+
+　　2. include
+
+　　JNIEXPORT void JNICALL Java_weiqiong_testjni (JNIEnv *env, jobject obj) { printf("haha---------go into c!!!\n"); }
+
+　　5．为了生成. so 文件，创建 makefile 文件如下：
+
+　　libtestjni.so:testjni.o makefile gcc -Wall -rdynamic -shared -o libtestjni.so testjni.o testjni.o:testjni.c weiqiong.h gcc -Wall -c testjni.c -I./ -I/usr/java/j2sdk1.4.0/include -I/usr/java/j2sdk1.4.0/include/linux cl: rm -rf *.o *.so 注意：gcc 前面是 tab 空，j2sdk 的目录根据自己装的 j2sdk 的具体版本来写，生成的 so 文件的名字必须是 loadLibrary 的参数名前加 “lib”。
+
+　　6．export LD_LIBRARY_PATH=.，由此设置 library 路径为当前目录，这样 java 文件才能找到 so 文件。一般的做法是将 so 文件 copy 到本机的 LD_LIBRARY_PATH 目录下。
+
+7．执行 java weiqiong，打印出结果：“haha---------go into c!!!”
+
+**调用中考虑的问题**
+
+　　在首次使用 JNI 的时候有些疑问，后来在使用中一一解决，下面就是这些问题的备忘：
+
+　　1。 java 和 c 是如何互通的？
+
+　　其实不能互通的原因主要是数据类型的问题，jni 解决了这个问题，例如那个 c 文件中的 jstring 数据类型就是 java 传入的 String 对象，经过 jni 函数的转化就能成为 c 的 char*。
+
+　　对应数据类型关系如下表：
+
+　　Java 类型 本地 c 类型 说明 boolean jboolean 无符号，8 位 byte jbyte 无符号，8 位 char jchar 无符号，16 位 short jshort 有符号，16 位 int jint 有符号，32 位 long jlong 有符号，64 位 float jfloat 32 位 double jdouble 64 位 void void N/A
+
+　　JNI 还包含了很多对应于不同 Java 对象的引用类型如下图：
+
+　　2. 如何将 java 传入的 String 参数转换为 c 的 char*，然后使用?
+
+　　java 传入的 String 参数，在 c 文件中被 jni 转换为 jstring 的数据类型，在 c 文件中声明 char* test，然后 test = (char*)(*env)->GetStringUTFChars(env, jstring, NULL); 注意：test 使用完后，通知虚拟机平台相关代码无需再访问：(*env)->ReleaseStringUTFChars(env, jstring, test);
+
+　　3. 将 c 中获取的一个 char * 的 buffer 传递给 java？
+
+　　这个 char * 如果是一般的字符串的话，作为 string 传回去就可以了。如果是含有’\0’的 buffer，最好作为 bytearray 传出，因为可以制定 copy 的 length，如果 copy 到 string，可能到’\0’就截断了。
+
+　　有两种方式传递得到的数据：
+
+　　一种是在 jni 中直接 new 一个 byte 数组，然后调用函数 (*env)->SetByteArrayRegion(env, bytearray, 0, len, buffer); 将 buffer 的值 copy 到 bytearray 中，函数直接 return bytearray 就可以了。
+
+　　一种是 return 错误号，数据作为参数传出，但是 java 的基本数据类型是传值，对象是传递的引用，所以将这个需要传出的 byte 数组用某个类包一下，如下：
+
+class RetObj {public byte[] bytearray; } 这个对象作为函数的参数 retobj 传出，通过如下函数将 retobj 中的 byte 数组赋值便于传出。代码如下：
+
+jclass   cls;
+
+jfieldID  fid;
+
+jbyteArray bytearray;
+
+bytearray = (*env)->NewByteArray(env,len);
+
+(*env)->SetByteArrayRegion(env, bytearray, 0, len, buffer);
+
+cls = (*env)->GetObjectClass(env, retobj);
+
+fid = (*env)->GetFieldID(env, cls, "retbytes", "[B"]);
+
+(*env)->SetObjectField(env, retobj, fid, bytearray);
+
+　　4. 不知道占用多少空间的 buffer，如何传递出去呢？
+
+在 jni 的 c 文件中 new 出空间，传递出去。java 的数据不初始化，指向传递出去的空间即可。
+
+**对 JAVA 传入数据的处理**
+
+　　1． 如果传入的是 bytearray 的话，作如下处理得到 buffer：
+
+char *tmpdata = (char*)(*env)->GetByteArrayElements(env, bytearray, NULL);
+
+ (*env)->ReleaseByteArrayElements(env, bytearray, tmpdata, 0);
+
+Chap 3：javah 命令帮助信息
+===================
+
+D:\Program Files\Java\jdk1.6.0_12\bin>javah
+
+用法：javah [选项] < 类 >
+
+其中 [选项] 包括：
+
+        -help                 输出此帮助消息并退出
+
+        -classpath <路径>     用于装入类的路径
+
+        -bootclasspath <路径> 用于装入引导类的路径
+
+        -d <目录>             输出目录
+
+        -o <文件>             输出文件（只能使用 -d 或 -o 中的一个）
+
+        -jni                  生成 JNI 样式的头文件（默认）
+
+        -version              输出版本信息
+
+        -verbose              启用详细输出
+
+Chap 4：用 javah 产生一个. h 文件
+=========================
+
+ 2009-07-29 15:21   阅读 23   评论 0  
+
+Java 不是完善的，Java 的不足除了体现在运行速度上要比传统的 C++ 慢许多之外，Java 无法直接造访到操作体系底层（如系统硬件等)，为此 Java 使用 native 法子来扩大 Java 程序的功效。 　　可以将 native 法子比作 Java 程序同Ｃ程序的接口，其实现步骤：  
+　　１、在 Java 中声明 native() 方式，然后编译；  
+　　２、用 javah 发生一个. h 文件；  
+　　３、写一个. cpp 文件实现 native 导出方式，其中须要包括第二步发生的. h 文件（注意其中又包孕了 JDK 带的 jni.h 文件）  
+　　４、将第三步的. cpp 文件编译成动态链接库文件；  
+　　５、在 Java 中用 System.loadLibrary() 法子加载第四步发生的动态链接库文件，这个 native() 办法就可以在 Java 中被拜访了。  
+　　JAVA 本地办法实用的情形  
+　　1. 为了使用底层的主机平台的某个特性，而这个特性不能通过 JAVA API 拜访  
+　　2. 为了拜访一个老的体系或者使用一个已有的库，而这个体系或这个库不是用 JAVA 编写的  
+　　3. 为了加快程序的性能，而将一段时光敏感的代码作为本地方式实现。  
+　　首先写好 JAVA 文件  
+/*  
+　* Created on 2005-12-19 Author shaoqi  
+　*/  
+package com.hode.hodeframework.modelupdate, [视频聊天网站](http://090704.cn/);  
+public class CheckFile  
+{  
+　　 public native void displayHelloWorld();  
+　　 static  
+　　 {  
+　System.loadLibrary("test");  
+　　 }  
+　　 public static void main(String[] args) {  
+　　　　new CheckFile().displayHelloWorld();　  
+　　 }  
+}  
+  
+然后依据写好的文件编译成 CLASS 文件  
+　 　**然后在 classes 或 bin 之类的 class 根目录下 (其中有已经生成的 *.class 文件)** 执行 javah -jni com.hode.hodeframework.modelupdate.CheckFile，就会在 class 根目录下得到一个 com_hode_hodeframework_modelupdate_CheckFile.h 的文件
+
+然后依据头文件的内容编写 com_hode_hodeframework_modelupdate_CheckFile.c 文件
+
+#include "CheckFile.h"  
+#include　  
+#include　  
+JNIEXPORT void JNICALL Java_com_hode_hodeframework_modelupdate_CheckFile_displayHelloWorld(  
+JNIEnv *env, jobject obj)  
+{  
+　　 printf("Hello world!  
+");  
+　　 return;  
+}  
+  
+之后编译生成 DLL 文件如 “test.dll”，名称与 System.loadLibrary("test") 中的名称一致  
+　　vc 的编译办法：cl -I%java_home%include -I%java_home%includewin32 -LD com_hode_hodeframework_modelupdate_CheckFile.c -Fetest.dll  
+　　最后在运行时加参数 - Djava.library.path=[dll 寄存的路径]
+
+Chap5:jni 教程 (very very good)
+=============================
+
+本文来源：[http://blog.csdn.net/sunjavaduke/archive/2007/07/28/1713895.aspx](http://blog.csdn.net/sunjavaduke/archive/2007/07/28/1713895.aspx)
+
+本[教程](http://23book.net/)摘自 IBM DW，如有转载，请声明！
+
+Java 本机接口（Java Native Interface (JNI)）是一个本机[编程](http://www.23book.net/SoftwareDev/Index.htm)接口，它是 Java 软件开发工具箱（Java Software Development Kit (SDK)）的一部分。
+
+JNI 允许 Java 代码使用以其它语言（譬如 C 和 C++）编写的代码和代码库。Invocation API（JNI 的一部分）可以用来将 Java 虚拟机（JVM）嵌入到本机应用程序中，从而允许程序员从本机代码内部调用 Java 代码。
+
+本[教程](http://23book.net/)涉及 JNI 最常见的两个应用：从 Java 程序调用 C/C++，以及从 C/C++ 程序调用 Java 代码。我们将讨论 Java 本机接口的这两个基本部分以及可能出现的一些更高级的[编程](http://www.23book.net/SoftwareDev/Index.htm)难题。
+
+本[教程](http://23book.net/)将带您去了解使用 Java 本机接口的所有步骤。您将学习如何从 Java 应用程序内部调用本机 C/C++ 代码以及如何从本机 C/C++ 应用程序内部调用 Java 代码。
+
+所有示例都是使用 Java、C 和 C++ 代码编写的，并可以移植到 Windows 和基于 UNIX 的平台上。要完全理解这些示例，您必须有一些 Java 语言[编程](http://www.23book.net/SoftwareDev/Index.htm)经验。此外，您还需要一些 C 或 C++ [编程](http://www.23book.net/SoftwareDev/Index.htm)经验。严格来说，JNI 解决方案可以分成 Java [编程](http://www.23book.net/SoftwareDev/Index.htm)任务和 C/C++ 编程任务，由不同的程序员完成每项任务。然而，要完全理解 JNI 是如何在两种编程环境中工作的，您必须能够理解 Java 和 C/C++ 代码。
+
+我们还将讲述一些高级主题，包括本机方法的异常处理和多线程。要充分理解本教程，您应该熟悉 Java 平台的安全性模型，并有一些多线程应用程序开发的经验。
+
+这里将关于高级主题的节从较基本的循序渐进 JNI 简介中划分出来。现在，初级 Java 程序员可以先学习本教程的前两部分，掌握之后再开始学习高级主题。
+
+要运行本教程中的示例，您需要下列工具与组件：
+
+*   **Java 编译器**：随 SDK 一起提供的 javac.exe。
+*   **Java 虚拟机（JVM）**：随 SDK 一起提供的 java.exe。
+*   **本机方法 C 文件生成器**：随 SDK 一起提供的 javah.exe。
+*   定义 JNI 的**库文件和本机头文件**。jni.h C 头文件、jvm.lib 和 jvm.dll 或 jvm.so 文件，这些文件都是随 SDK 一起提供的。
+*   能够创建共享库的 **C 和 C++ 编译器**。最常见的两个 C 编译器是用于 Windows 的 Visual C++ 和用于基于 UNIX 系统的 cc。
+
+虽然您可以使用自己喜欢的任何开发环境，但我们将在本教程中使用示例是用随 SDK 一起提供的标准工具和组件编写的。请参阅参考资料来下载 SDK、完整的源文件以及对于完成本教程不可缺少的其它工具。本教程具体地解释了 Sun 的 JNI 实现，该实现被认为是 JNI 解决方案的标准。本教程中没有讨论其它 JNI 实现的详细信息。
+
+在 Java 2 SDK 中，JVM 和运行时支持位于名为 jvm.dll（Windows）或 libjvm.so（UNIX）的共享库文件中。在 Java 1.1 JDK 中，JVM 和运行时支持位于名为 javai.dll（Windows）或 libjava.so（UNIX）的共享库文件中。版本 1.1 的共享库包含运行时以及类库的一些本机方法，但在版本 1.2 中已经不包含运行时，并且本机方法被放在 java.dll 和 libjava.so 中。对于以下 Java 代码，这一变化很重要：
+
+*   代码是用非 JNI 本机方法编写的（因为使用了 JDK 1.0 中旧的本机方法接口）
+*   通过 JNI Invocation 接口使用了嵌入式 JVM
+
+在两种情况下，在您的本机库能与版本 1.2 一起使用之前，都必须重新链接它们。注：这个变化应该不影响 JNI 程序员实现本机方法 — 只有通过 Invocation API 调用 JVM 的 JNI 代码才会受到影响。
+
+如果使用随 SDK/JDK 一起提供的 jni.h 文件，则头文件将使用 SDK/JDK 安装目录中的缺省 JVM（jvm.dll 或 libjvm.so）。支持 JNI 的 Java 平台的任何实现都会这么做，或允许您指定 JVM 共享库；然而，完成这方面操作的细节可能会因具体 Java 平台／JVM 实现而有所不同。实际上，许多 JVM 实现根本不支持 JNI。
+
+**用 Java 调用 C/C++ 代码**
+
+当无法用 Java 语言编写整个应用程序时，JNI 允许您使用本机代码。在下列典型情况下，您可能决定使用本机代码：
+
+*   希望用更低级、更快的编程语言去实现对时间有严格要求的代码。
+*   希望从 Java 程序访问旧代码或代码库。
+*   需要标准 Java 类库中不支持的依赖于平台的特性。
+
+**从 Java 代码调用 C/C++ 的六个步骤**
+
+从 Java 程序调用 C 或 C ++ 代码的过程由六个步骤组成。我们将在下面几页中深入讨论每个步骤，但还是先让我们迅速地浏览一下它们。
+
+1.  **编写 Java 代码**。我们将从编写 Java 类开始，这些类执行三个任务：声明将要调用的本机方法；装入包含本机代码的共享库；然后调用该本机方法。
+2.  **编译 Java 代码**。在使用 Java 类之前，必须成功地将它们编译成字节码。
+3.  **创建 C/C++ 头文件**。C/C++ 头文件将声明想要调用的本机函数说明。然后，这个头文件与 C/C++ 函数实现（请参阅步骤 4）一起来创建共享库（请参阅步骤 5）。
+4.  **编写 C/C++ 代码**。这一步实现 C 或 C++ 源代码文件中的函数。C/C++ 源文件必须包含步骤 3 中创建的头文件。
+5.  **创建共享库文件**。从步骤 4 中创建的 C 源代码文件来创建共享库文件。
+6.  **运行 Java 程序**。运行该代码，并查看它是否有用。我们还将讨论一些用于解决常见错误的技巧。
+
+**步骤 1：编写 Java 代码**
+
+我们从编写 Java 源代码文件开始，它将声明本机方法（或方法），装入包含本机代码的共享库，然后实际调用本机方法。
+
+这里是名为 Sample1.java 的 Java 源代码文件的示例：
+
+**package** com.ibm.course.jni;
+
+**public class** Sample1 {
+
+    **public native int** intMethod(**int** n);
+
+    **public native boolean** booleanMethod(**boolean** bool);
+
+    **public native** String stringMethod(String text);
+
+**public native int** intArrayMethod(**int**[] intArray);
+
+    **public static void** main(String[] args) {
+
+       System._loadLibrary_("Sample1");
+
+       Sample1 sample = **new** Sample1();
+
+       **int** square = sample.intMethod(5);
+
+       **boolean** bool = sample.booleanMethod(**true**);
+
+       String text = sample.stringMethod("JAVA");
+
+       **int** sum = sample.intArrayMethod(**new int**[] { 1, 1, 2, 3, 5, 8, 13});
+
+       System._out_.println("intMethod:" + square);
+
+       System._out_.println("booleanMethod:" + bool);
+
+       System._out_.println("stringMethod:" + text);
+
+       System._out_.println("intArrayMethod:" + sum);
+
+    }
+
+}
+
+**这段代码做了些什么？**
+
+首先，请注意对 native 关键字的使用，它只能随方法一起使用。native 关键字告诉 Java 编译器：方法是用 Java 类之外的本机代码实现的，但其声明却在 Java 中。**只能在 Java 类中_声明_本机方法，而不能实现它**（但是不能声明为抽象的方法，使用 native 关键字即可），所以本机方法不能拥有方法主体。
+
+现在，让我们逐行研究一下代码：
+
+*   从第 3 行到第 6 行，我们声明了四个 native 方法。
+*   在第 10 行，我们装入了包含这些本机方法的实现的共享库文件。（到步骤 5 时，我们将创建该共享库文件。）
+*   最终，从第 12 行到第 15 行，我们调用了本机方法。注：这个操作和调用非本机 Java 方法的操作没有差异。
+
+**注**：基于 UNIX 的平台上的共享库文件通常含有前缀 “lib”。在本例中，第 10 行可能是 System.loadLibrary("libSample1");。请一定要注意您在步骤 5：创建共享库文件中生成的共享库文件名。
+
+**步骤 2：编译 Java 代码**
+
+接下来，我们需要将 Java 代码编译成字节码。完成这一步的方法之一是使用随 SDK 一起提供的 Java 编译器 javac。用来将 Java 代码编译成字节码的命令是：
+
+C:\eclipse\workspace\IBMJNI\src\com\ibm\course\jni>javac Sample1.java
+
+**步骤 3：创建 C/C++ 头文件**
+
+第三步是创建 C/C++ 头文件，它定义本机函数说明。完成这一步的方法之一是使用 javah.exe，它是随 SDK 一起提供的本机方法 C 存根生成器工具。这个工具被设计成用来创建头文件，该头文件为在 Java 源代码文件中所找到的每个 native 方法定义 C 风格的函数。这里使用的命令是：
+
+C:\eclipse\workspace\IBMJNI\bin>javah –classpath ./ –jni com.ibm.course.jni.Sample1
+
+**javah 工具帮助**
+
+Usage: javah [options] <classes>
+
+where [options] include:
+
+        -help                 Print this help message and exit
+
+        -classpath <path>     Path from which to load classes
+
+        -bootclasspath <path> Path from which to load bootstrap classes
+
+        -d <dir>              Output directory
+
+        -o <file>             Output file (only one of -d or -o may be used)
+
+        -jni                  Generate JNI-style header file (default)
+
+        -version              Print version information
+
+        -verbose              Enable verbose output
+
+        -force                Always write output files
+
+<classes> are specified with their fully qualified names (for
+
+instance, java.lang.Object).
+
+**在 Sample1.java 上运行 javah.exe 的结果**
+
+下面的 Sample1.h 是对我们的 Java 代码运行 javah 工具所生成的 C/C++ 头文件：
+
+/* DO NOT EDIT THIS FILE - it is machine generated */
+
+#include <jni.h>
+
+/* Header for class com_ibm_course_jni_Sample1 */
+
+#ifndef _Included_com_ibm_course_jni_Sample1
+
+#define _Included_com_ibm_course_jni_Sample1
+
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
+
+/*
+
+ * Class:     com_ibm_course_jni_Sample1
+
+ * Method:    intMethod
+
+ * Signature: (I)I
+
+ */
+
+JNIEXPORT jint JNICALL Java_com_ibm_course_jni_Sample1_intMethod
+
+  (JNIEnv *, jobject, jint);
+
+/*
+
+ * Class:     com_ibm_course_jni_Sample1
+
+ * Method:    booleanMethod
+
+ * Signature: (Z)Z
+
+ */
+
+JNIEXPORT jboolean JNICALL Java_com_ibm_course_jni_Sample1_booleanMethod
+
+  (JNIEnv *, jobject, jboolean);
+
+/*
+
+ * Class:     com_ibm_course_jni_Sample1
+
+ * Method:    stringMethod
+
+ * Signature: (Ljava/lang/String;)Ljava/lang/String;
+
+ */
+
+JNIEXPORT jstring JNICALL Java_com_ibm_course_jni_Sample1_stringMethod
+
+  (JNIEnv *, jobject, jstring);
+
+/*
+
+ * Class:     com_ibm_course_jni_Sample1
+
+ * Method:    intArrayMethod
+
+ * Signature: ([I)I
+
+ */
+
+JNIEXPORT jint JNICALL Java_com_ibm_course_jni_Sample1_intArrayMethod
+
+  (JNIEnv *, jobject, jintArray);
+
+#ifdef __cplusplus
+
+}
+
+#endif
+
+#endif
+
+**关于 C/C++ 头文件**
+
+正如您可能已经注意到的那样，Sample1.h 中的 C/C++ 函数说明和 Sample1.java 中的 Java native 方法声明有很大差异。JNIEXPORT 和 JNICALL 是用于导出函数的、依赖于编译器的指示符。返回类型是映射到 Java 类型的 C/C++ 类型。附录 A：JNI 类型中完整地说明了这些类型。
+
+除了 Java 声明中的一般参数以外，所有这些函数的参数表中都有一个指向 JNIEnv 和 jobject 的指针。指向 JNIEnv 的指针实际上是一个指向函数指针表的指针。正如将要在步骤 4 中看到的，这些函数提供各种用来在 C 和 C++ 中操作 Java 数据的能力。
+
+jobject 参数引用当前对象。因此，如果 C 或 C++ 代码需要引用 Java 函数，则这个 jobject 充当引用或指针，返回调用的 Java 对象。函数名本身是由前缀 “Java_” 加全限定类名，再加下划线和方法名构成的。
+
+**JNI 类型**
+
+JNI 使用几种映射到 Java 类型的本机定义的 C 类型。这些类型可以分成两类：原始类型和伪类（pseudo-classes）。在 C 中，伪类作为结构实现，而在 C++ 中它们是真正的类。
+
+Java 原始类型直接映射到 C 依赖于平台的类型，如下所示：
+
+C 类型 jarray 表示通用数组。在 C 中，所有的数组类型实际上只是 jobject 的同义类型。但是，在 C++ 中，所有的数组类型都继承了 jarray，jarray 又依次继承了 jobject。下列表显示了 Java 数组类型是如何映射到 JNI C 数组类型的。
+
+这里是一棵对象树，它显示了 JNI 伪类是如何相关的。
+
+**步骤 4：编写 C/C++ 代码**
+
+当谈到编写 C/C++ 函数实现时，有一点需要牢记：说明必须和 Sample1.h 的函数声明完全一样。我们将研究用于 C 实现和 C++ 实现的完整代码，然后讨论两者之间的差异。
+
+**C 函数实现**
+
+以下是 Sample1.c，它是用 C 编写的实现：
+
+  #include "com_ibm_course_jni_Sample1.h"
+
+ #include <string.h>
+
+  JNIEXPORT jint JNICALL Java_com_ibm_course_jni_Sample1_intMethod
+
+    (JNIEnv *env, jobject obj, jint num) {
+
+     return num * num;
+
+  }
+
+  JNIEXPORT jboolean JNICALL Java_com_ibm_course_jni_Sample1_booleanMethod
+
+   (JNIEnv *env, jobject obj, jboolean boolean) {
+
+   return !boolean;
+
+}
+
+JNIEXPORT jstring JNICALL Java_com_ibm_course_jni_Sample1_stringMethod
+
+   (JNIEnv *env, jobject obj, jstring string) {
+
+     const char *str = (*env)->GetStringUTFChars(env, string, 0);
+
+     char cap[128];
+
+     strcpy(cap, str);
+
+     (*env)->ReleaseStringUTFChars(env, string, str);
+
+     return (*env)->NewStringUTF(env, strupr(cap));
+
+}
+
+JNIEXPORT jint JNICALL Java_com_ibm_course_jni_Sample1_intArrayMethod
+
+   (JNIEnv *env, jobject obj, jintArray array) {
+
+     int i, sum = 0;
+
+     jsize len = (*env)->GetArrayLength(env, array);
+
+     jint *body = (*env)->GetIntArrayElements(env, array, 0);
+
+     for (i=0; i<len; i++)
+
+     {sum += body[i];
+
+     }
+
+     (*env)->ReleaseIntArrayElements(env, array, body, 0);
+
+     return sum;
+
+}
+
+void main(){}
+
+**C++ 函数实现**
+
+以下是 Sample1.cpp（C++ 实现）
+
+#include "com_ibm_course_jni_Sample1.h"
+
+#include <string.h>
+
+JNIEXPORT jint JNICALL Java_Sample1_intMethod
+
+  (JNIEnv *env, jobject obj, jint num) {
+
+   return num * num;
+
+}
+
+JNIEXPORT jboolean JNICALL Java_Sample1_booleanMethod
+
+   (JNIEnv *env, jobject obj, jboolean boolean) {
+
+   return !boolean;
+
+}
+
+JNIEXPORT jstring JNICALL Java_Sample1_stringMethod
+
+   (JNIEnv *env, jobject obj, jstring string) {
+
+     const char *str = env->GetStringUTFChars(string, 0);
+
+     char cap[128];
+
+     strcpy(cap, str);
+
+     env->ReleaseStringUTFChars(string, str);
+
+     return env->NewStringUTF(strupr(cap));
+
+}
+
+JNIEXPORT jint JNICALL Java_Sample1_intArrayMethod
+
+   (JNIEnv *env, jobject obj, jintArray array) {
+
+     int i, sum = 0;
+
+     jsize len = env->GetArrayLength(array);
+
+     jint *body = env->GetIntArrayElements(array, 0);
+
+     for (i=0; i<len; i++)
+
+     {sum += body[i];
+
+     }
+
+     env->ReleaseIntArrayElements(array, body, 0);
+
+     return sum;
+
+}
+
+void main(){}
+
+**C 和 C++ 函数实现的比较**
+
+唯一的差异在于用来访问 JNI 函数的方法。在 C 中，JNI 函数调用由 “(*env)->” 作前缀，目的是为了取出函数指针所引用的值。在 C++ 中，JNIEnv 类拥有处理函数指针查找的内联成员函数。下面将说明这个细微的差异，其中，这两行代码访问同一函数，但每种语言都有各自的语法。
+
+**C 语法：**jsize len = (*env)->GetArrayLength(env,array);
+
+**C++ 语法：**jsize len =env->GetArrayLength(array);
+
+**步骤 5：创建共享库文件**
+
+接下来，我们创建包含本机代码的共享库文件。大多数 C 和 C++ 编译器除了可以创建机器代码可执行文件以外，也可以创建共享库文件。用来创建共享库文件的命令取决于您使用的编译器。下面是在 Windows 和 Solaris 系统上执行的命令。
+
+**Windows：**cl -Ic:\jdk\include -Ic:\jdk\include\win32 -LD Sample1.c -FeSample1.dll
+
+**Solaris：**cc -G -I/usr/local/jdk/include -I/user/local/jdk/include/solaris Sample1.c -o Sample1.so
+
+**步骤 6：运行 Java 程序**
+
+最后一步是运行 Java 程序，并确保代码正确工作。因为必须在 Java 虚拟机中执行所有 Java 代码，所以需要使用 Java 运行时环境。完成这一步的方法之一是使用 java，它是随 SDK 一起提供的 Java 解释器。所使用的命令是：
+
+java com.ibm.course.jni.Sample1
+
+当运行 Sample1.class 程序时，应该获得下列结果：
+
+PROMPT>java Sample1
+
+intMethod: 25
+
+booleanMethod: false
+
+stringMethod: JAVA
+
+intArrayMethod: 33
+
+PROMPT>
+
+**故障排除**
+
+当使用 JNI 从 Java 程序访问本机代码时，您会遇到许多问题。您会遇到的三个最常见的错误是：
+
+*   **无法找到动态链接**。它所产生的错误消息是：java.lang.UnsatisfiedLinkError。这通常指无法找到共享库，或者无法找到共享库内特定的本机方法。
+*   **无法找到共享库文件**。当用 System.loadLibrary(String libname) 方法（参数是文件名）装入库文件时，请确保文件名拼写正确以及_没有_指定扩展名。还有，确保库文件的位置在类路径中，从而确保 JVM 可以访问该库文件。
+*   **无法找到具有指定说明的方法**。确保您的 C/C++ 函数实现拥有与头文件中的函数说明相同的说明。
+
+从 Java 调用 C 或 C++ 本机代码（虽然不简单）是 Java 平台中一种良好集成的功能。虽然 JNI 支持 C 和 C++，但 C++ 接口更清晰一些并且通常比 C 接口更可取。
+
+正如您已经看到的，调用 C 或 C++ 本机代码需要赋予函数特殊的名称，并创建共享库文件。当利用现有代码库时，更改代码通常是不可取的。要避免这一点，在 C++ 中，通常创建代理代码或代理类，它们有专门的 JNI 所需的命名函数。然后，这些函数可以调用底层库函数，这些库函数的说明和实现保持不变。
+
+Chap6: JNI 传递返回值
+================
+
+作为主调方的 Java 源程序 TestJNI.java 如下。
+
+代码清单 15-4 在 Linux 平台上调用 C 函数的例程——TestJNI.java
+
+1.       public class TestJNI
+
+2.       {
+
+3.          static
+
+4.          {
+
+5.            System.loadLibrary("testjni");// 载入静态库，test 函数在其中实现
+
+6.          }
+
+7.      
+
+8.          private native void testjni(); // 声明本地调用
+
+9.         
+
+10.       public void test()
+
+11.       {
+
+12.         testjni();
+
+13.       }
+
+14.   
+
+15.       public static void main(String args[])
+
+16.       {
+
+17.         TestJNI haha = new TestJNI();
+
+18.         haha.test();
+
+19.       }
+
+20.    }
+
+TestJNI.java 声明从 libtestjni.so（注意 Linux 平台的动态链接库文件的扩展名是. so）中调用函数 testjni()。
+
+在 Linux 平台上，遵循 **JNI** 规范的动态链接库文件名必须以 “lib” 开头。例如在上面的 Java 程序中指定的库文件名为“testjni”，则实际的库文件应该命名为“libtestjni.so”。
+
+编译 TestJNI.java，并为 C 程序生成头文件：
+
+javac TestJNI.java
+
+javah TestJNI
+
+提供 testjni() 函数的 testjni.c 源文件如下。
+
+代码清单 15-5 在 Linux 平台上调用 C 函数的例程——testjni.c
+
+       #include <stdio.h>
+
+      #include <TestJNI.h>  
+
+     JNIEXPORT void JNICALL Java_TestJNI_testjni(JNIEnv *env, jobject obj){
+
+      printf("haha---------go into c!!!\n");
+
+     }
+
+编写 Makefile 文件如下，JDK 安装的位置请读者自行调整：
+
+libtestjni.so:testjni.o
+
+     gcc -rdynamic -shared -o libtestjni.so testjni.o
+
+testjni.o:testjni.c TestJNI.h
+
+     gcc -c testjni.c -I./ -I/usr/java/jdk1.6.0_00/include -I/usr/java/jdk1.6.0_00/include/linux
+
+在 Makefile 文件中，我们描述了最终的 libtestjin.so 依赖于目标文件 testjni.o，而 testjni.o 则依赖于 testjni.c 源文件和 TestJNI.h 头文件。请注 意，我们在将 testjni.o 连接成动态链接库文件时使用了 “-rdynamic” 选项。
+
+执行 make 命令编译 testjni.c。Linux 平台和在 Windows 平台上类似，有 3 种方法可以让 Java 程序找到并装载动态链接库文件。
+
+— 将动态链接库文件放置在当前路径下。
+
+— 将动态链接库文件放置在 LD_LIBRARY_PATH 环境变量所指向的路径下。注意这一点和 Windows 平台稍有区别，Windows 平台参考 PATH 环境变量。
+
+— 在启动 JVM 时指定选项 “-Djava.library.path”，将动态链接库文件放置在该选项所指向的路径下。
+
+从下一节开始，我们开始接触到在 **JNI** 框架内 Java 调用 C 程序的一些高级话题，包括如何传递**参数**、如何**传递数组**、如何传递对象等。
+
+各种类型数据的传递是跨平台、跨语言互操作的永恒话题，更复杂的操作其实都可以分解为各种 基本数据类型的操作。只有掌握了基于各种数据类型的互操作，才能称得上掌握了 **JNI** 开发。从下一节开始，环境和步骤不再是阐述的重点，将不再花费专门的篇 幅，例程中的关键点将成为我们关注的焦点。
+
+15.2.2.3 传递字符串
+--------------
+
+到目前为止，我们还没有实现 Java 程序向 C 程序传递**参数**，或者 C 程序向 Java 程序传递**参数**。本例程将由 Java 程序向 C 程序传入一个字符串，C 程序对该字符串转成大写形式后回传给 Java 程序。
+
+Java 源程序如下。
+
+代码清单 15-6 在 Linux 平台上调用 C 函数的例程——Sample1
+
+      public class Sample1
+
+      {
+
+                    public native String stringMethod(String text);
+
+     public static void main(String[] args)
+
+     {
+
+         System.loadLibrary("Sample1");
+
+          Sample1 sample = new Sample1();
+
+          String text   = sample.stringMethod("Thinking In Java");
+
+         System.out.println("stringMethod:" + text);
+
+     }
+
+}
+
+Sample1.java 以 “Thinking In Java” 为**参数**调用 libSample1.so 中的函数 stringMethod()，在得到返回的字符串后打印输出。
+
+Sample1.c 的源程序如下。
+
+代码清单 15-7 在 Linux 平台上调用 C 函数的例程——Sample1.c
+
+      #include <Sample1.h>
+
+      #include <string.h>   
+
+      JNIEXPORT jstring JNICALL Java_Sample1_stringMethod(JNIEnv *env, jobject obj, jstring string)
+
+      {
+
+         const char *str = (*env)->GetStringUTFChars(env, string, 0);
+
+         char cap[128];
+
+         strcpy(cap, str);
+
+         (*env)->ReleaseStringUTFChars(env, string, str);
+
+       int i=0;
+
+       for(i=0;i<strlen(cap);i++)
+
+         *(cap+i)=(char)toupper(*(cap+i));
+
+       return (*env)->NewStringUTF(env, cap);
+
+    }
+
+首先请注意函数头部分，函数接收一个 jstring 类 型的输入**参数**，并输出一个 jstring 类型的**参数**。jstring 是 **jni**.h 中定义的数据类型，是 **JNI** 框架内特有的字符串类型，因为 **jni**.h 在 Sample1.h 中被引入，因此在 Sample1.c 中无须再次引入。
+
+程序的第 4 行是从 **JNI** 调用上下文中获取 UTF 编码的输入字符，将其放在指针 str 所指向 的一段内存中。第 9 行是释放这段内存。第 13 行是将经过大写转换的字符串予以返回，这一句使用了 NewStringUTF() 函数，将 C 语言的字符串指针 转换为 **JNI** 的 jstring 类型。JNIEnv 也是在 **jni**.h 中定义的，代表 **JNI** 调用的上下文，GetStringUTFChars()、 ReleaseStringUTFChars() 和 NewStringUTF() 均是 JNIEnv 的函数。
+
+**15.2.2.4 传递整型数组**
+
+本节例程将首次尝试在 **JNI** 框架内启用数组：C 程序向 Java 程序返回一个定长的整型数组成的数组，Java 程序将该数组打印输出。
+
+Java 程序的源代码如下。
+
+代码清单 15-8 在 Linux 平台上调用 C 函数的例程——Sample2
+
+       public class Sample2
+
+      {
+
+        public native int[] intMethod();
+
+      public static void main(String[] args)
+
+      {
+
+         System.loadLibrary("Sample2");
+
+         Sample2 sample=new Sample2();
+
+           int[] nums=sample.intMethod();
+
+        for(int i=0;i<nums.length;i++)
+
+           System.out.println(nums[i]);
+
+     }
+
+}
+
+Sample2.java 调用 libSample2.so 中的函数 intMethod()。Sample2.c 的源代码如下。
+
+代码清单 15-9 在 Linux 平台上调用 C 函数的例程——Sample2.c
+
+      #include <Sample2.h>
+
+      JNIEXPORT jintArray JNICALL Java_Sample2_intMethod(JNIEnv *env, jobject obj)
+
+    {
+
+           int i = 1;
+
+            jintArray  array;// 定义数组对象
+
+           array = (*env)-> NewIntArray(env, 10);
+
+           for(; i<= 10; i++)
+
+               (*env)->SetIntArrayRegion(env, array, i-1, 1, &i);
+
+       /* 获取数组对象的元素个数 */
+
+      int len = (*env)->GetArrayLength(env, array);
+
+       /* 获取数组中的所有元素 */
+
+      jint* elems = (*env)-> GetIntArrayElements(env, array, 0);
+
+     for(i=0; i<len; i++)
+
+        printf("ELEMENT %d IS %d\n", i, elems[i]);
+
+return array;
+
+    }
+
+Sample2.c 涉及了两个 **jni**.h 定义的整型数相关的数据类型：jint 和 jintArray，jint 是在 **JNI** 框架内特有的整数类型。程序的第 7 行开辟出一个长度为 10 的 jint 数组。然后依次向该数组中放入元素 1-10。第 11 行至第 16 行不是程序的必须部分，纯粹是为了向读者们演示 GetArrayLength() 和 GetIntArrayElements() 这两个函数的使用方法，前者是获取数组长度，后者则是获取数组的首地址以便于遍历数组。
+
+**15.2.2.5 传递字符串数组**
+
+本节例程是对上节例程的进一步深化：虽然仍然是**传递数组**，但是数组的基类换成了字符串这样一种对象数据类型。Java 程序将向 C 程序传入一个包含中文字符的字符串，C 程序并没有处理这个字符串，而是开辟出一个新的字符串数组返回给 Java 程序，其中还包含两个汉字字符串。
+
+Java 程序的源代码如下。
+
+代码清单 15-10 在 Linux 平台上调用 C 函数的例程——Sample3
+
+      public class Sample3
+
+      {
+
+         public native String[] stringMethod(String text);
+
+        public static void main(String[] args)
+
+ throws java.io.UnsupportedEncodingException
+
+        {
+
+          System.loadLibrary("Sample3");
+
+           Sample3 sample = new Sample3();
+
+           String[] texts = sample.stringMethod("java 编程思想");
+
+       for(int i=0;i<texts.length;i++)
+
+        {
+
+            texts[i]=new String(texts[i].getBytes("ISO8859-1"),"GBK");
+
+            System.out.print(texts[i] );
+
+       }
+
+         System.out.println();
+
+      }
+
+    }
+
+Sample3.java 调用 libSample3.so 中的函数 stringMethod()。Sample3.c 的源代码如下：
+
+代码清单 15-11 在 Linux 平台上调用 C 函数的例程——Sample3.c
+
+       #include <Sample3.h>
+
+      #include <string.h>
+
+      #include <stdlib.h>
+
+      #define ARRAY_LENGTH 5   
+
+     JNIEXPORT jobjectArray JNICALL Java_Sample3_stringMethod
+
+(JNIEnv *env, jobject obj, jstring string)
+
+       {   
+
+         jclass objClass = (*env)->FindClass(env, "java/lang/String");
+
+        jobjectArray texts= (*env)->NewObjectArray(env,
+
+(jsize)ARRAY_LENGTH, objClass, 0);
+
+         jstring jstr;
+
+          char* sa[] = { "Hello,", "world!", "**JNI**"," 很 "," 好玩 " };
+
+         int i=0;
+
+         for(;i<ARRAY_LENGTH;i++)
+
+          {
+
+            jstr = (*env)->NewStringUTF( env, sa[i] );
+
+            (*env)->SetObjectArrayElement(env, texts, i, jstr);// 必须放入 jstring
+
+         }
+
+        return texts;
+
+   }
+
+第 9、10 行是我们需要特别关注的地方：**JNI** 框架并 没有定义专门的字符串数组，而是使用 jobjectArray——对象数组，对象数组的基类是 jclass，jclass 是 **JNI** 框架内特有的类型，相当 于 Java 语言中的 Class 类型。在本例程中，通过 FindClass() 函数在 **JNI** 上下文中获取到 java.lang.String 的类型 （Class），并将其赋予 jclass 变量。
+
+在例程中我们定义了一个长度为 5 的对象数组 texts，并在程序的第 18 行向其中循环放入预先定义好的 sa 数组中的字符串，当然前置条件是使用 NewStringUTF() 函数将 C 语言的字符串转换为 jstring 类型。
+
+本例程的另一个关注点是 C 程序向 Java 程序传递的中文字符，在 Java 程序中能否正常显 示的问题。在笔者的试验环境中，Sample3.c 是在 Linux 平台上编辑的，其中的中文字符则是用支持 GBK 的输入法输入的，而 Java 程序采用 ISO8859_1 字符集存放 **JNI** 调用的返回字符，因此在 “代码清单 15-10 在 Linux 平台上调用 C 函数的例程——Sample3” 的第 14 行中将其转码后输出。
+
+**15.2.2.6 传递对象数组**
+
+本节例程演示的是 C 程序向 Java 程序传递对象数组，而且对象数组中存放的不再是字符串，而是一个在 Java 中自定义的、含有一个 topic 属性的 MailInfo 对象类型。
+
+MailInfo 对象定义如下。
+
+代码清单 15-12 在 Linux 平台上调用 C 函数的例程——MailInfo
+
+     public class MailInfo {
+
+         public String topic;
+
+       public String getTopic()
+
+       {
+
+           return this.topic;
+
+        }
+
+public void setTopic(String topic)
+
+   {
+
+    this.topic=topic;
+
+   }
+
+   }
+
+Java 程序的源代码如下。
+
+代码清单 15-13 在 Linux 平台上调用 C 函数的例程——Sample4
+
+       public class Sample4
+
+      {
+
+      public native MailInfo[] objectMethod(String text);
+
+      public static void main(String[] args)
+
+      {
+
+          System.loadLibrary("Sample4");
+
+         Sample4 sample = new Sample4();
+
+          MailInfo[] mails = sample.objectMethod("Thinking In Java");
+
+        for(int i=0;i<mails.length;i++)
+
+              System.out.println(mails[i].topic);
+
+    }
+
+}
+
+Sample4.java 调用 libSample4.so 中的 objectMethod() 函数。Sample4.c 的源代码如下。
+
+代码清单 15-14 在 Linux 平台上调用 C 函数的例程——Sample4.c
+
+     #include <Sample4.h>
+
+     #include <string.h>
+
+     #include <stdlib.h>    
+
+     #define ARRAY_LENGTH 5
+
+      JNIEXPORT jobjectArray JNICALL Java_Sample4_objectMethod(
+
+JNIEnv *env, jobject obj, jstring string)
+
+       {  
+
+    jclass objClass = (*env)->FindClass(env, "java/lang/Object");
+
+   jobjectArray mails= (*env)->NewObjectArray(env,
+
+(jsize)ARRAY_LENGTH, objClass, 0);
+
+    jclass  objectClass = (*env)->FindClass(env, "MailInfo");
+
+    jfieldID topicFieldId = (*env)->GetFieldID(env, objectClass,
+
+"topic", "Ljava/lang/String;");
+
+    int i=0;
+
+    for(;i<ARRAY_LENGTH;i++)
+
+    {
+
+        (*env)->SetObjectField(env, obj, topicFieldId, string);
+
+         (*env)->SetObjectArrayElement(env, mails, i, obj);
+
+       }
+
+    return mails;
+
+     }
+
+程序的第 9、10 行读者们应该不会陌生，在上一节的例 程中已经出现过，不同之处在于这次通过 FindClass() 函数在 **JNI** 上下文中获取的是 java.lang.Object 的类型（Class），并将 其作为基类开辟出一个长度为 5 的对象数组，准备用来存放 MailInfo 对象。
+
+程序的第 12、13 行的目的则是创建一个 jfieldID 类型的变量，在 **JNI** 中，操作对 象属性都是通过 jfieldID 进行的。第 12 行首先查找得到 MailInfo 的类型（Class），然后基于这个 jclass 进一步获取其名为 topic 的属性，并将其赋予 jfieldID 变量。
+
+程序的第 18、19 行的目的是循环向对象数组中放入 jobject 对象。 SetObjectField() 函数属于首次使用，该函数的作用是向 jobject 的属性赋值，而值的内容正是 Java 程序传入的 jstring 变量 值。请注意在向对象属性赋值和向对象数组中放入对象的过程中，我们使用了在函数头部分定义的 jobject 类型的环境**参数** obj 作为中介。至此，**JNI** 框 架固有的两个环境入参 env 和 obj，我们都有涉及。
+
+Chap7:Jni 中 C++ 和 Java 的参数传递
+============================
+
+如何使用 JNI 的一些基本方法和过程在网上多如牛毛，如果你对 Jni 不甚了解，不知道 Jni 是做什么的，如何建立一个基本的 jni 程序，或许可以参考下面下面这些文章:
+
+<利用 VC++6.0 实现 JNI 的最简单的例子>
+
+<JNI 入门教程之 HelloWorld 篇>
+
+<SUN JNI Tutorial>
+
+这些资料的例子中，大多数只是输入一些简单的参数，获取没有参数。而在实际的使用过程中，往往需要对参数进行处理转换。才可以被 C/C++ 程序识别。比如我们在 C++ 中有一个结构（Struct）DiskInfo , 需要传递一个类似于 DiskInfo *pDiskInfo 的参数，类似于在 C++ 这样参数如何传递到 Java 中呢？下面我们就来讨论 C++ 到 Java 中方法的一些常见参数的转换:
+
+1. 定义 Native Java 类：
+
+如果你习惯了使用 JNI，你就不会觉得它难了。既然本地方法是由其他语言实现的，它们在 Java 中没有函数体。但是，所有本地代码必须用本地关键词 native 声明，成为 Java 类的成员。假设我们在 C++ 中有这么一个结构，它用来描述硬盘信息：
+
+// 硬盘信息
+
+struct {
+
+    char name[256];
+
+    int serial;
+
+}DiskInfo;
+
+那么我们需要在 Java 中定义一个类来与之匹配，声明可以写成这样：
+
+class DiskInfo {
+
+    // 名字
+
+    public String name;
+
+    // 序列号
+
+    public int serial;
+
+}
+
+在这个类中，申明一些 Native 的本地方法，来测试方法参数的传递，分别定义了一些函数，用来传递结构或者结构数组，具体定义如下面代码：
+
+/**//****************** 定义本地方法 ********************/  
+    // 输入常用的数值类型 (Boolean,Byte,Char,Short,Int,Float,Double)  
+    public native void displayParms(String showText, int i, boolean bl);
+
+    // 调用一个静态方法  
+    public native int add(int a, int b);
+
+    // 输入一个**数组**  
+    public native void setArray(boolean[] blList);
+
+    // 返回一个字符串**数组**  
+    public native String[] getStringArray();
+
+    // 返回一个结构  
+    public native DiskInfo getStruct();
+
+// 返回一个结构**数组**  
+    public native DiskInfo[] getStructArray();  
+  
+
+2. 编译生成 C/C++ 头文件
+
+定义好了 Java 类之后，接下来就要写本地代码。本地方法符号提供一个满足约定的头文件，使用 Java 工具 Javah 可以很容易地创建它而不用手动去创建。你对 Java 的 class 文件使用 javah 命令，就会为你生成一个对应的 C/C++ 头文件。
+
+1）、在控制台下进入工作路径，本工程路径为：E:\work\java\workspace\JavaJni。
+
+2）、运行 javah 命令：javah -classpath E:\work\java\workspace\JavaJni com.sundy.jnidemo ChangeMethodFromJni
+
+本文生成的 C/C++ 头文件名为: com_sundy_jnidemo_ChangeMethodFromJni.h
+
+3. 在 C/C++ 中实现本地方法
+
+生成 C/C++ 头文件之后，你就需要写头文件对应的本地方法。注意：所有的本地方法的第一个参数都是指向 JNIEnv 结构的。这个结构是用来调用 JNI 函数的。第二个参数 jclass 的意义，要看方法是不是静态的（static）或者实例（Instance）的。前者，jclass 代表一个类对象的引用，而后者是被调用的方法所属对象的引用。
+
+返回值和参数类型根据等价约定映射到本地 C/C++ 类型，如表 JNI 类型映射所示。有些类型，在本地代码中可直接使用，而其他类型只有通过 JNI 调用操作。
+
+表 A ※   **JNI** 类型映射
+
+Java 类型 本地类型 描述
+
+boolean jboolean C/C++8 位整型
+
+byte jbyte C/C++ 带符号的 8 位整型
+
+char jchar C/C++ 无符号的 16 位整型
+
+short jshort C/C++ 带符号的 16 位整型
+
+int jint C/C++ 带符号的 32 位整型
+
+long jlong C/C++ 带符号的 64 位整型 e
+
+float jfloat C/C++32 位浮点型
+
+double jdouble C/C++64 位浮点型
+
+Object jobject 任何 Java 对象，或者没有对应 java 类型的对象
+
+Class jclass Class 对象
+
+String jstring 字符串对象
+
+Object[] jobjectArray 任何对象的数组
+
+boolean[] jbooleanArray 布尔型数组
+
+byte[] jbyteArray 比特型数组
+
+char[] jcharArray 字符型数组
+
+short[] jshortArray 短整型数组
+
+int[] jintArray 整型数组
+
+long[] jlongArray 长整型数组
+
+float[] jfloatArray 浮点型数组
+
+double[] jdoubleArray 双浮点型数组
+
+3.1 使用数组：
+
+JNI 通过 JNIEnv 提供的操作 Java 数组的功能。它提供了两个函数：一个是操作 java 的简单型数组的，另一个是操作对象类型数组的。
+
+因为速度的原因，简单类型的数组作为指向本地类型的指针暴露给本地代码。因此，它们能作为常规的数组存取。这个指针是指向实际的 Java 数组或者 Java 数组的拷贝的指针。另外，数组的布置保证匹配本地类型。
+
+为了存取 Java 简单类型的数组，你就要要使用 GetXXXArrayElements 函数（见表 B），XXX 代表了数组的类型。这个函数把 Java 数组看成参数，返回一个指向对应的本地类型的数组的指针。
+
+表 B
+
+函数                  Java 数组类型 本地类型
+
+GetBooleanArrayElements jbooleanArray jboolean
+
+GetByteArrayElements jbyteArray jbyte
+
+GetCharArrayElements jcharArray jchar
+
+GetShortArrayElements jshortArray jshort
+
+GetIntArrayElements jintArray jint
+
+GetLongArrayElements jlongArray jlong
+
+GetFloatArrayElements jfloatArray jfloat
+
+GetDoubleArrayElements jdoubleArray jdouble
+
+JNI 数组存取函数
+
+当你对数组的存取完成后，要确保调用相应的 ReleaseXXXArrayElements 函数，参数是对应 Java 数组和 GetXXXArrayElements 返回的指针。如果必要的话，这个释放函数会复制你做的任何变化（这样它们就反射到 java 数组），然后释放所有相关的资源。
+
+为了使用 java 对象的数组，你必须使用 GetObjectArrayElement 函数和 SetObjectArrayElement 函数，分别去 get，set 数组的元素。GetArrayLength 函数会返回数组的长度。
+
+3.2 使用对象
+
+JNI 提供的另外一个功能是在本地代码中使用 Java 对象。通过使用合适的 JNI 函数，你可以创建 Java 对象，get、set 静态 (static) 和实例（instance）的域，调用静态 (static) 和实例（instance）函数。JNI 通过 ID 识别域和方法，一个域或方法的 ID 是任何处理域和方法的函数的必须参数。
+
+表 C 列出了用以得到静态 (static) 和实例（instance）的域与方法的 JNI 函数。每个函数接受（作为参数）域或方法的类，它们的名称，符号和它们对应返回的 jfieldID 或 jmethodID。
+
+表 C
+
+函数 描述
+
+GetFieldID 得到一个实例的域的 ID
+
+GetStaticFieldID 得到一个静态的域的 ID
+
+GetMethodID 得到一个实例的方法的 ID
+
+GetStaticMethodID 得到一个静态方法的 ID
+
+※域和方法的函数
+
+如果你有了一个类的实例，它就可以通过方法 GetObjectClass 得到，或者如果你没有这个类的实例，可以通过 FindClass 得到。符号是从域的类型或者方法的参数，返回值得到字符串，如表 D 所示。
+
+表 D
+
+Java 类型   符号
+
+boolean Z
+
+byte B
+
+char C
+
+short S
+
+int I
+
+long L
+
+float F
+
+double D
+
+void V
+
+objects 对象 Lfully-qualified-class-name;L 类名
+
+Arrays 数组 [array-type [数组类型
+
+methods 方法 (argument-types)return-type(参数类型) 返回类型
+
+※确定域和方法的符号
+
+下面我们来看看，如果通过使用数组和对象，从 C++ 中的获取到 Java 中的 DiskInfo 类对象，并返回一个 DiskInfo 数组:
+
+// 返回一个结构数组，返回一个硬盘信息的结构数组
+
+JNIEXPORT jobjectArray JNICALL
+
+Java_com_sundy_jnidemo_ChangeMethodFromJni_getStructArray
+
+(JNIEnv *env, jobject _obj)
+
+{
+
+    // 申明一个 object 数组
+
+    jobjectArray args = 0;
+
+    // 数组大小
+
+    jsize        len = 5;
+
+    // 获取 object 所属类, 一般为 java/lang/Object 就可以了
+
+    jclass objClass = (env)->FindClass("java/lang/Object");
+
+    // 新建 object 数组
+
+    args = (env)->NewObjectArray(len, objClass, 0);
+
+    /**//* 下面为获取到 Java 中对应的实例类中的变量 */
+
+    // 获取 Java 中的实例类
+
+    jclass objectClass = (env)->FindClass("com/sundy/jnidemo/DiskInfo");
+
+    // 获取类中每一个变量的定义
+
+    // 名字
+
+    jfieldID str = (env)->GetFieldID(objectClass,"name","Ljava/lang/String;");
+
+    // 序列号
+
+    jfieldID ival = (env)->GetFieldID(objectClass,"serial","I");
+
+    // 给每一个实例的变量付值，并且将实例作为一个 object，添加到 objcet 数组中
+
+    for(int i=0; i < len; i++)
+
+    {
+
+        // 给每一个实例的变量付值
+
+        jstring jstr = WindowsTojstring(env,"我的磁盘名字是 D:");
+
+        //(env)->SetObjectField(_obj,str,(env)->NewStringUTF("my name is D:"));
+
+        (env)->SetObjectField(_obj,str,jstr);
+
+        (env)->SetShortField(_obj,ival,10);
+
+        // 添加到 objcet 数组中
+
+        (env)->SetObjectArrayElement(args, i, _obj);
+
+    }
+
+    // 返回 object 数组
+
+    return args;
+
+}
+
+全部的 C/C++ 方法实现代码如下:
+
+/**//*
+
+*
+
+* 一缕阳光 (sundy) 版权所有，保留所有权利。
+
+*/
+
+/**//**
+
+*
+
+* TODO Jni 中一个从 Java 到 C/C++ 参数传递测试类
+
+*
+
+* @author 刘正伟 (sundy)
+
+* @see http://www.cnweblog.com/sundy
+
+* @see mailto:sundy26@126.com
+
+* @version 1.0
+
+* @since 2005-4-30
+
+*
+
+* 修改记录：
+
+*
+
+* 日期              修改人                 描述
+
+* ----------------------------------------------------------------------------------------------
+
+*
+
+*
+
+*
+
+*/
+
+// JniManage.cpp : 定义 DLL 应用程序的入口点。
+
+//
+
+package com.sundy.jnidemo;
+
+#include "stdafx.h"
+
+#include <stdio.h>
+
+#include <math.h>
+
+#include "jni.h"
+
+#include "jni_md.h"
+
+#include "./head/Base.h"
+
+#include "head/wmi.h"
+
+#include "head/com_sundy_jnidemo_ChangeMethodFromJni.h" // 通过 javah –jni javactransfer 生成
+
+#include <stdio.h>
+
+#include "stdlib.h"
+
+#include "string.h"
+
+#pragma comment (lib,"BaseInfo.lib")
+
+#pragma comment (lib,"jvm.lib")
+
+// 硬盘信息
+
+struct {
+
+    char name[256];
+
+    int serial;
+
+}DiskInfo;
+
+/**//*BOOL APIENTRY DllMain( HANDLE hModule,
+
+                       DWORD ul_reason_for_call,
+
+                       LPVOID lpReserved
+
+                     )
+
+{
+
+    LPTSTR strName = new CHAR[256] ;
+
+    (*GetHostName)(strName);
+
+    printf("%s\n",strName);
+
+    delete [] strName;
+
+    return TRUE;
+
+}*/
+
+// 将 jstring 类型转换成 windows 类型
+
+char* jstringToWindows(JNIEnv *env, jstring jstr);
+
+// 将 windows 类型转换成 jstring 类型
+
+jstring WindowsTojstring(JNIEnv* env, char* str);
+
+// 主函数
+
+BOOL WINAPI DllMain(HANDLE hHandle, DWORD dwReason, LPVOID lpReserved)
+
+{
+
+    return TRUE;
+
+}
+
+// 输入常用的数值类型 Boolean,Byte,Char,Short,Int,Float,Double
+
+JNIEXPORT void JNICALL Java_com_sundy_jnidemo_ChangeMethodFromJni_displayParms
+
+(JNIEnv *env, jobject obj, jstring s, jint i, jboolean b)
+
+{
+
+    const char* szStr = (env)->GetStringUTFChars(s, 0 );
+
+    printf("String = [%s]\n", szStr );
+
+    printf("int = %d\n", i);
+
+    printf("boolean = %s\n", (b==JNI_TRUE ? "true" : "false") );
+
+    (env)->ReleaseStringUTFChars(s, szStr );
+
+}
+
+// 调用一个静态方法, 只有一个简单类型输出
+
+JNIEXPORT jint JNICALL Java_com_sundy_jnidemo_ChangeMethodFromJni_add
+
+(JNIEnv *env, jobject, jint a, jint b)
+
+{
+
+    int rtn = (int)(a + b);
+
+    return (jint)rtn;
+
+}
+
+/**/ 输入一个数组, 这里输入的是一个 Boolean 类型的数组
+
+JNIEXPORT void JNICALL Java_com_sundy_jnidemo_ChangeMethodFromJni_setArray
+
+(JNIEnv *env, jobject, jbooleanArray ba)
+
+{
+
+    jboolean* pba = (env)->GetBooleanArrayElements(ba, 0 );
+
+    jsize len = (env)->GetArrayLength(ba);
+
+    int i=0;
+
+    // change even array elements
+
+    for(i=0; i < len; i+=2)
+
+    {
+
+        pba[i] = JNI_FALSE;
+
+        printf("boolean = %s\n", (pba[i]==JNI_TRUE ? "true" : "false") );
+
+    }
+
+    (env)->ReleaseBooleanArrayElements(ba, pba, 0 );
+
+}
+
+/**/ 返回一个字符串数组
+
+JNIEXPORT jobjectArray JNICALL Java_com_sundy_jnidemo_ChangeMethodFromJni_getStringArray
+
+(JNIEnv *env, jobject)
+
+{
+
+    jstring      str;
+
+    jobjectArray args = 0;
+
+    jsize        len = 5;
+
+    char*        sa[] = { "Hello,", "world!", "JNI", "is", "fun"};
+
+    int          i=0;
+
+    args = (env)->NewObjectArray(len,(env)->FindClass("java/lang/String"),0);
+
+    for(i=0; i < len; i++)
+
+    {
+
+        str = (env)->NewStringUTF(sa[i] );
+
+        (env)->SetObjectArrayElement(args, i, str);
+
+    }
+
+    return args;
+
+}
+
+// 返回一个结构, 这里返回一个硬盘信息的简单结构类型
+
+JNIEXPORT jobject JNICALL Java_com_sundy_jnidemo_ChangeMethodFromJni_getStruct
+
+(JNIEnv *env, jobject obj)
+
+{
+
+    /**//* 下面为获取到 Java 中对应的实例类中的变量 */
+
+    // 获取 Java 中的实例类
+
+    jclass objectClass = (env)->FindClass("com/sundy/jnidemo/DiskInfo");
+
+    // 获取类中每一个变量的定义
+
+    // 名字
+
+    jfieldID str = (env)->GetFieldID(objectClass,"name","Ljava/lang/String;");
+
+    // 序列号
+
+    jfieldID ival = (env)->GetFieldID(objectClass,"serial","I");
+
+    // 给每一个实例的变量付值
+
+    (env)->SetObjectField(obj,str,(env)->NewStringUTF("my name is D:"));
+
+    (env)->SetShortField(obj,ival,10);
+
+    return obj;
+
+}
+
+// 返回一个结构数组，返回一个硬盘信息的结构数组
+
+JNIEXPORT jobjectArray JNICALL Java_com_sundy_jnidemo_ChangeMethodFromJni_getStructArray
+
+(JNIEnv *env, jobject _obj)
+
+{
+
+    // 申明一个 object 数组
+
+    jobjectArray args = 0;
+
+    // 数组大小
+
+    jsize        len = 5;
+
+    // 获取 object 所属类, 一般为 ava/lang/Object 就可以了
+
+    jclass objClass = (env)->FindClass("java/lang/Object");
+
+    // 新建 object 数组
+
+    args = (env)->NewObjectArray(len, objClass, 0);
+
+    /**//* 下面为获取到 Java 中对应的实例类中的变量 */
+
+    // 获取 Java 中的实例类
+
+    jclass objectClass = (env)->FindClass("com/sundy/jnidemo/DiskInfo");
+
+    // 获取类中每一个变量的定义
+
+    // 名字
+
+    jfieldID str = (env)->GetFieldID(objectClass,"name","Ljava/lang/String;");
+
+    // 序列号
+
+    jfieldID ival = (env)->GetFieldID(objectClass,"serial","I");
+
+    // 给每一个实例的变量付值，并且将实例作为一个 object，添加到 objcet 数组中
+
+    for(int i=0; i < len; i++)
+
+    {
+
+        // 给每一个实例的变量付值
+
+        jstring jstr = WindowsTojstring(env,"我的磁盘名字是 D:");
+
+        //(env)->SetObjectField(_obj,str,(env)->NewStringUTF("my name is D:"));
+
+        (env)->SetObjectField(_obj,str,jstr);
+
+        (env)->SetShortField(_obj,ival,10);
+
+        // 添加到 objcet 数组中
+
+        (env)->SetObjectArrayElement(args, i, _obj);
+
+    }
+
+    // 返回 object 数组
+
+    return args;
+
+}
+
+// 将 jstring 类型转换成 windows 类型
+
+char* jstringToWindows(JNIEnv *env, jstring jstr)
+
+{
+
+    int length = (env)->GetStringLength(jstr );
+
+    const jchar* jcstr = (env)->GetStringChars(jstr, 0 );
+
+    char* rtn = (char*)malloc( length*2+1 );
+
+    int size = 0;
+
+    size = WideCharToMultiByte(CP_ACP, 0, (LPCWSTR)jcstr, length, rtn,(length*2+1), NULL, NULL );
+
+    if(size <= 0)
+
+        return NULL;
+
+    (env)->ReleaseStringChars(jstr, jcstr );
+
+    rtn[size] = 0;
+
+    return rtn;
+
+}
+
+// 将 windows 类型转换成 jstring 类型
+
+jstring WindowsTojstring(JNIEnv* env, char* str)
+
+{
+
+    jstring rtn = 0;
+
+    int slen = strlen(str);
+
+    unsigned short * buffer = 0;
+
+    if(slen == 0)
+
+        rtn = (env)->NewStringUTF(str );
+
+    else
+
+    {
+
+        int length = MultiByteToWideChar(CP_ACP, 0, (LPCSTR)str, slen, NULL, 0 );
+
+        buffer = (unsigned short *)malloc( length*2 + 1 );
+
+        if(MultiByteToWideChar( CP_ACP, 0, (LPCSTR)str, slen, (LPWSTR)buffer, length ) >0 )
+
+            rtn = (env)->NewString( (jchar*)buffer, length );
+
+    }
+
+    if(buffer)
+
+        free(buffer);
+
+    return rtn;
+
+}
+
+Java 测试 native 代码
+
+这没有什么多说的，看代码吧
+
+// 主测试程序
+
+    public static void main(String[] args) {
+
+        ChangeMethodFromJni changeJni = new ChangeMethodFromJni();
+
+        // 输入常用的数值类型 (string int boolean)
+
+        System.out
+
+                .println("------------------ 输入常用的数值类型 (string int boolean)-----------");
+
+        changeJni.displayParms("Hello World!", 100, true);
+
+        // 调用一个静态方法
+
+        System.out.println("------------------ 调用一个静态方法 -----------");
+
+        int ret = changeJni.add(12, 20);
+
+        System.out.println("The result is:" + String.valueOf(ret));
+
+        // 输入一个数组
+
+        System.out.println("------------------ 输入一个数组 -----------");
+
+        boolean[] blList = new boolean[] { true, false, true };
+
+        changeJni.setArray(blList);
+
+        // 返回一个字符串数组
+
+        System.out.println("------------------ 返回一个字符串数组 -----------");
+
+        String[] strList = changeJni.getStringArray();
+
+        for (int i = 0; i < strList.length; i++) {
+
+            System.out.print(strList[i]);
+
+        }
+
+        System.out.println();
+
+        System.out.println("------------------ 返回一个结构 -----------");
+
+        // 返回一个结构
+
+        DiskInfo disk = changeJni.getStruct();
+
+        System.out.println("name:" + disk.name);
+
+        System.out.println("Serial:" + disk.serial);
+
+        // 返回一个结构数组
+
+        System.out.println("------------------ 返回一个结构数组 -----------");
+
+        DiskInfo[] diskList = changeJni.getStructArray();
+
+        for (int i = 0; i < diskList.length; i++) {
+
+            System.out.println("name:" + diskList[i].name);
+
+            System.out.println("Serial:" + diskList[i].serial);
+
+        }
+
+    }
+
+注: 本程序在 VS2003,eclipse (jse5.0) winxp sp2 编译通过
+
+posted on 2005-05-02 20:22 sundy 阅读 (4406) 评论 (21) 编辑 收藏 所属分类: Java
+
+评论
+
+# re: Jni 中 C++ 和 Java 的参数传递 2005-05-22 14:35 张磊
+
+请问如果想返回 byte[] 类型该怎么做 回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2005-05-23 08:37 sundy
+
+因为：
+
+byte[] jbyteArray 比特型数组
+
+所以你将 byte[] 作为一个 jbyteArray 数组传递就可以了
+
+回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2005-09-21 14:46 小影
+
+请问如果我想把在 C++ 里面计算好的一个二维数组传回给 java 程序接受，该怎么写代码呢？我找了很多这方面的书和资料，都没有关于传递二维数组的介绍，请您给予指导, 多谢啦 ^_^ 回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2005-09-21 17:47 sundy
+
+我没有直接传递过二维数组
+
+但我想你可以把试一试二维数组转换成为一个 Hashmap 的数组传出来。
+
+请参考 "如何在 Jni 中传递出 Hashmap 的数组?" 的一些代码
+
+回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2005-12-26 16:32 wangjian
+
+返回一个结构数组时，为什么每个对象的数据都是一样的？即 5 个 Diskinfo 的成员值都相同，能不能不相同？ 回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2005-12-26 16:55 wangjian
+
+我把 5 个 DiskInfo 对象的成员 serial 分别设置为 1、2、3、4、5，可是传递到 java 后 5 个对象的 serial 成员值都是 5，为什么这样阿？盼回复，多谢！ 回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2005-12-27 21:51 sundy
+
+// 给每一个实例的变量付值，并且将实例作为一个 object，添加到 objcet 数组中
+
+for(int i=0; i < len; i++)
+
+{
+
+......
+
+// 添加到 objcet 数组中
+
+(env)->SetObjectArrayElement(args, i, _obj);
+
+}
+
+你看看设置的_Obj 是不是都是同一个??
+
+回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2005-12-28 13:32 wangjian
+
+如下所示，我就是把你程序中 (env)->SetShortField(_obj,ival,10) 的参数 10 换成 i，结果每个对象都是对象的 serial 成员值都是 4，请问怎样实现多个不同对象的传递？
+
+for(int i=0; i < len; i++)
+
+{
+
+jstring jstr = WindowsTojstring(env,"我的磁盘名字是 D:");
+
+(env)->SetObjectField(_obj,str,jstr);
+
+(env)->SetShortField(_obj,ival,i);
+
+(env)->SetObjectArrayElement(args, i, _obj);
+
+}
+
+回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2005-12-28 15:15 sundy
+
+应该没有问题的呀,
+
+SetObjectArrayElement 的时候，_obj 是不同的吗?
+
+要不你将 for 循环改为:
+
+jstring jstr = WindowsTojstring(env,"我的磁盘名字是 C:");
+
+(env)->SetObjectField(_obj,str,jstr);
+
+(env)->SetShortField(_obj,ival,0);
+
+(env)->SetObjectArrayElement(args, 0, _obj);
+
+jstring jstr = WindowsTojstring(env,"我的磁盘名字是 D:");
+
+(env)->SetObjectField(_obj,str,jstr);
+
+(env)->SetShortField(_obj,ival,1);
+
+(env)->SetObjectArrayElement(args, 1, _obj);
+
+看看对吗?   回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2005-12-29 20:42 wangjian
+
+这样作不对，不过我找到正确的方法了，要用构造函数生成新的对象。 回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2006-01-17 11:07 luli
+
+SQLRETURN SQLAllocHandle( SQLSMALLINT HandleType,
+
+SQLHANDLE InputHandle,
+
+SQLHANDLE * OutputHandlePtr
+
+)
+
+这是 odbc api 里的一个函数 SQLHANDLE 是一个结构
+
+c# 里的引用方式如下
+
+[DllImport("ODBC32.dll")]
+
+private static extern short SQLAllocHandle(short hType, IntPtr inputHandle, out IntPtr outputHandle);
+
+但我不清楚 SQLHANDLE 结构具体怎么构造的 因此我无法用 java 类来模拟
+
+我是菜鸟 望解答 谢过了   回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2006-01-17 14:25 luli
+
+忘了补充 SQLHANDLE InputHandle 与 SQLHANDLE * OutputHandlePtr
+
+一个是结构 一个是结构指针 那我是否该如下模拟
+
+class SQLHANDLE
+
+{
+
+}
+
+public class test
+
+{
+
+SQLHANDLE a=new SQLHANDLE ();
+
+public static void main(String args[]) {
+
+int i=SQLAllocHandle(SQLSMALLINT HandleType, new SQLHANDLE(),a)
+
+}
+
+}
+
+回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2006-03-21 17:31 Hefe
+
+WideCharToMultiByte();
+
+MultiByteToWideChar();
+
+请问这两个函数实现什么功能，请作者给出代码，多谢！
+
+回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2006-03-22 08:47 sundy
+
+@Hefe look here: http://www.google.com/search?hl=zh-CN&lr=lang_zh-CN&q=WideCharToMultiByte
+
+回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2006-03-28 17:40 dijk
+
+要在 c 函数中调用 java 类的类成员的方法，比如调用 JEditorPane 类型成员的 setText 方法，该怎么办？ 回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2006-04-16 21:33 陈世雄
+
+java 中函数的处理中，对于对象类型（非基本类型 int,long...）的输入参数，函数中是可以修改输入参数的内容，函数执行完毕，修改仍然是有效的。
+
+jni 中 是否也是这样呢？
+
+回复 更多评论   
+
+# re: Jni 中 C++ 和 Java 的参数传递 2006-04-18 17:50 王文波
+
+你好：
+
+向你请教一个问题：我想用 jini 来调用 dll。我在 jbuilder 中新建的简单的 project 调用 jini 运行正常。但是，我现在要对一个工程软件进行二次开发，该软件的
+
+开发也使用 jbuilder 生成一个 project，然后放在指定的路径下就可以了，该软件在运行的时候会自动读取该 project。我在这个软件二次开发的 project 中使用
+
+jini，则总是报错：unsatisfiedlinkError get（）。其中 get（）方法名。请问该怎么解决这个问题？
+
+我的邮箱: zwj23232@tom.com 回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2006-05-29 21:25 single
+
+# re: Jni 中 C++ 和 Java 的参数传递 2005-12-29 20:42 wangjian
+
+这样作不对，不过我找到正确的方法了，要用构造函数生成新的对象。 回复
+
+---------------------------------------------------
+
+能说说方法吗？ 回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2006-08-29 11:34 yangyongfa
+
+我正在做 JNI, 是在 C++ 中调用 JAVA 类的方法, 请问, 我在 JAVA 类的方法中参数使 用的是 byte[], 而我在 C++ 中是把一个文件读成 unsigned char*, 请问怎么可以正确调用 JAVA 中的方法? 类中方法原型: public boolean AddHoyuBox2DB(String BoxName, byte[] BoxFile,byte[] WDHPic,int BoxFileBinLen, int WDHPicBinLen, String ParameterText, byte[] XXPic,int PicBinLen, byte[] SeriousPics,int SeriousPicsBinLen,String FileLenStr) ?
+
+回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2007-10-25 15:27 vampire
+
+c 的结构提里写有一个 **p，指针的指针，在 java 中该如何封装？？？ 回复 更多评论  
+
+# re: Jni 中 C++ 和 Java 的参数传递 2007-12-11 13:13 Focus
+
+@single
+
+for(int i=0; i < len; i++)
+
+{
+
+jobject objTemp = (env)->AllocObject(objectClass); // 释放问题？？这个是否需要释放不是很懂
+
+//objectClass 是函数上面给的 那个
+
+jstring jstr = WindowsTojstring(env,"我的磁盘名字是 D:");
+
+(env)->SetObjectField(objTemp,str,jstr);
+
+(env)->SetShortField(objTemp,ival,i);
+
+(env)->SetObjectArrayElement(args, i, objTemp);
+
+}
+
+这个 可以实现 数组 元素相同的问题
+
+Chap8: 如何将 java 传递过来的 jbyteArray 转换成 C/C++ 中的 BYTE 数组
+=====================================================
+
+近遇到一个问题，请各位帮忙解决下：  
+    如何将 java 传递过来的 jbyteArray 转换成 C/C++ 中的 BYTE 数组？BYTE 为 unsigned char 类型  
+    这两个我理解应该是相同的吧，强制类型转换好像不启作用，应该如何转换呢？
+
+* * *
+
+**该问题已经关闭:** 问题已解决，之前代码有问题 jbyte * arrayBody = env->GetByteArrayElements(data,0); jsize theArrayLengthJ = env->GetArrayLength(data); BYTE * starter = (BYTE *)arrayBody;
+
+Chap5: 使用 JNI 技术实现 java 程序调用第三方 dll(c/c++) 文件的功能
+================================================
+
+**JAVA** 的跨平台的特性深受 **java** 程序员们的喜爱, 但正是由于它为了实现跨平台的目的, 使得它和本地机器的各种内部联系变得很少, 大大约束了它的功能, 比如与一些硬件设备通信, 往往要花费很 大的精力去设计流程编写代码去管理设备端口, 而且有一些设备厂商提供的硬件接口已经经过一定的封装和处理, 不能直接使用 **java** 程序通过端口和设备通信, 这种情况下就得考虑使用 **java** 程序去调用比较擅长同系统打交道的第三方程序, 从 1.1 版本开始的 JDK 提供了解决这个问题的技术标准:**JNI** 技术.  
+       **JNI** 是 **Java** Native Interface(**Java** 本地接口) 的缩写, 本地是相对于 **java** 程序来说的, 指直接运行在操作系统之上, 与操作系统直接交互的程序. 从 1.1 版本的 JDK 开始,**JNI** 就作为标准平台的一部分发行. 在 **JNI** 出现的初期是为了 **Java** 程序与本地已编译语言, 尤其是 C 和 C++ 的互操作而设计的, 后来经过扩展也可以与 c 和 c++ 之外的语言编写的程序交互, 例如 Delphi 程序.  
+       使用 **JNI** 技术固然增强了 **java** 程序的性能和功能, 但是它也破坏了 **java** 的跨平台的优点, 影响程序的可移植性和安全性, 例如由于其他语言 (如 C/C++) 可能能够随意地分配对象 / 占用内存,**Java** 的指针安全性得不到保证. 但在有些情况下, 使用 **JNI** 是可以接受的, 甚至是必须的, 例如上面提到的使用 **java** 程序调用硬件厂商提供的类库同设备通信等, 目前市场上的许多读卡器设备就是这种情况. 在这必须使用 **JNI** 的情况下, 尽量把所有本地方法都封装在单个类中, 这个类调用单个的本地库文件, 并保证对于每种目标操作系统, 都可以用特定于适当平台的版本替换这个文件, 这样使用 **JNI** 得到的要比失去的多很多.  
+       现在开始讨论上面提到的问题, 一般设备商会提供两种类型的类库文件, windows 系统的会包含. dll/.h/.lib 文件, 而 linux 系统的会包含. so/.a 文件, 这里只讨论 windows 系统下的 c/c++ 编译的 dll 文件调用方法.  
+       我把设备商提供的 dll 文件称之为第三方 dll 文件, 之所以说第三方, 是因为 **JNI** 直 接调用的是按它的标准使用 c/c++ 语言编译的 dll 文件, 这个文件是客户程序员按照设备商提供的. h 文件中的列出的方法编写的 dll 文件, 我称之为第二方 dll 文件, 真正调用设备商提供的 dll 文件的其实就是这个第二方 dll 文件. 到这里, 解决问题的思路已经产生了, 大慨分可以分为三步:  
+       1 > 编写一个 **java** 类, 这个类包含的方法是按照设备商提供的. h 文件经过变形 / 转换处理过的, 并且必须使用 native 定义. 这个地方需要注意的问题是 **java** 程序中定义的方法不必追求和厂商提供的头文件列出的方法清单中的方法具有相同的名字 / 返回值 / 参数, 因为一些参数类型如指针等在 **java** 中没法模拟, 只要能保证这个方法能实现原 dll 文件中的方法提供的功能就行了;  
+       2 > 按 **JNI** 的规则使用 c/c++ 语言编写一个 dll 程序;  
+       3 > 按 dll 调用 dll 的规则在自己编写的 dll 程序里面调用厂商提供的 dll 程序中定义的方法.
+
+       我之前为了给一个 **java** 项目添加 IC 卡读写功能, 曾经查了很多资料发现查到的资料都是只说到第二步, 所以剩下的就只好自己动手研究了. 下面结合具体的代码来按这三个步骤分析.
+
+     1 > 假设厂商提供的. h 文件中定义了一个我们需要的方法:  
+      __int16 __stdcall readData(HANDLE icdev, __int16 offset, __int16 len, unsigned char *data_buffer);  
+      a.__int16 定义了一个不依赖于具体的硬件和软件环境, 在任何环境下都占 16 bit 的整型数据 (**java** 中的 int 类型是 32 bit), 这个数据类型是 vc++ 中特定的数据类型, 所以我自己做的 dll 也是用的 vc++ 来编译.  
+     b.__stdcall 表示这个函数可以被其它程序调用, vc++ 编译的 DLL 欲被其他语言编写的程序调用, 应将函数的调用方式声明为__stdcall 方式, WINAPI 都采用这种方式. c/c++ 语言默认的调用方式是__cdecl, 所以在自己做可被 **java** 程序调用的 dll 时一定要加上__stdcall 的声明, 否则在 **java** 程序执行时会报类型不匹配的错误.  
+     c.HANDLE icdev 是 windows 操作系统中的一个概念, 属于 win32 的一种数据类型, 代表一个核心对象在某一个进程中的唯一索引, 不是指针, 在知道这个索引代表的对象类型时可以强制转换成此类型的数据.  
+    这些知识都属于 win32 编程的范围, 更为详细的 win32 资料可以查阅相关的文档.  
+    这个方法的原始含义是通过设备初始时产生的设备标志号 icdev, 读取从某字符串在**内存空间**中的相对超始位置 offset 开始的共 len 个字符, 并存放到 data_buffer 指向的无符号字符类型的**内存空间**中, 并返回一个 16 bit 的整型值来标志这次的读设备是否成功, 这里真正需要的是 unsigned char * 这个指针指向的**地址**存放的数据, 而 **java** 中没有指针类型, 所以可以考虑定义一个返回字符串类型的 **java** 方法, 原方法中返回的整型值也可以按经过一定的规则处理按字符串类型传出, 由于 HANDLE 是一个类型于 **java** 中的 Ojbect 类型的数据, 可以把它当作 int 类型处理, 这样 **java** 程序中的方法定义就已经形成了:  
+    String readData(int icdev, int offset, int len);  
+    声明这个方法的时候要加上 native 关键字, 表明这是一个与本地方法通信的 **java** 方法, 同时为了安全起见, 此文方法要对其它类隐藏, 使用 private 声明, 再另外写一个 public 方法去调用它, 同时要在这个类中把本地文件加载进来, 最终的代码如下:
+
+package test;
+
+public class LinkDll  
+{  
+    // 从指定**地址**读数据  
+    private native String readData(int icdev, int offset, int len);  
+    public String readData(int icdev, int offset, int len)  
+    {  
+        return this.readDataTemp(icdev, offset, len);  
+    }
+
+    static    
+    {           
+        System.loadLibrary("TestDll");// 如果执行环境是 linux 这里加载的是 SO 文件, 如果是 windows 环境这里加载的是 dll 文件  
+    }  
+}
+
+2 > 使用 JDK 的 javah 命令为这个类生成一个包含类中的方法定义的. h 文件, 可进入到 class 文件包的根目录下 (只要是在 classpath 参数中的路径即可), 使用 javah 命令的时候要加上包名 javah test.LinkDll, 命令成功后生成一个名为 test_LinkDll.h 的头文件.  
+    文件内容如下:
+
+/* DO NOT EDIT THIS FILE - it is machine generated*/  
+#include <**jni**.h>
+
+/* Header for class test_LinkDll */  
+#ifndef _Included_test_LinkDll #define
+
+Included_test_LinkDll  
+#ifdef __cplusplus extern "C" { #endif  
+/*  
+* Class:     test_LinkDll  
+* Method:    readDataTemp  
+* Signature: (III)Ljava/lang/String;  
+*/  
+JNIEXPORT jstring JNICALL **Java**_test_LinkDll_readDataTemp(JNIEnv *, jobject, jint, jint, jint);  
+#ifdef __cplusplus } #endif  
+#endif
+
+    可以看出,**JNI** 为了实现和 dll 文件的通信, 已经按它的标准对方法名 / 参数类型 / 参数数目作了一定的处理, 其中的 JNIEnv*/jobjtct 这两个参数是每个 **JNI** 方法固有的参数, javah 命令负责按 **JNI** 标准为每个 **java** 方法加上这两个参数. JNIEnv 是指向类型为 JNIEnv_的一个特殊 **JNI** 数据结构的指针, 当由 C++ 编译器编译时 JNIEnv_结构其实被定义为一个类, 这个类中定义了很多内嵌函数, 通过使用 "->" 符号, 可以很方便使用这些函数, 如:  
+    (env)->NewString( jchar* c, jint len )  
+    可以从指针 c 指向的**地址**开始读取 len 个字符封装成一个 JString 类型的数据.  
+    其中的 jchar 对应于 c/c++ 中的 char,jint 对应于 c/c++ 中的 len,JString 对应于 **java** 中的 String, 通过查看 **jni**.h 可以看到这些数据类型其实都是根据 **java** 和 c/c++ 中的数据类型对应关系使用 typedef 关键字重新定义的基本数据类型或结构体.  
+    具体的对应关系如下:  
+**Java** 类型     本地类型             描述  
+boolean       jboolean             C/C++8 位整型  
+byte             jbyte                   C/C++ 带符号的 8 位整型  
+char             jchar                   C/C++ 无符号的 16 位整型  
+short            jshort                  C/C++ 带符号的 16 位整型  
+int                 jint                      C/C++ 带符号的 32 位整型  
+long             jlong                   C/C++ 带符号的 64 位整型 e  
+float             jfloat                   C/C++32 位浮点型  
+double        jdouble               C/C++64 位浮点型  
+Object          jobject                 任何 **Java** 对象, 或者没有对应 **java** 类型的对象  
+Class         jclass                  Class 对象  
+String          jstring                  字符串对象  
+Object[]      jobjectArray         任何对象的数组  
+boolean[]    jbooleanArray     布尔型数组  
+byte[]          jbyteArray           比特型数组  
+char[]           jcharArray            字符型数组  
+short[]          jshortArray           短整型数组  
+int[]             jintArray                整型数组  
+long[]          jlongArray             长整型数组  
+float[]         jfloatArray              浮点型数组  
+double[]     jdoubleArray        双浮点型数组  
+    更为详细的资料可以查阅 **JNI** 文档.  
+    需要注意的问题: test_LinkDll.h 文件包含了 **jni**.h 文件;
+
+3 > 使用 vc++ 6.0 编写 TestDll.dll 文件, 这个文件名是和 **java** 类中 loadLibrary 的名称一致.  
+a > 使用 vc++6.0 新建一个 Win32 Dynamic-Link Library 的工程文件, 工程名指定为 TestDll  
+b > 把源代码文件和头文件使用 "Add Fiels to Project" 菜单加载到工程中, 若使用 c 来编码, 源码文件后缀名为. c, 若使用 c++ 来编码, 源码文件扩展名为. cpp, 这个一定要搞清楚, 因为对于不同的语言, 使用 JNIEnv 指针的方式是不同的.  
+c > 在这个文件里调用设备商提供的 dll 文件, 设备商一般提供三种文件: dll/lib/h, 这里假设分别为 A.dll/A.lib/A.h.  
+这个地方的调用分为动态调用和静态调用静态调用即是只要把被调用的 dll 文件放到 path 路径下, 然后加载 lib 链接文件和. h 头文件即可直接调用 A.dll 中的方法:  
+把设备商提供的 A.h 文件使用 "Add Fiels to Project" 菜单加载到这个工程中, 同时在源代码文件中要把这个 A.h 文件使用 include 包含进来;  
+然后依次点击 "Project->settings" 菜单, 打开 link 选项卡, 把 A.lib 添加到 "Object/library modules" 选项中.  
+具体的代码如下:  
+// 读出数据, 需要注意的是如果是 c 程序在调用 **JNI** 函数时必须在 JNIEnv 的变量名前加 *, 如 (*env)->xxx, 如果是 c++ 程序, 则直接使用 (env)->xxx
+
+#include<WINDOWS.H>  
+#include<MALLOC.H>  
+#include<STDIO.H>  
+#include<**jni**.h>  
+#include "test_LinkDll.h"  
+#include "A.h"
+
+JNIEXPORT jstring JNICALL **Java**_test_LinkDll_readDataTemp(JNIEnv *env, jobject jo, jint ji_icdev, jint ji_len)  
+{  
+    //************************* 基本数据声明与定义 ******************************  
+     HANDLE H_icdev = (HANDLE)ji_icdev;// 设备标志符  
+    __int16 i16_len = (__int16)ji_len;// 读出的数据长度, 值为 3, 即 3 个 HEX 形式的字符  
+    __int16 i16_result;// 函数返回值  
+    __int16 i16_coverResult;// 字符转换函数的返回值  
+        int i_temp;// 用于循环的中间变量  
+      jchar jca_result[3] = { 'e', 'r', 'r' };// 当读数据错误时返回此字符串
+
+    // 无符号字符指针, 指向的**内存空间**用于存放读出的 HEX 形式的数据字符串  
+    unsigned char* uncp_hex_passward = (unsigned char*)malloc( i16_len );  
+  
+    // 无符号字符指针, 指向的**内存空间**存放从 HEX 形式转换为 ASC 形式的数据字符串  
+    unsigned char* uncp_asc_passward = (unsigned char*)malloc( i16_len * 2 );  
+  
+    //**java** char 指针, 指向的**内存空间**存放从存放 ASC 形式数据字符串空间读出的数据字符串  
+    jchar *jcp_data = (jchar*)malloc(i16_len*2+1);  
+  
+    //**java** String, 存放从 **java** char 数组生成的 String 字符串, 并返回给调用者  
+    jstring js_data = 0;
+
+    //********* 读出 3 个 HEX 形式的数据字符到 uncp_hex_data 指定的**内存空间** **********  
+    i16_result = readData(H_icdev, 6, uncp_hex_data);// 这里直接调用的是设备商提供的原型方法.
+
+    if (i16_result != 0)  
+    {  
+        printf("读卡错误......\n");  
+        // 这个地方调用 **JNI** 定义的方法 NewString(jchar*,jint), 把 jchar 字符串转换为 JString 类型数据, 返回到 **java** 程序中即是 String  
+        return (env)->NewString( jca_result, 3 );  
+    }
+
+    printf("读数据成功......\n");
+
+    //**************HEX 形式的数据字符串转换为 ASC 形式的数据字符串 **************  
+    i16_coverResult = hex_asc(uncp_hex_data, uncp_asc_data, 3);  
+    if (i16_coverResult != 0)  
+    {  
+        printf("字符转换错误！\n");  
+        return (env)->NewString( jca_result, 3 );  
+    }
+
+    //**********ASC char 形式的数据字符串转换为 jchar 形式的数据字符串 ***********  
+    for (i_temp = 0; i_temp < i16_len; i_temp++)    
+        jcp_data[i_temp] = uncp_hex_data[i_temp];  
+  
+    //******************jchar 形式的数据字符串转换为 **java** String****************  
+    js_data = (env)->NewString(jcp_data,i16_len);    
+  
+    return js_data;  
+}
+
+动态调用, 不需要 lib 文件, 直接加载 A.dll 文件, 并把其中的文件再次声明, 代码如下:  
+#include<STDIO.H>  
+#include<WINDOWS.H>  
+#include "test_LinkDll.h"
+
+// 首先声明一个临时方法, 这个方法名可以随意定义, 但参数同设备商提供的原型方法的参数保持一致.  
+typedef int (*readDataTemp)( int, int, int, unsigned char * );// 从指定**地址**读数据
+
+// 从指定**地址**读数据  
+JNIEXPORT jstring JNICALL **Java**_readDataTemp(JNIEnv *env, jobject jo, jint ji_icdev, jint ji_offset, jint ji_len)  
+{  
+    int i_temp;  
+    int i_result;  
+    int i_icdev = (int)ji_icdev;  
+    int i_offset = (int)ji_offset;  
+    int i_len = (int)ji_len;  
+    jchar jca_result[5] = { 'e', 'r', 'r' };  
+    unsigned char *uncp_data = (unsigned char*)malloc(i_len);  
+    jchar *jcp_data = (jchar *)malloc(i_len);  
+    jstring js_data = 0;  
+  
+    //HINSTANCE 是 win32 中同 HANDLE 类似的一种数据类型, 意为 Handle to an instance, 常用来标记 App 实例, 在这个地方首先把 A.dll 加载到**内存空间**, 以一个 App 的形式存放, 然后取
+
+得它的 instance 交给 dllhandle, 以备其它资源使用.  
+    HINSTANCE dllhandle;  
+    dllhandle = LoadLibrary("A.dll");  
+     
+    // 这个地方首先定义一个已声明过的临时方法, 此临时方法相当于一个结构体, 它和设备商提供的原型方法具有相同的参数结构, 可互相转换  
+    readDataTemp readData;
+
+    // 使用 win32 的 GetProcAddress 方法取得 A.dll 中定义的名为 readData 的方法, 并把这个方法转换为已被定义好的同结构的临时方法,  
+    // 然后在下面的程序中, 就可以使用这个临时方法了, 使用这个临时方法在这时等同于使用 A.dll 中的原型方法.  
+    readData = (readDataTemp) GetProcAddress( dllhandle, "readData" );
+
+    i_result = (*readData)( i_icdev, i_offset, i_len, uncp_data );
+
+    if (i_result != 0)  
+    {  
+        printf("读数据失败......\n");  
+        return (env)->NewString( jca_result, 3 );  
+    }
+
+    for (i_temp = 0; i_temp < i_len; i_temp++)  
+    {  
+        jcp_data[i_temp] = uncp_data[i_temp];  
+    }
+
+    js_data = (env)->NewString( jcp_data, i_len );
+
+    return js_data;  
+}
+
+4 > 以上即是一个 **java** 程序调用第三方 dll 文件的完整过程, 当然, 在整个过程的工作全部完成以后, 就可以使用 **java** 类 LinkDll 中的 public String radData(int, int, int) 方法了, 效果同直接使用 c/c++ 调用这个设备商提供的 A.dll 文件中的 readData 方法几乎一样.
+
+总结:**JNI** 技术确实是提高了 **java** 程序的执行效率, 并且扩展了 **java** 程序的功能, 但它也确确实实破坏了 **java** 程序的最重要的优点: 平台无关性, 所以除非必须 (不得不) 使用 **JNI** 技术, 一般还是提倡写 100% 纯 **java** 的程序. 根据自己的经验及查阅的一些资料, 把可以使用 **JNI** 技术的情况罗列如下:  
+    1 > 需要直接操作物理设备, 而没有相关的驱动程序, 这时候我们可能需要用 C 甚至汇编语言来编写该设备的驱动, 然后通过 **JNI** 调用;  
+    2 > 涉及大量数学运算的部分, 用 **java** 会带来些效率上的损失;  
+    3 > 用 **java** 会产生系统难以支付的开销, 如需要大量网络链接的场合;  
+    4 > 存在大量可重用的 c/c++ 代码, 通过 **JNI** 可以减少开发工作量, 避免重复开发.  
+另外, 在利用 **JNI** 技术的时候要注意以下几点:  
+    1 > 由于 **Java** 安全机制的限制, 不要试图通过 Jar 文件的方式发布包含本地化方法的 Applet 到客户端;  
+    2 > 注意内存管理问题, 虽然在本地方法返回 **Java** 后将自动释放局部引用, 但过多的局部引用将使虚拟机在执行本地方法时耗尽内存;  
+    3>**JNI** 技术不仅可以让 **java** 程序调用 c/c++ 代码, 也可以让 c/c++ 代码调用 **java** 代码.
+
+注: 有一个名叫 Jawin 开源项目实现了直接读取第三方 dll 文件, 不用自己辛苦去手写一个起传值转换作用的 dll 文件, 有兴趣的可以研究一下. 但 是我用的时候不太顺手, 有很多规则限制, 像自己写程序时可以随意定义返回值, 随意转换类型, 用这个包的话这些都是不可能的了, 所以我的项目还没开始就把它 抛弃了.
+
+**Chap9: 如何编写 jni 方法（转载）**
+==========================
+
+作者: crazycow 发布时间: 2008-11-16 14:44:21.0
+
+http://blog.chinaunix.net/u1/38994/showart_1099528.html  
+一、概述：
+
+在 这篇文章中将会简单介绍如何编制一些简单的 JNI 方法。我们都知道 JNI 方法可以帮助我们调用用 C/c++ 编写的函数，这样如果一项工作已经用 C /c++ 语言实现的话，我们就可以不用花很大的力气再用 JAVA 语言对这一工作进行再实现，只要编制相应的 JNI 函数，就可以轻松实现 JAVA 语言对 C /c＋＋函数的调用，从而大大减轻程序开发人员的工作量。  
+  
+在这个项目中，我们编制了很多小实例，通过阅读，运行这些小实例，你可以轻松的学会如何编制 JNI 方法。这篇文档可以帮助你更好的理解及实现这些实例。  
+  
+现 在让我们进入主题。首先，我们看一下这个项目的体系构架。该项目分为两部分，一部分用 c 语言是 c 语言的例子，另一部分是 c++ 语言的例子。每部分都包含 java，src 源文件目录，以及一个 Makefile 文件。java 目录中是需要调用 JNI 函数的 JAVA 源程序，含有后缀名. java。src 目录 中含有 JNI 函数的实现代码，包括. c 或. cpp 文件和. h 文件。Makefile 文件是对 java 、src 目录下的文件进行编译组织进而生成可执 行文件的文件。当 Makefile 文件执行以后还会生成以下子目录：lib , class ,bin 目录 。lib 目录中包含项目中生成的静态函数库 文件 libJNIExamples.so，java 程序所调用的 JNI 方法都是通过这个库来调用的。class 目录中包含由 java 目录下 的. java 文件生成的. class 文件。bin 目录中是一个可执行的 shell 脚本文件。在执行该脚本的时候，项目所有程序实例的运行结果都将一并显 示在屏幕上。  
+  
+  
+具体执行步骤为：  
+  
+make  
+  
+cd bin  
+  
+./run.sh  
+  
+  
+下面来介绍一下在这个项目中所实现的实例：  
+  
+   1. 如何调用标准 C/c++ 中的函数－－例如：printf(...)  
+   2. 如何调用 C/c++ 中自定义的函数  
+   3. 如何在 jni 函数中访问 java 类中的对象实例域  
+   4. 如何在 jni 函数中访问 java 类中的静态实例域  
+   5. 如何在 jni 函数中调用 java 对象的方法  
+   6. 如何在 jni 函数中调用 java 类的静态方法  
+   7. 如何在 jni 函数中传递基本数据类型参数  
+   8. 如何在 jni 函数中传递对象类型参数  
+   9. 如何在 jni 函数中处理字符串  
+  10. 如何在 jni 函数中处理数组  
+  11. 处理 jni 函数中的返回值情况  
+  12. 在 jni 中实现创建 java 类对象  
+  
+  
+二、基本步骤：  
+  
+在介绍这些例子之前，让我们先来看看编写 jni 方法所需要的基本步骤，这些实例都是用 c 来实例来讲解，至于 c++ 的实例和 c 的实例区别不大，只要作稍微的修改即可，在文档的末尾我们将介绍这些内容：  
+  
+1、要想定义 jni 方法，首先得要在 java 语言中对这一方法进行声明 (自然这一声明过程要在类中进行)  
+  
+声明格式如下：
+
+publicnativevoid print();   System.loadLibrary(“JNIExamples”);   }  
+
+  
+jni 函数用关键字 native 方法声明。  
+  
+2、对该类的源文件进行编译使用 javac 命令，生成相应的. class 文件。  
+3、用 javah -jni 为函数生成一个在 java 调用和实际的 c 函数之间的转换存根，该存根通过从虚拟机栈中取出参数信息，并将其传递给已编译的 C 函数来实现转换。  
+4、建立一个特殊的共享库，并从该共享库到处这个存根，在上面的例子中使用了 System.loadLibrary，来加载 libJNIExamples 共享库。  
+  
+  
+三、配置运行环境：  
+  
+在 编写一个简单的 jni 函数之前我们必须配置相应的运行环境。jdk 的配置在这里就不作介绍，这里主要说的是库的路径。当调用 System.loadLibrary(..) 时，编译器会到我们系统设置的库路径中寻找该库。修改路径的方法和修改任何环境变量的方法基本相同，只要在 /etc/bash.bashrc 目录下增加一行 LD_LIBRARY_PATH=.:./lib:$(LD_LIBRARY_PATH) 即可。也可以通 过命令行 export LD_LIBRARY_PATH=.:./lib:$(LD_LIBRARY_PATH)  
+  
+  
+四、运行实例分析：
+
+**1、实例一：在 jni 中调用标准 c 中自带的函数 printf():**
+----------------------------------------
+
+下面以实例 1 为例来详细说明编写 jni 方法的详细过程。  
+  
+(1)、定义包含 jni 函数的类 Print.java：
+
+{  
+
+ /*********************************************************************** * the print() function will call the printf() funcion which is a ANSI c funciton * *************************************************************************/
+
+Public native  void print();      
+
+ System.loadLibrary("JNIExamples");    
+
+ }   
+
+}  
+
+  
+  
+在上面的实例 中，使用 public native void print(); 语句来定义了一个 Print 类的 jni 方法。并用 Sysgem.loadLibrary(“JNIExamples”) 语句来加载 libJNIExamples.so 库。注意：加载的语句一定要用 static 关键字声明在静态块中，以保证引用该类时该库始终被加载。  
+  
+(2)、对该类进行编译：javac Print.java。生成 Print.class 类，然后用 javah 产生一个 Print.h 的头文件：javah Print。长生的 Print.h 文件格式如下：
+
+/* DO NOT EDIT THIS FILE - it is machine generated *//* Header for class Print */  JNIEXPORT void JNICALL Java_Print_print     (JNIEnv *, jobject);   }   
+
+  
+其中的加粗字体为要实现的 JNI 函数生命部分。  
+  
+(3)、编写 JNI 函数的实现部分 Print.c
+
+JNIEXPORT void JNICALL Java_Print_print (JNIEnv *env, jobject obj)   
+
+{     
+
+printf("example1:in this example a printf() function in ANSI C is called\n");     
+
+printf("Hello,the output is generated by printf() function in ANSI C\n");  
+
+ }  
+
+  
+在这个文件中实现了一个简单的 Jni 方法。该方法调用 ANSI C 中的 printf() 函数，输出了两个句子。
+
+(4)、将本地函数编译到 libJNIExamples.so 的库中：  
+使用语句：gcc -fPIC -I/usr/jdk1.5/include -I/usr/jdk1.5/include/linux -shared -o libJNIExamples.so Print.c。  
+  
+(5)、至此 Jni 函数已全部实现，可以在 java 代码中调用拉。  
+在此我们使用一个简单的类来对实现的 jni 方法进行测试，下面是 PrintTest.java 的源代码部分：
+
+publicstaticvoid main(String[] args) {       Print p = new Print();       p.print();     }   }  
+
+  
+(6)、对 PrintTest.java 进行编译执行得到如下结果：  
+example1:in this example a printf() function in ANSI C is called  
+Hello,the output is generated by printf() function in ANSI C .  
+  
+下面介绍的每个实例实现的步骤也都是按着上述步骤执行的。所以介绍时只介绍实现的关键部分。  
+  
+
+**2、实例二、调用 c 语言用户定义的函数**
+------------------------
+
+**（源程序为：java/Cfunction.java java/C_functionTest.java src/Cfunction.c src/Cfunction.h ）**  
+当需要在 java 程序中调用用 c 所实现的函数是，需要在需要调用该 c 函数的类中定义一个 jni 方法，在该 jni 方法中去调用该 c 函数，相当于用 java 方法把 c 函数封装起来，以供 java 程序调用。  
+在实例二中我们简单定义了一个 printHello() 函数，该函数的功能只是输出一句话，如果要在 java 程序中调用该函数，只需在 jni 函数中调用即可，和调用 ANSI C 中自带的 prinf() 函数没有任何区别。  
+  
+
+**3、实例三、在 jni 函数中访问 java 类中的对象实例域**
+-----------------------------------
+
+**（源程序为：java/CommonField.java java/CommonFieldTest.java src/CommonField.c src/CommonField.h ）**  
+jni 函数的实现部分是在 c 语言中实现的，如果它想访问 java 中定义的类对象的实例域需要作三步工作，
+
+（1）调用 GetObjectClass() 函数得到该对像的类，该函数返回一个 jclass 类型值。
+
+（2）调用 GetFieldID() 函数得到要访问的实例域在该类中的 id。  
+（3）调用 GetXXXField() 来得到要访问的实例域的值。其中 XXX 和要访问的实例域的类型相对应。  
+在 jni 中 java 编程语言和 c 语言数据类型的对应关系为 java 原始数据类型前加 'j' 表示对应 c 语言的数据类型例如 boolean 为 jboolean ,int 为 jint，double 为 jdouble 等。对象类型的对应类型为 jobject。  
+在 本实例中，您可以看到我们在 java/CommonField.java 中定义了类 CommonField 类，其中包含 int a , int b 两 个实例域，我们要在 jni 函数 getCommonField() 中对这两个域进行访问和修改。你可以在 src/CommonField.c 中找到该函数 的实现部分。  
+以下语句是对该域的访问 (以下代码摘自：src/CommonField.c)：
+
+jclass class_Field = (*env)->GetObjectClass(env,obj);   
+
+jfieldID fdA = (*env)->GetFieldID(env,class_Field,"a","I");  
+
+ jfieldID fdB = (*env)->GetFieldID(env,class_Field,"b","I");   
+
+jint valueA = (*env)->GetIntField(env,obj,fdA);  
+
+ jint valueB = (*env)->GetIntField(env,obj,fdB);  
+
+  
+  
+在 jni 中对所有 jni 函数的调用都要用到 env 指针，该指针也是每一个本地方法的第一个参数，他是函数指针表的指针，所以，必须在每一个 jni 调用前面加上 (*env)->GetObjectClass(env,obj) 函数调用返回 obj 对像的类型，其中 obj 参数表示要你想要得到类型的类对象。  
+jfieldID GetFieldID(JNIEnv *env,jclass cl, const char name[], const char sig[]) 该 函数返回一个域的标识符 name 表示域名，sig 表示编码的域签名。所谓编码的签名即编码类型的签名在上例中类中的 a 实例域为 int 型，用 "I” 来表 示，同理"B” 表示 byte ，"C” 表示 char , “D” 表示 double ,”F” 表示 float,“J” 表示 long, “S” 表 示 short , “V” 表示 void ,”Z” 表示 boolean 类型。  
+GetIntField(env,obj,fdA)，用来访问 obj 对象的 fdA 域，如果要访问的域为 double 类型，则要使用 GetDoubleField(env,obj,fdA) 来访问，即类型对应 GetXXXField 中的 XXX。  
+  
+以下函数用来修改域的值：
+
+(*env)->SetIntField(env,obj,fdA,109);   (*env)->SetIntField(env,obj,fdB,145);  
+
+  
+这和获得域的值类似，只是该函数多了一个要设置给该域的值参数。  
+访问对象实例域的相关函数如下：  
+jfieldID GetFieldID(JNIEnv *env, jclass cl, const char name[], const char sig[])  
+该函数返回一个域的标识符。各参数含义如下：  
+env JNI 接口指针；cl 类对象 ； name 域名； sig 编码的域签名  
+  
+XXX GetXXXField(JNIEnv *env, jobject obj, jfieldID id)  
+该函数返回域的值。域类型 XXX 是 Object, Boolean, byte, char , short, int ,long ,float， double 中类型之一。  
+参数 env JNI 借口指针；obj 为域所在对象；id 为域的标识符。  
+void SetXXXField(JNIEnv *env,jobject obj, jfieldID id, XXX value)  
+  
+该函数用于设置域的值。XXX 的含义同上，  
+参数中 env, obj , id 的含义也同上，value 值为将要设置的值。  
+  
+
+**4、实例四：在 jni 函数中访问类的静态实例域**
+----------------------------
+
+**（java/Field.java java/FieldTest.java src/Field.c src/Field.h）**  
+
+因为静态实例域并不属于某个对象，而是属于一个类，所以在要访问静态实例域时，和访问对象的实例域不同，它所调用的函数是（以实例四来说明, 一下代码摘自 src/Field.c）：
+
+jclass class_Field = (*env)->FindClass(env,"Field");  
+
+ jfieldID fdA = (*env)->GetStaticFieldID(env,class_Field,"a","I");  
+
+ jint valueA = (*env)->GetStaticIntField(env,class_Field,fdA);  
+
+ (*env)->SetStaticIntField(env,class_Field,fdA,111);  
+
+由于没有 对象，必须使用 FindClass 代替 GetObjectClass 来获得类引用。在 FindClass() 的第二个参数是类的编码签名，类的编码签名和 基本类型的编码签名有所不同，如果类在当前包中，就直接是类的名称，如果类不在当前包中则要加入该类的详细路径：例如 String 类在 java.lang 包中，则 String 的签名要写成 ( Ljava/lang/String;), 其中的（L 和；）是不可少的，其中（；）是表达是的终止符。其他三个函数 和访问对象数据域基本没什么区别。
+
+**5、实例五：在 jni 函数中调用 java 对象的方法**
+--------------------------------
+
+**(java/CommonMethod.java java/CommonMethodTest.java src/CommonMehod.c src/CommonMethod.h)**  
+  
+在 jni 函数中我们不仅要对 java 对象的数据域进行访问，而且有时也需要调用 java 中类对象已经实现的方法，实例五就是关于这方面的实现的。在 src/CommonMethod.c 中我们可以找到下面的代码：
+
+JNIEXPORT void JNICALL Java_CommonMethod_callMethod (
+
+JNIEnv *env, jobject obj, jint a, jstring s)   
+
+{     
+
+printf("example 5:in this example,a object's method will be called\n");     
+
+jclass class_CommonMethod = (*env)->GetObjectClass(env,obj);    
+
+   jmethodID md = (*env)->GetMethodID(env,class_CommonMethod,"print",
+
+"(ILjava/lang/String;)V");    
+
+ (*env)->CallVoidMethod(env,obj,md,a,s);  
+
+ }  
+
+该代码部分展示了如何实现对 java 类对象函数的调用过程。从以上代码部分我们可以看到，要实现该调用需要有三个步骤，调用三个函数
+
+jclass class_CommonMethod = (*env)->GetObjectClass(env,obj);  
+
+ jmethodID md = (*env)->GetMethodID(env,class_CommonMethod,"print","(ILjava/lang/String;)V");  
+
+ (*env)->CallVoidMethod(env,obj,md,a,s);  
+
+  
+GetObjectClass(...) 函数获得要调用对象的类；GetMethodID(...) 获得要调用的方法相对于该类的 ID 号；CallXXXMethod(...) 调用该方法。
+
+在 编写该调用过程的时候，需要注意的仍然是 GetMethodID(...) 函数中编码签名的问题，在该实例中，我们要做的是找到 CommonMethod 类的 print(int a, String s) 方法，该方法打印整数 a, 和字符串 s 的直。在函数的编码签名部分（该部分以加粗、并加有下划 线）GetMethodID(env,class_CommonMethod,"print","(ILjava/lang /String;)V"); 从左往右可以查看，括号中的内容为要调用方法的参数部分内容，I 表示第一个参数为 int 类型，“Ljava/lang /String;” 表示第二个参数为 String 类型，V 表示返回值类型为空 void，如果返回值类型不为空，则使用相应的类型签名。返回值类型是和下面 将要使用的调用该方法的函数 CallXXXMethod(...) 相关联的，该函数的 xxx 要用相应的类型来替换, 在此实例中为 void，如果返回值类型 为 int 类型则调用该方法的函数就为 CallIntMethod(...)。
+
+**6、实例六：在 jni 函数中调用 java 类的静态方法**
+---------------------------------
+
+**（java/Method.java java/MethodTest.java src/Method.h src/Method.c)**  
+  
+实例五中介绍了如何调用类对象的方法，在此实例中我们将介绍如何调用 java 类的静态方法在此实例中我们在 / java/Method.java 中定义了静态方法：  
+  
+public static void print() {  
+
+  System.out.println("this is a static method of class Method");  
+}  
+
+该函数的功能就是打印字符串 “this is a static method of class Method”；  
+我们在 src/Method.c 中实现了对该方法调用的 jni 函数：
+
+JNIEXPORT void JNICALL Java_Method_callMethod (JNIEnv *env, jobject obj)   
+
+{     
+
+printf("example 6:in this example, the class's static method will be called\n");    
+
+ jclass class_Method = (*env)->FindClass(env,"Method");    
+
+ jmethodID md = (*env)->GetStaticMethodID(env,class_Method,"print","()V");    
+
+ (*env)->CallStaticVoidMethod(env,class_Method,md);   }  
+
+  
+  
+和实例五不同的是，我们要调用的三个函数变为：  
+FindClass(...)、GetStaticMethodID(...)、CallStaticVoidMethod(...)。  
+其中的机制和实例五是一样的。再次就不做过多的介绍。  
+  
+
+**7、实例七：jni 函数中传递基本数据类型参数**
+---------------------------
+
+**（java/Basic.java java/BasicTest.java src/Basic.c src/Basic.h) 在 java/Basic.java 中，我们定义了一个 public native void raiseValue(int a) 函数，该函数将打印使 value 的值增加 a, 并打印原来的 value 和新的 value 值。**  
+在 src/Basic.c 中给出了该 jni 函数的实现部分。
+
+JNIEXPORT void JNICALL Java_Basic_raiseValue (
+
+JNIEnv *env, jobject obj, jint a)  
+
+ {     
+
+printf("example 7: in this example, a integer type parament will be passed to the jni method\n");    
+
+ jclass class_Basic = (*env)->GetObjectClass(env,obj);    
+
+ jfieldID fd = (*env)->GetFieldID(env,class_Basic,"value","I");     
+
+jint v = (*env)->GetIntField(env,obj,fd);     
+
+v = v+a;    
+
+ (*env)->SetIntField(env,obj,fd,v);   
+
+}  
+
+  
+在此函数实现中，因为要访问 Basic 类中的 value 域，所以调用了 GetObjectClass(...), GetFieldID(...), GetIntField(...) 函数获取 value 值，下面一步 的 “ = v+a; ” 说明，传递基本类型参数的处理方式和在 c 语言中的基本数据类型的处理无异。  
+  
+
+**8、实例八：在 jni 函数中传递对象类型参数**
+---------------------------
+
+**（java/Book.java java/BookTest.java src/BookTest.c src/BookTest.h)**  
+  
+  在该实例中演示了在 jni 函数中传递对象函数的过程。  
+  
+  我们在该实例中定义了一个类 Book
+
+total_page = t;    
+
+ }
+
+  publicint getTotalPage() {}   
+
+publicint getCurrentPage() {}      
+
+ current_page++;    
+
+ }  
+
+ }  
+
+  
+然后我们在 java/BookTest.java 中定义 jni 函数
+
+public native void bookCurrentStatus(Book b);
+
+该函数需要一个 Book 类型的参数，并返回该参数的当前状态，包括该书一共有多少页的 total_page, 以及当前页 current_page。函数的实现部分为（src/BookTest.c)
+
+JNIEXPORT void JNICALL Java_BookTest_bookCurrentStatus (JNIEnv *env, 
+
+jobject this_obj, jobject obj)   
+
+{    
+
+ printf("example 8: in this example, a object parament will be passed to the jni method。\n");    
+
+ jclass class_book = (*env)->GetObjectClass(env,obj);    
+
+ jmethodID id_getTotal = (*env)->GetMethodID(env,
+
+class_book,"getTotalPage","()I");  
+
+ jmethodID id_getCurrent = (*env)->GetMethodID(env,
+
+class_book,"getCurrentPage","()I");   
+
+  jint total_page = (*env)->CallIntMethod(env,
+
+obj,id_getTotal);    
+
+jint current_page = (*env)->CallIntMethod(env,
+
+obj,id_getCurrent);     
+
+printf("the total page is:%d and the current page is :%d\n",
+
+total_page,current_page);  
+
+ }  
+
+该函数包含三个参数 (JNIEnv *env, jobject this_obj, jobject obj) ，第二 个 jobject this_obj 参数表示当前的 jni 函数所属于的类对象，第三个 jobject obj 参数表示传递的参数 Book 类型的类对象。
+
+对于实现部分，基本和实例五－－调用 java 类对象的方法中的操作相同，就不作详解。
+
+**9、实例九：在 jni 函数中处理字符串**
+------------------------
+
+**（java/Str.java java/StrTest.java src/Str.c src/Str.h）**  
+在该实例中我们讲解如何传递、处理字符串参数。  
+在 java/Str.java 中我们定义了一个 printString(String s) 的方法，用来处理字符串参数。  
+在 src/Str.c 中我们可以看到该函数的实现部分：
+
+JNIEXPORT void JNICALL Java_Str_printString (JNIEnv *env, 
+
+jobject obj, jstring s)   
+
+{     
+
+printf("example 9: in this example, a String object parament will be passed to the jni method.\n");    
+
+const char* string = (char*)(*env)->GetStringUTFChars(env,s,NULL);     
+
+printf("%s is put out in native method\n",string);  
+
+(*env)->ReleaseStringUTFChars(env,s,(jbyte*)string);   
+
+}  
+
+  
+实现过程中调用了两个函数：GetStringUTFChars(...)、 ReleaseStringUTFChars(...)。  
+GetStringUTFChars(...) 用来获取 String 对象的字符串，并将其抓那还为 char * 类型，这应该字符串就可以在 c 语言中进行处理拉。 ReleaseStringUTFChars(...) 用于当该字符串使用完成后，将其进行垃圾回收。记住，当使用完字符串时一定不要忘记调用该函数。  
+  
+
+**10、实例十：在 jni 函数中处理数组**
+------------------------
+
+**（java/Arr.java java/ArrTest.java src/Arr.c src/Arr.h)**
+
+java 中所有的数组类型都有相对应的 c 语言类型，其中 jarray 类型表示一个泛型数组
+
+boolean[] --jbooleanArray 
+
+byte[]--jbyteArray 
+
+char[]--jcharArary
+
+int[]---jcharArray 
+
+short[]---jshortArray 
+
+long[]---jlongArray 
+
+float[]--jfloatArray
+
+double[]—-jdoubleArray 
+
+Object[]--- jobjectArray。
+
+当访问数组时，可以通过 GetObjectAraryElement 和 SetObjectArrayElement 方法访问对象数组的元素。
+
+而 对于一般类型数组，你可以调用 GetXXXAraryElements 来获取一个只想数组起始元素的指针，而当你不在使用该数组时，要记得调用 ReleaseXXXArrayElements，这样你所作的改变才能保证在原始数组里得到反映。当然如果你需要得到数组的长度，可以调用 GetArrayLength 函数。
+
+在本实例中，我们在 Arr.java 中定义一个本地方法：print(int intArry[]), 该函数的功能为对该数组进行输出，在 src/Arr.c 中我们可以看到该方法的实现过程如下：
+
+JNIEXPORT void JNICALL Java_Arr_print (JNIEnv *env, 
+
+jobject obj, jintArray intArray)   
+
+{     
+
+printf("example 10:in this example, a array parament will be passed to the jni method.\n");     
+
+jint* arr = (*env)->GetIntArrayElements(env,intArray,NULL);   
+
+n = (*env)->GetArrayLength(env,intArray);   
+
+printf("the native method output the int array\n");   
+
+for(i = 0;i<(*env)->GetArrayLength(env,intArray);i++)    
+
+ {       
+
+printf("%d",arr[i]);     
+
+}     
+
+(*env)->ReleaseIntArrayElements(env,intArray,arr,0);   
+
+}  
+
+我们在此调用了 GetIntArrayElements(...) 来获取一个指向 intArray[] 数组第一个元素的指针。  
+用 getArrayLength(..) 函数来得到数组的长度，以方便数组遍历时使用。最后应用 ReleaseArrayElements(...) 函数来释放该数组指针。  
+  
+
+**11、实例十一：在 jni 中的返回值问题**
+-------------------------
+
+**（java/ReturnValue.java java/ReturnValueTest.java java/BookClass.java src/ReturnValue.c src/ReturnValue.h）**
+
+在 java/ReturnValue 类中定义了三个 jni 方法： returnInt()，returnString() ,returnObject()  
+三个方法，分别返回 int , String , Object 类型的值。
+
+其在 src/ReturnValue.c 中的实现分别为：
+
+JNIEXPORT jint JNICALL Java_ReturnValue_returnInt   (
+
+JNIEnv *env, jobject obj)   
+
+{    
+
+ jclass  class_ReturnValue = (*env)->GetObjectClass(env,obj);     
+
+jfieldID  fd = (*env)->GetFieldID(env,class_ReturnValue,"value","I");    
+
+ jint  v = (*env)->GetIntField(env,obj,fd);  
+
+return v;
+
+ }     
+
+* Signature: ()Ljava/lang/String;
+
+JNIEXPORT jstring JNICALL Java_ReturnValue_returnString   (
+
+JNIEnv *env, jobject obj)   
+
+{
+
+printf("example 11: in this example, the int and object of return value will be proceeding\n");
+
+ jclass class_ReturnValue = (*env)->GetObjectClass(env,obj);   
+
+  jfieldID fd = (*env)->GetFieldID(env,class_ReturnValue,"name","Ljava/lang/String;");   
+
+  jstring jstr = (jstring)(*env)->GetObjectField(env,obj,fd);
+
+}   
+
+* * Method: returnObject
+
+JNIEXPORT jobject JNICALL Java_ReturnValue_returnObject   (
+
+JNIEnv *env, jobject obj)   
+
+{   
+
+    jclass class_ReturnValue = (*env)->GetObjectClass(env,obj);    
+
+ jfieldID fd = (*env)->GetFieldID(env,class_ReturnValue,"myBook","LBookClass;");    
+
+ jobject  jbook = (jstring)(*env)->GetObjectField(env,obj,fd);   
+
+}  
+
+  
+在这里分别涉及到了对 java 类对象的一般参数，String 参数，以及 Object 参数的访问。  
+  
+
+**12、实例十二：在 jni 中创建 java 类对象：**
+-------------------------------
+
+**（java/Test.java src/CreateObj.c src/CreateObj.h）**
+
+  
+如果想要在 jni 函数创建 java 类对象则要引用 java 类的构造器方法，通过调用 NewObject 函数来实现。
+
+NewObject 函数的调用方式为：
+
+jobject obj_new = (*env)->NewObject(env,class, methodid, paraments);  
+在该实例中，我们在 java/Test.java 中定义了 Book1 类，要在 CreateObj 类的 modifyProperty() jni 方法中创建该类对象。我们可以在 src/CreateObj.c 中看到该 jni 方法创建对象的过程：
+
+jobject     book;  
+
+jclass      class_book;   
+
+jmethodID  md_book;   
+
+class_book = (*env)->FindClass(env,"LBook1;");   
+
+md_book = (*env)->GetMethodID(env,class_book,"<init>","(IILjava/lang/String;)V");  
+
+book = (*env)->NewObject(env,class_book,md_book,100,1,"huanghe");  
+
+在 创建对象的过程中可以看到，要创建一个 java 类对象，首先需要得到得到使用 FindClass 函数得到该类，然后使用 GetMethodID 方法得到该 类的构造器方法 id, 主义在此时构造器的函数名始终为："”, 其后函数的签名要符合函数签名规则。在此我们的构造器有三个参 数：int , int, String.
+
+并且其返回值类型要永久为空，所以函数签名为："(IILjava/lang/String;)V"
+
+然后我们调用 NewObject() 函数来创建该类的对象，在此之后就可以使用该对象拉。
+
+以上内容介绍的是 jni 函数 c 语言的实现实例。如果想要使用 c++ 的实例，我们只需要把其中的每一个函数调用过程作稍微的修改：
+
+例如：(*env)->NewObject(env,class_book,md_book,100,1,”huanghe”);
+
+修改为：(env)->NewObject(class_book,md_book,100,1,”huanghe”);
+
+即修改 (*env) 为(env)再把参数中的 env 去掉。然后把所有 c 的函数改为 c++ 的函数就 OK 拉。
+
+具体情况可以去查看我们的 c++ 实例代码.
+
+Chap10: 在 Windows 中实现 Java 本地方法
+===============================
+
+级别： 初级
+
+[David Wendt](http://www.ibm.com/developerworks/cn/java/jnimthds/#author)WebSphere Development Research Triangle Park, NC
+
+1999 年 5 月 01 日
+
+本文为在 32 位 Windows 平台上实现 Java 本地方法提供了实用的示例、步骤和准则。这些示例包括传递和返回常用的数据类型。
+
+本文中的示例使用 Sun Microsystems 公司创建的 Java DevelopmentKit (JDK) 版本 1.1.6 和 [Java 本地接口 (**JNI**) 规范](http://java.sun.com/products/jdk/1.1/docs/guide/jni/)。 用 C 语言编写的本地代码是用 MicrosoftVisual C++ 编译器编译生成的。
+
+简介
+
+本文提供调用本地 C 代码的 Java 代码示例，包括传递和返回某些常用的数据类型。本地方法包含在特定于平台的可执行文件中。就本文中的示例而言，本地方法包含在 Windows 32 位动态链接库 (DLL) 中。
+
+不过我要提醒您，对 Java 外部的调用通常不能移植到其他平台上，在 applet 中还可能引发安全异常。实现本地代码将使您的 Java 应用程序无法通过 100% 纯 Java 测试。但是，如果必须执行本地调用，则要考虑几个准则：
+
+1.  将您的所有本地方法都封装在单个类中，这个类调用单个 DLL。对于每种目标操作系统，都可以用特定于适当平台的版本替换这个 DLL。这样就可以将本地代码的影响减至最小，并有助于将以后所需的移植问题包含在内。
+2.  本地方法要简单。尽量将您的 DLL 对任何第三方（包括 Microsoft）运行时 DLL 的依赖减到最小。使您的本地方法尽量独立，以将加载您的 DLL 和应用程序所需的开销减到最小。如果需要运行时 DLL，必须随应用程序一起提供它们。
+
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+1.Java 调用 C
+-----------
+
+对于调用 C 函数的 Java 方法，必须在 Java 类中声明一个本地方法。在本部分的所有示例中，我们将创建一个名为 MyNative 的类，并逐步在其中加入新的功能。这强调了一种思想，即将本地方法集中在单个类中，以便将以后所需的移植工作减到最少。
+
+### 示例 1 -- 传递参数
+
+在第一个示例中，我们将三个常用**参数**类型传递给本地函数： _String_、 _int_ 和 _boolean_ 。本例说明在本地 C 代码中如何引用这些**参数**。
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">public class MyNative</p><p align="left">{</p><p align="left">&nbsp; public void showParms(String s, int i, boolean b)</p><p align="left">&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp; showParms0(s, i , b);</p><p align="left">&nbsp; }</p><p align="left">&nbsp; private native void showParms0(String s, int i, boolean b);</p><p align="left">&nbsp; static</p><p align="left">&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp; System.loadLibrary("MyNative");</p><p align="left">&nbsp; }</p><p align="left">}</p></td></tr></tbody></table>
+
+请注意，本地方法被声明为专用的，并创建了一个包装方法用于公用目的。这进一步将本地方法同代码的其余部分隔离开来，从而允许针对所需的平台对它进行优化。 _static_ 子句加载包含本地方法实现的 DLL。
+
+下一步是生成 C 代码来实现 showParms0 方法。此方法的 C 函数原型是通过对 .class 文件使用 javah 实用程序来创建的，而 .class 文件是通过编译 MyNative.java 文件生成的。这个实用程序可在 JDK 中找到。下面是 javah 的用法：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp;javac MyNative.java（将 .java 编译为 .class）</p><p align="left">&nbsp;javah -<strong>jni</strong> MyNative（生成 .h 文件）&nbsp;</p></td></tr></tbody></table>
+
+这将生成一个 MyNative.h 文件，其中包含一个本地方法原型，如下所示：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">/*</p><p align="left">&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; MyNative</p><p align="left">&nbsp;* Method:&nbsp;&nbsp;&nbsp; showParms0</p><p align="left">&nbsp;* Signature: (Ljava/lang/String;IZ)V</p><p align="left">&nbsp;*/</p><p align="left">JNIEXPORT void JNICALL Java_MyNative_showParms0</p><p align="left">&nbsp; (JNIEnv *, jobject, jstring, jint, jboolean);</p></td></tr></tbody></table>
+
+第一个**参数**是调用 **JNI** 方法时使用的 **JNI** Environment 指针。第二个**参数**是指向在此 Java 代码中实例化的 Java 对象 MyNative 的一个句柄。其他**参数**是方法本身的**参数**。请注意，MyNative.h 包括头文件 **jni**.h。**jni**.h 包含 **JNI** API 和变量类型（包括 jobject、jstring、jint、jboolean，等等）的原型和其他声明。
+
+本地方法是在文件 MyNative.c 中用 C 语言实现的：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">#include &lt;stdio.h&gt;</p><p align="left">#include "MyNative.h"</p><p align="left">JNIEXPORT void JNICALL Java_MyNative_showParms0</p><p align="left">&nbsp; (JNIEnv *env, jobject obj, jstring s, jint i, jboolean b)</p><p align="left">{</p><p align="left">&nbsp; const char* szStr = (*env)-&gt;GetStringUTFChars( env, s, 0 );</p><p align="left">&nbsp; printf("String = [%s]\n", szStr );</p><p align="left">&nbsp; printf("int = %d\n", i);</p><p align="left">&nbsp; printf( "boolean = %s\n", (b==<strong>JNI</strong>_TRUE ? "true" : "false") );</p><p align="left">&nbsp; (*env)-&gt;ReleaseStringUTFChars( env, s, szStr );</p><p align="left">}</p></td></tr></tbody></table>
+
+**JNI** API，GetStringUTFChars，用来根据 Java 字符串或 jstring **参数**创建 C 字符串。这是必需的，因为在本地代码中不能直接读取 Java 字符串，而必须将其转换为 C 字符串或 Unicode。有关转换 Java 字符串的详细信息，请参阅标题为 NLS Strings and **JNI** 的一篇论文。但是，jboolean 和 jint 值可以直接使用。
+
+MyNative.dll 是通过编译 C 源文件创建的。下面的编译语句使用 Microsoft Visual C++ 编译器：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp;cl -Ic:\jdk1.1.6\include -Ic:\jdk1.1.6\include\win32 -LD MyNative.c</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -FeMyNative.dll&nbsp;</p></td></tr></tbody></table>
+
+其中 c:\jdk1.1.6 是 JDK 的安装路径。
+
+MyNative.dll 已创建好，现在就可将其用于 MyNative 类了。  
+可以这样测试这个本地方法：在 MyNative 类中创建一个 main 方法来调用 showParms 方法，如下所示：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp;&nbsp; public static void main(String[] args )</p><p align="left">&nbsp;&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp; MyNative obj = new MyNative();</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp; obj.showParms("Hello", 23, true);</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp; obj.showParms("World", 34, false);</p><p align="left">&nbsp;&nbsp; }</p></td></tr></tbody></table>
+
+当运行这个 Java 应用程序时，请确保 MyNative.dll 位于 Windows 的 PATH 环境变量所指定的路径中或当前目录下。当执行此 Java 程序时，如果未找到这个 DLL，您可能会看到以下的消息：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp;java MyNative&nbsp;</p><p align="left">&nbsp;Can't find class MyNative&nbsp;</p></td></tr></tbody></table>
+
+这是因为 static 子句无法加载这个 DLL，所以在初始化 MyNative 类时引发异常。Java 解释器处理这个异常，并报告一个一般错误，指出找不到这个类。  
+如果用 -verbose 命令行选项运行解释器，您将看到它因找不到这个 DLL 而加载 UnsatisfiedLinkError 异常。
+
+如果此 Java 程序完成运行，就会输出以下内容：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp;java MyNative&nbsp;</p><p align="left">&nbsp;String = [Hello]&nbsp;</p><p align="left">&nbsp;int = 23</p><p align="left">&nbsp;boolean = true&nbsp;</p><p align="left">&nbsp;String = [World]&nbsp;</p><p align="left">&nbsp;int</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = 34&nbsp;</p></td></tr></tbody></table>
+
+### boolean = false 示例 2 -- 返回一个值
+
+本例将说明如何在本地方法中实现返回代码。  
+将这个方法添加到 MyNative 类中，这个类现在变为以下形式：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">public class MyNative</p><p align="left">{</p><p align="left">&nbsp; public void showParms(String s, int i, boolean b)</p><p align="left">&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp; showParms0(s, i , b);</p><p align="left">&nbsp; }</p><p align="left">&nbsp; public int hypotenuse(int a, int b)</p><p align="left">&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp; return hyptenuse0(a, b);</p><p align="left">&nbsp; }</p><p align="left">&nbsp; private native void showParms0(String s, int i, boolean b);</p><p align="left">&nbsp; private native int&nbsp; hypotenuse0(int a, int b);</p><p align="left">&nbsp; static</p><p align="left">&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp; System.loadLibrary("MyNative");</p><p align="left">&nbsp; }</p><p align="left">&nbsp; /* 测试本地方法 */</p><p align="left">&nbsp; public static void main(String[] args )</p><p align="left">&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp; MyNative obj = new MyNative();</p><p align="left">&nbsp;&nbsp;&nbsp; System.out.println(obj.hypotenuse(3,4) );</p><p align="left">&nbsp;&nbsp;&nbsp; System.out.println(obj.hypotenuse(9,12) );</p><p align="left">&nbsp; }</p><p align="left">}</p></td></tr></tbody></table>
+
+公用的 hypotenuse 方法调用本地方法 hypotenuse0 来根据传递的**参数**计算值，并将结果作为一个整数返回。这个新本地方法的原型是使用 javah 生成的。请注意，每次运行这个实用程序时，它将自动覆盖当前目录中的 MyNative.h。按以下方式执行 javah：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp;javah -<strong>jni</strong> MyNative&nbsp;</p></td></tr></tbody></table>
+
+生成的 MyNative.h 现在包含 hypotenuse0 原型，如下所示：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">/*</p><p align="left">&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; MyNative</p><p align="left">&nbsp;* Method:&nbsp;&nbsp;&nbsp; hypotenuse0</p><p align="left">&nbsp;* Signature: (II)I</p><p align="left">&nbsp;*/</p><p align="left">JNIEXPORT jint JNICALL Java_MyNative_hypotenuse0</p><p align="left">&nbsp; (JNIEnv *, jobject, jint, jint);</p></td></tr></tbody></table>
+
+该方法是在 MyNative.c 源文件中实现的，如下所示：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">#include &lt;stdio.h&gt;</p><p align="left">#include &lt;math.h&gt;</p><p align="left">#include "MyNative.h"</p><p align="left">JNIEXPORT void JNICALL Java_MyNative_showParms0</p><p align="left">&nbsp; (JNIEnv *env, jobject obj, jstring s, jint i, jboolean b)</p><p align="left">{</p><p align="left">&nbsp; const char* szStr = (*env)-&gt;GetStringUTFChars( env, s, 0 );</p><p align="left">&nbsp; printf("String = [%s]\n", szStr );</p><p align="left">&nbsp; printf("int = %d\n", i);</p><p align="left">&nbsp; printf( "boolean = %s\n", (b==<strong>JNI</strong>_TRUE ? "true" : "false") );</p><p align="left">&nbsp; (*env)-&gt;ReleaseStringUTFChars( env, s, szStr );</p><p align="left">}</p><p align="left">JNIEXPORT jint JNICALL Java_MyNative_hypotenuse0</p><p align="left">&nbsp; (JNIEnv *env, jobject obj, jint a, jint b)</p><p align="left">{</p><p align="left">&nbsp; int rtn = (int)sqrt( (double)( (a*a) + (b*b) ) );</p><p align="left">&nbsp; return (jint)rtn;</p><p align="left">}</p></td></tr></tbody></table>
+
+再次请注意，jint 和 int 值是可互换的。  
+使用相同的编译语句重新编译这个 DLL：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp;cl -Ic:\jdk1.1.6\include -Ic:\jdk1.1.6\include\win32 -LD MyNative.c</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -FeMyNative.dll&nbsp;</p></td></tr></tbody></table>
+
+现在执行 java MyNative 将输出 5 和 15 作为斜边的值。
+
+### 示例 3 -- 静态方法
+
+您可能在上面的示例中已经注意到，实例化的 MyNative 对象是没必要的。实用方法通常不需要实际的对象，通常都将它们创建为静态方法。本例说明如何用一个静态方法实现上面的示例。更改 MyNative.java 中的方法签名，以使它们成为静态方法：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp; public static int hypotenuse(int a, int b)</p><p align="left">&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp; return hypotenuse0(a,b);</p><p align="left">&nbsp; }</p><p align="left">&nbsp; ...</p><p align="left">&nbsp; private static native int&nbsp; hypotenuse0(int a, int b);</p></td></tr></tbody></table>
+
+现在运行 javah 为 _hypotenuse0_ 创建一个新原型，生成的原型如下所示：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">/*</p><p align="left">&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; MyNative</p><p align="left">&nbsp;* Method:&nbsp;&nbsp;&nbsp; hypotenuse0</p><p align="left">&nbsp;* Signature: (II)I</p><p align="left">&nbsp;*/</p><p align="left">JNIEXPORT jint JNICALL Java_MyNative_hypotenuse0</p><p align="left">&nbsp; (JNIEnv *, jclass, jint, jint);</p></td></tr></tbody></table>
+
+C 源代码中的方法签名变了，但代码还保持原样：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">JNIEXPORT jint JNICALL Java_MyNative_hypotenuse0</p><p align="left">&nbsp; (JNIEnv *env, jclass cls, jint a, jint b)</p><p align="left">{</p><p align="left">&nbsp; int rtn = (int)sqrt( (double)( (a*a) + (b*b) ) );</p><p align="left">&nbsp; return (jint)rtn;</p><p align="left">}</p></td></tr></tbody></table>
+
+本质上，jobject **参数**已变为 jclass **参数**。此**参数**是指向 MyNative.class 的一个句柄。main 方法可更改为以下形式：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp; public static void main(String[] args )</p><p align="left">&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp; System.out.println(MyNative.hypotenuse( 3, 4) );</p><p align="left">&nbsp;&nbsp;&nbsp; System.out.println(MyNative.hypotenuse( 9, 12) );</p><p align="left">&nbsp; }</p></td></tr></tbody></table>
+
+因为方法是静态的，所以调用它不需要实例化 MyNative 对象。本文后面的示例将使用静态方法。
+
+### 示例 4 -- 传递数组
+
+本例说明如何传递**数组**型**参数**。本例使用一个基本类型，boolean，并将更改**数组**元素。下一个示例将访问 String（非基本类型）**数组**。将下面的方法添加到 MyNative.java 源代码中：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp; public static void setArray(boolean[] ba )</p><p align="left">&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp; for(int i=0; i &lt; ba.length; i++)</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ba[i] = true;</p><p align="left">&nbsp;&nbsp;&nbsp; setArray0(ba);</p><p align="left">&nbsp; }</p><p align="left">&nbsp; ...</p><p align="left">&nbsp; private static native void setArray0(boolean[] ba );</p></td></tr></tbody></table>
+
+在本例中，布尔型**数组**被初始化为 true，本地方法将把特定的元素设置为 false。同时，在 Java 源代码中，我们可以更改 main 以使其包含测试代码：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp;&nbsp;&nbsp; boolean[] ba = new boolean[5];</p><p align="left">&nbsp;&nbsp;&nbsp; MyNative.setArray(ba);</p><p align="left">&nbsp;&nbsp;&nbsp; for(int i=0; i &lt; ba.length; i++)</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println(ba[i] );</p></td></tr></tbody></table>
+
+在编译源代码并执行 javah 以后，MyNative.h 头文件包含以下的原型：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">/*</p><p align="left">&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; MyNative</p><p align="left">&nbsp;* Method:&nbsp;&nbsp;&nbsp; setArray0</p><p align="left">&nbsp;* Signature: ([Z)V</p><p align="left">&nbsp;*/</p><p align="left">JNIEXPORT void JNICALL Java_MyNative_setArray0</p><p align="left">&nbsp; (JNIEnv *, jclass, jbooleanArray);</p></td></tr></tbody></table>
+
+请注意，布尔型**数组**是作为单个名为 jbooleanArray 的类型创建的。  
+基本类型有它们自已的**数组**类型，如 jintArray 和 jcharArray。  
+非基本类型的**数组**使用 jobjectArray 类型。下一个示例中包括一个 jobjectArray。这个布尔**数组**的**数组**元素是通过 **JNI** 方法 GetBooleanArrayElements 来访问的。  
+针对每种基本类型都有等价的方法。这个本地方法是如下实现的：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">JNIEXPORT void JNICALL Java_MyNative_setArray0</p><p align="left">&nbsp; (JNIEnv *env, jclass cls, jbooleanArray ba)</p><p align="left">{</p><p align="left">&nbsp; jboolean* pba = (*env)-&gt;GetBooleanArrayElements( env, ba, 0 );</p><p align="left">&nbsp; jsize len = (*env)-&gt;GetArrayLength(env, ba);</p><p align="left">&nbsp; int i=0;</p><p align="left">&nbsp; // 更改偶数<strong>数组</strong>元素</p><p align="left">&nbsp; for(i=0; i &lt; len; i+=2)</p><p align="left">&nbsp;&nbsp;&nbsp; pba[i] = <strong>JNI</strong>_FALSE;</p><p align="left">&nbsp; (*env)-&gt;ReleaseBooleanArrayElements( env, ba, pba, 0 );</p><p align="left">}</p></td></tr></tbody></table>
+
+指向布尔型**数组**的指针可以使用 GetBooleanArrayElements 获得。  
+**数组**大小可以用 GetArrayLength 方法获得。使用 ReleaseBooleanArrayElements 方法释放**数组**。现在就可以读取和修改**数组**元素的值了。jsize 声明等价于 jint（要查看它的定义，请参阅 JDK 的 include 目录下的 **jni**.h 头文件）。
+
+### 示例 5 -- 传递 Java String 数组
+
+本例将通过最常用的非基本类型，Java String，说明如何访问非基本对象的**数组**。字符串**数组**被传递给本地方法，而本地方法只是将它们显示到控制台上。  
+MyNative 类定义中添加了以下几个方法：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp; public static void showStrings(String[] sa )</p><p align="left">&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp; showStrings0(sa);</p><p align="left">&nbsp; }</p><p align="left">&nbsp; private static void showStrings0(String[] sa );</p></td></tr></tbody></table>
+
+并在 main 方法中添加了两行进行测试：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp; String[] sa = new String[] { "Hello,", "world!", "<strong>JNI</strong>","is","fun." };</p><p align="left">&nbsp; MyNative.showStrings(sa);</p></td></tr></tbody></table>
+
+本地方法分别访问每个元素，其实现如下所示。
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">JNIEXPORT void JNICALL Java_MyNative_showStrings0</p><p align="left">&nbsp; (JNIEnv *env, jclass cls, jobjectArray sa)</p><p align="left">{</p><p align="left">&nbsp; int len = (*env)-&gt;GetArrayLength( env, sa );</p><p align="left">&nbsp; int i=0;</p><p align="left">&nbsp; for(i=0; i &lt; len; i++)</p><p align="left">&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp; jobject obj = (*env)-&gt;GetObjectArrayElement(env, sa, i);</p><p align="left">&nbsp;&nbsp;&nbsp; jstring str = (jstring)obj;</p><p align="left">&nbsp;&nbsp;&nbsp; const char* szStr = (*env)-&gt;GetStringUTFChars( env, str, 0 );</p><p align="left">&nbsp;&nbsp;&nbsp; printf("%s", szStr);</p><p align="left">&nbsp;&nbsp;&nbsp; (*env)-&gt;ReleaseStringUTFChars( env, str, szStr );</p><p align="left">&nbsp; }</p><p align="left">&nbsp; printf("\n");</p><p align="left">}</p></td></tr></tbody></table>
+
+**数组**元素可以通过 GetObjectArrayElement 访问。
+
+在本例中，我们知道返回值是 jstring 类型，所以可以安全地将它从 jobject 类型转换为 jstring 类型。字符串是通过前面讨论过的方法打印的。有关在 Windows 中处理 Java 字符串的信息，请参阅标题为 NLS Strings and **JNI** 的一篇论文。
+
+### 示例 6 -- 返回 Java String 数组
+
+最后一个示例说明如何在本地代码中创建一个字符串**数组**并将它返回给 Java 调用者。MyNative.java 中添加了以下几个方法：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp; public static String[] getStrings()</p><p align="left">&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp; return getStrings0();</p><p align="left">&nbsp; }</p><p align="left">&nbsp; private static native String[] getStrings0();</p></td></tr></tbody></table>
+
+更改 main 以使 showStrings 将 getStrings 的输出显示出来：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp; MyNative.showStrings(MyNative.getStrings() );</p></td></tr></tbody></table>
+
+实现的本地方法返回五个字符串。
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">JNIEXPORT jobjectArray JNICALL Java_MyNative_getStrings0</p><p align="left">&nbsp; (JNIEnv *env, jclass cls)</p><p align="left">{</p><p align="left">&nbsp; jstring&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; str;</p><p align="left">&nbsp; jobjectArray args = 0;</p><p align="left">&nbsp; jsize&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; len = 5;</p><p align="left">&nbsp; char*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sa[] = { "Hello,", "world!", "<strong>JNI</strong>","is","fun" };</p><p align="left">&nbsp; int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i=0;</p><p align="left">&nbsp; args = (*env)-&gt;NewObjectArray(env, len, (*env)-&gt;FindClass(env, "java/lang/String"), 0);</p><p align="left">&nbsp; for(i=0; i &lt; len; i++)</p><p align="left">&nbsp; {</p><p align="left">&nbsp;&nbsp;&nbsp; str = (*env)-&gt;NewStringUTF( env, sa[i] );</p><p align="left">&nbsp;&nbsp;&nbsp; (*env)-&gt;SetObjectArrayElement(env, args, i, str);</p><p align="left">&nbsp; }</p><p align="left">&nbsp; return args;</p><p align="left">}</p></td></tr></tbody></table>
+
+字符串**数组**是通过调用 NewObjectArray 创建的，同时传递了 String 类和**数组**长度两个**参数**。Java String 是使用 NewStringUTF 创建的。String 元素是使用 SetObjectArrayElement 存入**数组**中的。
+
+2. 调试
+-----
+
+现 在您已经为您的应用程序创建了一个本地 DLL，但在调试时还要牢记以下几点。如果使用 Java 调试器 java_g.exe，则还需要创建 DLL 的一个 “调试” 版本。这只是表示必须创建同名但带有一个 _g 后缀的 DLL 版本。就 MyNative.dll 而言，使用 java_g.exe 要求在 Windows 的 PATH 环境指定的路径中有一个 MyNative_g.dll 文件。在大多数情况下，这个 DLL 可以通过将原文件重命名或复制为其名称带缀 _g 的文件。
+
+现在，Java 调试器不允许您进入本地代码，但您可以在 Java 环境外使用 C 调试器（如 Microsoft Visual C++）调试本地方法。首先将源文件导入一个项目中。  
+将编译设置调整为在编译时将 include 目录包括在内：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp;c:\jdk1.1.6\include;c:\jdk1.1.6\include\win32&nbsp;</p></td></tr></tbody></table>
+
+将配置设置为以调试模式编译 DLL。在 Project Settings 中的 Debug 下，将可执行文件设置为 java.exe（或者 java_g.exe，但要确保您生成了一个 _g.dll 文件）。程序**参数**包括包含 main 的类名。如果在 DLL 中设置了断点，则当调用本地方法时，执行将在适当的地方停止。
+
+下面是设置一个 Visual C++ 6.0 项目来调试本地方法的步骤。
+
+1.  在 Visual C++ 中创建一个 Win32 DLL 项目，并将 .c 和 .h 文件添加到这个项目中。
+
+*   在 Tools 下拉式菜单的 Options 设置下设置 JDK 的 include 目录。下面的对话框显示了这些目录。
+
+*   选择 Build 下拉式菜单下的 Build MyNative.dll 来建立这个项目。确保将项目的活动配置设置为调试（这通常是缺省值）。
+*   在 Project Settings 下，设置 Debug 选项卡来调用适当的 Java 解释器，如下所示：
+
+当执行这个程序时，忽略 “在 java.exe 中找不到任何调试信息” 的消息。当调用本地方法时，在 C 代码中设置的任何断点将在适当的地方停止 Java 程序的执行。
+
+3. 其他信息
+-------
+
+**JNI 方法和 C++**
+
+上面这些示例说明了如何在 C 源文件中使用 **JNI** 方法。如果使用 C++，则请将相应方法的格式从：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp;(*env)-&gt;JNIMethod( env, .... );&nbsp;</p></td></tr></tbody></table>
+
+更改为：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">&nbsp;env-&gt;JNIMethod(...);&nbsp;</p></td></tr></tbody></table>
+
+在 C++ 中，**JNI** 函数被看作是 JNIEnv 类的成员方法。
+
+**字符串和国家语言支持**
+
+本文中使用的技术用 UTF 方法来转换字符串。使用这些方法只是为了方便起见，如果应用程序需要国家语言支持 (NLS)，则不能使用这些方法。有关在 Windows 和 NLS 环境中处理 Java 字符串正确方法，请参标题为 NLS Strings and **JNI** 的一篇论文。
+
+4. 小结
+
+本文提供的示例用最常用的数据类据（如 jint 和 jstring）说明了如何实现本地方法，并讨论了 Windows 特定的几个问题，如显示字符串。本文提供的示例并未包括全部 **JNI**，**JNI** 还包括其他**参数**类型，如 jfloat、jdouble、jshort、jbyte 和 jfieldID，以及用来处理这些类型的方法。有关这个主题的详细信息，请参阅 Sun Microsystems 提供的 Java 本地接口规范。
+
+5. 关于作者:    David Wendt 是 IBM WebSphere Studio 的一名程序员，该工作室位于北卡罗莱纳州的 Research Triangle Park。可以通过 wendt@us.ibm.com 与他联系。
+
+Chap11:JNI 编程系列之基础篇
+===================
+
+编程技术   2008-12-06 19:50   阅读 2   评论 0
+
+字号： 大  中  小
+
+JNI 编程系列之基础篇
+
+最近干一个活需要从 Java 调用 C++ 编译的动态链接库，研究了一下 JNI，现在将网上搜罗的文档和自己的体会贡献出来。
+
+JNI 的做法是：通过在方法前加上关键字 native 来识别本地方法，然后用本地语言 (如 C，C++) 来实现该方法，并编译成动态链接库，在 Java 的类中调用该动态链接库，然后就可以像使用 Java 自己的方法一样使用 native 方法了。这样做的好处是既具有了 Java 语言的便利性，又具有了 C 语言的效率；另一个好处是可以利用已有的 C 代码，避免重复开发。
+
+下面从最简单的 JNI 程序入手，介绍如何进行 JNI 编程。
+
+下面是一个简单的 Java 程序 HelloWorld.java，
+
+class HelloWorld {
+
+private native void print();
+
+public static void main(String[] args) {
+
+new HelloWorld().print();
+
+}
+
+static {
+
+System.loadLibrary("HelloWorld");
+
+}
+
+}
+
+在这个例子中，注意到两个关键的地方。
+
+首先是第二行
+
+private native void print();
+
+如果没有 native 关键字，这一行代码就是普通 Java 方法的声明。关键字 native 表明这是一个用本地语言实现的方法。
+
+第二个地方是
+
+System.loadLibrary("HelloWorld");
+
+这行代码的作用是调用名为 HelloWorld 的动态链接库，在 Windows 下，是 HelloWorld.dll，在 Linux 下是 HelloWorld.so。
+
+显然现在这个 Java 程序是不能运行的。要运行它先要做下面的工作。执行
+
+> javac HelloWorld.java
+
+> javah -jni HelloWorld
+
+执行完这两条语句之后，会生成一个名为 HelloWorld.h 的文件，它的内容应该是这样的，
+
+/* DO NOT EDIT THIS FILE - it is machine generated */
+
+#include <jni.h>
+
+/* Header for class HelloWorld */
+
+#ifndef _Included_HelloWorld
+
+#define _Included_HelloWorld
+
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
+
+/*
+
+* Class:     HelloWorld
+
+* Method:    print
+
+* Signature: ()V
+
+*/
+
+JNIEXPORT void JNICALL Java_HelloWorld_print (JNIEnv *, jobject);
+
+#ifdef __cplusplus
+
+}
+
+#endif
+
+#endif
+
+注意到在这个程序的开头有这样一行代码，
+
+#include <jni.h>
+
+这里的 jni.h，只要你安装了 JDK 就能在安装目录下找到它。
+
+不要修改这个文件的内容，现在要做的是写一个名为 HelloWorld.cpp 程序，实现上面这个. h 文件里的函数，
+
+//------------
+
+#include "HelloWorld.h"
+
+#include <iostream>
+
+JNIEXPORT void JNICALL Java_HelloWorld_print (JNIEnv *, jobject) {
+
+std::cout << "Hello World!" << std::endl;
+
+}
+
+//--------------
+
+这是一个最简单的 C++ 程序。将它编译为动态链接库，我们得到 HelloWorld.dll，将这个. dll 文件拷到 HelloWorld.java 文件所在的目录下。执行
+
+> java HelloWorld
+
+你会看到屏幕上输出
+
+> Hello World!
+
+现在来总结一下，要实现 JNI 编程，需要以下几个步骤：
+
+1. 写一个 Java 程序，将你希望用 C 语言实现的方法用 native 关键字标识出来，同时加上调用动态链接库的语句。
+
+   System.loadLibrary("HelloWorld");
+
+2. 执行下面两条语句，生成. h 文件
+
+   > javac HelloWorld.java
+
+在 class 或 bin 目录下 (其下或其子目录下有 javac 命令生成的 *.class 文件) 执行
+
+   > javah -jni HelloWorld
+
+3. 根据. h 文件，写一个. cpp 程序，编译成动态链接库，并将其复制到. java 文件所在的路径下。
+
+4. 执行 java HelloWorld
+
+这样，就学会了最简单的 JNI 编程，网上能 google 到的大部分文章也就到此为止了。但是你一定还有很多疑问，就像我刚开始一样，最容易想到的就是，如果本地方法要传递参数或者返回值怎么办？本地方法的定义在. java 文件中，参数或者返回值的类型都是 Java 的类型。而它的实现是通过 C 程序完成的，参数和返回值的类型只能是 C 的类型。诸如此类的问题，上面这个简单的例子是回答不了的。在下一篇，我将解释这些问题。
+
+Chap12:JNI 编程系列之中级篇（上）
+======================
+
+编程技术   2008-12-06 23:41   阅读 9   评论 0
+
+字号： 大  中  小
+
+本篇将介绍在 JNI 编程中如何传递参数和返回值。
+
+首先要强调的是，native 方法不但可以传递 Java 的基本类型做参数，还可以传递更复杂的类型，比如 String，数组，甚至自定义的类。这一切都可以在 jni.h 中找到答案。
+
+1. Java 基本类型的传递
+
+用过 Java 的人都知道，Java 中的基本类型包括 boolean，byte，char，short，int，long，float，double 这样几种，如果你用这几种类型做 native 方法的参数，当你通过 javah -jni 生成. h 文件的时候，只要看一下生成的. h 文件，就会一清二楚，这些类型分别对应的类型是 jboolean，jbyte，jchar，jshort，jint，jlong，jfloat，jdouble 。这几种类型几乎都可以当成对应的 C++ 类型来用，所以没什么好说的。
+
+2. String 参数的传递
+
+Java 的 String 和 C++ 的 string 是不能对等起来的，所以处理起来比较麻烦。先看一个例子，
+
+//*****************
+
+class Prompt {
+
+// native method that prints a prompt and reads a line
+
+private native String getLine(String prompt);
+
+public static void main(String args[]) {
+
+Prompt p = new Prompt();
+
+String input = p.getLine("Type a line:");
+
+System.out.println("User typed:" + input);
+
+}
+
+static {
+
+System.loadLibrary("Prompt");
+
+}
+
+}
+
+//*****************
+
+在这个例子中，我们要实现一个 native 方法
+
+String getLine(String prompt);
+
+读入一个 String 参数，返回一个 String 值。
+
+通过执行 javah -jni 得到的头文件是这样的
+
+//*****************
+
+#include <jni.h>
+
+#ifndef _Included_Prompt
+
+#define _Included_Prompt
+
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
+
+JNIEXPORT jstring JNICALL Java_Prompt_getLine(JNIEnv *env, jobject this, jstring prompt);
+
+#ifdef __cplusplus
+
+}
+
+#endif
+
+#endif
+
+//*****************
+
+jstring 是 JNI 中对应于 String 的类型，但是和基本类型不同的是，jstring 不能直接当作 C++ 的 string 用。如果你用
+
+cout << prompt << endl;
+
+编译器肯定会扔给你一个错误信息的。
+
+其实要处理 jstring 有很多种方式，这里只讲一种我认为最简单的方式，看下面这个例子，
+
+//*****************
+
+#include "Prompt.h"
+
+#include <iostream>
+
+JNIEXPORT jstring JNICALL Java_Prompt_getLine(JNIEnv *env, jobject obj, jstring prompt)
+
+{
+
+const char* str;
+
+str = env->GetStringUTFChars(prompt, false);
+
+if(str == NULL) {
+
+return NULL; /* OutOfMemoryError already thrown */
+
+}
+
+std::cout << str << std::endl;
+
+env->ReleaseStringUTFChars(prompt, str);
+
+// return a string
+
+char* tmpstr = "return string succeeded";
+
+jstring rtstr = env->NewStringUTF(tmpstr);
+
+return rtstr;
+
+}
+
+//*****************
+
+在上面的例子中，作为参数的 prompt 不能直接被 C++ 程序使用，先做了如下转换
+
+str = env->GetStringUTFChars(prompt, false);
+
+将 jstring 类型变成一个 char * 类型。
+
+返回的时候，要生成一个 jstring 类型的对象，也必须通过如下命令，
+
+jstring rtstr = env->NewStringUTF(tmpstr);
+
+这里用到的 GetStringUTFChars 和 NewStringUTF 都是 JNI 提供的处理 String 类型的函数，还有其他的函数这里就不一一列举了。
+
+/****************************************************/
+
+JNI 编程系列之中级篇（下）
+
+编程技术   2008-12-06 23:44   阅读 7   评论 0  
+
+字号： 大  中  小
+
+3. 数组类型的传递
+----------
+
+和 String 一样，JNI 为 Java 基本类型的数组提供了 j*Array 类型，比如 int[] 对应的就是 jintArray。来看一个传递 int 数组的例子，Java 程序就不写了，
+
+//*******************
+
+JNIEXPORT jint JNICALL Java_IntArray_sumArray(JNIEnv *env, jobject obj, jintArray arr)
+
+{
+
+    jint *carr;
+
+    carr = env->GetIntArrayElements(arr, false);
+
+    if(carr == NULL) {
+
+        return 0; /* exception occurred */
+
+}
+
+    jint sum = 0;
+
+    for(int i=0; i<10; i++) {
+
+        sum += carr[i];
+
+}
+
+    env->ReleaseIntArrayElements(arr, carr, 0);
+
+    return sum;
+
+}
+
+//*******************
+
+这个例子中的 GetIntArrayElements 和 ReleaseIntArrayElements 函数就是 JNI 提供用于处理 int 数组的函数。如果试图用 arr[i] 的方式去访问 jintArray 类型，毫无疑问会出错。JNI 还提供了另一对函数 GetIntArrayRegion 和 ReleaseIntArrayRegion 访问 int 数组，就不介绍了，对于其他基本类型的数组，方法类似。
+
+4. 二维数组和 String 数组
+------------------
+
+在 JNI 中，二维数组和 String 数组都被视为 object 数组，因为数组和 String 被视为 object。仍然用一个例子来说明，这次是一个二维 int 数组，作为返回值。
+
+//*******************
+
+JNIEXPORT jobjectArray JNICALL Java_ObjectArrayTest_initInt2DArray(JNIEnv *env, jclass cls, int size)
+
+{
+
+    jobjectArray result;
+
+    jclass intArrCls = env->FindClass("[I");
+
+    result = env->NewObjectArray(size, intArrCls, NULL);
+
+    for (int i = 0; i < size; i++) {
+
+        jint tmp[256]; /* make sure it is large enough! */
+
+        jintArray iarr = env->NewIntArray(size);
+
+        for(int j = 0; j < size; j++) {
+
+            tmp[j] = i + j;
+
+        }
+
+        env->SetIntArrayRegion(iarr, 0, size, tmp);
+
+        env->SetObjectArrayElement(result, i, iarr);
+
+        env->DeleteLocalRef(iarr);
+
+    }
+
+    return result;
+
+}
+
+//*******************
+
+上面代码中的第三行，
+
+jobjectArray result;
+
+因为要返回值，所以需要新建一个 jobjectArray 对象。
+
+jclass intArrCls = env->FindClass("[I");
+
+是创建一个 jclass 的引用，因为 result 的元素是一维 int 数组的引用，所以 intArrCls 必须是一维 int 数组的引用，这一点是如何保证的呢？注意 FindClass 的参数 "[I"，JNI 就是通过它来确定引用的类型的，I 表示是 int 类型，[标识是数组。对于其他的类型，都有相应的表示方法，
+
+Z boolean
+
+B byte
+
+C char
+
+S short
+
+I int
+
+J long
+
+F float
+
+D double
+
+String 是通过 “Ljava/lang/String;” 表示的，那相应的，String 数组就应该是“[Ljava/lang/String;”。
+
+还是回到代码，
+
+result = env->NewObjectArray(size, intArrCls, NULL);
+
+的作用是为 result 分配空间。
+
+jintArray iarr = env->NewIntArray(size);
+
+是为一维 int 数组 iarr 分配空间。
+
+env->SetIntArrayRegion(iarr, 0, size, tmp);
+
+是为 iarr 赋值。
+
+env->SetObjectArrayElement(result, i, iarr);
+
+是为 result 的第 i 个元素赋值。
+
+通过上面这些步骤，我们就创建了一个二维 int 数组，并赋值完毕，这样就可以做为参数返回了。
+
+如果了解了上面介绍的这些内容，基本上大部分的任务都可以对付了。虽然在操作数组类型，尤其是二维数组和 String 数组的时候，比起在单独的语言中编程要麻烦，但既然我们享受了跨语言编程的好处，必然要付出一定的代价。
+
+有一点要补充的是，本文所用到的函数调用方式都是针对 C++ 的，如果要在 C 中使用，所有的 env-> 都要被替换成 (*env)->，而且后面的函数中需要增加一个参数 env，具体请看一下 jni.h 的代码。另外还有些省略的内容，可以参考 JNI 的文档：Java Native Interface 6.0 Specification，在 JDK 的文档里就可以找到。如果要进行更深入的 JNI 编程，需要仔细阅读这个文档。接下来的高级篇，也会讨论更深入的话题。
+
+Chap13:JNI 编程系列之高级篇
+===================
+
+编程技术   2008-12-10 17:08   阅读 6   评论 0
+
+字号： 大  中  小
+
+在本篇中，将会涉及关于 JNI 编程更深入的话题，包括：在 native 方法中访问 Java 类的域和方法，将 Java 中自定义的类作为参数和返回值传递等等。了解这些内容，将会对 JNI 编程有更深入的理解，写出的程序也更清晰，易用性更好。
+
+1. 在一般的 Java 类中定义 native 方法
+---------------------------
+
+在前两篇的例子中，都是将 native 方法放在 main 方法的 Java 类中，实际上，完全可以在任何类中定义 native 方法。这样，对于外部来说，这个类和其他的 Java 类没有任何区别。
+
+2. 访问 Java 类的域和方法
+-----------------
+
+native 方法虽然是 native 的，但毕竟是方法，那么就应该同其他方法一样，能够访问类的私有域和方法。实际上，JNI 的确可以做到这一点，我们通过几个例子来说明，
+
+public class ClassA {
+
+String str_ = "abcde";
+
+int number_;
+
+public native void nativeMethod();
+
+private void javaMethod() {
+
+System.out.println("call java method succeeded");
+
+}
+
+static {
+
+System.loadLibrary("ClassA");
+
+}
+
+}
+
+在这个例子中，我们在一个没有 main 方法的 Java 类中定义了 native 方法。我们将演示如何在 nativeMethod() 中访问域 str_，number_和方法 javaMethod()，nativeMethod() 的 C++ 实现如下，
+
+JNIEXPORT void JNICALL Java_testclass_ClassCallDLL_nativeMethod(JNIEnv *env, jobject obj)
+
+{
+
+// access field
+
+jclass cls = env->GetObjectClass(obj);
+
+jfieldID fid = env->GetFieldID(cls, "str_", "Ljava/lang/String;");
+
+jstring jstr = (jstring)env->GetObjectField(obj, fid);
+
+const char *str = env->GetStringUTFChars(jstr, false);
+
+if(std::string(str) == "abcde")
+
+std::cout << "access field succeeded" << std::endl;
+
+jint i = 2468;
+
+fid = env->GetFieldID(cls, "number_", "I");
+
+env->SetIntField(obj, fid, i);
+
+// access method
+
+jmethodID mid = env->GetMethodID(cls, "javaMethod", "()V");
+
+env->CallVoidMethod(obj, mid);
+
+}
+
+上面的代码中，通过如下两行代码获得 str_的值，
+
+jfieldID fid = env->GetFieldID(cls, "str_", "Ljava/lang/String;");
+
+jstring jstr = (jstring)env->GetObjectField(obj, fid);
+
+第一行代码获得 str_的 id，在 GetFieldID 函数的调用中需要指定 str_的类型，第二行代码通过 str_的 id 获得它的值，当然我们读到的是一个 jstring 类型，不能直接显示，需要转化为 char * 类型。
+
+接下来我们看如何给 Java 类的域赋值，看下面两行代码，
+
+fid = env->GetFieldID(cls, "number_", "I");
+
+env->SetIntField(obj, fid, i);
+
+第一行代码同前面一样，获得 number_的 id，第二行我们通过 SetIntField 函数将 i 的值赋给 number_，其他类似的函数可以参考 JDK 的文档。
+
+访问 javaMethod() 的过程同访问域类似，
+
+jmethodID mid = env->GetMethodID(cls, "javaMethod", "()V");
+
+env->CallVoidMethod(obj, mid);
+
+需要强调的是，在 GetMethodID 中，我们需要指定 javaMethod 方法的类型，域的类型很容易理解，方法的类型如何定义呢，在上面的例子中，我们用的是 ()V，V 表示返回值为空，() 表示参数为空。如果是更复杂的函数类型如何表示？看一个例子，
+
+long f (int n, String s, int[] arr);
+
+这个函数的类型符号是 (ILjava/lang/String;[I)J，I 表示 int 类型，Ljava/lang/String; 表示 String 类型，[I 表示 int 数组，J 表示 long。这些都可以在文档中查到。
+
+3. 在 native 方法中使用用户定义的类
+-----------------------
+
+JNI 不仅能使用 Java 的基础类型，还能使用用户定义的类，这样灵活性就大多了。大体上使用自定义的类和使用 Java 的基础类 (比如 String) 没有太大的区别，关键的一点是，如果要使用自定义类，首先要能访问类的构造函数，看下面这一段代码，我们在 native 方法中使用了自定义的 Java 类 ClassB，
+
+jclass cls = env->FindClass("Ltestclass/ClassB;");
+
+jmethodID id = env->GetMethodID(cls, "<init>", "(D)V");
+
+jdouble dd = 0.033;
+
+jvalue args[1];
+
+args[0].d = dd;
+
+jobject obj = env->NewObjectA(cls, id, args);
+
+首先要创建一个自定义类的引用，通过 FindClass 函数来完成，参数同前面介绍的创建 String 对象的引用类似，只不过类名称变成自定义类的名称。然后通过 GetMethodID 函数获得这个类的构造函数，注意这里方法的名称是 "<init>"，它表示这是一个构造函数。
+
+jobject obj = env->NewObjectA(cls, id, args);
+
+生成了一个 ClassB 的对象，args 是 ClassB 的构造函数的参数，它是一个 jvalue * 类型。
+
+通过以上介绍的三部分内容，native 方法已经看起来完全像 Java 自己的方法了，至少主要功能上齐备了，只是实现上稍麻烦。而了解了这些，JNI 编程的水平也更上一层楼。下面要讨论的话题也是一个重要内容，至少如果没有它，我们的程序只能停留在演示阶段，不具有实用价值。
+
+4. 异常处理
+-------
+
+在 C++ 和 Java 的编程中，异常处理都是一个重要的内容。但是在 JNI 中，麻烦就来了，native 方法是通过 C++ 实现的，如果在 native 方法中发生了异常，如何传导到 Java 呢？
+
+JNI 提供了实现这种功能的机制。我们可以通过下面这段代码抛出一个 Java 可以接收的异常，
+
+jclass errCls;
+
+env->ExceptionDescribe();
+
+env->ExceptionClear();
+
+errCls = env->FindClass("java/lang/IllegalArgumentException");
+
+env->ThrowNew(errCls, "thrown from C++ code");
+
+如果要抛出其他类型的异常，替换掉 FindClass 的参数即可。这样，在 Java 中就可以接收到 native 方法中抛出的异常。
+
+至此，JNI 编程系列的内容就完全结束了，这些内容都是本人的原创，通过查阅文档和网上的各种文章总结出来的，相信除了 JDK 的文档外，没有比这更全面的讲述 JNI 编程的文章了。当然，限于篇幅，有些地方不可能讲的很细。限于水平，也可能有一些错误。文中所用的代码，都亲自编译执行过。希望这些内容能为需要的朋友提供帮助，毕竟，分享是一种美德。
+
+Chap14: 如何在 C/C++ 中调用 Java
+==========================
+
+作者：刘冬 发文时间：2003.02.17
+
+Java 跨平台的特性使 Java 越来越受开发人员的欢迎，但也往往会听到不少的抱怨：用 Java 开发的图形用户窗口界面每次在启动的时候都会跳出 一个控制台窗口，这个控制台窗口让本来非常棒的界面失色不少。怎么能够让通过 Java 开发的 GUI 程序不弹出 Java 的控制台窗口呢？其实现在很多流行的 开发环境例如 JBuilder、Eclipse 都是使用纯 Java 开发的集成环境。这些集成环境启动的时候并不会打开一个命令窗口，因为它使用了 JNI（Java Native Interface）的技术。通过这种技术，开发人员不一定要用命令行来启动 Java 程序，可以    通过编写一个本地 GUI 程序直接启动 Java 程序，这样就可避免另外打开一个命令窗口，让开发的 Java 程序更加专业。
+
+JNI 允许运行在虚拟机的 Java 程序能够与其它语言（例如 C 和 C++）编写的程序或者类库进行相互间的调用。同时 JNI 提供的一整套的 API，允许将 Java 虚拟机直接嵌入到本地的应用程序中。图 1 是 Sun 站点上对 JNI 的基本结构的描述。
+
+图 1 JNI 基本结构描述图
+
+本文将介绍如何在 C/C++ 中调用 Java 方法，并结合可能涉及到的问题介绍整个开发的步骤及可能遇到的难题和解决方法。本文所采用的工具是 Sun 公司创建的 Java Development Kit (JDK) 版本 1.3.1，以及微软公司的 Visual C++ 6 开发环境。
+
+1. 环境搭建
+-------
+
+为了让本文以下部分的代码能够正常工作，我们必须建立一个完整的开发环境。首先需要下载并安装 JDK 1.3.1，其下载地址为 “[http://java.sun.com](http://java.sun.com/)”。假设安装路径为 C：\JDK。下一步就是设置集成开发环境，通过 Visual C++ 6 的菜单 Tools→Options 打开选项对话框如图 2。  
+  
+
+图 2 设置集成开发环境图  
+  
+
+  
+将目录 C:\JDK\include 和 C:\JDK\include\win32 加入到开发环境的 Include Files 目录中，
+
+同时将 C: \JDK\lib 目录添加到开发环境的 Library Files 目录中。这三个目录是 JNI 定义的一些常量、结构及方法的头文件和库文件。
+
+集成开发环境 已经设置完毕，同时为了执行程序需要把 Java 虚拟机所用到的动态链接库所在的目录 C:\JDK \jre\bin\classic 设置到系统的 Path 环境变量中。这里需要提出的是，某些开发人员为了方便直接将 JRE 所用到的 DLL 文件直接拷贝到系统目录下。这样做是不行的，将导致初始化 Java 虚拟机 环境失败（返回值 - 1），原因是 Java 虚拟机是以相对路径来寻找所用到的库文件和其它一些相关文件的。
+
+至此整个 JNI 的开发环境设置完毕，为了让此次 JNI 旅程能够顺利进行，还必须先准备一个 Java 类。在这个类中将用到 Java 中几乎所有有代表性的属性及方法，如静态方法与属性、数组、异常抛出与捕 捉等。我们定义的 Java 程序 (Demo.java) 如下，本文中所有的代码演示都将基于该 Java 程序，代码如下：  
+  
+package jni.test;
+
+/**
+
+ * 该类是为了演示 JNI 如何访问各种对象属性等
+
+ * @author liudong
+
+ */
+
+public class Demo {  
+
+ // 用于演示如何访问静态的基本类型属性
+
+ public static int COUNT = 8;
+
+ // 演示对象型属性
+
+ public String msg;  
+ private int[] counts;  
+ public Demo() {  
+ this("缺省构造函数");  
+ }  
+ /**  
+  * 演示如何访问构造器  
+  */  
+ public Demo(String msg) {  
+  System.out.println("<init>:" + msg);  
+  this.msg = msg;  
+  this.counts = null;  
+ }  
+ /**  
+  * 该方法演示如何访问一个访问以及中文字符的处理  
+  */  
+ public String getMessage() {  
+  return msg;  
+ }
+
+ /**
+
+  * 演示数组对象的访问
+
+  */  
+ public int[] getCounts() {  
+  return counts;  
+ }  
+ /**  
+  * 演示如何构造一个数组对象  
+ */  
+ public void setCounts(int[] counts) {  
+  this.counts = counts;  
+ }  
+ /**  
+  * 演示异常的捕捉  
+ */  
+ public void throwExcp() throws IllegalAccessException {
+
+  throw new IllegalAccessException("exception occur.");
+
+ }
+
+}
+
+2. 初始化虚拟机
+---------
+
+本地代码在调用 Java 方法之前必须先加载 Java 虚拟机，而后所有的 Java 程序都在虚拟机中执行。
+
+为了初始化 Java 虚拟机，JNI 提供了 一系列的接口函数 Invocation API。通过这些 API 可以很方便地将虚拟机加载到内存中。创建虚拟机可以用函 数 jint JNI_CreateJavaVM(JavaVM **pvm, void **penv, void *args)。对于这个函数有一点 需要注意的是，在 JDK 1.1 中第三个参数总是指向一个结构 JDK1_ 1InitArgs，这个结构无法完全在所有版本的虚拟机中进行无缝移植。在 JDK 1.2 中已经使用了一个标准的初始化结构 JavaVMInitArgs 来替代 JDK1_1InitArgs。下面我们分别给出两种不同版本的示例 代码。  
+  
+在 JDK 1.1 初始化虚拟机:
+
+#include <jni.h>  
+int main() {  
+ JNIEnv *env;  
+ JavaVM *jvm;  
+ JDK1_1InitArgs vm_args;  
+ jint res;  
+ /* IMPORTANT: 版本号设置一定不能漏 */  
+ vm_args.version = 0x00010001;  
+ /* 获取缺省的虚拟机初始化参数 */  
+ JNI_GetDefaultJavaVMInitArgs(&vm_args);  
+ /* 添加自定义的类路径 */  
+ sprintf(classpath, "%s%c%s",  
+ vm_args.classpath, PATH_SEPARATOR, USER_CLASSPATH);  
+ vm_args.classpath = classpath;  
+ /* 设置一些其他的初始化参数 */  
+ /* 创建虚拟机 */  
+ res = JNI_CreateJavaVM(&jvm,&env,&vm_args);  
+ if (res < 0) {  
+  fprintf(stderr, "Can't create Java VM\n");  
+  exit(1);  
+ }  
+ /* 释放虚拟机资源 */  
+ (*jvm)->DestroyJavaVM(jvm);  
+}  
+  
+
+JDK 1.2 初始化虚拟机：
+
+/* invoke2.c */  
+#include <jni.h>  
+int main() {  
+ int res;  
+ JavaVM *jvm;  
+ JNIEnv *env;  
+ JavaVMInitArgs vm_args;  
+ JavaVMOption options[3];  
+ vm_args.version=JNI_VERSION_1_2;// 这个字段必须设置为该值  
+ /* 设置初始化参数 */  
+ options[0].optionString = "-Djava.compiler=NONE";   
+ options[1].optionString = "-Djava.class.path=.";   
+ options[2].optionString = "-verbose:jni"; // 用于跟踪运行时的信息  
+ /* 版本号设置不能漏 */  
+ vm_args.version = JNI_VERSION_1_2;  
+ vm_args.nOptions = 3;  
+ vm_args.options = options;  
+ vm_args.ignoreUnrecognized = JNI_TRUE;  
+ res = JNI_CreateJavaVM(&jvm, (void**)&env, &vm_args);  
+ if (res < 0) {  
+  fprintf(stderr, "Can't create Java VM\n");  
+  exit(1);  
+ }     
+ (*jvm)->DestroyJavaVM(jvm);  
+ fprintf(stdout, "Java VM destory.\n");  
+}  
+  
+  
+  
+为了保证 JNI 代码的可移植性，建议使用 JDK 1.2 的方法来创建虚拟机。JNI_CreateJavaVM 函数的第二个参数 JNIEnv *env，就是贯穿整个 JNI 始末的一个参数，因为几乎所有的函数都要求一个参数就是 JNIEnv *env。  
+  
+
+3. 访问类方法
+--------
+
+初始化了 Java 虚拟机后，就可以开始调用 Java 的方法。要调用一个 Java 对象的方法必须经过几个步骤：
+
+### 3.1. 获取指定对象的类定义 (jclass)
+
+有两种途径来获取对象的类定义：
+
+第一种是在已知类名的情况下使用 FindClass 来查找对应的类。但是要注意类名并不同于平时写的 Java 代码，例如要得到类 jni.test.Demo 的定义必须调用如下代码：  
+jclass cls = (*env)->FindClass(env, "jni/test/Demo"); // 把点号换成斜杠
+
+  
+然后通过对象直接得到其所对应的类定义：
+
+jclass cls = (*env)-> GetObjectClass(env, obj); // 其中 obj 是要引用的对象，类型是 jobject
+
+### 3.2. 读取要调用方法的定义 (jmethodID)
+
+我们先来看看 JNI 中获取方法定义的函数：  
+  
+jmethodID (JNICALL *GetMethodID)(JNIEnv *env, jclass clazz, const char *name,   
+const char *sig);  
+jmethodID (JNICALL *GetStaticMethodID)(JNIEnv *env, jclass class, const char   
+*name, const char *sig);
+
+这两个函数的区别在于 GetStaticMethodID 是用来获取静态方法的定义，GetMethodID 则是获取非静态的方法定义。这两个函 数都需要提供四个参数：env 就是初始化虚拟机得到的 JNI 环境；第二个参数 class 是对象的类定义，也就是第一步得到的 obj；第三个参数是方法名 称；最重要的是第四个参数，这个参数是方法的定义。因为我们知道 Java 中允许方法的多态，仅仅是通过方法名并没有办法定位到一个具体的方法，因此需要第 四个参数来指定方法的具体定义。但是怎么利用一个字符串来表示方法的具体定义呢？JDK 中已经准备好一个反编译工具 javap，通过这个工具就可以得到类 中每个属性、方法的定义。下面就来看看 jni.test.Demo 的定义：
+
+打开命令行窗口并运行 javap -s -p jni.test.Demo 得到运行结果如下：  
+  
+Compiled from Demo.java  
+public class jni.test.Demo extends java.lang.Object {  
+ public static int COUNT;  
+ /*   I   */  
+ public java.lang.String msg;  
+ /*   Ljava/lang/String;   */  
+ private int counts[];  
+ /*   [I   */  
+ public jni.test.Demo();  
+ /*   ()V   */  
+ public jni.test.Demo(java.lang.String);  
+ /*   (Ljava/lang/String;)V   */  
+ public java.lang.String getMessage();  
+ /*   ()Ljava/lang/String;   */  
+ public int getCounts()[];  
+ /*   ()[I   */  
+ public void setCounts(int[]);  
+ /*   ([I)V   */  
+ public void throwExcp() throws java.lang.IllegalAccessException;  
+ /*   ()V   */  
+ static {};  
+ /*   ()V   */  
+}  
+  
+
+我们看到类中每个属性和方法下面都有一段注释。注释中不包含空格的内容就是第四个参数要填的内容 (关于 javap 具体参数请查询 JDK 的使用帮助)。下面这段代码演示如何访问 jni.test.Demo 的 getMessage 方法：
+
+/*  
+
+假设我们已经有一个 jni.test.Demo 的实例 obj   
+*/   
+
+jmethodID mid;
+
+jclass cls = (*env)-> GetObjectClass (env, obj); // 获取实例的类定义  
+mid=(*env)->GetMethodID( env,cls,"getMessage","()Ljava/lang/String;" );  
+/* 如果 mid 为 0 表示获取方法定义失败 */
+
+jstring msg = (*env)-> CallObjectMethod(env, obj, mid);
+
+/*  
+
+如果该方法是静态的方法那只需要将最后一句代码改为以下写法即可：  
+jstring msg = (*env)-> CallStaticObjectMethod(env, cls, mid);  
+*/
+
+### 3.3. 调用方法
+
+为了调用对象的某个方法，可以使用函数 Call<TYPE>Method 或者 CallStatic<TYPE>Method（访问类的静态方法），<TYPE > 根据不同的返回类型而定。这些方法都是使用可 变参数的定义，如果访问某个方法需要参数时，只需要把所有参数按照顺序填写到方法中就可以。在讲到构造函数的访问时，将演示如何访问带参数的构造函数。
+
+4 访问类属性
+-------
+
+访问类的属性与访问类的方法大体上是一致的，只不过是把方法变成属性而已。  
+  
+
+### 4.1. 获取指定对象的类 (jclass)
+
+这一步与访问类方法的第一步完全相同，具体使用参看访问类方法的第一步。  
+  
+
+### 4.2. 读取类属性的定义 (jfieldID)
+
+在 JNI 中是这样定义获取类属性的方法的：
+
+jfieldID (JNICALL *GetFieldID)
+
+(JNIEnv *env, jclass clazz, const char *name, const char *sig);
+
+jfieldID (JNICALL *GetStaticFieldID)
+
+(JNIEnv *env, jclass clazz, const char *name, const char *sig);
+
+这两个函数中第一个参数为 JNI 环境；clazz 为类的定义；name 为属性名称；第四个参数同样是为了表达属性的类型。前面我们使用 javap 工具获取类的详细定义的时候有这样两行：  
+  
+public java.lang.String msg;
+
+/*   Ljava/lang/String;   */
+
+其中第二行注释的内容就是第四个参数要填的信息，这跟访问类方法时是相同的。  
+  
+
+### 4.3. 读取和设置属性值
+
+有了属性的定义要访问属性值就很容易了。有几个方法用来读取和设置类的属性，它们是：Get<TYPE>Field、 Set<TYPE>Field、GetStatic<TYPE>Field、 SetStatic<TYPE>Field。比如读取 Demo 类的 msg 属性就可以用 GetObjectField，而访问 COUNT 用 GetStaticIntField，相关代码如下：  
+  
+jfieldID field = (*env)->GetFieldID(env,obj,"msg","Ljava/lang/String;");
+
+jstring msg = (*env)->GetObjectField(env, cls, field); //msg 就是对应 Demo 的 msg
+
+jfieldID field2 = (*env)->GetStaticFieldID(env,obj,"COUNT","I");
+
+jint count = (*env)->GetStaticIntField(env,cls,field2);
+
+5. 访问构造函数
+---------
+
+很多人刚刚接触 JNI 的时候往往会在这一节遇到问题，查遍了整个 jni.h 看到这样一个函数 NewObject，它应该是可以用来访问类的构造函 数。但是该函数需要提供构造函数的方法定义，其类型是 jmethodID。从前面的内容我们知道要获取方法的定义首先要知道方法的名称，但是构造函数的名 称怎么来填写呢？其实访问构造函数与访问一个普通的类方法大体上是一样的，惟一不同的只是方法名称不同及方法调用时不同而已。访问类的构造函数时方法名必 须填写 “<init>”。下面的代码演示如何构造一个 Demo 类的实例：
+
+jclass cls = (*env)->FindClass(env, "jni/test/Demo");
+
+/** 
+
+ 首先通过类的名称获取类的定义，相当于 Java 中的 Class.forName 方法
+
+*/
+
+if (cls == 0)   
+
+<error handler>
+
+jmethodID mid = (*env)->GetMethodID(env,cls,"<init>","(Ljava/lang/String;)V");
+
+if(mid == 0)  
+
+<error handler>
+
+jobject demo = (*env)->NewObject( env ,cls,mid,0 );
+
+/**
+
+ 访问构造函数必须使用 NewObject 的函数来调用前面获取的构造函数的定义
+
+ 上面的代码我们构造了一个 Demo 的实例并传一个空串 null
+
+*/
+
+6. 数组处理
+-------
+
+  
+6.1 创建一个新数组
+
+要创建一个数组，我们首先应该知道数组元素的类型及数组长度。JNI 定义了一批数组的类型 j<TYPE>Array 及数组操作的函数 New<TYPE>Array，其中 < TYPE > 就是数组中元素的类型。例如，要创建一个大小为 10 并且每个位置值分别为 1－10 的整数数组，编写代码如下：
+
+int i = 1;
+
+jintArray array; // 定义数组对象
+
+(*env)-> NewIntArray(env, 10);
+
+for(; i<= 10; i++) 
+
+(*env)->SetIntArrayRegion(env, array, i-1, 1, &i);
+
+6.2 访问数组中的数据
+
+访问数组首先应该知道数组的长度及元素的类型。现在我们把创建的数组中的每个元素值打印出来，代码如下：
+
+int i;
+
+/* 获取数组对象的元素个数 */
+
+int len = (*env)->GetArrayLength(env, array);
+
+/* 获取数组中的所有元素 */
+
+jint* elems = (*env)-> GetIntArrayElements(env, array, 0);
+
+for(i=0; i< len; i++)
+
+printf("ELEMENT %d IS %d\n", i, elems[i]);
+
+7. 中文处理
+-------
+
+  
+中文字符的处理往往是让人比较头疼的事情，特别是使用 Java 语言开发的软件，在 JNI 这个问题更加突出。由于 Java 中所有的字符都 是 Unicode 编码，但是在本地方法中，例如用 VC 编写的程序，如果没有特殊的定义一般都没有使用 Unicode 的编码方式。为了让本地方法能够访 问 Java 中定义的中文字符及 Java 访问本地方法产生的中文字符串，我定义了两个方法用来做相互转换。  
+  
+· 方法一，将 Java 中文字符串转为本地字符串  
+  
+
+/**
+
+第一个参数是虚拟机的环境指针
+
+第二个参数为待转换的 Java 字符串定义
+
+第三个参数是本地存储转换后字符串的内存块
+
+第三个参数是内存块的大小
+
+*/
+
+int JStringToChar(JNIEnv *env, jstring str, LPTSTR desc, int desc_len)
+
+{
+
+ int len = 0;
+
+ if(desc==NULL||str==NULL)
+
+ return -1;
+
+ // 在 VC 中 wchar_t 是用来存储宽字节字符 (UNICODE) 的数据类型
+
+ wchar_t *w_buffer = new wchar_t[1024];
+
+ ZeroMemory(w_buffer,1024*sizeof(wchar_t));
+
+ // 使用 GetStringChars 而不是 GetStringUTFChars
+
+ wcscpy(w_buffer,env->GetStringChars(str,0));
+
+ env->ReleaseStringChars(str,w_buffer);
+
+ ZeroMemory(desc,desc_len);
+
+ // 调用字符编码转换函数 (Win32 API) 将 UNICODE 转为 ASCII 编码格式字符串
+
+ // 关于函数 WideCharToMultiByte 的使用请参考 MSDN
+
+ len = WideCharToMultiByte(CP_ACP,0,w_buffer,1024,desc,desc_len,NULL,NULL);
+
+ //len = wcslen(w_buffer);
+
+ if(len>0 && len<desc_len)
+
+  desc[len]=0;
+
+ delete[] w_buffer;
+
+ return strlen(desc);
+
+}  
+  
+
+· 方法二，将 C 的字符串转为 Java 能识别的 Unicode 字符串
+
+  
+jstring NewJString(JNIEnv* env,LPCTSTR str)
+
+{
+
+ if(!env || !str)
+
+  return 0;
+
+ int slen = strlen(str);
+
+ jchar* buffer = new jchar[slen];
+
+ int len = MultiByteToWideChar(CP_ACP,0,str,strlen(str),buffer,slen);
+
+ if(len>0 && len < slen)
+
+  buffer[len]=0;
+
+ jstring js = env->NewString(buffer,len);
+
+ delete [] buffer;
+
+ return js;
+
+}
+
+8. 异常
+-----
+
+由于调用了 Java 的方法，因此难免产生操作的异常信息。这些异常没有办法通过 C++ 本身的异常处理机制来捕捉到，但 JNI 可以通过一些函数来获 取 Java 中抛出的异常信息。之前我们在 Demo 类中定义了一个方法 throwExcp，下面将访问该方法并捕捉其抛出来的异常信息，代码如下：
+
+/**  
+假设我们已经构造了一个 Demo 的实例 obj，其类定义为 cls  
+*/  
+jthrowable excp = 0; /* 异常信息定义 */  
+jmethodID mid=(*env)->GetMethodID(env,cls,"throwExcp","()V");  
+/* 如果 mid 为 0 表示获取方法定义失败 */  
+jstring msg = (*env)-> CallVoidMethod(env, obj, mid);  
+/* 在调用该方法后会有一个 IllegalAccessException 的异常抛出 */  
+excp = (*env)->ExceptionOccurred(env);  
+if(excp){   
+ (*env)->ExceptionClear(env);  
+ // 通过访问 excp 来获取具体异常信息  
+ /*
+
+在 Java 中，大部分的异常信息都是扩展类 java.lang.Exception，因此可以访问 excp 的 toString  
+或者 getMessage 来获取异常信息的内容。访问这两个方法同前面讲到的如何访问类的方法是相同的。
+
+ */
+
+}
+
+9. 线程和同步访问
+----------
+
+有些时候需要使用多线程的方式来访问 Java 的方法。我们知道一个 Java 虚拟机是非常消耗系统的内存资源，差不多每个虚拟机需要内存大约在 20MB 左右。为了节省资源要求每个线程使用的是同一个虚拟机，这样在整个的 JNI 程序中只需要初始化一个虚拟机就可以了。所有人都是这样想的，但是一旦 子线程访问主线程创建的虚拟机环境变量，系统就会出现错误对话框，然后整个程序终止。  
+  
+其实这里面涉及到两个概念，它们分别是虚拟机 (JavaVM *jvm) 和虚拟机环境（JNIEnv *env）。真正消耗大量系统资源的是 jvm 而不是 env，jvm 是允许多个线程访问的，但是 env 只能被创建它本身的线程所访问，而且每个线程必须创建自己的虚拟机环境 env。这时候会有人提出疑问，主线程在初始化虚拟机的时候就创建了虚拟机环境 env。为了让子线程能够创建自己的 env，JNI 提供了两个函数：**AttachCurrentThread** 和 DetachCurrentThread。下面代码就是子线程访问 Java 方法的框架：
+
+DWORD WINAPI ThreadProc(PVOID dwParam)
+
+{
+
+ JavaVM jvm = (JavaVM*)dwParam; /* 将虚拟机通过参数传入 */
+
+ JNIEnv* env;
+
+ (*jvm)-> **AttachCurrentThread**(jvm,  &env, NULL);
+
+ .........
+
+ (*jvm)-> DetachCurrentThread(jvm);
+
+}  
+  
+
+10. 时间
+------
+
+  
+关于时间的话题是我在实际开发中遇到的一个问题。当要发布使用了 JNI 的程序时，并不一定要求客户要安装一个 Java 运行环境，因为可以在安装程 序中打包这个运行环境。为了让打包程序利于下载，这个包要比较小，因此要去除 JRE（Java 运行环境）中一些不必要的文件。但是如果程序中用 到 Java 中的日历类型，例如 java.util.Calendar 等，那么有个文件一定不能去掉，这个文件就是 [JRE]\lib\tzmappings。它是一个时区映射文件，一旦没有该文件就会发现时间操作上经常出现与正确时间相差几个小时的情况。下面是打包 JRE 中必不可少 的文件列表(以 Windows 环境为例)，其中[JRE] 为运行环境的目录，同时这些文件之间的相对路径不能变。
+
+文件名  目录
+
+hpi.dll       [JRE]\bin  
+ioser12.dll    [JRE]\bin  
+java.dll      [JRE]\bin  
+net.dll       [JRE]\bin  
+verify.dll     [JRE]\bin  
+zip.dll       [JRE]\bin  
+jvm.dll      [JRE]\bin\classic  
+rt.jar        [JRE]\lib  
+tzmappings   [JRE]\lib  
+  
+  
+由于 rt.jar 有差不多 10MB，但是其中有很大一部分文件并不需要，可以根据实际的应用情况进行删除。例如程序如果没有用到 Java Swing，就可以把涉及到 Swing 的文件都删除后重新打包。
+
+Chap15：基本 JNI 调用技术 (c/c++ 与 java 互调)
+====================================
+
+**一. C/C++ 调用 Java**
+
+在 C/C++ 中调用 Java 的方法一般分为五个步骤：初始化虚拟机、获取类、创建类对象、调用方法和退出虚拟机。
+
+**1. 初始化虚拟机**
+
+代码如下：
+
+    JNIEnv *env;
+
+    JavaVM *jvm;
+
+    JavaVMInitArgs vm_args;
+
+    JavaVMOption options[3];
+
+    int res;
+
+    // 设置参数
+
+options[0].optionString = "-Djava.compiler=NONE";
+
+//classpath 有多个时，UNIX 下以 “：” 分割。
+
+    options[1].optionString = "-Djava.class.path=.";
+
+    options[2].optionString = "-verbose:jni";
+
+    vm_args.version = JNI_VERSION_1_4;
+
+    vm_args.nOptions = 3;
+
+    vm_args.options = options;
+
+    vm_args.ignoreUnrecognized = JNI_TRUE;
+
+    res = **JNI_CreateJavaVM**(&jvm, (void**)&env, &vm_args);
+
+      if (res>= 0)
+
+{
+
+     // 创建虚拟机成功
+
+}
+
+一个应用程序只需要一个虚拟机，但是每个线程需要自己的虚拟机运行环境。我们从一个虚拟机获取多个当前线程的运行环境，代码如下：
+
+int result=0;
+
+result=jvm->**AttachCurrentThread**(reinterpret_cast<void**>( &env ), 0 );
+
+if(result>=0)
+
+{
+
+     // 获取运行环境成功
+
+}
+
+当线程退出时，需要释放本线程使用的运行环境。
+
+jvm->DetachCurrentThread();
+
+**2 获取类**
+
+在进行方法调用之前，需要先获取相应的类，类名称必须包括包名，其中的 “.” 用“/”代替。
+
+jclass JavaClass;
+
+JavaClass = env->FindClass("com/test/TestInterface");
+
+   if(JavaClass != 0)
+
+   {
+
+            // 获取成功
+
+   }
+
+**3 创建类对象**
+
+如果需要调用的方法静态方法，则可以跳过本步骤。反之，则需要构造该对象。构造对象是通过调用类的构造函数来实现的，构咱函数的方法声明为 <init>, GetMethodID 方法的参数在下一步骤详细说明。
+
+jobject obj;
+
+jmethodID ctor;
+
+ctor = env->GetMethodID(JavaClass,"<init>","()V");
+
+if(ctor != 0)// 获取方法成功
+
+   {
+
+         obj = env->NewObject(JavaClass, ctor);
+
+   }
+
+**4 调用方法**
+
+调用一个方法需要两个步骤：获取方法句柄和调用方法。
+
+jmethodID methodID = env->GetMethodID(JavaClass, "setTest","(I)V");
+
+if(methodID!=0)// 获取方法成功
+
+{
+
+env->CallVoidMethod(obj, methodID,12);
+
+}
+
+GetStaticMethodID 是用来获取静态方法的定义，GetMethodID 则是获取非静态的方法定义。他们传入参数的参数依次为：类定义、方法名称和方法的定义，方法的定义可以用 jdk 中带的 javap 工具反编译 class 文件获取，其格式如下：
+
+public void setTest(int inTest);
+
+Signature: (I)V
+
+Signature 后面的内容就是方法的定义。
+
+CallVoidMethod 是对获取的方法进行调用，JNI 接口中提供了一系列的同 类方法，包括静态方法的调用函数（如：CallStaticXXXMethod）和非静态的方法（如：CallXXXMethod），其中 XXX 表示的不 同方法返回类型，包括 int、object 等等。
+
+**5 退出虚拟机**
+
+退出虚拟机调用方法如下：
+
+jvm->DestroyJavaVM();
+
+在 JNI 接口定义中，只有最后一个线程退出时，该方法才会返回，但是我只用一个线程，调用该方法也无法返回。故此建议系统退出时执行该方法，或者整个程序退出时，让虚拟机自己释放。
+
+[注意]：
+
+l 在处理中文字符串时，需要注意 Java 的 char 是双字节的，采用 Unicode 编码，在和 C++ 中的 char 转换时，需要用到系统 API：WideCharToMultiByte 和 MultiByteToWideChar。
+
+l 注意对运行环境中对象引用时的释放，以免引起内存泄漏。
+
+jstring str;
+
+wchar_t *w_buffer =(wchar_t *)env->GetStringChars(str,0);
+
+env->ReleaseStringChars(str,(const unsigned short *)w_buffer);
+
+**6 处理异常**
+
+C/C++ 中调用 Java 时，一定要捕获并处理 Java 方法抛出的异常信息，否则可能导致 C/C++ 进程的核心转储（Core Dump）。
+
+异常应在每个方法调用后检查：
+
+msg = (jstring)env->CallObjectMethod(obj, mid);
+
+        if (env->ExceptionOccurred())
+
+        {
+
+           env->ExceptionDescribe();         
+
+            env->ExceptionClear();
+
+           return 0;
+
+        }
+
+**二. Java 调用 C/C++**
+
+Java 调用 C/C++ 时，遵循几个步骤：
+
+1、 用 Java **native** 关键字声明方法为本地方法（非 Java 语言实现）。
+
+2、 编译该声明类，得到 XXX.class 文件。
+
+3、 用 “javah –jni XXX” 命令从该 class 文件生成 C 语言头文件（XXX.h）。
+
+4、 采用 C 语言实现该头文件声明的方法，将实现类编译成库文件（libXXX.so）。
+
+5、 在 Java 程序中使用 System.loadLibrary(XXX) 加载该库文件（需要设置 - Djava.library.path 环境变量指向该库文件存放路径）。
+
+6、 即可象调用 Java 方法一样，调用 native 方式声明的本地方法。
+
+Chap16：JNI 的 c 代码中，另外一个线程获取 JNIEnv
+==================================
+
+2009-06-19 14:36
+
+JNI 中，**JNIEnv*** 指针变量只对当前线程有效。如果是其他的线程，需要先获得 JVM* 指针，然后再获得当前线程的 **JNIEnv*** 指针。部分示例代码为：
+
+/** Invoker.cpp, Invoker.java */
+
+#include <jni.h>
+
+#include <stdio.h>
+
+#include "Invoker.h"
+
+#include "invoker_include.h"
+
+JavaVM *   jvm;
+
+JNIEnv *   static_env;
+
+jobject *  jObject; // 线程间公用，必须使用 global reference
+
+jclass     c;         // 必须使用 global reference
+
+jmethodID m;   // 必须使用 global reference
+
+/*****************************
+
+* Class:     Invoker
+
+* Method:    register
+
+* Signature: ()V
+
+*****************************/
+
+JNIEXPORT void JNICALL Java_Invoker_register (JNIEnv *env, jobject arg)
+
+{
+
+jObject = arg;
+
+// printf("object: %x, %x. \n", &arg, &jObject);
+
+printf("[main] Invoker registered. \n");
+
+jclass bgpClass = (*env)->GetObjectClass(env, arg);
+
+jmethodID methodId = (*env)->GetMethodID(env, bgpClass, "invoke", "()V");
+
+printf("[main] -class: %d, method: %d \n", bgpClass, methodId);
+
+(*env)->CallVoidMethod(env, arg, methodId);
+
+// Global reference
+
+(*env)->**GetJavaVM**(env, &jvm);
+
+     jObject = (*env)->NewGlobalRef(env, arg);
+
+     c = (*env)->NewGlobalRef(env, bgpClass);
+
+     m = (*env)->NewGlobalRef(env, methodId);
+
+start(invoke_java_method);
+
+(*env)->DeleteGlobalRef(env, c);             // 手动销毁 global reference
+
+(*env)->DeleteGlobalRef(env, m);            // 手动销毁 global reference
+
+(*env)->DeleteGlobalRef(env, jObject);
+
+(*jvm)->DetachCurrentThread(jvm);         // 销毁线程
+
+(*jvm)->**DestroyJavaVM**(jvm);              // ？销毁虚拟机
+
+}
+
+// Test method
+
+JNIEXPORT void JNICALL Java_Invoker_println (JNIEnv *env, jobject obj, jstring string)
+
+{
+
+const char *str = (*env)->GetStringUTFChars(env, string, 0);
+
+printf("[main] %s\n",str);
+
+(*env)->ReleaseStringUTFChars(env, string, str);
+
+}
+
+// Callback method 回调函数
+
+int invoke_java_method ()
+
+{
+
+(*jvm)->AttachCurrentThread(jvm, (void**)&static_env, 0);           // 获得当前线程可以使用的 JNIEnv * 指针
+
+    (*static_env)->CallVoidMethod(static_env, jObject, m);   // 调用 Java 方法
+
+printf("[callback] java method invoked, invoker class: %x ... \n", &jObject);
+
+}
+
+chap 17：当 JNI 遇到多线程－－java 对象如何被 C++ 中的多个线程访问?
+=============================================
+
+java 中要访问 C++ 代码时, 使用 JNI 是唯一选择. 然而, 在多线程的情况下, 可能出现以下问题:
+
+问题描述:
+
+一个 java 对象通过 JNI 调用 DLL 中一个 send() 函数向服务器发送消息, 不等服务器消息到来就立即返回. 同时把 JNI 接口的指针 JNIEnv *env, 和 jobject obj 保存在 DLL 中的变量里.
+
+一段时间后, DLL 中的消息接收线程接收到服务器发来的消息, 并试图通过保存过的 env 和 obj 来调用先前的 java 对象的方法来处理此消息.
+
+然而, JNI 文档上说, JNI 接口的指针 JNIEnv * 不能在 c++ 的线程间共享, 在我的程序中, 如果接收线程试图调用 java 对象的方法, 程序会突然退出.
+
+不知道有没有方法突破 JNI 接口的指针不能在多个 c++ 线程中共享的限制?
+
+解决办法:
+
+在 [http://java.sun.com/docs/books/jni/html/pitfalls.html#29161](http://java.sun.com/docs/books/jni/html/pitfalls.html#29161) 提到,  
+JNI 接口指针不可为多个线程共用, 但是 java 虚拟机的 JavaVM 指针是整个 jvm 公用的. 于是, 在 DLL 中可以调用:
+
+static JavaVM* gs_jvm;
+
+env->**GetJavaVM**(&gs_jvm); 来获取 JavaVM 指针. 获取了这个指针后, 在 DLL 中的另一个线程里, 可以调用:
+
+JNIEnv *env;
+
+gs_jvm->AttachCurrentThread((void **)&env, NULL);
+
+来将 DLL 中的线程 "attached to the virtual machine"(不知如何翻译...), 同时获得了这个线程在 jvm 中的  JNIEnv 指针.
+
+由于我需要做的是在 DLL 中的一个线程里改变某个 java 对象的值, 所以, 还必须获取那个 java 对象的 jobject 指针. 同 JNIEnv 指针一样, jobject 指针也不能在多个线程中共享. 就是说, 不能直接在保存一个线程中的 jobject 指针到全局变量中, 然后在另外一个线程中使用它. 幸运的是, 可以用
+
+gs_object=env->NewGlobalRef(obj);
+
+来将传入的 obj 保存到 gs_object 中, 从而其他线程可以使用这个 gs_object 来操纵那个 java 对象了.
+
+示例代码如下:
+
+(1)java 代码:
+
+//file name: Test.java
+
+import java.io.*;
+
+class Test  implements  Runnable
+
+{
+
+ public int value  = 0;
+
+ private Thread tx=null;
+
+ public Test()
+
+ {
+
+  tx=new Thread(this,"tx");
+
+ }
+
+ static
+
+ {
+
+  System.loadLibrary("Test");
+
+ }
+
+   public native void setEnev();
+
+ public static void main(String args[])
+
+ {
+
+  Test t = new Test();
+
+  t.setEnev();
+
+  System.out.println("ok in java main");
+
+  t.tx.start ();
+
+  try
+
+  {
+
+   Thread.sleep(10000000);
+
+  }catch(Exception e)
+
+  {
+
+   System.out.println("error in main");
+
+  }
+
+ }
+
+ public void run()
+
+ {
+
+  try
+
+  {
+
+    while(true)
+
+    {
+
+      Thread.sleep(1000);
+
+      System.out.println(value);
+
+    }
+
+  }catch(Exception e)
+
+  {
+
+    System.out.println("error in run");
+
+  }
+
+ }
+
+}
+
+(2) DLL 代码:
+
+//cpp file name:  Test.cpp:
+
+#include "test.h"
+
+#include<windows.h>
+
+#include<stdio.h>
+
+static JavaVM *gs_jvm=NULL;
+
+static jobject gs_object=NULL;
+
+static int gs_i=10;
+
+void WINAPI ThreadFun(PVOID argv)
+
+{
+
+ JNIEnv *env;
+
+ gs_jvm->AttachCurrentThread((void **)&env, NULL);
+
+ jclass cls = env->GetObjectClass(gs_object);
+
+ jfieldID fieldPtr = env->GetFieldID(cls,"value","I");
+
+ while(1)
+
+ {
+
+ Sleep(100);
+
+ // 在 DLL 中改变外面的 java 对象的 value 变量的值.
+
+ env->SetIntField(gs_object,fieldPtr,(jint)gs_i++);
+
+ }
+
+}
+
+JNIEXPORT void JNICALL Java_Test_setEnev(JNIEnv *env, jobject obj)
+
+{
+
+ printf("come into test.dll\n");
+
+ //Returns “0” on success; returns a negative value on failure.
+
+ int retGvm=env->GetJavaVM(&gs_jvm);
+
+ // 直接保存 obj 到 DLL 中的全局变量是不行的, 应该调用以下函数:
+
+ gs_object=env->NewGlobalRef(obj);
+
+ HANDLE ht=CreateThread( NULL,0,
+
+(LPTHREAD_START_ROUTINE)ThreadFun,0,
+
+NULL,NULL);
+
+ printf("the Handle ht is:%d\n",ht);
+
+}
+
+chap 18：JNI 在多线程中的应用
+====================
+
+引文地址：[http://blog.csdn.net/hust_liuX/archive/2006/12/25/1460486.aspx](http://blog.csdn.net/hust_liuX/archive/2006/12/25/1460486.aspx)
+
+我在这里将文章整理了一下，重新修改了部分描述和增加了一些重要的说明事项。修改文如下：
+
+**问题描述:**
+
+一个 java 对象通过 **JNI** 调用 DLL 中一个 send() 函数向服务器发送消息, 不等服务器消息到来就立即返回, 同时把 **JNI** 接口的指针 JNIEnv *env(虚拟机环境指针), 和 jobject obj 保存在 DLL 中的变量里.
+
+一段时间后, DLL 中的消息接收线程接收到服务器发来的消息,  
+并试图通过保存过的 env 和 obj 来调用先前的 java 对象的方法 (相当于 JAVA 回调方法) 来处理此消息. 此时程序会突然退出(崩溃).
+
+**解决办法:**
+
+    解决此问题首先要明白造成这个问题的原因。那么崩溃的原因是什么呢？
+
+**JNI** 文档上有明确表述：  The `JNIEnv` pointer, passed as the first argument to every native method, can only be used in the thread with which it is associated. It is wrong to cache the `JNIEnv` interface pointer obtained from one thread, and use that pointer in another thread.
+
+    意思就是 JNIEnv 指针不能直接在**多线程**中共享使用。上面描述的程序崩溃的原因就在这里：回调时的线程和之前保存变量的线程共享了这个 JNIEnv *env 指针和 jobject obj 变量。
+
+在 [http://java.sun.com/docs/books/**jni**/html/other.html#26206](http://java.sun.com/docs/books/jni/html/other.html#26206) 提到，JNIEnv *env 指针不可为多个线程共用, 但是 java 虚拟机的 JavaVM 指针是整个 jvm 公用的，我们可以通过 JavaVM 来得到当前线程的 JNIEnv 指针。
+
+于是, 在第一个线程 A 中调用:
+
+JavaVM* gs_jvm;
+
+env->GetJavaVM(&gs_jvm); // 来获取 JavaVM 指针. 获取了这个指针后, 将该 JavaVM 保存起来。
+
+在另一个线程 B 里, 调用
+
+JNIEnv *env;
+
+gs_jvm->AttachCurrentThread((void **)&env, NULL);
+
+// 这里就获得了 B 这个线程在 jvm 中的 JNIEnv 指针.
+
+这里还必须获取那个 java 对象的 jobject 指针, 因为我们要回调 JAVA 方法. 同 JNIEnv 指针一样, jobject 指针也不能在多个线程中共享. 就是说, 不能直接在保存一个线程中的 jobject 指针到全局变量中, 然后在另外一个线程中使用它. 幸运的是, 可以用   
+
+1.  gs_object=env->NewGlobalRef(obj);// 创建一个全局变量
+
+来将传入的 obj(局部变量) 保存到 gs_object 中, 从而其他线程可以使用这个 gs_object(全局变量) 来操纵这个 java 对象了.
+
+  
+示例代码如下:
+
+(1)java 代码: Test.java:
+
+1.  import java.io.*;
+2.  class Test implements Runnable
+3.  {
+4.  public int value   = 0;
+5.  static{System.loadLibrary("Test");}
+
+7.  public native void setEnev();// 本地方法
+
+9.  public static void main(String args[]) throws Exception
+10.  {
+11.      Test t = new Test();
+12.      t.setEnev(); // 调用本地方法
+
+14.      while(true)
+15.       {
+16.         Thread.sleep(1000);
+17.         System.out.println(t.value);
+18.       }
+19.     }
+20.  }
+
+(2) DLL 代码: Test.cpp:
+
+**1.    #include "test.h"**
+
+**2.    #include<windows.h>**
+
+**3.    #include<stdio.h>**
+
+**4.    static JavaVM *gs_jvm=NULL;**
+
+**5.    static jobject gs_object=NULL;**
+
+**6.    static int gs_i=10;**
+
+**7.** 
+
+**8.    JNIEXPORT void JNICALL Java_Test_setEnev(JNIEnv *env, jobject obj)**
+
+**9.    {**
+
+**10.        env->GetJavaVM(&gs_jvm); // 保存到全局变量中 JVM**
+
+**11.       // 直接赋值 obj 到 DLL 中的全局变量是不行的, 应该调用以下函数:**
+
+**12.        gs_object=env->NewGlobalRef(obj);**
+
+**13.** 
+
+**14.   HANDLE ht=CreateThread(NULL,0,(LPTHREAD_START_ROUTINE)ThreadFun,0,NULL,NULL);**
+
+**15.   }**
+
+**16.** 
+
+**17.   void WINAPI ThreadFun(PVOID argv)//JNI 中线程回调这个方法**
+
+**18.   {**
+
+**19.   JNIEnv *env;**
+
+**20.   gs_jvm->AttachCurrentThread((void **)&env, NULL);**
+
+**21.   jclass cls = env->GetObjectClass(gs_object);**
+
+**22.   jfieldID fieldPtr = env->GetFieldID(cls,"value","I");**
+
+**23.** 
+
+**24.   while(1)**
+
+**25.   {**
+
+**26.        Sleep(100);**
+
+**27.      // 这里改变 JAVA 对象的属性值（回调 JAVA）**
+
+**28.       env->SetIntField(gs_object,fieldPtr,(jint)gs_i++);**
+
+**29.      }**
+
+**30.   }**
+
+**31.** 
+
+**32.** 
+
+**JNI**
+
+There are certain constraints that you must keep in mind when writing native methods that are to run in a multithreaded environment. By understanding and programming within these constraints, your native methods will execute safely no matter how many threads simultaneously execute a given native method. For example:
+
+*   **A JNIEnv pointer is only valid in the thread associated with it. You must not pass this pointer from one thread to another, or cache and use it in multiple threads. The Java virtual machine passes a native method the same JNIEnv pointer in consecutive invocations from the same thread, but passes different JNIEnv pointers when invoking that native method from different threads. Avoid the common mistake of caching the JNIEnv pointer of one thread and using the pointer in another thread.**
+*   **Local references are valid only in the thread that created them. You must not pass local references from one thread to another. You should always convert local references to global references whenever there is a possibility that multiple threads may use the same reference.**
+
+chap 19：JNI 限制（多线程）
+===================
+
+**JNI** 限制：  
+There are certain constraints that you must keep in mind when writing native methods that are to run in a multithreaded environment. By understanding and programming within these constraints, your native methods will execute safely no matter how many threads simultaneously execute a given native method. For example:  
+A JNIEnv pointer is only valid in the thread associated with it. You must not pass this pointer from one thread to another, or cache and use it in multiple threads.
+
+The Java virtual machine passes a native method the same JNIEnv pointer in consecutive invocations from the same thread, but passes different JNIEnv pointers when invoking that native method from different threads. Avoid the common mistake of caching the JNIEnv pointer of one thread and using the pointer in another thread.
+
+Local references are valid only in the thread that created them. You must not pass local references from one thread to another. You should always convert local references to global references whenever there is a possibility that multiple threads may use the same reference.
+
+                                 本文来自 CSDN 博客，转载请标明出处：http://blog.csdn.net/lovingprince/archive/2008/08/19/2793504.aspx
+
+chap 20：使用 Java Native Interface 的最佳实践
+======================================
+
+**JNI 的发展**
+
+JNI 自从 JDK 1.1 发行版以来一直是 Java 平台的一部分，并且在 JDK 1.2 发行版中得到了扩展。JDK 1.0 发行版包含一个早期的本机方法接口，但是未明确分隔本机代码和 Java 代码。在这个接口中，本机代码可以直接进入 JVM 结构，因此无法跨 JVM 实现、平台或者甚至各种 JDK 版本进行移植。使用 JDK 1.0 模型升级含有大量本机代码的应用程序，以及开发能支持多个 JVM 实现的本机代码的开销是极高的。
+
+JDK 1.1 中引入的 JNI 支持：
+
+*   版本独立性
+*   平台独立性
+*   VM 独立性
+*   开发第三方类库
+
+有一个有趣的地方值得注意，一些较年轻的语言（如 PHP）在它们的本机代码支持方面仍然在努力克服这些问题。
+
+、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
+
+2009 年 7 月 27 日
+
+Java™ 本机接口（Java Native Interface，JNI）是一个标准的 Java API，它支持将 Java 代码与使用其他编程语言编写的代码相集成。如果您希望利用已有的代码资源，那么可以使用 JNI 作为您工具包中的关键组件 —— 比如在面向服务架构（SOA）和基于云的系统中。但是，如果在使用时未注意某些事项，则 JNI 会迅速导致应用程序性能低下且不稳定。本文将确定 10 大 JNI 编程缺陷，提供避免这些缺陷的最佳实践，并介绍可用于实现这些实践的工具。
+
+Java 环境和语言对于应用程序开发来说是非常安全和高效的。但是，一些应用程序却需要执行纯 Java 程序无法完成的一些任务，比如：
+
+*   与旧有代码集成，避免重新编写。
+*   实现可用类库中所缺少的功能。举例来说，在 Java 语言中实现 `ping` 时，您可能需要 Internet Control Message Protocol (ICMP) 功能，但基本类库并未提供它。
+*   最好与使用 C/C++ 编写的代码集成，以充分发掘性能或其他与环境相关的系统特性。
+*   解决需要非 Java 代码的特殊情况。举例来说，核心类库的实现可能需要跨包调用或者需要绕过其他 Java 安全性检查。
+
+JNI 允许您完成这些任务。它明确分开了 Java 代码与本机代码（C/C++）的执行，定义了一个清晰的 API 在这两者之间进行通信。从很大程度上说，它避免了本机代码对 JVM 的直接内存引用，从而确保本机代码只需编写一次，并且可以跨不同的 JVM 实现或版本运行。
+
+借助 JNI，本机代码可以随意与 Java 对象交互，获取和设计字段值，以及调用方法，而不会像 Java 代码中的相同功能那样受到诸多限制。这种自由是一把双刃剑：它牺牲 Java 代码的安全性，换取了完成上述所列任务的能力。在您的应用程序中使用 JNI 提供了强大的、对机器资源（内存、I/O 等）的低级访问，因此您不会像普通 Java 开发人员那样受到安全网的保护。JNI 的灵活性和强大性带来了一些编程实践上的风险，比如导致性能较差、出现 bug 甚至程序崩溃。您必须格外留意应用程序中的代码，并使用良好的实践来保障应用程序的总体完整性。
+
+本文介绍 JNI 用户最常遇到的 10 大编码和设计错误。其目标是帮助您认识到并避免它们，以便您可以编写安全、高效、性能出众的 JNI 代码。本文还将介绍一些用于在新代码或已有代码中查找这些问题的工具和技巧，并展示如何有效地应用它们。
+
+JNI 编程缺陷可以分为两类：
+
+*   **性能**：代码能执行所设计的功能，但运行缓慢或者以某种形式拖慢整个程序。
+*   **正确性**：代码有时能正常运行，但不能可靠地提供所需的功能；最坏的情况是造成程序崩溃或挂起。
+
+1. 性能缺陷
+-------
+
+程序员在使用 JNI 时的 5 大性能缺陷如下：
+
+*   [不缓存方法 ID、字段 ID 和类](http://www.chineselinuxuniversity.net/articles/26502.shtml#notc)
+*   [触发数组副本](http://www.chineselinuxuniversity.net/articles/26502.shtml#triggering)
+*   [回访（Reaching back）而不是传递参数](http://www.chineselinuxuniversity.net/articles/26502.shtml#reaching)
+*   [错误认定本机代码与 Java 代码之间的界限](http://www.chineselinuxuniversity.net/articles/26502.shtml#choosing)
+*   [使用大量本地引用，而未通知 JVM](http://www.chineselinuxuniversity.net/articles/26502.shtml#using)
+
+### 1.1. 不缓存方法 ID、字段 ID 和类
+
+要访问 Java 对象的字段并调用它们的方法，本机代码必须调用 `FindClass()`、`GetFieldID()`、`GetMethodId()` 和 `GetStaticMethodID()`。对于 `GetFieldID()`、`GetMethodID()` 和 `GetStaticMethodID()`， 为特定类返回的 ID 不会在 JVM 进程的生存期内发生变化。但是，获取字段或方法的调用有时会需要在 JVM 中完成大量工作，因为字段和方法可能是从超类中继承而来的，这会让 JVM 向上遍历类层次结构来找到它们。由于 ID 对于特定类是相同的，因此您只需要查找一次，然后便可重复使用。同样，查找类对象的开销也很大，因此也应该缓存它们。
+
+举例来说，清单 1 展示了调用静态方法所需的 JNI 代码：
+
+  
+**清单 1. 使用 JNI 调用静态方法**
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>int val=1;
+</pre><pre>jmethodID method;
+</pre><pre>jclass cls;
+</pre><pre>&nbsp;
+</pre><pre>cls = (*env)-&gt;FindClass(env, "com/ibm/example/TestClass");
+</pre><pre>if ((*env)-&gt;ExceptionCheck(env)) {
+</pre><pre>&nbsp;&nbsp; return ERR_FIND_CLASS_FAILED;
+</pre><pre>}
+</pre><pre>method = (*env)-&gt;GetStaticMethodID(env, cls, "setInfo", "(I)V");
+</pre><pre>if ((*env)-&gt;ExceptionCheck(env)) {
+</pre><pre>&nbsp;&nbsp; return ERR_GET_STATIC_METHOD_FAILED;
+</pre><pre>}
+</pre><pre>(*env)-&gt;CallStaticVoidMethod(env, cls, method,val);
+</pre><pre>if ((*env)-&gt;ExceptionCheck(env)) {
+</pre><pre>&nbsp;&nbsp; return ERR_CALL_STATIC_METHOD_FAILED;
+</pre><pre>}
+</pre></td></tr></tbody></table>
+
+当我们每次希望调用方法时查找类和方法 ID 都会产生六个本机调用，而不是第一次缓存类和方法 ID 时需要的两个调用。
+
+缓存会对您应用程序的运行时造成显著的影响。考虑下面两个版本的方法，它们的作用是相同的。清单 2 使用了缓存的字段 ID：
+
+  
+**清单 2. 使用缓存的字段 ID**
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>int sumValues2(JNIEnv* env, jobject obj, jobject allValues){
+</pre><pre>&nbsp;
+</pre><pre>&nbsp;&nbsp; jint avalue = (*env)-&gt;GetIntField(env, allValues, a);
+</pre><pre>&nbsp;&nbsp; jint bvalue = (*env)-&gt;GetIntField(env, allValues, b);
+</pre><pre>&nbsp;&nbsp; jint cvalue = (*env)-&gt;GetIntField(env, allValues, c);
+</pre><pre>&nbsp;&nbsp; jint dvalue = (*env)-&gt;GetIntField(env, allValues, d);
+</pre><pre>&nbsp;&nbsp; jint evalue = (*env)-&gt;GetIntField(env, allValues, e);
+</pre><pre>&nbsp;&nbsp; jint fvalue = (*env)-&gt;GetIntField(env, allValues, f);
+</pre><pre>&nbsp;
+</pre><pre>&nbsp;&nbsp; return avalue + bvalue + cvalue + dvalue + evalue + fvalue;
+</pre><pre>}
+</pre></td></tr></tbody></table>
+
+<table width="40%" align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p><strong>性能技巧 #1</strong></p><p>查找并全局缓存常用的类、字段 ID 和方法 ID。</p></td></tr></tbody></table></td></tr></tbody></table>
+
+清单 3 没有使用缓存的字段 ID：
+
+  
+**清单 3. 未缓存字段 ID**
+
+<table width="60%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>int sumValues2(JNIEnv* env, jobject obj, jobject allValues){
+</pre><pre>&nbsp;&nbsp; jclass cls = (*env)-&gt;GetObjectClass(env,allValues);
+</pre><pre>&nbsp;&nbsp; jfieldID a = (*env)-&gt;GetFieldID(env, cls, "a", "I");
+</pre><pre>&nbsp;&nbsp; jfieldID b = (*env)-&gt;GetFieldID(env, cls, "b", "I");
+</pre><pre>&nbsp;&nbsp; jfieldID c = (*env)-&gt;GetFieldID(env, cls, "c", "I");
+</pre><pre>&nbsp;&nbsp; jfieldID d = (*env)-&gt;GetFieldID(env, cls, "d", "I");
+</pre><pre>&nbsp;&nbsp; jfieldID e = (*env)-&gt;GetFieldID(env, cls, "e", "I");
+</pre><pre>&nbsp;&nbsp; jfieldID f = (*env)-&gt;GetFieldID(env, cls, "f", "I");
+</pre><pre>&nbsp;&nbsp; jint avalue = (*env)-&gt;GetIntField(env, allValues, a);
+</pre><pre>&nbsp;&nbsp; jint bvalue = (*env)-&gt;GetIntField(env, allValues, b);
+</pre><pre>&nbsp;&nbsp; jint cvalue = (*env)-&gt;GetIntField(env, allValues, c);
+</pre><pre>&nbsp;&nbsp; jint dvalue = (*env)-&gt;GetIntField(env, allValues, d);
+</pre><pre>&nbsp;&nbsp; jint evalue = (*env)-&gt;GetIntField(env, allValues, e);
+</pre><pre>&nbsp;&nbsp; jint fvalue = (*env)-&gt;GetIntField(env, allValues, f);
+</pre><pre>&nbsp;&nbsp; return avalue + bvalue + cvalue + dvalue + evalue + fvalue
+</pre><pre>}
+</pre></td></tr></tbody></table>
+
+[清单 2](http://www.chineselinuxuniversity.net/articles/26502.shtml#listing2) 用 3,572 ms 运行了 10,000,000 次。清单 3 用了 86,217 ms — 多花了 24 倍的时间。
+
+### 1.2. 触发数组副本
+
+JNI 在 Java 代码和本机代码之间提供了一个干净的接口。为了维持这种分离，数组将作为不透明的句柄传递，并且本机代码必须回调 JVM 以便使用 set 和 get 调用操作数组元素。Java 规范让 JVM 实现决定让这些调用提供对数组的直接访问，还是返回一个数组副本。举例来说，当数组经过优化而不需要连续存储时，JVM 可以返回一个副本。（参见 [参考资料](http://www.chineselinuxuniversity.net/articles/26502.shtml#resources) 获取关于 JVM 的信息）。
+
+随后，这些调用可以复制被操作的元素。举例来说，如果您对含有 1,000 个元素的数组调用 `GetLongArrayElements()`，则会造成至少分配或复制 8,000 字节的数据（每个 `long` 1,000 元素 * 8 字节）。当您随后使用 `ReleaseLongArrayElements()` 更新数组的内容时，需要另外复制 8,000 字节的数据来更新数组。即使您使用较新的 `GetPrimitiveArrayCritical()`，规范仍然准许 JVM 创建完整数组的副本。
+
+<table width="40%" align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p><strong>性能技巧 #2</strong></p><p>获取和更新仅本机代码需要的数组部分。在只要数组的一部分时通过适当的 API 调用来避免复制整个数组。</p></td></tr></tbody></table></td></tr></tbody></table>
+
+`Get_Type_ArrayRegion()` 和 `Set_Type_ArrayRegion()` 方法允许您获取和更新数组的一部分，而不是整个数组。通过使用这些方法访问较大的数组，您可以确保只复制本机代码将要实际使用的数组部分。
+
+举例来说，考虑相同方法的两个版本，如清单 4 所示：
+
+  
+**清单 4. 相同方法的两个版本**
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>jlong getElement(JNIEnv* env, jobject obj, jlongArray arr_j, 
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int element){
+</pre><pre>&nbsp;&nbsp; jboolean isCopy;
+</pre><pre>&nbsp;&nbsp; jlong result;
+</pre><pre>&nbsp;&nbsp; jlong* buffer_j = (*env)-&gt;GetLongArrayElements(env, arr_j, &amp;isCopy);
+</pre><pre>&nbsp;&nbsp; result = buffer_j[element];
+</pre><pre>&nbsp;&nbsp; (*env)-&gt;ReleaseLongArrayElements(env, arr_j, buffer_j, 0);
+</pre><pre>&nbsp;&nbsp; return result;
+</pre><pre>}
+</pre><pre>&nbsp;
+</pre><pre>jlong getElement2(JNIEnv* env, jobject obj, jlongArray arr_j, 
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int element){
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp; jlong result;
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp; (*env)-&gt;GetLongArrayRegion(env, arr_j, element,1, &amp;result);
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp; return result;
+</pre><pre>}
+</pre></td></tr></tbody></table>
+
+第一个版本可以生成两个完整的数组副本，而第二个版本则完全没有复制数组。当数组大小为 1,000 字节时，运行第一个方法 10,000,000 次用了 12,055 ms；而第二个版本仅用了 1,421 ms。第一个版本多花了 8.5 倍的时间！
+
+<table width="40%" align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p><strong>性能技巧 #3</strong></p><p>在单个 API 调用中尽可能多地获取或更新数组内容。如果可以一次较多地获取和更新数组内容，则不要逐个迭代数组中的元素。</p></td></tr></tbody></table></td></tr></tbody></table>
+
+另一方面，如果您最终要获取数组中的所有元素，则使用 `Get_Type_ArrayRegion()` 逐个获取数组中的元素是得不偿失的。要获取最佳的性能，应该确保以尽可能大的块的来获取和更新数组元素。如果您要迭代一个数组中的所有元素，则 [清单 4](http://www.chineselinuxuniversity.net/articles/26502.shtml#listing4) 中这两个 `getElement()` 方法都不适用。比较好的方法是在一个调用中获取大小合理的数组部分，然后再迭代所有这些元素，重复操作直到覆盖整个数组。
+
+### 1.3. 回访而不是传递参数
+
+在 调用某个方法时，您经常会在传递一个有多个字段的对象以及单独传递字段之间做出选择。在面向对象设计中，传递对象通常能提供较好的封装，因为对象字段的变 化不需要改变方法签名。但是，对于 JNI 来说，本机代码必须通过一个或多个 JNI 调用返回到 JVM 以获取需要的各个字段的值。这些额外的调用会带来额外的开销，因为从本机代码过渡到 Java 代码要比普通方法调用开销更大。因此，对于 JNI 来说，本机代码从传递进来的对象中访问大量单独字段时会导致性能降低。
+
+考虑清单 5 中的两个方法，第二个方法假定我们缓存了字段 ID：
+
+  
+**清单 5. 两个方法版本**
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>int sumValues(JNIEnv* env, jobject obj, jint a, jint b,jint c, jint d, jint e, jint f){
+</pre><pre>&nbsp;&nbsp; return a + b + c + d + e + f;
+</pre><pre>}
+</pre><pre>&nbsp;
+</pre><pre>int sumValues2(JNIEnv* env, jobject obj, jobject allValues){
+</pre><pre>&nbsp;
+</pre><pre>&nbsp;&nbsp; jint avalue = (*env)-&gt;GetIntField(env, allValues, a);
+</pre><pre>&nbsp;&nbsp; jint bvalue = (*env)-&gt;GetIntField(env, allValues, b);
+</pre><pre>&nbsp;&nbsp; jint cvalue = (*env)-&gt;GetIntField(env, allValues, c);
+</pre><pre>&nbsp;&nbsp; jint dvalue = (*env)-&gt;GetIntField(env, allValues, d);
+</pre><pre>&nbsp;&nbsp; jint evalue = (*env)-&gt;GetIntField(env, allValues, e);
+</pre><pre>&nbsp;&nbsp; jint fvalue = (*env)-&gt;GetIntField(env, allValues, f);
+</pre><pre>&nbsp;&nbsp; 
+</pre><pre>&nbsp;&nbsp;&nbsp;return avalue + bvalue + cvalue + dvalue + evalue + fvalue;
+</pre><pre>}
+</pre></td></tr></tbody></table>
+
+<table width="40%" align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p><strong>性能技巧 #4</strong></p><p>如果可能，将各参数传递给 JNI 本机代码，以便本机代码回调 JVM 获取所需的数据。</p></td></tr></tbody></table></td></tr></tbody></table>
+
+`sumValues2()` 方法需要 6 个 JNI 回调，并且运行 10,000,000 次需要 3,572 ms。其速度比 `sumValues()` 慢 6 倍，后者只需要 596 ms。通过传递 JNI 方法所需的数据，`sumValues()` 避免了大量的 JNI 开销。
+
+### 1.4. 错误认定本机代码与 Java 代码之间的界限
+
+本 机代码和 Java 代码之间的界限是由开发人员定义的。界限的选定会对应用程序的总体性能造成显著的影响。从 Java 代码中调用本机代码以及从本机代码调用 Java 代码的开销比普通的 Java 方法调用高很多。此外，这种越界操作会干扰 JVM 优化代码执行的能力。举例来说，随着 Java 代码与本机代码之间互操作的增加，实时编译器的效率会随之降低。经过测量，我们发现从 Java 代码调用本机代码要比普通调用多花 5 倍的时间。同样，从本机代码中调用 Java 代码也需要耗费大量的时间。
+
+<table width="40%" align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p><strong>性能技巧 #5</strong></p><p>定义 Java 代码与本机代码之间的界限，最大限度地减少两者之间的互相调用。</p></td></tr></tbody></table></td></tr></tbody></table>
+
+因 此，在设计 Java 代码与本机代码之间的界限时应该最大限度地减少两者之间的相互调用。消除不必要的越界调用，并且应该竭力在本机代码中弥补越界调用造成的成本损失。最大限度地减少越界调用的一个关键因素是确保数据处于 Java / 本机界限的正确一侧。如果数据未在正确的一侧，则另一侧访问数据的需求则会持续发起越界调用。
+
+举例来说，如果我们希望使用 JNI 为某个串行端口提供接口，则可以构造两种不同的接口。第一个版本如清单 6 所示：
+
+  
+**清单 6. 到串行端口的接口：版本 1**
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>/**
+</pre><pre> * Initializes the serial port and returns a java SerialPortConfig objects
+</pre><pre> * that contains the hardware address for the serial port, and holds
+</pre><pre> * information needed by the serial port such as the next buffer 
+</pre><pre>&nbsp;* to write data into
+</pre><pre> * 
+</pre><pre>&nbsp;* @param env JNI env that can be used by the method
+</pre><pre> * @param comPortName the name of the serial port
+</pre><pre> * @returns SerialPortConfig object to be passed ot setSerialPortBit 
+</pre><pre>&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and getSerialPortBit calls
+</pre><pre> */
+</pre><pre>jobject initializeSerialPort(JNIEnv* env, jobject obj,&nbsp; jstring comPortName);
+</pre><pre>&nbsp;
+</pre><pre>/**
+</pre><pre> * Sets a single bit in an 8 bit byte to be sent by the serial port
+</pre><pre> *
+</pre><pre> * @param env JNI env that can be used by the method
+</pre><pre> * @param serialPortConfig object returned by initializeSerialPort
+</pre><pre> * @param whichBit value from 1-8 indicating which bit to set
+</pre><pre> * @param bitValue 0th bit contains bit value to be set 
+</pre><pre>&nbsp;*/
+</pre><pre>void setSerialPortBit(JNIEnv* env, jobject obj, jobject serialPortConfig, 
+</pre><pre>&nbsp;&nbsp;jint whichBit,&nbsp; jint bitValue);
+</pre><pre>&nbsp;
+</pre><pre>/**
+</pre><pre> * Gets a single bit in an 8 bit byte read from the serial port
+</pre><pre> *
+</pre><pre> * @param env JNI env that can be used by the method
+</pre><pre> * @param serialPortConfig object returned by initializeSerialPort
+</pre><pre> * @param whichBit value from 1-8 indicating which bit to read
+</pre><pre> * @returns the bit read in the 0th bit of the jint 
+</pre><pre>&nbsp;*/
+</pre><pre>jint getSerialPortBit(JNIEnv* env, jobject obj, jobject serialPortConfig, 
+</pre><pre>&nbsp;&nbsp;jint whichBit);
+</pre><pre>&nbsp;
+</pre><pre>/**
+</pre><pre> * Read the next byte from the serial port
+</pre><pre> * 
+</pre><pre>&nbsp;* @param env JNI env that can be used by the method
+</pre><pre> */
+</pre><pre>void readNextByte(JNIEnv* env, jobject obj);
+</pre><pre>&nbsp;
+</pre><pre>/**
+</pre><pre> * Send the next byte
+</pre><pre> *
+</pre><pre> * @param env JNI env that can be used by the method
+</pre><pre> */
+</pre><pre>void sendNextByte(JNIEnv* env, jobject obj);
+</pre></td></tr></tbody></table>
+
+在 [清单 6](http://www.chineselinuxuniversity.net/articles/26502.shtml#listing6) 中，串行端口的所有配置数据都存储在由 `initializeSerialPort()` 方法返回的 Java 对象中，并且将 Java 代码完全控制对硬件中各数据位的设置。[清单 6](http://www.chineselinuxuniversity.net/articles/26502.shtml#listing6) 所示版本的一些问题会造成其性能差于清单 7 中的版本：
+
+  
+**清单 7. 到串行端口的接口：版本 2**
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>/**
+</pre><pre> * Initializes the serial port and returns an opaque handle to a native
+</pre><pre> * structure that contains the hardware address for the serial port 
+</pre><pre>&nbsp;* and holds information needed by the serial port such as 
+</pre><pre>&nbsp;* the next buffer to write data into
+</pre><pre> *
+</pre><pre> * @param env JNI env that can be used by the method
+</pre><pre> * @param comPortName the name of the serial port
+</pre><pre> * @returns opaque handle to be passed to setSerialPortByte and 
+</pre><pre>&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; getSerialPortByte calls 
+</pre><pre>&nbsp;*/
+</pre><pre>jlong initializeSerialPort2(JNIEnv* env, jobject obj, jstring comPortName);
+</pre><pre>&nbsp;
+</pre><pre>/**
+</pre><pre> * sends a byte on the serial port
+</pre><pre> * 
+</pre><pre>&nbsp;* @param env JNI env that can be used by the method
+</pre><pre> * @param serialPortConfig opaque handle for the serial port
+</pre><pre> * @param byte the byte to be sent
+</pre><pre> */
+</pre><pre>void sendSerialPortByte(JNIEnv* env, jobject obj, jlong serialPortConfig, 
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;jbyte byte);
+</pre><pre>&nbsp;
+</pre><pre>/**
+</pre><pre> * Reads the next byte from the serial port
+</pre><pre> * 
+</pre><pre>&nbsp;* @param env JNI env that can be used by the method
+</pre><pre> * @param serialPortConfig opaque handle for the serial port
+</pre><pre> * @returns the byte read from the serial port
+</pre><pre> */
+</pre><pre>jbyte readSerialPortByte(JNIEnv* env, jobject obj,&nbsp; jlong serialPortConfig);
+</pre></td></tr></tbody></table>
+
+<table width="40%" align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p><strong>性能技巧 #6</strong></p><p>构造应用程序的数据，使它位于界限的正确的侧，并且可以由使用它的代码访问，而不需要大量跨界调用。</p></td></tr></tbody></table></td></tr></tbody></table>
+
+最显著的一个问题就是，[清单 6](http://www.chineselinuxuniversity.net/articles/26502.shtml#listing6) 中的接口在设置或检索每个位，以及从串行端口读取字节或者向串行端口写入字节都需要一个 JNI 调用。这会导致读取或写入的每个字节的 JNI 调用变成原来的 9 倍。第二个问题是，[清单 6](http://www.chineselinuxuniversity.net/articles/26502.shtml#listing6) 将串行端口的配置信息存储在 Java / 本机界限的错误一侧的某个 Java 对象上。我们仅在本机侧需要此配置数据；将它存储在 Java 侧会导致本机代码向 Java 代码发起大量回调以获取 / 设置此配置信息。[清单 7](http://www.chineselinuxuniversity.net/articles/26502.shtml#listing7) 将配置信息存储在一个本机结构中（比如，一个 `struct`），并向 Java 代码返回了一个不透明的句柄，该句柄可以在后续调用中返回。这意味着，当本机代码正在运行时，它可以直接访问该结构，而不需要回调 Java 代码获取串行端口硬件地址或下一个可用的缓冲区等信息。因此，使用 [清单 7](http://www.chineselinuxuniversity.net/articles/26502.shtml#listing7) 的实现的性能将大大改善。
+
+### 1.5. 使用大量本地引用而未通知 JVM
+
+JNI 函数返回的任何对象都会创建本地引用。举例来说，当您调用 `GetObjectArrayElement()` 时，将返回对数组中对象的本地引用。考虑清单 8 中的代码在运行一个很大的数组时会使用多少本地引用：
+
+  
+**清单 8. 创建本地引用**
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>void workOnArray(JNIEnv* env, jobject obj, jarray array){
+</pre><pre>&nbsp;&nbsp; jint i;
+</pre><pre>&nbsp;&nbsp; jint count = (*env)-&gt;GetArrayLength(env, array);
+</pre><pre>&nbsp;&nbsp; for (i=0; i &lt; count; i++) {
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jobject element = (*env)-&gt;GetObjectArrayElement(env, array, i);
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if((*env)-&gt;ExceptionOccurred(env)) {
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* do something with array element */
+</pre><pre>&nbsp;&nbsp; }
+</pre><pre>}
+</pre></td></tr></tbody></table>
+
+每次调用 `GetObjectArrayElement()` 时都会为元素创建一个本地引用，并且直到本机代码运行完成时才会释放。数组越大，所创建的本地引用就越多。
+
+<table width="40%" align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p><strong>性能技巧 #7</strong></p><p>当本机代码造成创建大量本地引用时，在各引用不再需要时删除它们。</p></td></tr></tbody></table></td></tr></tbody></table>
+
+这些本地引用会在本机方法终止时自动释放。JNI 规范要求各本机代码至少能创建 16 个本地引用。虽然这对许多方法来说都已经足够了，但一些方法在其生存期中却需要更多的本地引用。对于这种情况，您应该删除不再需要的引用，方法是使用 JNI `DeleteLocalRef()` 调用，或者通知 JVM 您将使用更多的本地引用。
+
+清单 9 向 [清单 8](http://www.chineselinuxuniversity.net/articles/26502.shtml#listing8) 中的示例添加了一个 `DeleteLocalRef()` 调用，用于通知 JVM 本地引用已不再需要，以及将可同时存在的本地引用的数量限制为一个合理的数值，而与数组的大小无关：
+
+  
+**清单 9. 添加** `**DeleteLocalRef()**`
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>void workOnArray(JNIEnv* env, jobject obj, jarray array){
+</pre><pre>&nbsp;&nbsp; jint i;
+</pre><pre>&nbsp;&nbsp; jint count = (*env)-&gt;GetArrayLength(env, array);
+</pre><pre>&nbsp;&nbsp; for (i=0; i &lt; count; i++) {
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jobject element = (*env)-&gt;GetObjectArrayElement(env, array, i);
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if((*env)-&gt;ExceptionOccurred(env)) {
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/* do something with array element */
+</pre><pre>&nbsp;
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (*env)-&gt;DeleteLocalRef(env, element);
+</pre><pre>&nbsp;&nbsp; }
+</pre><pre>}
+</pre></td></tr></tbody></table>
+
+<table width="40%" align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p><strong>性能技巧 #8</strong></p><p>如果某本机代码将同时存在大量本地引用，则调用 JNI <code>EnsureLocalCapacity()</code> 方法通知 JVM 并允许它优化对本地引用的处理。</p></td></tr></tbody></table></td></tr></tbody></table>
+
+您可以调用 JNI `EnsureLocalCapacity()` 方法来通知 JVM 您将使用超过 16 个本地引用。这将允许 JVM 优化对该本机代码的本地引用的处理。如果无法创建所需的本地引用，或者 JVM 采用的本地引用管理方法与所使用的本地引用数量之间不匹配造成了性能低下，则未成功通知 JVM 会导致 `FatalError`。
+
+2. 正确性缺陷
+--------
+
+5 大 JNI 正确性缺陷包括：
+
+*   [使用错误的 `JNIEnv`](http://www.chineselinuxuniversity.net/articles/26502.shtml#wrong)
+*   [未检测异常](http://www.chineselinuxuniversity.net/articles/26502.shtml#exceptions)
+*   [未检测返回值](http://www.chineselinuxuniversity.net/articles/26502.shtml#return)
+*   [未正确使用数组方法](http://www.chineselinuxuniversity.net/articles/26502.shtml#xxx)
+*   [未正确使用全局引用](http://www.chineselinuxuniversity.net/articles/26502.shtml#global)
+
+### 2.1 使用错误的 `JNIEnv`
+
+执行本机代码的线程使用 `JNIEnv` 发起 JNI 方法调用。但是，`JNIEnv` 并不是仅仅用于分派所请求的方法。JNI 规范规定每个 `JNIEnv` 对于线程来说都是本地的。JVM 可以依赖于这一假设，将额外的线程本地信息存储在 `JNIEnv` 中。一个线程使用另一个线程中的 `JNIEnv` 会导致一些小 bug 和难以调试的崩溃问题。
+
+<table width="40%" align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p><strong>正确性技巧 #1</strong></p><p>仅在相关的单一线程中使用 <code>JNIEnv</code>。</p></td></tr></tbody></table></td></tr></tbody></table>
+
+线程可以调用通过 `JavaVM` 对象使用 JNI 调用接口的 `GetEnv()` 来获取 `JNIEnv`。`JavaVM` 对象本身可以通过使用 `JNIEnv` 方法调用 JNI `**GetJavaVM**()` 来获取，并且可以被缓存以及跨线程共享。缓存 `JavaVM` 对象的副本将允许任何能访问缓存对象的线程在必要时获取对它自己的 `JNIEnv` 访问。要实现最优性能，线程应该绕过 `JNIEnv`，因为查找它有时会需要大量的工作。
+
+### 2.2 未检测异常
+
+本 机能调用的许多 JNI 方法都会引起与执行线程相关的异常。当 Java 代码执行时，这些异常会造成执行流程发生变化，这样便会自动调用异常处理代码。当某个本机方法调用某个 JNI 方法时会出现异常，但检测异常并采用适当措施的工作将由本机来完成。一个常见的 JNI 缺陷是调用 JNI 方法而未在调用完成后测试异常。这会造成代码有大量漏洞以及程序崩溃。
+
+举例来说，考虑调用 `GetFieldID()` 的代码，如果无法找到所请求的字段，则会出现 `NoSuchFieldError`。如果本机代码继续运行而未检测异常，并使用它认为应该返回的字段 ID，则会造成程序崩溃。举例来说，如果 Java 类经过修改，导致 `charField` 字段不再存在，则清单 10 中的代码可能会造成程序崩溃 — 而不是抛出一个 `NoSuchFieldError`：
+
+  
+**清单 10. 未能检测异常**
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jclass objectClass;
+</pre><pre>jfieldID fieldID;
+</pre><pre>jchar result = 0;
+</pre><pre>&nbsp;
+</pre><pre>objectClass = (*env)-&gt;GetObjectClass(env, obj);
+</pre><pre>fieldID = (*env)-&gt;GetFieldID(env, objectClass, "charField", "C");
+</pre><pre>result = (*env)-&gt;GetCharField(env, obj, fieldID);
+</pre></td></tr></tbody></table>
+
+<table width="40%" align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p><strong>正确性技巧 #2</strong></p><p>在发起可能会导致异常的 JNI 调用后始终检测异常。</p></td></tr></tbody></table></td></tr></tbody></table>
+
+添加异常检测代码要比在事后尝试调试崩溃简单很多。经常，您只需要检测是否出现了某个异常，如果是则立即返回 Java 代码以便抛出异常。然后，使用常规的 Java 异常处理流程处理它或者显示它。举例来说，清单 11 将检测异常：
+
+  
+**清单 11. 检测异常**
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jclass objectClass;
+</pre><pre>jfieldID fieldID;
+</pre><pre>jchar result = 0;
+</pre><pre>&nbsp;
+</pre><pre>objectClass = (*env)-&gt;GetObjectClass(env, obj);
+</pre><pre>fieldID = (*env)-&gt;GetFieldID(env, objectClass, "charField", "C");
+</pre><pre>if((*env)-&gt;ExceptionOccurred(env)) {
+</pre><pre>&nbsp;&nbsp; return;
+</pre><pre>}
+</pre><pre>result = (*env)-&gt;GetCharField(env, obj, fieldID);
+</pre></td></tr></tbody></table>
+
+不检测和清除异常会导致出现意外行为。您可以确定以下代码的问题吗？
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>fieldID = (*env)-&gt;GetFieldID(env, objectClass, "charField", "C");
+</pre><pre>if (fieldID == NULL){
+</pre><pre>&nbsp;&nbsp; fieldID = (*env)-&gt;GetFieldID(env, objectClass,"charField", "D");
+</pre><pre>}
+</pre><pre>return (*env)-&gt;GetIntField(env, obj, fieldID);
+</pre></td></tr></tbody></table>
+
+问题在于，尽管代码处理了初始 `GetFieldID()` 未返回字段 ID 的情况，但它并未_清除_ 此调用将设置的异常。因此，本机返回的结果会造成立即抛出一个异常。
+
+### 2.3 未检测返回值
+
+许多 JNI 方法都通过返回值来指示调用成功与否。与未检测异常相似，这也存在一个缺陷，即代码未检测返回值却假定调用成功而继续运行。对于大多数 JNI 方法来说，它们都设置了返回值和异常状态，这样应用程序更可以通过检测异常状态或返回值来判断方法运行正常与否。
+
+<table width="40%" align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p><strong>正确性技巧 #3</strong></p><p>始终检测 JNI 方法的返回值，并包括用于处理错误的代码路径。</p></td></tr></tbody></table></td></tr></tbody></table>
+
+您可以确定以下代码的问题吗？
+
+<table width="60%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>clazz = (*env)-&gt;FindClass(env, "com/ibm/j9//HelloWorld");
+</pre><pre>method = (*env)-&gt;GetStaticMethodID(env, clazz, "main",
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "([Ljava/lang/String;)V");
+</pre><pre>(*env)-&gt;CallStaticVoidMethod(env, clazz, method, NULL);
+</pre></td></tr></tbody></table>
+
+问题在于，如果未发现 `HelloWorld` 类，或者如果 `main()` 不存在，则本机将造成程序崩溃。
+
+### 2.4 未正确使用数组方法
+
+`Get_XXX_ArrayElements()` 和 `Release_XXX_ArrayElements()` 方法允许您请求任何元素。同样，`GetPrimitiveArrayCritical()`、`ReleasePrimitiveArrayCritical()`、`GetStringCritical()` 和 `ReleaseStringCritical()` 允许您请求数组元素或字符串字节，以最大限度降低直接指向数组或字符串的可能性。这些方法的使用存在两个常见的缺陷。其一，忘记在 `Release_XXX_()` 方法调用中提供更改。即便使用 `Critical` 版本，也无法保证您能获得对数组或字符串的直接引用。一些 JVM 始终返回一个副本，并且在这些 JVM 中，如果您在 `Release_XXX_()` 调用中指定了 `JNI_ABORT`，或者忘记调用了 `Release_XXX_()`，则对数组的更改不会被复制回去。
+
+举例来说，考虑以下代码：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>void modifyArrayWithoutRelease(JNIEnv* env, jobject obj, jarray arr1) {
+</pre><pre>&nbsp;&nbsp; jboolean isCopy;
+</pre><pre>&nbsp;&nbsp; jbyte* buffer = (*env)-&gt; (*env)-&gt;GetByteArrayElements(env,arr1,&amp;isCopy);
+</pre><pre>&nbsp; &nbsp;if ((*env)-&gt;ExceptionCheck(env)) return; 
+</pre><pre>&nbsp;&nbsp;&nbsp;
+</pre><pre>&nbsp;&nbsp;&nbsp;buffer[0] = 1;
+</pre><pre>}
+</pre></td></tr></tbody></table>
+
+<table width="40%" align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p><strong>正确性技巧 #4</strong></p><p>不要忘记为每个 <code>Get<em>XXX</em>()</code> 使用模式 <code>0</code>（复制回去并释放内存）调用 <code>Release<em>XXX</em>()</code>。</p></td></tr></tbody></table></td></tr></tbody></table>
+
+在提供直接指向数组的指针的 JVM 上，该数组将被更新；但是，在返回副本的 JVM 上则不是如此。这会造成您的代码在一些 JVM 上能够正常运行，而在其他 JVM 上却会出错。您应该始终始终包括一个释放（release）调用，如清单 12 所示：
+
+  
+**清单 12. 包括一个释放调用**
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>void modifyArrayWithRelease(JNIEnv* env, jobject obj, jarray arr1) {
+</pre><pre>&nbsp;&nbsp; jboolean isCopy;
+</pre><pre>&nbsp;&nbsp; jbyte* buffer = (*env)-&gt; (*env)-&gt;GetByteArrayElements(env,arr1,&amp;isCopy);
+</pre><pre>&nbsp;&nbsp; if ((*env)-&gt;ExceptionCheck(env)) return; 
+</pre><pre>&nbsp;&nbsp;&nbsp;
+</pre><pre>&nbsp;&nbsp;&nbsp;buffer[0] = 1;
+</pre><pre>&nbsp;
+</pre><pre>&nbsp;&nbsp; (*env)-&gt;ReleaseByteArrayElements(env, arr1, buffer, JNI_COMMIT);
+</pre><pre>&nbsp;&nbsp; if ((*env)-&gt;ExceptionCheck(env)) return;
+</pre><pre>}
+</pre></td></tr></tbody></table>
+
+第二个缺陷是不注重规范对在 `Get_XXX_Critical()` 和 `Release_XXX_Critical()` 之间执行的代码施加的限制。本机可能不会在这些方法之间发起任何调用，并且可能不会由于任何原因而阻塞。未重视这些限制会造成应用程序或 JVM 中出现间断性死锁。
+
+举例来说，以下代码看上去可能没有问题：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>void workOnPrimitiveArray(JNIEnv* env, jobject obj, jarray arr1) {
+</pre><pre>&nbsp;&nbsp; jboolean isCopy;
+</pre><pre>&nbsp;&nbsp; jbyte* buffer = (*env)-&gt;GetPrimitiveArrayCritical(env, arr1, &amp;isCopy); 
+</pre><pre>&nbsp;&nbsp;&nbsp;if ((*env)-&gt;ExceptionCheck(env)) return; 
+</pre><pre>&nbsp;&nbsp;&nbsp;
+</pre><pre>&nbsp;&nbsp;&nbsp;processBufferHelper(buffer);
+</pre><pre>&nbsp;&nbsp; 
+</pre><pre>&nbsp;&nbsp;&nbsp;(*env)-&gt;ReleasePrimitiveArrayCritical(env, arr1, buffer, 0); 
+</pre><pre>&nbsp;&nbsp;&nbsp;if ((*env)-&gt;ExceptionCheck(env)) return;
+</pre><pre>}
+</pre></td></tr></tbody></table>
+
+<table width="40%" align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p><strong>正确性技巧 #5</strong></p><p>确保代码不会在 <code>Get<em>XXX</em>Critical()</code> 和 <code>Release<em>XXX</em>Critical()</code> 调用之间发起任何 JNI 调用或由于任何原因出现阻塞。</p></td></tr></tbody></table></td></tr></tbody></table>
+
+但是，我们需要验证在调用 `processBufferHelper()` 时可以运行的所有代码都没有违反任何限制。这些限制适用于在 `Get` 和 `Release` 调用之间执行的所有代码，无论它是不是本机的一部分。
+
+### 2.5 未正确使用全局引用
+
+本机可以创建一些全局引用，以保证对象在不再需要时才会被垃圾收集器回收。常见的缺陷包括忘记删除已创建的全局引用，或者完全失去对它们的跟踪。考虑一个本机创建了全局引用，但是未删除它或将它存储在某处：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>lostGlobalRef(JNIEnv* env, jobject obj, jobject keepObj) {
+</pre><pre>&nbsp;&nbsp; jobject gref = (*env)-&gt;NewGlobalRef(env, keepObj);
+</pre><pre>}
+</pre></td></tr></tbody></table>
+
+<table width="40%" align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p><strong>正确性技巧 #6</strong></p><p>始终跟踪全局引用，并确保不再需要对象时删除它们。</p></td></tr></tbody></table></td></tr></tbody></table>
+
+创 建全局引用时，JVM 会将它添加到一个禁止垃圾收集的对象列表中。当本机返回时，它不仅会释放全局引用，应用程序还无法获取引用以便稍后释放它 — 因此，对象将会始终存在。不释放全局引用会造成各种问题，不仅因为它们会保持对象本身为活动状态，还因为它们会将通过该对象能接触到的所有对象都保持为活动状态。在某些情况下，这会显著加剧内存泄漏。
+
+3. 避免常见缺陷
+---------
+
+假设您编写了一些新 JNI 代码，或者继承了别处的某些 JVI 代码，如何才能确保避免了常见缺陷，或者在继承代码中发现它们？表 1 提供了一些确定这些常见缺陷的技巧：
+
+  
+**表 1. 确定 JNI 编程缺陷的清单**
+
+<table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td></td><td><p align="center"><strong>未缓存</strong></p></td><td><p align="center"><strong>触发数组副本</strong></p></td><td><p align="center"><strong>错误界限</strong></p></td><td><p align="center"><strong>过多回访</strong></p></td><td><p align="center"><strong>使用大量本地引用</strong></p></td><td><p align="center"><strong>使用错误的 JNIEnv</strong></p></td><td><p align="center"><strong>未检测异常</strong></p></td><td><p align="center"><strong>未检测返回值</strong></p></td><td><p align="center"><strong>未正确使用数组</strong></p></td><td><p align="center"><strong>未正确使用全局引用</strong></p></td></tr><tr><td><p>规范验证</p></td><td></td><td></td><td></td><td></td><td></td><td><p><strong>X</strong></p></td><td><p><strong>X</strong></p></td><td></td><td><p><strong>X</strong></p></td><td></td></tr><tr><td><p>方法跟踪</p></td><td><p><strong>X</strong></p></td><td><p><strong>X</strong></p></td><td><p><strong>X</strong></p></td><td><p><strong>X</strong></p></td><td></td><td></td><td><p><strong>X</strong></p></td><td></td><td><p><strong>X</strong></p></td><td><p><strong>X</strong></p></td></tr><tr><td><p>转储</p></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><p><strong>X</strong></p></td></tr><tr><td><p><code>-verbose:jni</code></p></td><td></td><td></td><td></td><td></td><td><p><strong>X</strong></p></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><p>代码审查</p></td><td><p><strong>X</strong></p></td><td><p><strong>X</strong></p></td><td><p><strong>X</strong></p></td><td><p><strong>X</strong></p></td><td><p><strong>X</strong></p></td><td><p><strong>X</strong></p></td><td><p><strong>X</strong></p></td><td><p><strong>X</strong></p></td><td><p><strong>X</strong></p></td><td><p><strong>X</strong></p></td></tr></tbody></table>
+
+您可以在开发周期的早期确定许多常见缺陷，方法如下：
+
+*   [根据规范验证新代码](http://www.chineselinuxuniversity.net/articles/26502.shtml#validation)
+*   [分析方法跟踪](http://www.chineselinuxuniversity.net/articles/26502.shtml#trace)
+*   [使用 `-verbose:jni` 选项](http://www.chineselinuxuniversity.net/articles/26502.shtml#verbose)
+*   [生成转储](http://www.chineselinuxuniversity.net/articles/26502.shtml#dumps)
+*   [执行代码审查](http://www.chineselinuxuniversity.net/articles/26502.shtml#reviews)
+
+### 3.1 根据 JNI 规范验证新代码
+
+维持规范的限制列表并审查本机与列表的遵从性是一个很好的实践，这可以通过手动或自动代码分析来完成。确保遵从性的工作可能会比调试由于违背限制而出现的细小和间断性故障轻松很多。下面提供了一个专门针对新开发代码（或对您来说是新的）的规范顺从性检查列表：
+
+*   验证 `JNIEnv` 仅与与之相关的线程使用。
+*   确认未在 `Get_XXX_Critical()` 的 `Release_XXX_Critical()` 部分调用 JNI 方法。
+*   对于进入关键部分的方法，验证该方法未在释放前返回。
+*   验证在所有可能引起异常的 JNI 调用之前都检测了异常。
+*   确保所有 `Get`/`Release` 调用在各 JNI 方法中都是相匹配的。
+
+IBM 的 JVM 实现包括开启自动 JNI 检测的选项，其代价是较慢的执行速度。与出色的代码单元测试相结合，这是一种极为强大的工具。您可以运行应用程序或单元测试来执行遵从性检查，或者确定所遇到的 bug 是否是由本机引起的。除了执行上述规范遵从性检查之外，它还能确保：
+
+*   传递给 JNI 方法的参数属于正确的类型。
+*   JNI 代码未读取超过数组结束部分之外的内容。
+*   传递给 JNI 方法的指针都是有效的。
+
+JNI 检测报告的所有结论并不一定都是代码中的错误。它们还包括一些针对代码的建议，您应该仔细阅读它们以确保代码功能正常。
+
+您可以通过以下命令行启用 JNI 检测选项：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>Usage: -Xcheck:jni:[option[,option[,...]]]
+</pre><pre>&nbsp;
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; all&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; check application and system classes
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; verbose&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trace certain JNI functions and activities
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trace&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; trace all JNI functions
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nobounds&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do not perform bounds checking on strings and arrays
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nonfatal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do not exit when errors are detected
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nowarn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do not display warnings
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; noadvice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do not display advice
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; novalist&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do not check for va_list reuse
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; valist&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; check for va_list reuse
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pedantic&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; perform more thorough, but slower checks
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print this screen
+</pre></td></tr></tbody></table>
+
+使用 IBM JVM 的 `-Xcheck:jni` 选项作为标准开发流程的一部分可以帮助您更加轻松地找出代码错误。特别是，它可以帮助您确定在错误线程中使用 `JNIEnv` 以及未正确使用关键区域的缺陷的根源。
+
+最新的 Sun JVM 提供了一个类似的 `-Xcheck:jni` 选项。它的工作原理不同于 IBM 版本，并且提供了不同的信息，但是它们的作用是相同的。它会在发现未符合规范的代码时发出警告，并且可以帮助您确定常见的 JNI 缺陷。
+
+### 3.2 分析方法跟踪
+
+生成对已调用本机方法以及这些本机方法发起的 JNI 回调的跟踪，这对确定大量常见缺陷的根源是非常有用的。可确定的问题包括：
+
+*   大量 `GetFieldID()` 和 `GetMethodID()` 调用 — 特别是，如果这些调用针对相同的字段和方法 — 表示字段和方法未被缓存。
+*   `Get_Type_ArrayElements()` 调用实例（而非 `Get_Type_ArrayRegion()`）有时表示存在不必要的复制。
+*   在 Java 代码与本机代码之前来回快速切换（由时间戳指示）有时表示 Java 代码与本机代码之间的界限有误，从而造成性能较差。
+*   每个本机函数调用后面都紧接着大量 `GetFieldID()` 调用，这种模式表示并未传递所需的参数，而是强制本机回访完成工作所需的数据。
+*   调用可能抛出异常的 JNI 方法之后缺少对 `ExceptionOccurred()` 或 `ExceptionCheck()` 的调用表示本机未正确检测异常。
+*   `Get_XXX_()` 和 `Release_XXX_()` 方法调用的数量不匹配表示缺少释放操作。
+*   在 `Get_XXX_Critical()` 和 `Release_XXX_Critical()` 调用之间调用 JNI 方法表示未遵循规范施加的限制。
+*   如果调用 `Get_XXX_Critical()` 和 `Release_XXX_Critical()` 之间相隔的时间较长，则表示未遵循 “不要阻塞调用” 规范所施加的限制。
+*   `NewGlobalRef()` 和 `DeleteGlobalRef()` 调用之间出现严重失衡表示释放不再需要的引用时出现故障。
+
+一些 JVM 实现提供了一种可用于生存方法跟踪的机制。您还可以通过各种外部工具来生成跟踪，比如探查器和代码覆盖工具。
+
+IBM JVM 实现提供了许多用于生成跟踪信息的方法。第一种方法是使用 `-Xcheck:jni:trace` 选项。这将生成对已调用的本机方法以及它们发起的 JNI 回调的跟踪。清单 13 显示某个跟踪的摘录（为便于阅读，隔开了某些行）：
+
+  
+**清单 13. IBM JVM 实现所生成的方法跟踪**
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>Call JNI: java/lang/System.getPropertyList()[Ljava/lang/String; {
+</pre><pre>00177E00&nbsp;&nbsp; Arguments: void
+</pre><pre>00177E00&nbsp;&nbsp; FindClass("java/lang/String")
+</pre><pre>00177E00&nbsp;&nbsp; FindClass("com/ibm/oti/util/Util")
+</pre><pre>00177E00&nbsp;&nbsp; Call JNI: com/ibm/oti/vm/VM.useNativesImpl()Z {
+</pre><pre>00177E00&nbsp;&nbsp;&nbsp;&nbsp; Arguments: void
+</pre><pre>00177E00&nbsp;&nbsp;&nbsp;&nbsp; Return: (jboolean)false
+</pre><pre>00177E00&nbsp;&nbsp; }
+</pre><pre>00177E00&nbsp;&nbsp; Call JNI: java/security/AccessController.initializeInternal()V {
+</pre><pre>00177E00&nbsp;&nbsp;&nbsp;&nbsp; Arguments: void
+</pre><pre>00177E00&nbsp;&nbsp;&nbsp;&nbsp; FindClass("java/security/AccessController")
+</pre><pre>00177E00&nbsp;&nbsp;&nbsp;&nbsp; GetStaticMethodID(java/security/AccessController, "doPrivileged", 
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"(Ljava/security/PrivilegedAction;)Ljava/lang/Object;")
+</pre><pre>00177E00&nbsp;&nbsp;&nbsp;&nbsp; GetStaticMethodID(java/security/AccessController, "doPrivileged", 
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"(Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;")
+</pre><pre>00177E00&nbsp;&nbsp;&nbsp;&nbsp; GetStaticMethodID(java/security/AccessController, "doPrivileged", 
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ljava/lang/Object;")
+</pre><pre>00177E00&nbsp;&nbsp;&nbsp;&nbsp; GetStaticMethodID(java/security/AccessController, "doPrivileged", 
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"(Ljava/security/PrivilegedExceptionAction;
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ljava/security/AccessControlContext;)Ljava/lang/Object;")
+</pre><pre>00177E00&nbsp;&nbsp;&nbsp;&nbsp; Return: void
+</pre><pre>00177E00&nbsp;&nbsp; }
+</pre><pre>00177E00&nbsp;&nbsp; GetStaticMethodID(com/ibm/oti/util/Util, "toString", 
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"([BII)Ljava/lang/String;")
+</pre><pre>00177E00&nbsp;&nbsp; NewByteArray((jsize)256)
+</pre><pre>00177E00&nbsp;&nbsp; NewObjectArray((jsize)118, java/lang/String, (jobject)NULL)
+</pre><pre>00177E00&nbsp;&nbsp; SetByteArrayRegion([B@0018F7D0, (jsize)0, (jsize)30, (void*)7FF2E1D4)
+</pre><pre>00177E00&nbsp;&nbsp; CallStaticObjectMethod/CallStaticObjectMethodV(com/ibm/oti/util/Util, 
+</pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;toString([BII)Ljava/lang/String;, (va_list)0007D758) {
+</pre><pre>00177E00&nbsp;&nbsp;&nbsp;&nbsp; Arguments: (jobject)0x0018F7D0, (jint)0, (jint)30
+</pre><pre>00177E00&nbsp;&nbsp;&nbsp;&nbsp; Return: (jobject)0x0018F7C8
+</pre><pre>00177E00&nbsp;&nbsp; }
+</pre><pre>00177E00&nbsp;&nbsp; ExceptionCheck()
+</pre></td></tr></tbody></table>
+
+清单 13 中的跟踪摘录显示了已调用的本机方法（比如 `AccessController.initializeInternal()V`）以及本机方法发起的 JNI 回调。
+
+### 3.3 使用 `-verbose:jni` 选项
+
+Sun 和 IBM JVM 还提供了一个 `-verbose:jni` 选项。对于 IBM JVM 而言，开启此选项将提供关于当前 JNI 回调的信息。清单 14 显示了一个示例：
+
+  
+**清单 14. 使用 IBM JVM 的** `**-verbose:jni**`**列出 JNI 回调**
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>&lt;JNI GetStringCritical: buffer=0x100BD010&gt;
+</pre><pre>&lt;JNI ReleaseStringCritical: buffer=100BD010&gt;
+</pre><pre>&lt;JNI GetStringChars: buffer=0x03019C88&gt;
+</pre><pre>&lt;JNI ReleaseStringChars: buffer=03019C88&gt;
+</pre><pre>&lt;JNI FindClass: java/lang/String&gt;
+</pre><pre>&lt;JNI FindClass: java/io/WinNTFileSystem&gt;
+</pre><pre>&lt;JNI GetMethodID: java/io/WinNTFileSystem.&lt;init&gt; ()V&gt;
+</pre><pre>&lt;JNI GetStaticMethodID: com/ibm/j9/offload/tests/HelloWorld.main ([Ljava/lang/String;)V&gt;
+</pre><pre>&lt;JNI GetMethodID: java/lang/reflect/Method.getModifiers ()I&gt;
+</pre><pre>&lt;JNI FindClass: java/lang/String&gt;
+</pre></td></tr></tbody></table>
+
+对于 Sun JVM 而言，开启 `-verbose:jni` 选项不会提供关于当前调用的信息，但它会提供关于所使用的本机方法的额外信息。清单 15 显示了一个示例：
+
+  
+**清单 15. 使用 Sun JVM 的** `**-verbose:jni**`
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>[Dynamic-linking native method java.util.zip.ZipFile.getMethod ... JNI]
+</pre><pre>[Dynamic-linking native method java.util.zip.Inflater.initIDs ... JNI]
+</pre><pre>[Dynamic-linking native method java.util.zip.Inflater.init ... JNI]
+</pre><pre>[Dynamic-linking native method java.util.zip.Inflater.inflateBytes ... JNI]
+</pre><pre>[Dynamic-linking native method java.util.zip.ZipFile.read ... JNI]
+</pre><pre>[Dynamic-linking native method java.lang.Package.getSystemPackage0 ... JNI]
+</pre><pre>[Dynamic-linking native method java.util.zip.Inflater.reset ... JNI]
+</pre></td></tr></tbody></table>
+
+开启此选项还会让 JVM 针对使用过多本地引用而未通知 JVM 的情况发起警告。举例来说，IBM JVM 生成了这样一个消息：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>JVMJNCK065W JNI warning in FindClass: Automatically grew local reference frame capacity 
+</pre><pre>from 16 to 48. 17 references are in use. 
+</pre><pre>Use EnsureLocalCapacity or PushLocalFrame to explicitly grow the frame. 
+</pre></td></tr></tbody></table>
+
+虽然 `-verbose:jni` 和 `-Xcheck:jni:trace` 选项可帮助您方便地获取所需的信息，但手动审查此信息是一项艰巨的任务。一个不错的提议是，创建一些脚本或实用工具来处理由 JVM 生成的跟踪文件，并查看 [警告](http://www.chineselinuxuniversity.net/articles/26502.shtml#trace)。
+
+### 3.4 生成转储
+
+运行中的 Java 进程生成的转储包含大量关于 JVM 状态的信息。对于许多 JVM 来说，它们包括关于全局引用的信息。举例来说，最新的 Sun JVM 在转储信息中包括这样一行：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>JNI global references: 73
+</pre></td></tr></tbody></table>
+
+通过生成前后转储，您可以确定是否创建了任何未正常释放的全局引用。
+
+您可以在 UNIX® 环境中通过对 `java` 进程发起 `kill -3` 或 `kill -QUIT` 来请求转储。在 Windows® 上，使用 Ctrl+Break 组合键。
+
+对于 IBM JVM，使用以下步骤获取关于全局引用的信息：
+
+1.  将 `-Xdump:system:events=user` 添加到命令行。这样，当您在 UNIX 系统上调用 `kill -3` 或者在 Windows 上按下 Ctrl+Break 时，JVM 便会生成转储。
+2.  程序在运行中时会生成后续转储。
+3.  运行 `jextract -nozip core._XXX_ output.xml`，这将会将转储信息提取到可读格式的 output.xml 中。
+4.  查找 output.xml 中的 `JNIGlobalReference` 条目，它提供关于当前全局引用的信息，如清单 16 所示：
+
+  
+**清单 16. output.xml 中的** `**JNIGlobalReference**`**条目**
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</pre><pre>&lt;rootobject type="Thread" reachability="strong" /&gt;
+</pre><pre>&lt;rootobject type="Thread" reachability="strong" /&gt;
+</pre><pre>&lt;rootobject type="JNIGlobalReference" reachability="strong" /&gt;
+</pre><pre>&lt;rootobject type="JNIGlobalReference" reachability="strong" /&gt;
+</pre><pre>&lt;rootobject type="JNIGlobalReference" reachability="strong" /&gt;
+</pre><pre>&lt;rootobject type="JNIGlobalReference" reachability="strong" /&gt;
+</pre><pre>&lt;rootobject type="JNIGlobalReference" reachability="strong" /&gt;
+</pre><pre>&lt;rootobject type="JNIGlobalReference" reachability="strong" /&gt;
+</pre><pre>&lt;rootobject type="JNIGlobalReference" reachability="strong" /&gt;
+</pre><pre>&lt;rootobject type="StringTable" reachability="weak" /&gt;
+</pre><pre>&lt;rootobject type="StringTable" reachability="weak" /&gt;
+</pre><pre>&lt;rootobject type="StringTable" reachability="weak" /&gt;
+</pre><pre>&lt;rootobject type="StringTable" reachability="weak" /&gt;
+</pre></td></tr></tbody></table>
+
+通过查看后续 Java 转储中报告的数值，您可以确定全局引用是否出现的泄漏。
+
+参见 [参考资料](http://www.chineselinuxuniversity.net/articles/26502.shtml#resources) 获取关于使用转储文件以及 IBM JVM 的 `jextract` 的更多信息。
+
+### 3.5 执行代码审查
+
+代 码审查经常可用于确定常见缺陷，并且可以在各种级别上完成。继承新代码时，快速扫描可以发现各种问题，从而避免稍后花费更多时间进行调试。在某些情况下， 审查是确定缺陷实例（比如未检查返回值）的唯一方法。举例来说，此代码的问题可能可以通过代码审查轻松确定，但却很难通过调试来发现：
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><pre>int calledALot(JNIEnv* env, jobject obj, jobject allValues){
+</pre><pre>&nbsp;&nbsp; jclass cls = (*env)-&gt;GetObjectClass(env,allValues); 
+</pre><pre>&nbsp;&nbsp;&nbsp;jfieldID a = (*env)-&gt;GetFieldID(env, cls, "a", "I");
+</pre><pre>&nbsp;&nbsp; jfieldID b = (*env)-&gt;GetFieldID(env, cls, "b", "I");
+</pre><pre>&nbsp;&nbsp; jfieldID c = (*env)-&gt;GetFieldID(env, cls, "c", "I");
+</pre><pre>&nbsp;&nbsp; jfieldID d = (*env)-&gt;GetFieldID(env, cls, "d", "I");
+</pre><pre>&nbsp;&nbsp; jfieldID e = (*env)-&gt;GetFieldID(env, cls, "e", "I");
+</pre><pre>&nbsp;&nbsp; jfieldID f = (*env)-&gt;GetFieldID(env, cls, "f", "I");
+</pre><pre>&nbsp;
+</pre><pre>}
+</pre><pre>&nbsp;
+</pre><pre>jclass getObjectClassHelper(jobject object){ 
+</pre><pre>&nbsp;&nbsp;&nbsp;/* use globally cached JNIEnv */
+</pre><pre>&nbsp;&nbsp; return cls = (*globalEnvStatic)-&gt;GetObjectClass(globalEnvStatic,allValues); 
+</pre><pre>}
+</pre></td></tr></tbody></table>
+
+代码审查可能会发现第一个方法未正确缓存字段 ID，尽管重复使用了相同的 ID，并且第二个方法所使用的 `JNIEnv` 并不在应该在的线程上。
+
+<table align="right" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="right"><a target="_blank" href="http://www.chineselinuxuniversity.net/articles/26502.shtml#main" rel="noopener noreferrer"><strong>回页首</strong></a></p></td></tr></tbody></table></td></tr></tbody></table>
+
+4. 结束语
+------
+
+现在，您已经了解了 10 大 JNI 编程缺陷，以及一些用于在已有或新代码中确定它们的良好实践。坚持应用这些实践有助于提高 JNI 代码的正确率，并且您的应用程序可以实现所需的性能水平。
+
+有 效集成已有代码资源的能力对于面向对象架构（SOA）和基于云的计算这两种技术的成功至关重要。JNI 是一项非常重要的技术，用于将非 Java 旧有代码和组件集成到基于 Java 的平台中，充当 SOA 或基于云的系统的基本元素。正确使用 JNI 可以加速将这些组件转变为服务的过程，并允许您从现有投资中获得最大优势。
+
+参考资料
+
+**学习**
+
+*   [Java Native Interface](http://java.sun.com/javase/6/docs/technotes/guides/jni/)：您可以在此处找到 JNI 规范、FAQ、示例和其他资源。
+*   “[用 JNI 进行 Java 编程](http://www.ibm.com/developerworks/cn/views/java/tutorials.jsp?cv_doc_id=84972)”（Scott Stricker，developerWorks，2002 年 3 月）：在本教程中，学习 JNI 基础知识以及一些比较高级的编程挑战。
+*   [IBM Java SDK Info Center](http://publib.boulder.ibm.com/infocenter/javasdk/v6r0/index.jsp)：了解关于在 IBM JVM 中使用转储文件以及 `jextract` 的更多信息。
+*   “[JNI Programming on AIX](http://www.ibm.com/developerworks/aix/library/au-JNI_AIX_PAPER.html)”（Nikolay Yevik，developerWorks，2004 年 3 月）：获取使用 IBM JDK for AIX 开发 JNI 应用程序的通用指南。
+*   “[Design and Implementation of a Comprehensive Real-time Java Virtual Machine](http://domino.research.ibm.com/comm/research_people.nsf/pages/dgrove.emsoft2007.html)”（Joshua Auerbach 等，_Proceedings of the Seventh ACM and IEEE International Conference on Embedded Software_，2007 年）：了解可返回数组副本的 JVM。
+*   浏览 [技术书店](http://www.ibm.com/developerworks/apps/SendTo?bookstore=safari) 查找有关这些主题和其他技术主题的图书。
+*   [developerWorks Java 技术专区](http://www.ibm.com/developerworks/cn/java/)：数百篇关于 Java 编程各方面的文章。
+
+Chap21:JNI 设计实践之路
+=================
+
+一、       前言
+-----------
+
+本文为在 32 位 Windows 平台上实现 Java 本地方法提供了实用的示例、步骤和准则。本文中的示例使用 Sun 公司的 Java Development Kit (JDK) 版本 1.4.2。用 C ++ 语言编写的本地代码是用 Microsoft Visual C++  6.0 编译器编译生成。规定在 Java 程序中 function/method 称为方法，在 C++ 程序中称为函数。
+
+本文将围绕求圆面积逐步展开，探讨 java 程序如何调用现有的 DLL？如何在 C++ 程序中创建，检查及更新 Java 对象？如何在 C++ 和 Java 程序中互抛异常，并进行异常处理？最后将探讨 Eclipse 及 JBuilder 工具可执行文件为什么不到 100K 大小以及所采用的技术方案？
+
+二、       JNI 基础知识简介
+-------------------
+
+Java 语言及其标准 API 应付应用程序的编写已绰绰有余。但在某些情况下，还是必须使用非 Java 代码，例如：打印、图像转换、访问硬件、访问现有的非 Java 代码等。与非 Java 代码的沟通要求获得编译器和 JVM 的专门支持，并需附加的工具将 Java 代码映射成非 Java 代码。目前，不同的开发商为我们提供了不同的方案，主要有以下方法：
+
+1.         JNI（Java Native Interface）
+
+2.         JRI（Java Runtime Interface）
+
+3.         J/Direct
+
+4.         RNI（Raw Native Interface）
+
+5.         Java/COM 集成方案
+
+6.         CORBA（Common Object Request Broker Architecture）
+
+其中方案 1 是 JDK 自带的一部分，方案 2 由网景公司所提供，方案 3 、 4 、 5 是微软所提供的方案，方案 6 是一家非盈利组织开发的一种集成技术，利用它可以在由不同语言实现的对象之间进行 “相互操作” 的能力。
+
+在开发过程中，我们一般采用第 1 种方案――JNI 技术。因为只用当程序用 Microsoft Java 编译器编译，而且只有在 Microsoft Java 虚拟机 (JVM) 上运行的时候，才采用方案 3 、 4 、 5。而方案 6 一般应用在大型的分布式应用中。
+
+       JNI 是一种包容极广的编程接口，允许我们从 Java 应用程序里调用本地化方法。也就是说，JNI 允许运行在虚拟机上的 Java 程序能够与其它语言（例如 C/ C++/ 汇编语言）编写的程序或者类库进行相互间的调用。同时 JNI 也提供了一整套的 API，允许将 Java 虚拟机直接嵌入到本地的应用程序中。其中 JNI 所扮演的角色可用图一描述：
+
+图一 JNI 基本结构描述图
+
+目前 JNI 只能与用 C 和 C＋＋编写的本地化方法打交道。利用 JNI，我们本地化方法可以：
+
+1.         创建、检查及更新 Java 对象
+
+2.         调用 Java 和非 Java 程序所编写的方法 (函数)，以及 win32 API 等.
+
+3.         捕获和抛出 “异常”
+
+4.         装载类并获取类信息
+
+5.         进行运行期类型检查
+
+所以，原来在 Java 程序中能对类及对象所做的几乎所有事情都可以在本地化方法中实现。
+
+下图表示了通过 JNI，Java 程序和非 Java 程序相互调用原理。
+
+图二   Java 程序和非 Java 程序通过 JNI 相互调用原理
+
+通过 JNI，编写 Java 程序调用非 Java 程序一般步骤：
+
+1.)    编写对本地化方法及自变量进行声明的 Java 代码
+
+2.)    利用头文件生成器 javah 生成本地化方法对应的头文件
+
+3.)    利用 C 和 C++ 实现本地化方法（可调用非 Java 程序），并编译、链接生成 DLL 文件
+
+4.)    Java 程序通过生成的 DLL 调用非 Java 程序
+
+同时我们也可以通过 JNI，将 Java 虚拟机直接嵌入到本地的应用程序中，步骤很简单，只需要在 C/C++ 程序中以 JNI API 函数为媒介调用 Java 程序。
+
+以上步骤虽简单，但有很多地方值得注意。如果一招不慎，可能造成满盘皆输。
+
+三、       Java 程序调用非 Java 程序
+---------------------------
+
+**3.1 本地化方法声明及头文件生成**
+
+任务：现有一求圆面积的 Circle.dll（用 MFC 编写，参数：圆半径；返回值：圆面积）文件，在 Java 程序中调用该 Dll。
+
+在本地化声明中，可分无包和有包两种情况。我们主要对有包的情况展开讨论。
+
+实例 1：
+
+package com.testJni;
+
+public class Circle
+
+{
+
+   public native void cAreas(int radius) ;
+
+   static
+
+   {
+
+        //System.out.println(System.getProperty("java.library.path"));
+
+        System.loadLibrary("CCircle");
+
+    }
+
+}
+
+在 Java 程序中，需要在类中声明所调用的库名称 System.loadLibrary(String libname);
+
+该函数是将一个 Dll/so 库载入内存，并建立同它的链接。定位库的操作依赖于具体的操作系统。在 windows 下，首先从当前目录查找，然后再搜寻”PATH” 环境变量列出的目录。如果找不到该库，则会抛出异常 UnsatisfiedLinkError。库的扩展名可以不用写出来，究竟是 Dll 还是 so，由系统自己判断。这里加载的是 3.2 中生成的 DLL，而不是其他应用程序生成的 Dll。还需要对将要调用的方法做本地声明，关键字为 **native**。表明此方法在本地方法中实现，而不是在 Java 程序中，有点类似于关键字 abstract。
+
+    我们写一个 Circle.bat 批处理文件编译 Circle.java 文件，内容如下 (可以用其他工具编译)：
+
+javac -d . Circle.java
+
+javah com.testJni.Circle
+
+pause
+
+**对于有包的情况一定要注意这一点**，就是在用 javah 时有所不同。开始时我的程序始终运行都不成功，问题就出在这里。本类名称的前面均是包名。这样生成的头文件就是：com_testJni_Circle.h。开始时，在包含包的情况下我用 javah Circle 生成的头文件始终是 Circle.h。在网上查资料时，看见别人的头文件名砸那长，我的那短。但不知道为什么，现在大家和我一样知道为什么了吧。：）。
+
+如果是无包的情况，则将批处理文件换成如下内容：
+
+javac Circle.java
+
+javah Circle
+
+pause
+
+**3.2 本地化方法实现**
+
+刚才生成的 com_testJni_Circle.h 头文件内容如下：
+
+/* DO NOT EDIT THIS FILE - it is machine generated */
+
+#include <jni.h>
+
+/* Header for class com_testJni_Circle */
+
+#ifndef _Included_com_testJni_Circle
+
+#define _Included_com_testJni_Circle
+
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
+
+/*
+
+ * Class:     com_testJni_Circle
+
+ * Method:    cAreas
+
+ * **Signature**:  (I)V
+
+ */
+
+JNIEXPORT void JNICALL Java_com_testJni_Circle_cAreas
+
+ (JNIEnv *, jobject, jint);
+
+#ifdef __cplusplus
+
+}
+
+#endif
+
+#endif
+
+如果在本地化方法声明中，方法 cAreas () 声明为 static 类型，则与之相对应的 Java_com_testJni_Circle_cAreas() 函数中的第二个参数类型为 jclass。也就是
+
+JNIEXPORT void JNICALL Java_com_testJni_Circle_cAreas(JNIEnv *env, **jclass newCircle**,jint radius)。
+
+这里 **JNIEXPORT** 和 **JNICALL** 都是 JNI 的关键字，其实是一些宏 (具体参看 jni_md.h 文件)。
+
+从以上头文件中，可以看出函数名生成规则为：**Java[_包名]_类名_方法名 [ _函数签名]**(其中 [] 是可选项)，均以字符下划线 ( _ ) 分割。如果是无包的情况，则不包含 [ _包名] 选项。如果本地化方法中有方法重载，则在该函数名最后面追加函数签名，也就是 Signature 对应的值，函数签名参见表一。
+
+<table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="center">函数签名</p></td><td><p align="center">Java 类型</p></td></tr><tr><td><p align="center">V</p></td><td><p align="center">void</p></td></tr><tr><td><p align="center">Z</p></td><td><p align="center">boolean</p></td></tr><tr><td><p align="center">B</p></td><td><p align="center">byte</p></td></tr><tr><td><p align="center">C</p></td><td><p align="center">char</p></td></tr><tr><td><p align="center">S</p></td><td><p align="center">short</p></td></tr><tr><td><p align="center">I</p></td><td><p align="center">int</p></td></tr><tr><td><p align="center">J</p></td><td><p align="center">long</p></td></tr><tr><td><p align="center">F</p></td><td><p align="center">float</p></td></tr><tr><td><p align="center">D</p></td><td><p align="center">double</p></td></tr><tr><td><p align="center">L fully-qualified-class ;</p></td><td><p align="center">fully-qualified-class</p></td></tr><tr><td><p align="center">[ type</p></td><td><p align="center">type[]</p></td></tr><tr><td><p align="center">(arg-types) ret-type</p></td><td><p align="center">method type</p></td></tr></tbody></table>
+
+表一函数签名与 Java 类型的映射
+
+在具体实现的时候，我们只关心函数原型： 
+
+JNIEXPORT void JNICALL Java_com_testJni_Circle_cAreas(JNIEnv *, jobject, jint);
+
+现在就让我们开始激动人心的一步吧 : ) 。启动 VC 集成开发环境，新建一工程，在 project 里选择 win32 Dynamic-link Library，输入工程名，然后点击 ok，接下去步骤均取默认 (图三)。如果不取默认，生成的工程将会有 DllMain () 函数，反之将无这个函数。我在这里取的是空。
+
+图三   新建 DLL 工程
+
+然后选择菜单 File->new->Files->C++ Source File，生成一个空 *.cpp 文件，取名为 CCircle。与 3.1 中 System.loadLibrary("CCircle"); 参数保持一致。将 JNIEXPORT void JNICALL Java_com_testJni_Circle_cAreas(JNIEnv *, jobject, jint); 拷贝到 CPP 文件中，并包含其头文件。
+
+对应的 CCircle.cpp 内容如下：
+
+#include<iostream.h>
+
+#include"com_testJni_Circle.h"
+
+#include"windows.h"
+
+JNIEXPORT void JNICALL Java_com_testJni_Circle_cAreas(JNIEnv *env, jobject newCircle,jint radius)
+
+{
+
+     // 调用求圆面积的 Circle.dll
+
+     typedef void (*PCircle)(int radius);
+
+     HINSTANCE hDLL;
+
+     PCircle Circle;
+
+     hDLL=LoadLibrary("Circle.dll");// 加载动态链接库 Circle.dll 文件
+
+     Circle=(PCircle)GetProcAddress(hDLL,"Circle");
+
+     Circle(8);
+
+     FreeLibrary(hDLL);// 卸载 Circle.dll 文件；
+
+}
+
+在编译前一定要注意下列情况。
+
+**注意：**一定要把 SDK 目录下 include 文件夹及其下面的 win32 文件夹中的头文件拷贝到 VC 目录的 include 文件夹下。或者在 VC 的 tools\options\directories 中设置，如图四所示。
+
+图四   头文件设置
+
+我们知道 dll 文件有两种指明导出函数的方法，一种是在. def 文件中定义，另一种是在定义函数时使用关键字__declspec(dllexport)。而关键字 JNIEXPORT 实际在 jni_md.h 中如下定义，
+
+#define JNIEXPORT __declspec(dllexport)，可见 JNI 默认的导出函数使用第二种。使用第二种方式产生的导出函数名会根据编译器发生变化，在有的情况下会发生找不到导出函数的问题（我们在 java 控制台程序中调用很正常，但把它移植到 JSP 页面时，就发生了该问题，JVM 开始崩溃，百思不得其解，后来加入一个. def 文件才解决问题）。其实在《windows 核心编程》一书中，第 19.3.2 节就明确指出创建用于非 Visual C++ 工具的 DLL 时，建议加入一个 def 文件，告诉 Microsoft 编译器输出没有经过改变的函数名。因此最好采用第一种方法，定义一个. def 文件来指明导出函数。本例中可以新建一个 CCircle.def 文件，内容如下：
+
+; CCircle.def : Declares the module parameters for the DLL.
+
+LIBRARY      "CCircle"
+
+DESCRIPTION 'CCircle Windows Dynamic Link Library'
+
+EXPORTS
+
+    ; Explicit exports can go here
+
+    Java_com_testJni_Circle_cAreas
+
+现在开始对所写的程序进行编译。选择 build->rebuild all 对所写的程序进行编译。点击 build->build CCirclee.DLL 生成 DLL 文件。
+
+也可以用命令行 cl 来编译。语法格式参见 JDK 文档 JNI 部分。
+
+**再次强调（曾经为这个东西大伤脑筋）**：DLL 放置地方
+
+1)        当前目录。
+
+2)        Windows 的系统目录及 Windows 目录
+
+3)        放在 path 所指的路径中
+
+4)        自己在 path 环境变量中设置一个路径，要注意所指引的路径应该到. dll 文件的上一级，如果指到. dll，则会报错。
+
+下面就开始测试我们的所写的 DLL 吧（假设 DLL 已放置正确）。
+
+import com.testJni.Circle;
+
+public class test
+
+{
+
+   public static void main(String argvs[])
+
+   {
+
+      Circle myCircle;
+
+      myCircle = new Circle();
+
+      myCircle.cAreas(2);
+
+   }     
+
+}
+
+编译，运行程序，将会弹出如下界面：
+
+图五 运行结果
+
+以上是我们通过 JNI 方法调用的一个简单程序。实际情况要比这复杂的多。
+
+现在开始来讨论 JNI 中参数的情况，我们来看一个程序片断。
+
+实例二：
+
+JNIEXPORT jstring JNICALL Java_MyNative_cToJava
+
+(JNIEnv *env, jclass obj)
+
+{
+
+              jstring jstr;
+
+              char str[]="Hello,word!\n";
+
+              jstr=env->NewStringUTF(str);
+
+              return jstr;
+
+}
+
+在 C 和 Java 编程语言之间传送值时，需要理解这些值类型在这两种语言间的对应关系。这些都在头文件 jni.h 中定义，用 typedef 语句声明了这些类在目标平台上的代价类。头文件也定义了常量如：JNI_FALSE=0 和 JNI_TRUE=1; 表二和表三说明了 Java 类型和 C 类型之间的映射关系。
+
+<table width="509" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="center">Java 语言</p></td><td><p align="center">C/C++ 语言</p></td><td><p align="center">bit 位数</p></td></tr><tr><td><p align="center">boolean</p></td><td><p align="center">jboolean</p></td><td><p align="center">8 unsigned</p></td></tr><tr><td><p align="center">byte</p></td><td><p align="center">jbyte</p></td><td><p align="center">8</p></td></tr><tr><td><p align="center">char</p></td><td><p align="center">jchar</p></td><td><p align="center">16 unsigned</p></td></tr><tr><td><p align="center">short</p></td><td><p align="center">jshort</p></td><td><p align="center">16</p></td></tr><tr><td><p align="center">int</p></td><td><p align="center">jint</p></td><td><p align="center">32</p></td></tr><tr><td><p align="center">long</p></td><td><p align="center">jlong</p></td><td><p align="center">64</p></td></tr><tr><td><p align="center">float</p></td><td><p align="center">jfloat</p></td><td><p align="center">32</p></td></tr><tr><td><p align="center">double</p></td><td><p align="center">jdouble</p></td><td><p align="center">64</p></td></tr><tr><td><p align="center">void</p></td><td><p align="center">void</p></td><td><p align="center">0</p></td></tr></tbody></table>
+
+表二   Java 基本类型到本地类型的映射
+
+表三 Java 中的类到本地类的映射
+
+JNI 函数 NewStringUTF() 是从一个包含 UTF 格式编码字符的 char 类型数组中创建一个新的 jstring 对象。jstring 是以 JNI 为中介使 Java 的 String 类型与本地的 string 沟通的一种类型，我们可以视而不见 (具体对应见表二和表三)。如果你使用的函数是 GetStringUTFChars()(将 jstring 转换为 UTF-8 字符串)，必须同时使用 ReleaseStringUTFChars() 函数，通过它来通知虚拟机去回收 UTF-8 串占用的内存，否则将会造成内存泄漏，最终导致系统崩溃。因为 JVM 在调用本地方法时，是在虚拟机中开辟了一块本地方法栈供本地方法使用，当本地方法使用完 UTF-8 串后，得释放所占用的内存。其中程序片断 jstr=env->NewStringUTF(str); 是 C++ 中的写法，不必使用 env 指针。因为 JNIEnv 函数的 C++ 版本包含有直接插入成员函数，他们负责查找函数指针。而对于 C 的写法，应改为：jstr=**(*env)->**NewStringUTF(**env**,str); 因为所有 JNI 函数的调用都使用 env 指针，它是任意一个本地方法的第一个参数。env 指针是指向一个函数指针表的指针。因此在每个 JNI 函数访问前加前缀 (*env)->，以确保间接引用函数指针。
+
+C/C++ 和 Java 互传参数需要自己在编程过程中仔细摸索与体味。
+
+四、       C/C++ 访问 Java 成员变量和成员方法
+--------------------------------
+
+我们修改 3.1 中的 Java 程序声明，加入如下代码：
+
+   private int circleRadius;
+
+   public Circle()
+
+   {
+
+       circleRadius=0;
+
+   }
+
+   public void setCircleRadius(int radius)
+
+   {
+
+       circleRadius=radius;
+
+   }
+
+   public void javaAreas()
+
+   {
+
+       float PI = 3.14f;
+
+       if(circleRadius<=0)
+
+       {
+
+           System.out.println (“error!”);
+
+       }
+
+       else
+
+       {
+
+          System.out.println (PI*circleRadius*circleRadius);
+
+       }      
+
+    }
+
+在 C++ 程序中访问 Circle 类中的 private 私有成员变量 circleRadius，并设置它的值，同时调用 Java 方法 javaAreas()。在函数 Java_com_testJni_Circle_cAreas() 中加入如下代码：
+
+jclass circle;
+
+       jmethodID AreasID;
+
+       jfieldID radiusID;
+
+jint newRadius=5;
+
+       circle = env->GetObjectClass(newCircle);//get current class
+
+       radiusID=env->GetFieldID(circle,"circleRadius","I");//get field ID
+
+       env->SetIntField(newCircle,radiusID,newRadius);//set field value
+
+       AreasID=env->GetMethodID(circle,"javaAreas","()V");//get method ID
+
+       env->CallVoidMethod(newCircle,AreasID,NULL);//invoking method
+
+在 C++ 代码中，创建、检查及更新 Java 对象，首先要得到该类，然后再根据类得到其成员的 ID，最后根据该类的对象，ID 号调用成员变量或者成员方法。
+
+得到类，有两个 API 函数，分别为 FindClass() 和 GetObjectClass(); 后者顾名思义用于已经明确知道其对象，然后根据对象找类。前者用于得到没有实例对象的类。这里也可以改成 circle = env-> FidnClass("com/testJni/Circle"); 其中包的分隔符用字符 "/" 代替。如果已知一个类，也可以在 C++ 代码中创建该类对象，其 JNI 函数为 NewObject(); 示例代码如下：
+
+jclass      circle =env->FindClass("com/testJni/ Circle");
+
+jmethodID circleID=env->GetMethodID(circle,"<init>","()V");// 得到构造函数的 ID
+
+jobject newException=env->NewObject(circle, circleID,NULL);
+
+得到成员变量的 ID，根据其在 Java 代码中声明的类型不同而不同。具体分为两大类：非 static 型和 static 型，分别对应 GetFieldID() 和 GetStaticFieldID()。同时也可以获得和设置成员变量的值，根据其声明的 type 而变化，获得其值的 API 函数为：**Get**type**Field**() 和 **GetStatic**type**Field**()；与之相对应的设置其值的函数为 **Set**type**Field**() 和 **SetStatic**type**Field**()；在本例中，成员变量 circleRadius 声明成 int 型，则对应的函数分别为 GetIntField() 和 SetIntField();
+
+其实 JNI API 函数名是很有规律的，从上面已窥全貌。获得成员方法的 ID 也是同样的分类方法。具体为 GetMethodID() 和 GetStaticMethodID()。调用成员方法跟获得成员变量的值相类似，也根据其方法返回值的 type 不同而不同，分别为 **Call**type**Method**() 和 **CallStatic**type**Method**()。对于返回值为 void 的类型，其相应 JNI 函数为 CallVoidMethod()；
+
+以上获得成员 ID 函数的形参均一致。第一个参数为 jclass，第二个参数为成员变量或方法，第三个参数为该成员的签名 (签名可参见表一)。但调用或设置成员变量或方法时，第一个参数为实例对象 (即 jobject)，其余形参与上面相同。
+
+特别要注意的是得到构造方法的 ID 时，第二个参数不遵循上面的原则，为 jmethodID constructorID = env->GetMethodID(jclass, **"<init>"**,"函数签名");
+
+从上面代码中可以看出，在 C++ 中可以访问 java 程序 private 类型的变量，**严重破坏了类的封装原则。从而可以看出其不安全性。**
+
+五、       异常处理
+-------------
+
+本地化方法稳定性非常差，调用任何一个 JNI 函数都会出错，为了**程序的健壮性**，非常有必要在本地化方法中加入异常处理。我们继续修改上面的类。
+
+我们声明一个异常类，其代码如下：
+
+package com.testJni;
+
+import com.testJni.*;
+
+public class RadiusIllegal extends Exception
+
+{
+
+    protected String MSG="error!";
+
+    public RadiusIllegal(String message)
+
+    {
+
+        MSG=message;
+
+    }
+
+    public void print()
+
+    {
+
+       System.out.println(MSG);
+
+    }
+
+}
+
+同时也修改 Circle.java 中的方法, 加入异常处理。
+
+    public void javaAreas() throws RadiusIllegal    // 修改 javaAreas()，加入异常处理
+
+   {
+
+       float PI = 3.14f;
+
+       if(circleRadius<=0)
+
+       {
+
+           throw new RadiusIllegal("warning:radius is illegal!");
+
+       }
+
+       else
+
+       {
+
+            System.out.println (PI*circleRadius*circleRadius);
+
+       }      
+
+   }
+
+   public native void cAreas(int radius) throws RadiusIllegal;    // 修改 cAreas ()，加入异常处理
+
+   修改 C++ 代码中的函数，加入异常处理，实现 Java 和 C++ 互抛异常，并进行异常处理。
+
+   JNIEXPORT void JNICALL Java_com_testJni_Circle_cAreas(JNIEnv *env, jobject newCircle,jint radius)
+
+{
+
+       // 此处省略部分代码
+
+       radiusIllegal=env->FindClass("com/testJni/RadiusIllegal");//get the exception class
+
+       if((exception=env->ExceptionOccurred())!=NULL)
+
+       {
+
+              cout<<"errors in com_testJni_RadiusIllegal"<<endl;
+
+              env->ExceptionClear();
+
+       }    
+
+       // 此处省略部分代码
+
+       env->CallVoidMethod(newCircle,AreasID,NULL);//invoking
+
+       if((exception=env->ExceptionOccurred())!=NULL)
+
+       {
+
+              if(env->IsInstanceOf(exception,radiusIllegal)==JNI_TRUE)
+
+              {                  
+
+                     cout<<"errors in java method"<<endl;
+
+                     env->ExceptionClear();
+
+              }
+
+              else
+
+              {
+
+                     cout<<"errors in invoking javaAreas() method of Circle"<<endl;
+
+                     env->ExceptionClear();
+
+              }
+
+        }   
+
+        if(radius<=0)
+
+        {
+
+              env->ThrowNew(radiusIllegal,"errors in C function!");//throw exception
+
+         return ;
+
+        }
+
+        else
+
+        {
+
+              // 此处为调用计算圆面积的 DLL
+
+        }
+
+}
+
+在本地化方法 (C++) 中，可以自己处理异常，也可以重新抛出异常，让 Java 程序来捕获该异常，进行相关处理。
+
+如果调用 JNI 函数发生异常，不及时进行处理，再次调用其他 JNI 函数时，可能会使 JVM 崩溃 (crash), 大多数 JNI 函数都具有此特性。可以调用函数 ExceptionOccurred() 来判断是否发生了异常。该函数返回 jthrowable 的实例对象，如本例 if((exception=env->ExceptionOccurred())!=NULL)就用来判断是否发生了异常。当要判断具体是哪个异常发生时，可以用 IsInstanceOf()来进行测试，此函数非彼 IsInstanceOf(Java 语言中的 IsInstanceOf)。在上面的代码中，我们在本地化方法中给 circleRadius 设置了一非法值，然后调用方法 javaAreas(), 此时 java 代码会抛出异常，在本地化方法中进行捕获，然后用 IsInstanceOf()来进行测试是否发生了 RadiusIllegal 类型的异常，以便进行相关处理。在调用其他 JNI 函数之前，应当首先清除异常，其函数为 ExceptionClear()。
+
+如果是 C++ 的程序发生异常，则可以用 JNI API 函数 ThrowNew() 抛出该异常。但此时本地化方法并不返回退出，直到该程序执行完毕。所以当在本地化方法中发生异常时，应该人为的退出，及时进行处理，避免程序崩溃。函数 ThrowNew() 中第一个参数为 jclass 的类，第二个参数为附加信息，用来描述异常信息。
+
+如果要知道异常发生的详细信息，或者对程序进行调试时，可以用函数 ExceptionDescribe() 来显示异常栈里面的内容。
+
+六、       MFC 程序中嵌入 Java 虚拟机
+---------------------------
+
+可能大家天天都在用 Eclipse 和 Jbulider 这两款优秀的 IDE 进行程序开发，可能还不知道他们的可执行文件不到 100KB 大小，甚则连一副图片都可能比他们大。其实隐藏在他们背后的技术是 JNI，可执行文件只是去启动 Java 程序，所以也只有那么小。
+
+我们只需要在 MFC 程序中创建一个 JVM，然后基于这个 JVM 调用 Java 的方法，启动 Java 程序，就可以模拟出 Eclipse 和 Jbulider 的那种效果，使 java 程序更专业。其实要实现这种效果，用上面的方法足有够有。创建 JVM, 只需包含相应的类库，设置相关的属性。
+
+首先进行环境设置, 在 VC 环境的 tools-->options-->Directories 下的 Library files 选项中包含其创建 JVM 的库文件 jvm.lib，该库文件位于 JDK \ lib 目录下，如图 6 所示：
+
+图六库文件路径设置
+
+然后，在环境变量 path 中设置 jvm.dll 的路径。该 Dll      位于 jdk\jre\bin\server 目录或 jdk\jre\bin\client 目录下。**注意：一定不要将 jvm.dll 和 jvm.lib 拷贝到你应用程序路径下**，这样会引起 JVM 初始化失败。因为 Java 虚拟机是以相对路径来寻找和调用用到的库文件和其他相关文件。
+
+接下来，我们在 MFC 程序 (该程序请到《程序员》杂志频道下载) 中进行创建 JVM 初始化工作。示例代码如下：
+
+       JNIEnv *env;
+
+       JavaVM *jvm;
+
+       jint res;
+
+       jclass cls;
+
+       jmethodID mid;      
+
+       JavaVMInitArgs vm_args;
+
+       JavaVMOption options[3];
+
+       memset(&vm_args, 0, sizeof(vm_args));    
+
+     // 进行初始化工作      
+
+       options[0].optionString = "-Djava.compiler=NONE";
+
+       options[1].optionString = "-Djava.class.path=.";
+
+       options[2].optionString = "-verbose:jni";      
+
+       vm_args.version=JNI_VERSION_1_4;       // 版本号设置
+
+       vm_args.nOptions = 3;
+
+       vm_args.options = options;
+
+       vm_args.ignoreUnrecognized = JNI_TRUE;
+
+       res = JNI_CreateJavaVM(&jvm,(void**)&env,&vm_args); // 创建 JVM
+
+       if (res < 0)
+
+       {
+
+              MessageBox("Can't create Java VM","Error",MB_OK|MB_ICONERROR);
+
+              exit(1);
+
+       }
+
+       cls = env->FindClass("prog");
+
+       if(env->ExceptionOccurred()!=NULL)
+
+       {
+
+              MessageBox("Can't find Prog class!","Error",MB_OK|MB_ICONERROR);
+
+              exit(1);
+
+       }
+
+       mid = env->GetStaticMethodID(cls, "main", "([Ljava/lang/String;)V");
+
+       if(env->ExceptionOccurred()!=NULL)
+
+       {
+
+              MessageBox("Can't find Prog.main!","Error",MB_OK|MB_ICONERROR);
+
+              exit(1);
+
+       }
+
+       env->CallStaticVoidMethod(cls, mid, NULL); // 调用 Java 程序 main() 方法，启动 Java 程序
+
+       if(env->ExceptionOccurred()!=NULL)
+
+       {
+
+              MessageBox("Fatal Error!","Error",MB_OK|MB_ICONERROR);
+
+              exit(1);
+
+       }
+
+       jvm->DestroyJavaVM();// 释放 JVM 资源
+
+程序首先进行 JVM 初始化设置。我们观察 jni.h 文件关于 JavaVMOption 和 JavaVMInitArgs 的定义
+
+typedef struct JavaVMOption {
+
+    char *optionString;
+
+    void *extraInfo;
+
+} JavaVMOption;
+
+typedef struct JavaVMInitArgs {
+
+    jint version;
+
+    jint nOptions;
+
+    JavaVMOption *options;
+
+    jboolean ignoreUnrecognized;
+
+} JavaVMInitArgs;
+
+结构体 JavaVMInitArgs 中有四个参数，我们在程序中都得必须设置。其中版本号一定要设置正确，不同的版本有不同的设置方法，关于版本 1.1 和 1.2 的设置方法参看 sun 公司的文档，这里只给出版本 1.4 的设置方法。第二个参数表示 JavaVMOption 结构体变量的维数，这里设置为三维，其中 options[0].optionString = "-Djava.compiler=NONE"; 表示 disable JIT;options[1].optionString = "-Djava.class.path=."; 表示你所调用 Java 程序的 Class 文件的路径，这里设置为该 exe 应用程序的根路径 (最后一个字符 "." 表示根路径)；options[2].optionString = "-verbose:jni"; 用于跟踪运行时的信息。第三个参数是一个 JavaVMOption 的指针变量。第四个参数意思我们可以参看帮助文档的解释 If ignoreUnrecognized is JNI_FALSE, JNI_CreateJavaVM returns JNI_ERR as soon as it encounters any unrecognized option strings。
+
+初始化完毕后，就可以调用创建 JVM 的函数 jint JNICALL JNI_CreateJavaVM(JavaVM **pvm, void **penv, void *args); 如果返回值小于 0 表示创建 JVM 失败。最可能的原因就是 **jvm.dll 和 jvm.lib** 设置错误。
+
+如果在运行的过程中找不到 java 程序的类，那么就是 - Djava.class.path 设置错误。只要 JVM 创建成功，就可以根据上面的方法调用 java 程序。最后当程序结束后，调用函数 DestroyJavaVM() 摧毁 JVM，释放资源。
+
+**七、       附录**
+
+利用 JNI 函数，我们可以从本地化方法的内部与 JVM 打交道。正如在前面的例子中所看到的那样，每个本地化方法中都会接收一个特殊的自变量作为自己的第一个参数：JNIEnv――它是指向类型为 JNIEnv_的一个特殊 JNI 数据结构的指针。JNI 数据结构的一个元素是指向由 JVM 生成的一个指针的数组；该数组的每个元素都是指向一个 JNI 函数的指针。可以从本地化方法的内部对 JNI 函数的调用。第二个参数会根据 Java 类中本地方法的定义不同而不同，如果是定义为 static 方法，类型会是 jclass，表示对特定 Class 对象的引用，如果是非 static 方法，类型是 jobject，表示当前对象的引用，相当于” this”。可以说这两个变量是本地化方法返回 JAVA 的大门。
+
+**注意：**在本地化方法中生成的 Dll 不具备到处运行的特性，而具有” 牵一发而动全身” 的特点。只要包名一改变，那么你所有的工作就得重新做一遍。原因就是当用 javah 生成头文件时，函数名的生成规则为 **Java[_包名]_类名_方法名 [ _函数签名]**；当你的包名改变时，生成的函数名也跟着改变了，那么你再次调用以前编写的 Dll 时，会抛出异常。
+
+**八、       参考文献**
+
+1.         《Java 编程思想》Bruce Eckel 机械工业出版社
+
+2.         《Java2 核心技术卷 2》（第 6 版）Cay S.Horstmann,Gary Cornell 机械工业出版社
+
+3.         《高级 Java2 大学教程》(英文版) Harvey M.Deitel ,Paul J.Deitel,Sean E.Santry 电子工业出版社
+
+4.         《windows 核心编程》Jeffrey Richter 机械工业出版社
+
+5.           [http://www.jguru.com](http://www.jguru.com/)
+
+6.                    sun 公司文档
+
+如对本文有任何疑问和异议，欢迎与作者探讨：[normalnotebook@126.com](mailto:normalnotebook@126.com)
+
+注：本文最初发表在 2004 年《开发高手》第 12 期上。
+
+=====================================================================
+
+<table border="0" cellpadding="0"><tbody><tr><td><p align="left"><a target="_blank" href="http://www.blogjava.net/gf7/archive/2005/12/22/25041.html" rel="noopener noreferrer">利用 jawin 完成调用 window 中 dll 的调用</a><u><br><a target="_blank" href="http://hi.baidu.com/linjk03/blog/item/2c506a349988d6bfd0a2d34c.html" rel="noopener noreferrer">http://hi.baidu.com/linjk03/blog/item/2c506a349988d6bfd0a2d34c.html</a></u></p><p align="left">最近由于项目的特殊需求，我们必须在程序调用 window 的 dll。<br>开始我们用 jni，后来由于调用的 dll 太多，而且很烦琐。所以，我们决定用开源的 jawin 调用。<br>jawin 可以对 dll 中的方法进行调用，也可以调用 com 中的方法. 内部还提供了一个工具，直接对 com 组件导出成 java 的类，个人认为很方便。<br><br>下面是我们作的一个测试，很顺利便通过了。<br>1、下载 jawin：<a target="_blank" href="http://jawinproject.sourceforge.net/" rel="noopener noreferrer">http://jawinproject.sourceforge.net/</a>。<br>2、配置：<br>&nbsp;&nbsp;&nbsp; 》将 jawin.jar 放于 %JAVA_HOME%\jre\lib\ext 下 。<br>&nbsp;&nbsp;&nbsp; 》将 jawin.dll 放于 c:\winnt\system32 下。否则将出现错误：COMException : no jawin in java.library.path；<br>&nbsp;&nbsp;&nbsp; 也可将 jawin.dll 放于每个项目目录下。</p><p align="left">&nbsp;&nbsp; 》至此在 Editplus 中调试 Jawin/NJawin 的例子，可以通过。 而在 Eclipse 中有时还会出上面的错误：COMException : no jawin in java.library.path。<br>&nbsp;&nbsp; 》在 Eclipse 中，菜单 -&gt;window-&gt;preference-&gt;Java-&gt;installed JREs 将原来的 remove, 重新建一个指到你的 java sdk 目录。<br>&nbsp;&nbsp; 》 ok 了。<br>3、程序测试：</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp; 》调用 dll，dll 的方式不需要导出了, 直接调用就可以了，下面是下载的包中提供的一个例子:<br>&nbsp;&nbsp;&nbsp;&nbsp; 》我在 win2000 下，测试通过。<br>/*<br>* Created on Dec 22, 2005<br>*<br>*/<br>import org.jawin.FuncPtr;</p><p align="left">import org.jawin.ReturnFlags;</p><p align="left">/**<br>* @author gf mail to <a target="_blank" href="mailto:gf@163.com" rel="noopener noreferrer">gf@163.com</a><br>*<br>* TODO To change the template for this generated type comment go to<br>* Window - Preferences - Java - Code Style - Code Templates<br>*/<br>public class GfJawinTest {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static void main(String[] args) {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FuncPtr msgBox = new FuncPtr("USER32.DLL", "MessageBoxW");</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; msgBox.invoke_I(0, "Hello From a DLL", "From Jawin", 0, ReturnFlags.CHECK_NONE);</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (Exception e) {</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.printStackTrace();</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">}</p></td></tr></tbody></table>
+
+```
+static int32_t readInputStreamData(int32_t handle, uint8_t* buf, int32_t bufLen)
+
+```
+
+```
+{
+
+```
+
+```
+    JNIEnv* env;
+
+```
+
+```
+    jobject* pInputStream;
+
+```
+
+```
+    int32_t len;
+
+```
+
+```
+    DrmData* p;
+
+```
+
+```
+    jclass cls;
+
+```
+
+```
+    jmethodID mid;
+
+```
+
+```
+    jbyteArray tmp;
+
+```
+
+```
+    int tmpLen;
+
+```
+
+```
+    jbyte* pNativeBuf;
+
+```
+
+```
+    p = (DrmData *)handle;
+
+```
+
+```
+    if (NULL == p || NULL == buf || bufLen <- 0)
+
+```
+
+```
+        return 0;
+
+```
+
+```
+    env = p->env;
+
+```
+
+```
+    pInputStream = p->pInData;
+
+```
+
+```
+    len = p->len;
+
+```
+
+```
+    if (NULL == env || p->len <= 0 || NULL == pInputStream)
+
+```
+
+```
+        return 0;
+
+```
+
+```
+    cls = (*env)->GetObjectClass(env, *pInputStream);
+
+```
+
+```
+    mid = (*env)->GetMethodID(env, cls, "read", "([BII)I");
+
+```
+
+```
+    tmp = (*env)->NewByteArray(env, bufLen);
+
+```
+
+```
+    bufLen = (*env)->CallIntMethod(env, *pInputStream, mid, tmp, 0, bufLen);
+
+```
+
+```
+    (*env)->DeleteLocalRef(env, cls);
+
+```
+
+```
+    if (-1 == bufLen)
+
+```
+
+```
+        return -1;
+
+```
+
+```
+    pNativeBuf = (*env)->GetByteArrayElements(env, tmp, NULL);
+
+```
+
+```
+    memcpy(buf, pNativeBuf, bufLen);
+
+```
+
+```
+    (*env)->ReleaseByteArrayElements(env, tmp, pNativeBuf, 0);
+
+```
+
+```
+    (*env)->DeleteLocalRef(env, tmp);
+
+```
+
+```
+    return bufLen;
+
+```
+
+```
+}
+
+```
+
+Ch22: 用 Java 代码处理本地对象的事件
+========================
+
+```
+当您需要使用以其他语言编写的对象时，本地事件源和 Java? 侦听器之间的通信可能需要一些小技巧 —— 尤其是在多线程环境中。本文通过使用一种透明处理从本地代码到 JVM 的事件通信的设计模式，帮助您有效地处理传统的本地库。 
+
+　 　在面向对象系统中，对象可以触发一组事件。Java 编程语言为定义基于观察者设计模式（Observer design pattern）的事件侦听器提供了支持，但当您需要使用以其他语言编写的对象时，这还不够。使用 Java Native Interface (JNI) 在本地事件源和 Java 侦听器之间进行通信，可能需要一些技巧，尤其是有多线程环境中。在本文中，我们描述了一种透明处理从本地代码到 JVM 的事件通信的设计模式。您可以使用这种设计来提供到遗留本地应用程序的 Java 接口，或者构建带 Java 侦听器的本地应用程序。
+
+
+
+```
+
+1. 观察者设计模式
+----------
+
+```
+观察者设计模式定义了事件侦听器与事件创建者之间的多对一依赖关系。当事件创建者触发一个事件时，其所有侦听器接收到该事件的通知。由于事件创建者和侦 听器是无关的，您可以单独使用或修改它们。这种设计模式是事件驱动编程的核心，被广泛用于 GUI 框架，比如 Swing 和 SWT。
+
+```
+
+```
+如果整个应用程序都使用 Java 编程语言编写，实现观察者设计模式相当简单。图 1 中的类图给出了一个例子： 
+
+图 1. 观察者设计模式
+ 
+
+
+
+```
+
+```
+Java 本地应用程序侦听器
+
+```
+
+```
+不过，在某些情况下，我们想要让本地应用程序支持 Java 侦听器。大量应用程序（包括应用程序入口点）可能以本地代码编写，而应用程序以与其用户界面交互的方式生成事件。在这种情形下，支持基于Java 用户界面的最佳方式是让 Java 类将自身注册为应用程序生成的各种事件的侦听器。简而言之，通过支持以 Java 语言编写的侦听器，可以获得支持 Java 的 本地应用程序。
+
+```
+
+```
+图 2 所示的类图给出了一个示例场景。CEventSource 类用 C++ 语言编写。它使用 addMouseDownListener() 和 removeMouseDownListener() 让侦听器注册和取消注册其 “鼠标按下” 事件。它想要所有侦听器实现 IMouseDownListener 接口。
+
+图 2. 示例场景的类图
+ 
+
+　 　注意，IMouseDownListener 是一个 C++ 抽象类。那么，Java 类如何注册事件才不会引入 Java 侦听器和 CEventSource 类之间的编译时绑定呢？在其注册事件后，CEventSource 类如何调用 Java 类中的方法呢？这正是 Java Invocation API 的用武之地。
+
+
+
+```
+
+2.Java Invocation API
+---------------------
+
+```
+ Invocation API 让您可以将 JVM 加载到一个本地应用程序中，而不必显式地链接 JVM 源。 通过在 jvm.dll 中调用一个函数，可以创建一个 JVM，jvm.dll 还将当前本地线程连接到 JVM。然后，您可以在 JVM 中从本地线程调用所有 Java 方法。
+
+
+
+```
+
+```
+然而，Invocation API 无法彻底解决问题。您不希望 CEventSource 类具有与 Java 侦听器的编译时依赖关系。另外，Java 侦听器不应该承担使用 JNI 来注册带 CEventSource 的侦听器的责任。
+
+```
+
+3. 代理设计模式
+---------
+
+```
+通过使用代理设计模式（Proxy design pattern），可以避免这一弊端。通常来说，代理是另一个对象的占位符。客户端对象可以处理代理对象，而代理封装了所有使用本地方法的细节。代理模式的细节显示在图 3 中：
+
+```
+
+```
+图 3. 代理设计模式示例
+ 
+
+```
+
+```
+　 　EventSourceProxy 是 CEventSource 类的代理。要将其自身注册为一个侦听器，客户端应该实现 IJMouseDownListener 接口。该接口类似于 IMouseDownListener，但它是用 Java 代码编写的。当第一个客户端调用其 addMouseDownListener() 方法时，它使用 registerListener() 本地方法来将其自身注册为一个带 CEventSource 的侦听器。registerListener() 方法用 C++ 语言来实现。它创建一个 JMouseDownListener 对象，并将其注册为一个带 CEventSource 的侦听器。当 JMouseDownListener 的 onMouseDown 事件被触发时，JMouseDownListener 中的 onMouseDownListener() 方法使用 Invocation API 来通知 EventSourceProxy。
+
+　 　EventSourceProxy 还维持一组使用它来注册的侦听器。无论其 onMouseDown 何时被触发，它将通知该组中的所有侦听器。注意，即使针对该事件存在多个 Java 侦听器，只有代理的一个实例被注册为具有 CEventSource。代理将 onMouseDown 事件委托给它的所有侦听器。这防止了本地代码和 Java 代码之间不必要的上下文切换。
+
+
+
+```
+
+4. 多线程问题
+--------
+
+　　本地方法接收 JNI 接口指针作为一个参数。但是，一个想要将事件委托回其关联 Java 代理的本地侦听器没有现成的 JNI 接口指针。一旦获得 JNI 接口指针，应该将其保存起来以便后续使用。  
+  
+　　JNI 接口指针只在当前线程中有效。实现 JNI 的 JVM 可以在 JNI 接口指针指向的区域中分配和存储本地线程数据。这意味着您也需要以本地线程数据保存 JNI 接口指针。  
+  
+　　JNI 接口指针可以两种方式获得：
+
+*   一旦线程使用 JNI_CreateJavaVM 创建了 JVM，JNI 将接口指针值放在由第二个参数指定的位置。然后该值可以保存在本地线程区域中。
+*   如果 JVM 已由进程中某个其他线程创建，当前线程可以调用 AttachCurrentThread。JNI 将接口指针值放在由第一个参数指定的位置。
+
+```
+　　但是这还没有完。需要记住的是，程序是以 C/C++ 语言编写的，因此，无法使用自动垃圾回收，因为程序不是使用 Java 语言编写的。一旦线程完成 JNI 调用，它需要通过调用 DetachCurrentThread 来释放接口指针。如果未做此调用并且线程存在，进程将无法正常终止。相反，它将一直等待现在已不存在的线程以 DestroyJavaVM 调用的方式从 JVM 中离开。
+
+
+
+```
+
+5. 环境设置
+-------
+
+　　公共接口  
+  
+　 　IMouseDownListener 和 IEventSource 接口定义在 common.h 中。IMouseDownListener 只有一个方法：onMouseDown()。该方法接收鼠标单击的屏幕位置。IEventSource 接口包含了 addMouseDownListener() 和 removeMouseDownListener() 方法，用于注册和取消注册侦听器。  
+  
+　　Java Invocation API 的帮助例程  
+  
+　　有 7 个必需的常用工具方法可用于简化 Java Invocation API 的使用，它们定义在 Jvm.h 中，在 Jvm.cpp 中实现：
+
+*   CreateJavaObject() 创建一个 Java 对象，给出其类名和针对本地 IEventSource 的句柄。这个创建好的 Java 对象将用于侦听来自该本地句柄的事件。该句柄通过其构造方法传递给对象。
+*   ReleaseJObject() 调用 Java 对象的 release() 方法。该方法用于从 EventSourceProxy 取消注册对象的侦听器。
+*   DetachThread() 从 JVM 分离当前线程（如果当前线程连接到 JVM）。当线程正被连接时，该调用对于释放特定于线程的、已分配给 JNI 的资源是很必要的。
+
+　　其余方法都自己附带有解释：
+
+*   CreateJVM()
+*   DestroyJVM()
+*   GetJVM()
+*   GetJNIEnv()
+
+```
+CJvm 类还在特定于线程的位置保存一个 JNI 环境指针。这是很有必要的，因为 JNI 环境指针是线程相关的。
+
+　　本地事件源
+
+　　在 EventSource.h 和 EventSource.cpp 中，CEventSource 是一个简单而直观的 IEventSource 接口的实现。 
+
+　　本地事件侦听器
+
+　　在 MouseDownListener.h 和 MouseDownListener.cpp 中，CMouseDownListener 是 IMouseDownListener 接口的实现。该本地侦听器仅出于解释目的而编写。
+
+　　入口点
+
+　　main.cpp 包含 main() 和 ThreadMain()。 main() 创建一个本地 EventSource、一个本地侦听器和一个 Java 侦听器。然后创建线程，并在睡眠几秒后让它执行。最后，它释放 Java 侦听器并销毁 JVM。
+
+　　ThreadMain() 简单地触发一个事件，然后将自身从 JVM 分离出来。
+
+```
+
+Java 模块  
+  
+　　IJMouseDownListener.java 中的 IJMouseDownListener 只是本地接口针对 Java 平台的一个克隆。  
+  
+　 　MouseDownListener 是 Java 中的一个示例侦听器，在 MouseDownListener.java 中实现。它在其构造方法中接收本地 EventSource 句柄。它定义了一个 release() 方法，该方法取消注册带 EventSourceProxy 的侦听器。  
+  
+　　EventSourceProxy 是一个用于来自本地模块的 EventSource 的占位符或代理项。它在 EventSourceProxy.java 中实现。它维持一个静态哈希表，以将一个代理映射到实际 EventSource。  
+  
+　 　addMouseDownListener() 和 removeMouseDownListener() 允许您维持一个 Java 侦听器集合。单个本地 EventSource 可以有多个 Java 侦听器，但只有在必要时代理才注册 / 取消注册本地 EventSource。  
+  
+　　当从本地 EventSource 转发事件时，EventSourceProxy 的本地实现调用 fireMouseDownEvent()。该方法迭代 Java 侦听器的哈希集合，并通知它们。  
+  
+　　EventSourceProxy 的本地部分还维持一个到自身的全局引用。这对于稍后调用 fireMouseDownEvent() 是很必要的。  
+  
+　　构建并执行示例代码  
+  
+　　示例代码中的所有 Java 类都使用普通过程构建，无需特殊步骤。对于 EventSourceProxy 的本地实现，您需要使用 javah 生成头文件：
+
+<table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">javah -classpath .\java\bin events.EventSourceProxy</p></td></tr></tbody></table>
+
+  
+　 　为了构建针对 Win32 平台的 C++ 模块，我们提供了 Microsoft Developer Studio 项目文件和 cpp.dsw 工作区。您可以打开工作区，简单地构建 main 项目。工作区中的所有项目都以适当的依赖关系相关联。确保您的 Developer Studio 可以找到 JNI 头和编译时 JNI 库。可以通过选择 **Tools > Options > Directories** 菜单项完成这一工作。  
+  
+　　构建成功之后，在可以执行示例程序之前，还需要完成几个步骤。  
+  
+　　首先，因为用于构建 Java 类并包含 JNI 头和库的 JDK 可能有针对 Java Invocation API 的运行时组件，例如 jvm.dll，您必需设置它。最简单的方法是更新 PATH 变量。  
+  
+　　其次，main 程序带有命令行参数，这些参数是简单的 JVM 参数。您需要至少传递两个参数给 JVM：
+
+<table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">main.exe "-Djava.class.path=.\\java\\bin"&nbsp;</p><p align="left">"-Djava.library.path=.\\cpp\\listener\\Debug"</p></td></tr></tbody></table>
+
+  
+　　得到的控制台输出如下：
+
+<table width="100%" border="1" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">In CMouseDownListener::onMouseDown</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X = 50</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y = 100</p><p align="left">In MouseDownListener.onMouseDown</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; X = 50</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y = 100</p></td></tr></tbody></table>
+
+  
+　　正如您从控制台输出所看到的，Java 侦听器产生与出于解释目的而构建的本地侦听器相同的结果。  
+  
+　　**结束语**  
+  
+　 　本文展示了如何为本地应用程序生成的事件注册一个 Java 类作为侦听器。通过使用观察者设计模式，您已经减少了事件源与侦听器之间的耦合。您还通过使用代理设计模式隐藏了来自 Java 侦听器的事件源的实现细节。您可以使用该设计模式组合来将一个 Java UI 添加到现有的本地应用程序。
+
+Ch23: JNI and Thread
+====================
+
+The Java virtual machine supports multiple threads of control concurrently executing in the same address space. This concurrency introduces a degree of complexity that you do not have in a single-threaded environment. Multiple threads may access the same objects, the same file descriptors--in short, the same shared resources--at the same time.
+
+To get the most out of this section, you should be familiar with the concepts of multithreaded programming. You should know how to write Java applications that utilize multiple threads and how to synchronize access of shared resources. A good reference on multithreaded programming in the Java programming language is _Concurrent Programming in Java_TM_, Design Principles and Patterns_, by Doug Lea (Addison-Wesley, 1997).
+
+1.1 Constraints
+---------------
+
+There are certain constraints that you must keep in mind when writing native methods that are to run in a multithreaded environment. By understanding and programming within these constraints, your native methods will execute safely no matter how many threads simultaneously execute a given native method. For example:
+
+*   A `JNIEnv` pointer is only valid in the thread associated with it. You must not pass this pointer from one thread to another, or cache and use it in multiple threads. The Java virtual machine passes a native method the same `JNIEnv` pointer in consecutive invocations from the same thread, but passes different `JNIEnv` pointers when invoking that native method from different threads. Avoid the common mistake of caching the `JNIEnv` pointer of one thread and using the pointer in another thread.
+*   Local references are valid only in the thread that created them. You must not pass local references from one thread to another. You should always convert local references to global references whenever there is a possibility that multiple threads may use the same reference.
+
+1.2 Monitor Entry and Exit
+--------------------------
+
+Monitors are the primitive synchronization mechanism on the Java platform. Each object can be dynamically associated with a monitor. The JNI allows you to synchronize using these monitors, thus implementing the functionality equivalent to a synchronized block in the Java programming language:
+
+```
+ synchronized (obj) {
+
+```
+
+```
+     ...                   // synchronized block
+
+```
+
+```
+ }
+
+```
+
+The Java virtual machine guarantees that a thread acquires the monitor associated with the object `obj` before it executes any statements in the block. This ensures that there can be at most one thread that holds the monitor and executes inside the synchronized block at any given time. A thread blocks when it waits for another thread to exit a monitor.
+
+Native code can use JNI functions to perform equivalent synchronization on JNI references. You can use the `MonitorEnter` function to enter the monitor and the `MonitorExit` function to exit the monitor:
+
+```
+ if ((*env)->MonitorEnter(env, obj) != JNI_OK) {
+
+```
+
+```
+     ... /* error handling */
+
+```
+
+```
+ }
+
+```
+
+```
+ ...     /* synchronized block */
+
+```
+
+```
+ if ((*env)->MonitorExit(env, obj) != JNI_OK) {
+
+```
+
+```
+     ... /* error handling */
+
+```
+
+```
+ };
+
+```
+
+Executing the code above, a thread must first enter the monitor associated with `obj` before executing any code inside the synchronized block. The `Monitor-Enter` operation takes a `jobject` as an argument and blocks if another thread has already entered the monitor associated with the `jobject`. Calling `MonitorExit` when the current thread does not own the monitor results in an error and causes an `Illegal-MonitorStateException` to be raised. The above code contains a matched pair of `MonitorEnter` and `MonitorExit` calls, yet we still need to check for possible errors. Monitor operations may fail if, for example, the underlying thread implementation cannot allocate the resources necessary to perform the monitor operation.
+
+`MonitorEnter` and `MonitorExit` work on `jclass`, `jstring`, and `jarray` types, which are special kinds of `jobject` references.
+
+Remember to match a `MonitorEnter` call with the appropriate number of `MonitorExit` calls, especially in code that handles errors and exceptions:
+
+```
+ if ((*env)->MonitorEnter(env, obj) != JNI_OK) ...;
+
+```
+
+```
+ ...
+
+```
+
+```
+ if ((*env)->ExceptionOccurred(env)) {
+
+```
+
+```
+     ... /* exception handling */
+
+```
+
+```
+     /* remember to call MonitorExit here */
+
+```
+
+```
+     if ((*env)->MonitorExit(env, obj) != JNI_OK) ...;
+
+```
+
+```
+ }
+
+```
+
+```
+ ... /* Normal execution path.
+
+```
+
+```
+ if ((*env)->MonitorExit(env, obj) != JNI_OK) ...;
+
+```
+
+Failure to call `MonitorExit` will most likely lead to deadlocks. By comparing the above C code segment with the code segment at the beginning of this section, you can appreciate how much easier it is to program with the Java programming language than with the JNI. Thus, it is preferable to express synchronization constructs in the Java programming language. If, for example, a static native method needs to enter the monitor associated with its defining class, you should define a static synchronized native method as opposed to performing JNI-level monitor synchronization in native code.
+
+1.3 Monitor Wait and Notify
+---------------------------
+
+The Java API contains several other methods that are useful for thread synchronization. They are `Object.wait`, `Object.notify`, and `Object.notifyAll`. No JNI functions are supplied that correspond directly to these methods because monitor wait and notify operations are not as performance critical as monitor enter and exit operations. Native code may instead use the JNI method call mechanism to invoke the corresponding methods in the Java API:
+
+```
+ /* precomputed method IDs */
+
+```
+
+```
+ static jmethodID MID_Object_wait;
+
+```
+
+```
+ static jmethodID MID_Object_notify;
+
+```
+
+```
+ static jmethodID MID_Object_notifyAll;
+
+```
+
+```
+ void
+
+```
+
+```
+ JNU_MonitorWait(JNIEnv *env, jobject object, jlong timeout)
+
+```
+
+```
+ {
+
+```
+
+```
+     (*env)->CallVoidMethod(env, object, MID_Object_wait,
+
+```
+
+```
+                            timeout);
+
+```
+
+```
+ }
+
+```
+
+```
+ void
+
+```
+
+```
+ JNU_MonitorNotify(JNIEnv *env, jobject object)
+
+```
+
+```
+ {
+
+```
+
+```
+     (*env)->CallVoidMethod(env, object, MID_Object_notify);
+
+```
+
+```
+ }
+
+```
+
+```
+ void
+
+```
+
+```
+ JNU_MonitorNotifyAll(JNIEnv *env, jobject object)
+
+```
+
+```
+ {
+
+```
+
+```
+     (*env)->CallVoidMethod(env, object, MID_Object_notifyAll);
+
+```
+
+```
+ }
+
+```
+
+We assume that the method IDs for `Object.wait`, `Object.notify`, and `Object.notifyAll` have been calculated elsewhere and are cached in the global variables. Like in the Java programming language, you can call the above monitor-related functions only when holding the monitor associated with the `jobject` argument.
+
+1.4 Obtaining a JNIEnv Pointer in Arbitrary Contexts
+----------------------------------------------------
+
+We explained earlier that a `JNIEnv` pointer is only valid in its associated thread. This is generally not a problem for native methods because they receive the `JNIEnv` pointer from the virtual machine as the first argument. Occasionally, however, it may be necessary for a piece of native code not called directly from the virtual machine to obtain the `JNIEnv` interface pointer that belongs to the current thread. For example, the piece of native code may belong to a "callback" function called by the operating system, in which case the `JNIEnv` pointer will probably not be available as an argument.
+
+You can obtain the `JNIEnv` pointer for the current thread by calling the `AttachCurrentThread` function of the invocation interface:
+
+```
+ JavaVM *jvm; /* already set */
+
+```
+
+```
+ f()
+
+```
+
+```
+ {
+
+```
+
+```
+     JNIEnv *env;
+
+```
+
+```
+     (*jvm)->AttachCurrentThread(jvm, (void **)&env, NULL);
+
+```
+
+```
+     ... /* use env */
+
+```
+
+```
+ }
+
+```
+
+When the current thread is already attached to the virtual machine, `Attach-Current-Thread` returns the `JNIEnv` interface pointer that belongs to the current thread.
+
+There are many ways to obtain the `JavaVM` pointer: by recording it when the virtual machine is created, by querying for the created virtual machines using `JNI_GetCreatedJavaVMs`, by calling the JNI function `GetJavaVM` inside a regular native method, or by defining a `JNI_OnLoad` handler. Unlike the `JNIEnv` pointer, the `JavaVM` pointer remains valid across multiple threads so it can be cached in a global variable.
+
+Java 2 SDK release 1.2 provides a new invocation interface function `**GetEnv**` so that you can check whether the current thread is attached to the virtual machine, and, if so, to return the `JNIEnv` pointer that belongs to the current thread. `**GetEnv**` and `AttachCurrentThread` are functionally equivalent if the current thread is already attached to the virtual machine.
+
+1.5 Matching the Thread Models
+------------------------------
+
+Suppose that native code to be run in multiple threads accesses a global resource. Should the native code use JNI functions `MonitorEnter` and `MonitorExit`, or use the native thread synchronization primitives in the host environment (such as `mutex_lock` on Solaris)? Similarly, if the native code needs to create a new thread, should it create a `java.lang.Thread` object and perform a callback of `Thread.start` through the JNI, or should it use the native thread creation primitive in the host environment (such as `thr_create` on Solaris)?
+
+The answer is that all of these approaches work if the Java virtual machine implementation supports a _thread model_ that matches that used by the native code. The thread model dictates how the system implements essential thread operations such as scheduling, context switching, synchronization, and blocking in system calls. In a _native thread_ model the operating system manages all the essential thread operations. In a _user thread_ model, on the other hand, the application code implements the thread operations. For example, the "Green thread" model shipped with JDK and Java 2 SDK releases on Solaris uses the ANSI C functions `setjmp` and `longjmp` to implement context switches.
+
+Many modern operating systems (such as Solaris and Win32) support a native thread model. Unfortunately, some operating systems still lack native thread support. Instead, there may be one or many user thread packages on these operating systems.
+
+If you write application strictly in the Java programming language, you need not worry about the underlying thread model of the virtual machine implementation. The Java platform can be ported to any host environment that supports the required set of thread primitives. Most native and user thread packages provide the necessary thread primitives for implementing a Java virtual machine.
+
+JNI programmers, on the other hand, must pay attention to thread models. The application using native code may not function properly if the Java virtual implementation and the native code have a different notion of threading and synchronization. For example, a native method could be blocked in a synchronization operation in its own thread model, but the Java virtual machine, running in a different thread model, may not be aware that the thread executing the native method is blocked. The application deadlocks because no other threads will be scheduled.
+
+The thread models match if the native code uses the same thread model as the Java virtual machine implementation. If the Java virtual machine implementation uses native thread support, the native code can freely invoke thread-related primitives in the host environment. If the Java virtual machine implementation is based on a user thread package, the native code should either link with the same user thread package or rely on no thread operations at all. The latter may be harder to achieve than you think: most C library calls (such as I/O and memory allocation functions) perform thread synchronization underneath. Unless the native code performs pure computation and makes no library calls, it is likely to use thread primitives indirectly.
+
+Most virtual machine implementations support only a particular thread model for JNI native code. Implementations that support native threads are the most flexible, hence native threads, when available, are typically preferred on a given host environment. Virtual machine implementations that rely on a particular user thread package may be severely limited as to the type of native code with which they can operate.
+
+Some virtual machine implementations may support a number of different thread models. A more flexible type of virtual machine implementation may even allow you to provide a custom thread model implementation for virtual machine's internal use, thus ensuring that the virtual machine implementation can work with your native code. Before embarking on a project likely to require native code, you should consult the documentation that comes with your virtual machine implementation for thread model limitations.
+
+8.4 Load and Unload Handlers
+----------------------------
+
+Load and unload handlers allow the native library to export two functions: one to be called when `System.loadLibrary` loads the native library, the other to be called when the virtual machine unloads the native library. This feature was added in Java 2 SDK release 1.2.
+
+### 8.4.1 The `JNI_OnLoad` Handler
+
+When `System.loadLibrary` loads a native library, the virtual machine searches for the following exported entry in the native library:
+
+```
+ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *jvm, void *reserved);
+
+```
+
+You can invoke any JNI functions in an implementation of `JNI_Onload`. A typical use of the `JNI_OnLoad` handler is caching the `JavaVM` pointer, class references, or method and field IDs, as shown in the following example:
+
+```
+ JavaVM *cached_jvm;
+
+```
+
+```
+ jclass Class_C;
+
+```
+
+```
+ jmethodID MID_C_g;
+
+```
+
+```
+ JNIEXPORT jint JNICALL
+
+```
+
+```
+ JNI_OnLoad(JavaVM *jvm, void *reserved)
+
+```
+
+```
+ {
+
+```
+
+```
+     JNIEnv *env;
+
+```
+
+```
+     jclass cls;
+
+```
+
+```
+     cached_jvm = jvm;  /* cache the JavaVM pointer */
+
+```
+
+```
+     if ((*jvm)->GetEnv(jvm, (void **)&env, JNI_VERSION_1_2)) {
+
+```
+
+```
+         return JNI_ERR; /* JNI version not supported */
+
+```
+
+```
+     }
+
+```
+
+```
+     cls = (*env)->FindClass(env, "C");
+
+```
+
+```
+     if (cls == NULL) {
+
+```
+
+```
+         return JNI_ERR;
+
+```
+
+```
+     }
+
+```
+
+```
+     /* Use weak global ref to allow C class to be unloaded */
+
+```
+
+```
+     Class_C = (*env)->NewWeakGlobalRef(env, cls);
+
+```
+
+```
+     if (Class_C == NULL) {
+
+```
+
+```
+         return JNI_ERR;
+
+```
+
+```
+     }
+
+```
+
+```
+     /* Compute and cache the method ID */
+
+```
+
+```
+     MID_C_g = (*env)->GetMethodID(env, cls, "g", "()V");
+
+```
+
+```
+     if (MID_C_g == NULL) {
+
+```
+
+```
+         return JNI_ERR;
+
+```
+
+```
+     }
+
+```
+
+```
+     return JNI_VERSION_1_2;
+
+```
+
+```
+ }
+
+```
+
+The `JNI_OnLoad` function first caches the `JavaVM` pointer in the global variable `cached_**jvm**`. It then obtains the `JNIEnv` pointer by calling `**GetEnv**`. It finally loads the `C` class, caches the class reference, and computes the method ID for `C.g`. The `JNI_OnLoad` function returns `JNI_ERR` ([§12.4](http://java.sun.com/docs/books/jni/html/types.html#46915)) on error and otherwise returns the `JNIEnv` version `JNI_VERSION_1_2` needed by the native library.
+
+We will explain in the next section why we cache the `C` class in a weak global reference instead of a global reference.
+
+Given a cached `JavaVM` interface pointer it is trivial to implement a utility function that allows the native code to obtain the `JNIEnv` interface pointer for the current thread ([§8.1.4](http://java.sun.com/docs/books/jni/html/other.html#26206)) :
+
+```
+ JNIEnv *JNU_GetEnv()
+
+```
+
+```
+ {
+
+```
+
+```
+     JNIEnv *env;
+
+```
+
+```
+     (*cached_jvm)->GetEnv(cached_jvm,
+
+```
+
+```
+                           (void **)&env,
+
+```
+
+```
+                           JNI_VERSION_1_2);
+
+```
+
+```
+     return env;
+
+```
+
+```
+ }
+
+```
+
+### 8.4.2 The `JNI_OnUnload` Handler
+
+Intuitively, the virtual machine calls the `JNI_OnUnload` handler when it unloads a JNI native library. This is not precise enough, however. When does the virtual machine determine that it can unload a native library? Which thread runs the `JNI_OnUnload` handler?
+
+The rules of unloading native libraries are as follows:
+
+*   The virtual machine associates each native library with the class loader `L` of the class `C` that issues the `System.loadLibrary` call.
+*   The virtual machine calls the `JNI_OnUnload` handler and unloads the native library after it determines that the class loader `L` is no longer a live object. Because a class loader refers to all the classes it defines, this implies that `C` can be unloaded as well.
+*   The `JNI_OnUnload` handler runs in a finalizer, and is either invoked synchroniously by `java.lang.System.runFinalization` or invoked asynchronously by the virtual machine.
+
+Here is the definition of a `JNI_OnUnload` handler that cleans up the resources allocated by the `JNI_OnLoad` handler in the last section:
+
+```
+ JNIEXPORT void JNICALL 
+
+```
+
+```
+ JNI_OnUnload(JavaVM *jvm, void *reserved)
+
+```
+
+```
+ {
+
+```
+
+```
+     JNIEnv *env;
+
+```
+
+```
+     if ((*jvm)->GetEnv(jvm, (void **)&env, JNI_VERSION_1_2)) {
+
+```
+
+```
+         return;
+
+```
+
+```
+     }
+
+```
+
+```
+     (*env)->DeleteWeakGlobalRef(env, Class_C);
+
+```
+
+```
+     return;
+
+```
+
+```
+ }
+
+```
+
+The `JNI_OnUnload` function deletes the weak global reference to the `C` class created in the `JNI_OnLoad` handler. We need not delete the method ID `MID_C_g` because the virtual machine automatically reclaims the resources needed to represent `C`'s method IDs when unloading its defining class `C`.
+
+We are now ready to explain why we cache the `C` class in a weak global reference instead of a global reference. A global reference would keep `C` alive, which in turn would keep `C`'s class loader alive. Given that the native library is associated with `C`'s class loader `L`, the native library would not be unloaded and `JNI_OnUnload` would not be called.
+
+The `JNI_OnUnload` handler runs in a finalizer. In contrast, the `JNI_OnLoad` handler runs in the thread that initiates the `System.loadLibrary` call. Because `JNI_OnUnload` runs in an unknown thread context, to avoid possible deadlocks, you should avoid complex synchronization and locking operations in `JNI_OnUnload`. The `JNI_OnUnload` handler typically carries out simple tasks such as releasing the resources allocated by the native library.
+
+The `JNI_OnUnload` handler runs when the class loader that loaded the library and all classes defined by that class loader are no longer alive. The `JNI_OnUnload` handler must not use these classes in any way. In the above `JNI_OnUnload` definition, you must not perform any operations that assume `Class_C` still refers to a valid class. The `DeleteWeakGlobalRef` call in the example frees the memory for the weak global reference itself, but does not manipulate the referred class `C` in any way.
+
+In summary, you should be careful when writing `JNI_OnUnload` handlers. Avoid complex locking operations that may introduce deadlocks. Keep in mind that classes have been unloaded when the `JNI_OnUnload` handler is invoked.
+
+8.5 Reflection Support
+----------------------
+
+Reflection generally refers to manipulating language-level constructs at runtime. For example, reflection allows you to discover at run time the name of arbitrary class objects and the set of fields and methods defined in the class. Reflection support is provided at the Java programming language level through the `java.lang.reflect` package as well as some methods in the `java.lang.Object` and `java.lang.Class` classes. Although you can always call the corresponding Java API to carry out reflective operations, the JNI provides the following functions to make the frequent reflective operations from native code more efficient and convenient:
+
+*   `GetSuperclass` returns the superclass of a given class reference.
+*   `IsAssignableFrom` checks whether instances of one class can be used when instances of another class are expected.
+*   `GetObjectClass` returns the class of a given `jobject` reference.
+*   `IsInstanceOf` checks whether a `jobject` reference is an instance of a given class.
+*   `FromReflectedField` and `ToReflectedField` allow the native code to convert between field IDs and `java.lang.reflect.Field` objects. They are new additions in Java 2 SDK release 1.2.
+*   `FromReflectedMethod` and `ToReflectedMethod` allow the native code to convert between method IDs, `java.lang.reflect.Method` objects and `java.lang.reflect.Constructor` objects. They are new additions in Java 2 SDK release 1.2.
+
+Ch24: 测量 Java 应用程序的 CPU 和内存占用率
+==============================
+
+   测量 CPU 和内存的占用率常常是检查 [Java](http://java.chinaitlab.com/) 应用程序是否达到特定性能的一个重要环节。尽管 [Java](http://java.chinaitlab.com/) 提 供了一些重要的方法用于测量其堆栈大小，但是使用标准的 API 是无法测量本机 Java 进程的大小和 CPU 当前的使用率的。这种测量的结果对于开发人员来说非常重要，它会提供应用程序的实时性能和效率信息。不幸的是，这样的信息只能从操作系统直接获取， 而这已经超出了 Java 标准的可移植能力。
+
+    一个主要的解决方案是使用操作系统自带的本机系统调用，将数据通过 JNI（Java Native Interface，Java 本机接口）传输给 Java. 与调用各个平台专用的外部命令（比如 ps）并分析输出结果不同，这种方案始终是一种很可靠的方 式。以前碰到这样的问题时，我尝试过使用 Vladimir Roubtsov 自己编写的一个很小的库，它只能在 Win32 系统下测量进程的 CPU 占用率。但是，这个库的能力十分有限，所以我需要某种方式能够同时在 [Windows](http://windows.chinaitlab.com/) 和 Solaris 平台上测量 CPU 和内存的占用率。
+
+    我扩展了这个库的能力，在 [Windows](http://windows.chinaitlab.com/) 和 Solaris 8 平台上实现了所有功能。新的库能够测量纯 CPU 使用时间、CPU 使用的百分比、本机剩余内存和已经使用的内存、Java 进程的本机内存大小、系统信息 （比如操作系统的名字、补丁程序、硬件信息等）。它由三部分实现： Java 通用的部分、Windows 实现，以及 Solaris 实现。依靠操作系统的部分用纯 C 语言实现。
+
+    编辑提示：本文可以[下载](http://download.chinaitlab.com/)，所有的源代码都以单独的文本方式列出来了。
+
+库
+
+    所以，我们将创建一个简单的 JNI 库，用于同 C 层里的操作系统进行沟通，并把生成的数据提供给 Java 应用程序。首先，我们要创建一个 SystemInformation 类（列表 A），为测量和记录 CPU 的使用率和其他与系统相关的信息提供一个简单的 API. 这个类是抽象的，因为它公开 的是一个完全静态的 API.
+
+列表 A
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p>&lt;PRE&gt;package com.vladium.utils;</p><p>public abstract class SystemInformation<br>{<br>// public: ................................................................<br><br>/**<br>* A simple class to represent data snapshots taken by {@link #makeCPUUsageSnapshot}.<br>*/<br>public static final class CPUUsageSnapshot<br>{<br>public final long m_time, m_CPUTime;<br><br>// constructor is private to ensure that makeCPUUsageSnapshot()<br>// is used as the factory method for this class:<br>private CPUUsageSnapshot (final long time, final long CPUTime)<br>{<br>m_time = time;<br>m_CPUTime = CPUTime;<br>}<br><br>} // end of nested class</p><p>// Custom exception class for throwing<br>public static final class NegativeCPUTime extends Exception {<br>}</p><p>/**<br>* Minimum time difference [in milliseconds] enforced for the inputs into<br>* {@link #getProcessCPUUsage(SystemInformation.CPUUsageSnapshot,SystemInformation.CPUUsageSnapshot)}.<br>* The motivation for this restriction is the fact that &lt;CODE&gt;System.currentTimeMillis()&lt;/CODE&gt;<br>* on some systems has a low resolution (e.g., 10ms on win32). The current value<br>* is 100 ms.<br>*/<br>public static final int MIN_ELAPSED_TIME = 100;<br><br><br>/**<br>* Creates a CPU usage data snapshot by associating CPU time used with system<br>* time. The resulting data can be fed into<br>* {@link #getProcessCPUUsage(SystemInformation.CPUUsageSnapshot,SystemInformation.CPUUsageSnapshot)}.<br>*/<br>public static CPUUsageSnapshot makeCPUUsageSnapshot() throws SystemInformation.NegativeCPUTime<br>{<br>long prCPUTime = getProcessCPUTime ();<br>if (prCPUTime&amp;lt;0) throw new NegativeCPUTime();<br>return new CPUUsageSnapshot (System.currentTimeMillis (), getProcessCPUTime ());<br>}<br><br>/**<br>* Computes CPU usage (fraction of 1.0) between &lt;CODE&gt;start.m_CPUTime&lt;/CODE&gt; and<br>* &lt;CODE&gt;end.m_CPUTime&lt;/CODE&gt; time points [1.0 corresponds to 100% utilization of<br>* all processors].<br>*<br>* @throws IllegalArgumentException if start and end time points are less than<br>* {@link #MIN_ELAPSED_TIME} ms apart.<br>* @throws IllegalArgumentException if either argument is null;<br>*/<br>public static double getProcessCPUUsage (final CPUUsageSnapshot start, final CPUUsageSnapshot end)<br>{<br>if (start == null) throw new IllegalArgumentException ("null input: start");<br>if (end == null) throw new IllegalArgumentException ("null input: end");<br>if (end.m_time &amp;lt; start.m_time + MIN_ELAPSED_TIME)<br>throw new IllegalArgumentException ("end time must be at least" + MIN_ELAPSED_TIME + "ms later than start time");<br><br>return ((double)(end.m_CPUTime - start.m_CPUTime)) / (end.m_time - start.m_time);<br>}<br><br>/**<br>* Returns the PID of the current process. The result is useful when you need<br>* to integrate a Java app with external tools.<br>*/<br>public static native int getProcessID ();</p><p>/**<br>* Returns the number of processors on machine<br>*/<br>public static native int getCPUs ();</p><p>/**<br>* Returns CPU (kernel + user) time used by the current process [in milliseconds].<br>* The returned value is adjusted for the number of processors in the system.<br>*/<br>public static native long getProcessCPUTime ();</p><p>/**<br>* Returns CPU (kernel + user) time used by the current process [in perecents].<br>* The returned value is either CPU percentage, or zero if this is not supported by OS.<br>* Currently it is supported by Solaris8, and not supported by Windows XP<br>*/<br>public static native double getProcessCPUPercentage();</p><p>/**<br>* Returns maximum memory available in the system.<br>*/<br>public static native long getMaxMem ();</p><p>/**<br>* Returns current free memory in the system.<br>*/<br>public static native long getFreeMem ();</p><p>/**<br>* Returns system name info like "uname" command output<br>*/<br>public static native String getSysInfo ();</p><p>/**<br>* Returns CPU usage (fraction of 1.0) so far by the current process. This is a total<br>* for all processors since the process creation time.<br>*/<br>public static native double getProcessCPUUsage ();</p><p>/**<br>* Returns current space allocated for the process, in Kbytes. Those pages may or may not be in memory.<br>*/<br>public static native long getMemoryUsage();</p><p>/**<br>* Returns current process space being resident in memory, in Kbytes.<br>*/<br>public static native long getMemoryResident();</p><p>/**<br>* Sets the system native process PID for which all measurements will be done.<br>* If this method is not called then the current JVM pid will act as a default.<br>* Returns the native-dependent error code, or 0 in case of success.<br>*/<br>public static native int setPid(int pid);</p><p>/**<br>* Closes native-dependent process handle, if necessary.<br>*/<br>public static native int detachProcess();</p><p>// protected: .............................................................</p><p>// package: ...............................................................</p><p>// private: ...............................................................<br><br><br>private SystemInformation () {} // prevent subclassing<br><br>private static final String SILIB = "silib";<br><br>static<br>{<br>// loading a native lib in a static initializer ensures that it is<br>// available done before any method in this class is called:<br>try<br>{<br>System.loadLibrary (SILIB);<br>}<br>catch (UnsatisfiedLinkError e)<br>{<br>System.out.println ("native lib'" + SILIB + "'not found in'java.library.path':" + System.getProperty ("java.library.path"));<br><br>throw e; // re-throw<br>}<br>}</p><p>} // end of class<br>&lt;/PRE&gt;</p></td></tr></tbody></table>
+
+   最重要的方法是 getProcessCPUTime（），它会返回当前进程的 CPU 时间（内核和用户）的毫秒数，或者是 PID 在初始化期间被传送给本机库 的进程所消耗的 CPU 时间。返回的值应该根据系统的处理器的个数进行调整；下面我们来看看这是如何在本机代码里做到的。我们用修改符 native 来声明这 个方法，这意味着它必须在 JNI 代码里实现。getProcessCPUTime（）方法用来给 CPU 的使用率数据进行快照，方式是将经过测量的 CPU 时 间与当前的系统时间进行关联。这样的数据库快照在 makeCPUUsageSnapshot（）方法里进行，并输出一个 CPUUsageSnapshot 容器对象。这样，测量 CPU 使用率的原理就很容易理解了：我们按照给定的时间间隔进行两次 CPU 快照，按 1.0 的分数来计算两个时间点之间的 CPU 使用 率，方式是两点所在的 CPU 时间差除以两点所在系统时间差。下面就是 getProcessCPUUsage（）方法的工作原理：
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">public static double getProcessCPUUsage (final CPUUsageSnapshot start, final CPUUsageSnapshot end)<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (start == null) throw new IllegalArgumentException ("null input: start");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (end == null) throw new IllegalArgumentException ("null input: end");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (end.m_time &lt; start.m_time + MIN_ELAPSED_TIME)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; throw new IllegalArgumentException ("end time must be at least" + MIN_ELAPSED_TIME + "ms later than start time");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return ((double)(end.m_CPUTime - start.m_CPUTime)) / (end.m_time - start.m_time);<br>&nbsp;&nbsp;&nbsp; }</p></td></tr></tbody></table>
+
+    只要我们知道分母里的快照之间的时间间隔，以及分子里进程花在活动状态上的 CPU 时间，我们就会得到所测量的时间间隔过程中进程的 CPU 使用率；1.0 就代表所有处理器 100％的使用率。
+
+    事实上这种方式可以用在所有版本的 UNIX 的 ps 工具和 Windows 的任务管理器上，这两个都是用于监视特定进程的 CPU 使用率的程序。很显然，时间间 隔越长，我们得到的结果就越平均、越不准确。但是最小时差应该被强制输入 getProcessCPUUsage（）。这种限制的原因是某些系统上的 System.currentTimeMillis（）的解析度很低。Solaris 8 操作系统提供了一个系统调用，用于从内核表里直接获得 CPU 使用率。出于这个目的，我们拥有的 getProcessCPUPercentage（）方法会以百分比的形式返回进程所使用的 CPU 时间。如果这个特性不被操作系统支持（比如在 Windows 下），那么 JNI 库就会根据我们应用程序的设计返回一 个负值。
+
+    还有其他一些本机声明要在本机部分实现：
+
+    getCPUs() 用来返回机器上处理器的个数  
+    getMaxMem() 用来返回系统上可用的最大物理内存  
+    getFreeMem() 用来返回系统上当前可用内存  
+    getSysInfo() 用来返回系统信息，包括一些硬件和操作系统的详细信息  
+    getMemoryUsage() 用来返回分配给进程的空间，以 KB 为单位（这些页面文件可能在内存里，也有可能不在内存里）  
+    getMemoryResident() 用来返回当前进程驻留在内存里的空间，以 KB 为单位。
+
+    所有这些方法对于不同的 Java 开发人员来说常常都是非常有用的。为了确保本机 JNI 库被调入内存并在调用任何本机方法之前被初始化，这个库被加载到一个静态初始值里：
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">static<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.loadLibrary (SILIB);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; catch (UnsatisfiedLinkError e)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.out.println ("native lib'" + SILIB + "'not found in'Java.library.path':" + System.getProperty ("Java.library.path"));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; throw e; // re-throw<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; }</p></td></tr></tbody></table>
+
+    在初始化一个. dll（或者. so）库之后，我们可以直接使用本机声明的方法：
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">final SystemInformation.CPUUsageSnapshot m_prevSnapshot =<br>SystemInformation.makeCPUUsageSnapshot ();<br>Thread.sleep(1000);<br>final SystemInformation.CPUUsageSnapshot event =<br>SystemInformation.makeCPUUsageSnapshot ();<br>final long memorySize = SystemInformation.getMemoryUsage();<br>final long residentSize = SystemInformation.getMemoryResident();<br>long freemem = SystemInformation.getFreeMem()/1024;<br>long maxmem = SystemInformation.getMaxMem()/1024;<br>double receivedCPUUsage = 100.0 * SystemInformation.getProcessCPUUsage (m_prevSnapshot, event);<br>System.out.println("Current CPU usage is"+receivedCPUUsage+"%”);</p></td></tr></tbody></table>
+
+    现在让我们来分别看看针对 Windows 和 Solaris 的 JNI 本机实现。C 头文件 silib.h（列表 B）能够用 JDK 里的 Javah 工具生成，或者手动编写。
+
+ **列表 B**
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">/* DO NOT EDIT THIS FILE - it is machine generated */<br>#include<br>/* Header for class com_vladium_utils_SystemInformation */</p><p align="left">#ifndef _Included_com_vladium_utils_SystemInformation<br>#define _Included_com_vladium_utils_SystemInformation<br>#ifdef __cplusplus<br>extern "C" {<br>#endif</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getProcessID<br>&nbsp;* Signature: ()I<br>&nbsp;*/<br>JNIEXPORT jint<br>JNICALL Java_com_vladium_utils_SystemInformation_getProcessID (JNIEnv *, jclass);</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getCPUs<br>&nbsp;* Signature: ()I<br>&nbsp;*/<br>JNIEXPORT jint<br>JNICALL Java_com_vladium_utils_SystemInformation_getCPUs (JNIEnv *, jclass);</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getProcessCPUTime<br>&nbsp;* Signature: ()J<br>&nbsp;*/<br>JNIEXPORT jlong<br>JNICALL Java_com_vladium_utils_SystemInformation_getProcessCPUTime (JNIEnv *, jclass);</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getProcessCPUUsage<br>&nbsp;* Signature: ()D<br>&nbsp;*/<br>JNIEXPORT jdouble<br>JNICALL Java_com_vladium_utils_SystemInformation_getProcessCPUUsage (JNIEnv *, jclass);</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getPagefileUsage<br>&nbsp;* Signature: ()J<br>&nbsp;*/<br>JNIEXPORT jlong<br>JNICALL Java_com_vladium_utils_SystemInformation_getPagefileUsage (JNIEnv *, jclass);</p><p align="left">#ifdef __cplusplus<br>}<br>#endif<br>#endif</p></td></tr></tbody></table>
+
+ **Windows**
+
+    首先我们来看看 Windows 的实现（列表 C）。
+
+ **列表 C**
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">/* ------------------------------------------------------------------------- */<br>/*<br>&nbsp;* An implementation of JNI methods in com.vladium.utils.SystemInformation<br>&nbsp;* class. The author compiled it using Microsoft Visual <a target="_blank" href="http://c.chinaitlab.com/" rel="noopener noreferrer">C++</a> and GCC for Win32 but the code<br>&nbsp;* should be easy to use with any compiler for win32 platform.<br>&nbsp;*<br>&nbsp;* For simplicity, this implementaion assumes JNI 1.2+ and omits error handling.<br>&nbsp;*<br>&nbsp;* Enhanced by Peter V. Mikhalenko (C) 2004, Deutsche Bank [peter@mikhalenko.com]<br>&nbsp;* Original source (C) 2002, Vladimir Roubtsov [vlad@trilogy.com]<br>&nbsp;*/<br>/* ------------------------------------------------------------------------- */</p><p align="left">#include<br>#include<br>#include<br>#include<br>#include<br>#include</p><p align="left">#include "com_vladium_utils_SystemInformation.h"</p><p align="left">static jint s_PID;<br>static HANDLE s_currentProcess;<br>static int alreadyDetached;<br>static int s_numberOfProcessors;<br>static SYSTEM_INFO systemInfo;<br>static WORD processorArchitecture;<br>static DWORD pageSize;<br>static DWORD processorType;<br>static WORD processorLevel;<br>static WORD processorRevision;</p><p align="left">#define INFO_BUFFER_SIZE 32768<br>#define BUFSIZE 2048</p><p align="left"><br>/* ------------------------------------------------------------------------- */</p><p align="left">/*<br>&nbsp;* A helper function for converting FILETIME to a LONGLONG [safe from memory<br>&nbsp;* alignment point of view].<br>&nbsp;*/<br>static LONGLONG<br>fileTimeToInt64 (const FILETIME * time)<br>{<br>&nbsp;&nbsp;&nbsp; ULARGE_INTEGER _time;</p><p align="left">&nbsp;&nbsp;&nbsp; _time.LowPart = time-&gt;dwLowDateTime;<br>&nbsp;&nbsp;&nbsp; _time.HighPart = time-&gt;dwHighDateTime;</p><p align="left">&nbsp;&nbsp;&nbsp; return _time.QuadPart;<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* This method was added in JNI 1.2. It is executed once before any other<br>&nbsp;* methods are called and is ostensibly for negotiating JNI spec versions, but<br>&nbsp;* can also be conveniently used for initializing variables that will not<br>&nbsp;* change throughout the lifetime of this process.<br>&nbsp;*/<br>JNIEXPORT jint JNICALL<br>JNI_OnLoad (JavaVM * vm, void * reserved)<br>{</p><p align="left">&nbsp;&nbsp;&nbsp; s_PID = _getpid ();<br>&nbsp;&nbsp;&nbsp; s_currentProcess = GetCurrentProcess ();<br>&nbsp;&nbsp;&nbsp; externalCPUmon = 0;<br>&nbsp;&nbsp;&nbsp; alreadyDetached = 0;</p><p align="left">&nbsp;&nbsp;&nbsp; GetSystemInfo (&amp; systemInfo);<br>&nbsp;&nbsp;&nbsp; s_numberOfProcessors = systemInfo.dwNumberOfProcessors;<br>&nbsp;&nbsp;&nbsp; processorArchitecture = systemInfo.wProcessorArchitecture;<br>&nbsp;&nbsp;&nbsp; pageSize = systemInfo.dwPageSize;<br>&nbsp;&nbsp;&nbsp; processorType = systemInfo.dwProcessorType;<br>&nbsp;&nbsp;&nbsp; processorLevel = systemInfo.wProcessorLevel;<br>&nbsp;&nbsp;&nbsp; processorRevision = systemInfo.wProcessorRevision;</p><p align="left">&nbsp;&nbsp;&nbsp; return JNI_VERSION_1_2;<br>}<br>/* ......................................................................... */</p><p align="left">JNIEXPORT void JNICALL<br>JNI_OnUnload (JavaVM * vm, void * reserved)<br>{</p><p align="left">&nbsp;&nbsp;&nbsp; if (!alreadyDetached &amp;&amp; s_currentProcess!=NULL) {<br>&nbsp;&nbsp;&nbsp;&nbsp; CloseHandle(s_currentProcess);<br>&nbsp;&nbsp;&nbsp;&nbsp; printf("[JNI Unload] Detached from native process.<br>");<br>&nbsp;&nbsp;&nbsp;&nbsp; fflush(stdout);<br>&nbsp;&nbsp;&nbsp; }</p><p align="left">}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getCPUs<br>&nbsp;* Signature: ()I<br>&nbsp;*/<br>JNIEXPORT jint JNICALL<br>Java_com_vladium_utils_SystemInformation_getCPUs (JNIEnv * env, jclass cls)<br>{<br>&nbsp;&nbsp;&nbsp; return (jint)s_numberOfProcessors;<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getSysInfo<br>&nbsp;* Signature: ()S<br>&nbsp;*/<br>JNIEXPORT jstring JNICALL<br>Java_com_vladium_utils_SystemInformation_getSysInfo (JNIEnv * env, jclass cls)<br>{<br>&nbsp;&nbsp;&nbsp; char buf[2048];<br>&nbsp;&nbsp;&nbsp; char buf2[512];<br>&nbsp;&nbsp;&nbsp; *buf=0;<br>&nbsp;&nbsp;&nbsp; OSVERSIONINFOEX osvi;<br>&nbsp;&nbsp;&nbsp; BOOL bOsVersionInfoEx;<br>&nbsp;&nbsp;&nbsp; TCHAR&nbsp; infoBuf[INFO_BUFFER_SIZE];<br>&nbsp;&nbsp;&nbsp; DWORD&nbsp; bufCharCount = INFO_BUFFER_SIZE;</p><p align="left"><br>&nbsp;&nbsp;&nbsp; // Try calling GetVersionEx using the OSVERSIONINFOEX structure.<br>&nbsp;&nbsp;&nbsp; // If that fails, try using the OSVERSIONINFO structure.<br>&nbsp;&nbsp;&nbsp; ZeroMemory(&amp;osvi, sizeof(OSVERSIONINFOEX));<br>&nbsp;&nbsp;&nbsp; osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFOEX);<br>&nbsp;&nbsp;&nbsp; if(!(bOsVersionInfoEx = GetVersionEx ((OSVERSIONINFO *) &amp;osvi)) )<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; osvi.dwOSVersionInfoSize = sizeof (OSVERSIONINFO);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (! GetVersionEx ( (OSVERSIONINFO *) &amp;osvi) ) {<br>&nbsp;&nbsp;&nbsp;&nbsp; // Return empty string in case of problems<br>&nbsp;&nbsp; goto next_label;<br>&nbsp;}<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp; switch (osvi.dwPlatformId)<br>&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Test for the Windows NT product family.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case VER_PLATFORM_WIN32_NT:</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Test for the specific product.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (osvi.dwMajorVersion == 5 &amp;&amp; osvi.dwMinorVersion == 2)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"WinServer2003,");</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (osvi.dwMajorVersion == 5 &amp;&amp; osvi.dwMinorVersion == 1)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"WinXP");</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (osvi.dwMajorVersion == 5 &amp;&amp; osvi.dwMinorVersion == 0)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Win2K");</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (osvi.dwMajorVersion &lt;= 4)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"WinNT");</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Test for specific product on Windows NT 4.0 SP6 and later.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(bOsVersionInfoEx)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Test for the workstation type.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (osvi.wProductType == VER_NT_WORKSTATION)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(osvi.dwMajorVersion == 4)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Workstation 4.0");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if(osvi.wSuiteMask &amp; VER_SUITE_PERSONAL)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Home Edition");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Professional");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Test for the server type.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if ( osvi.wProductType == VER_NT_SERVER ||<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; osvi.wProductType == VER_NT_DOMAIN_CONTROLLER )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(osvi.dwMajorVersion == 5 &amp;&amp; osvi.dwMinorVersion == 2)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(osvi.wSuiteMask &amp; VER_SUITE_DATACENTER)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Datacenter Edition");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if(osvi.wSuiteMask &amp; VER_SUITE_ENTERPRISE)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Enterprise Edition");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if (osvi.wSuiteMask == VER_SUITE_BLADE)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Web Edition");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Standard Edition");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if(osvi.dwMajorVersion == 5 &amp;&amp; osvi.dwMinorVersion == 0)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(osvi.wSuiteMask &amp; VER_SUITE_DATACENTER)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Datacenter Server");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else if(osvi.wSuiteMask &amp; VER_SUITE_ENTERPRISE)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Advanced Server");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Server");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else&nbsp; // Windows NT 4.0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(osvi.wSuiteMask &amp; VER_SUITE_ENTERPRISE)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Server 4.0, Enterprise Edition");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Server 4.0");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else&nbsp; // Test for specific product on Windows NT 4.0 SP5 and earlier<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HKEY hKey;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char szProductType[BUFSIZE];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DWORD dwBufLen=BUFSIZE;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LONG lRet;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lRet = RegOpenKeyEx( HKEY_LOCAL_MACHINE,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "SYSTEMCurrentControlSetControlProductOptions",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0, KEY_QUERY_VALUE, &amp;hKey );<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(lRet != ERROR_SUCCESS) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; goto next_label;<br>&nbsp;&nbsp;}</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lRet = RegQueryValueEx( hKey, "ProductType", NULL, NULL,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (LPBYTE) szProductType, &amp;dwBufLen);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if((lRet != ERROR_SUCCESS) || (dwBufLen &gt; BUFSIZE) ) {<br>&nbsp;&nbsp;goto next_label;<br>&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RegCloseKey(hKey);</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (lstrcmpi( "WINNT", szProductType) == 0 )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Workstation");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (lstrcmpi( "LANMANNT", szProductType) == 0 )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Server");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (lstrcmpi( "SERVERNT", szProductType) == 0 )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Advanced Server");</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sprintf(buf2, "%d.%d", (int)osvi.dwMajorVersion, (int)osvi.dwMinorVersion );<br>&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,buf2);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Display service pack (if any) and build number.</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if( osvi.dwMajorVersion == 4 &amp;&amp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lstrcmpi(osvi.szCSDVersion, "Service Pack 6") == 0 )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HKEY hKey;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LONG lRet;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Test for SP6 versus SP6a.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lRet = RegOpenKeyEx( HKEY_LOCAL_MACHINE,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "SOFTWAREMicrosoftWindows NTCurrentVersionHotfixQ246009",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0, KEY_QUERY_VALUE, &amp;hKey );<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(lRet == ERROR_SUCCESS) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sprintf(buf2, "SP 6a (Build %d),", (int)(osvi.dwBuildNumber &amp; 0xFFFF) );<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,buf2);<br>&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else // Windows NT 4.0 prior to SP6a<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sprintf(buf2, "%s (Build %d),",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; osvi.szCSDVersion,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (int)(osvi.dwBuildNumber &amp; 0xFFFF));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,buf2);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RegCloseKey(hKey);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else // not Windows NT 4.0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sprintf(buf2, "%s (Build %d),",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; osvi.szCSDVersion,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (int)(osvi.dwBuildNumber &amp; 0xFFFF));<br>&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,buf2);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Test for the Windows Me/98/95.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case VER_PLATFORM_WIN32_WINDOWS:</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (osvi.dwMajorVersion == 4 &amp;&amp; osvi.dwMinorVersion == 0)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Win95");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (osvi.szCSDVersion[1] == 'C' || osvi.szCSDVersion[1] == 'B' )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"OSR2");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (osvi.dwMajorVersion == 4 &amp;&amp; osvi.dwMinorVersion == 10)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Win98");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (osvi.szCSDVersion[1] == 'A' )<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"SE");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (osvi.dwMajorVersion == 4 &amp;&amp; osvi.dwMinorVersion == 90)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"WinME");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; case VER_PLATFORM_WIN32s:</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Win32s");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br>&nbsp;&nbsp; }</p><p align="left">next_label:</p><p align="left">&nbsp;&nbsp; strcat(buf,"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on ");<br>&nbsp;&nbsp; // Get and display the name of the computer.<br>&nbsp;&nbsp; bufCharCount = INFO_BUFFER_SIZE;<br>&nbsp;&nbsp; if(!GetComputerName( infoBuf, &amp;bufCharCount) )<br>&nbsp;&nbsp;&nbsp; &nbsp;goto next_label_2;<br>&nbsp;&nbsp; strcat(buf, infoBuf);</p><p align="left">next_label_2:<br>&nbsp;&nbsp;&nbsp; strcat(buf,"(");<br>&nbsp;&nbsp;&nbsp; if (!(osvi.dwPlatformId==VER_PLATFORM_WIN32_WINDOWS &amp;&amp; osvi.dwMajorVersion == 4 &amp;&amp; osvi.dwMinorVersion == 0)) {<br>&nbsp;&nbsp;&nbsp;&nbsp; // Win95 does not keep CPU info in registry<br>&nbsp;&nbsp;&nbsp;&nbsp; LONG lRet;<br>&nbsp;&nbsp;&nbsp;&nbsp; HKEY hKey;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char szOrigCPUType[BUFSIZE];<br>&nbsp;&nbsp;&nbsp;&nbsp; int i=0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DWORD dwBufLen=BUFSIZE;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lRet = RegOpenKeyEx( HKEY_LOCAL_MACHINE,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "HARDWAREDESCRIPTIONSystemCentralProcessor",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0, KEY_QUERY_VALUE, &amp;hKey );<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(lRet != ERROR_SUCCESS) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; goto next_label_3;<br>&nbsp;&nbsp;}</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lRet = RegQueryValueEx( hKey, "ProcessorNameString", NULL, NULL,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (LPBYTE) szOrigCPUType, &amp;dwBufLen);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if((lRet != ERROR_SUCCESS) || (dwBufLen &gt; BUFSIZE) ) {<br>&nbsp;&nbsp;goto next_label_3;<br>&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RegCloseKey(hKey);<br>&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(szOrigCPUType)&gt;0) {<br>&nbsp;&nbsp;while(szOrigCPUType[i]==' ' &amp;&amp; szOrigCPUType[i]!=0) i++;<br>&nbsp;&nbsp;strcat(buf,szOrigCPUType+i);<br>&nbsp;&nbsp;&nbsp;&nbsp; } else goto next_label_3;<br>&nbsp;&nbsp;&nbsp; } else {<br>next_label_3:<br>&nbsp;&nbsp;&nbsp;&nbsp; if (processorArchitecture==PROCESSOR_ARCHITECTURE_UNKNOWN) strcat(buf,"unknown_arch");<br>&nbsp;&nbsp;&nbsp;&nbsp; else if (processorArchitecture==PROCESSOR_ARCHITECTURE_INTEL) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,"Intel");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sprintf(buf2,"level %d",processorLevel);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(buf,buf2);<br>&nbsp;&nbsp;&nbsp;&nbsp; } else if (processorArchitecture==PROCESSOR_ARCHITECTURE_IA64) strcat(buf,"IA64");<br>&nbsp;&nbsp;&nbsp;&nbsp; else if (processorArchitecture==PROCESSOR_ARCHITECTURE_MIPS) strcat(buf,"MIPS");<br>&nbsp;&nbsp;&nbsp;&nbsp; else if (processorArchitecture==PROCESSOR_ARCHITECTURE_ALPHA) strcat(buf,"Alpha");<br>&nbsp;&nbsp;&nbsp;&nbsp; else if (processorArchitecture==PROCESSOR_ARCHITECTURE_PPC) strcat(buf,"PowerPC");<br>&nbsp;&nbsp;&nbsp;&nbsp; else if (processorArchitecture==PROCESSOR_ARCHITECTURE_SHX) strcat(buf,"SHX");<br>&nbsp;&nbsp;&nbsp;&nbsp; else if (processorArchitecture==PROCESSOR_ARCHITECTURE_ALPHA64) strcat(buf,"Alpha64");<br>&nbsp;&nbsp;&nbsp;&nbsp; else strcat(buf,"unknown_arch");<br>&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; strcat(buf,")");</p><p align="left">&nbsp;&nbsp;&nbsp; jstring retval = (*env)-&gt;NewStringUTF(env,buf);<br>&nbsp;&nbsp;&nbsp; return retval;<br>}<br>/* ......................................................................... */</p><p align="left"><br>/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getProcessID<br>&nbsp;* Signature: ()I<br>&nbsp;*/<br>JNIEXPORT jint JNICALL<br>Java_com_vladium_utils_SystemInformation_getProcessID (JNIEnv * env, jclass cls)<br>{<br>&nbsp;&nbsp;&nbsp; return s_PID;<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; setPid<br>&nbsp;* Signature: ()I<br>&nbsp;*/<br>JNIEXPORT jint JNICALL<br>Java_com_vladium_utils_SystemInformation_setPid (JNIEnv * env, jclass cls, jint pid)<br>{<br>&nbsp;&nbsp;&nbsp; DWORD errCode;<br>&nbsp;&nbsp;&nbsp; LPVOID lpMsgBuf;<br>&nbsp;&nbsp;&nbsp; s_PID = pid;<br>&nbsp;&nbsp;&nbsp; s_currentProcess = OpenProcess(PROCESS_ALL_ACCESS,FALSE,pid);<br>&nbsp;&nbsp;&nbsp; if (s_currentProcess==NULL) {<br>&nbsp;&nbsp;&nbsp;&nbsp; errCode = GetLastError();<br>&nbsp;&nbsp;&nbsp;&nbsp; FormatMessage(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FORMAT_MESSAGE_ALLOCATE_BUFFER |<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FORMAT_MESSAGE_FROM_SYSTEM,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NULL,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; errCode,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (LPTSTR) &amp;lpMsgBuf,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0, NULL );</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp; printf("[CPUmon] Could not attach to native process.<br>&nbsp; Error code: %ld<br>&nbsp; Error description: %s<br>",errCode,lpMsgBuf);<br>&nbsp;&nbsp;&nbsp;&nbsp; fflush(stdout);<br>&nbsp;&nbsp;&nbsp;&nbsp; LocalFree(lpMsgBuf);<br>&nbsp;&nbsp;&nbsp;&nbsp; return errCode;<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; printf("[CPUmon] Attached to native process.<br>");<br>&nbsp;&nbsp;&nbsp; fflush(stdout);<br>&nbsp;&nbsp;&nbsp; return 0;<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; detachProcess<br>&nbsp;* Signature: ()I<br>&nbsp;*/<br>JNIEXPORT jint JNICALL<br>Java_com_vladium_utils_SystemInformation_detachProcess (JNIEnv * env, jclass cls)<br>{<br>&nbsp;&nbsp;&nbsp; if (!alreadyDetached &amp;&amp; s_currentProcess!=NULL) {<br>&nbsp;&nbsp;&nbsp;&nbsp; CloseHandle(s_currentProcess);<br>&nbsp;&nbsp;&nbsp;&nbsp; alreadyDetached = 1;<br>&nbsp;&nbsp;&nbsp;&nbsp; printf("[CPUmon] Detached from native process.<br>");<br>&nbsp;&nbsp;&nbsp;&nbsp; fflush(stdout);<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; return 0;<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getProcessCPUTime<br>&nbsp;* Signature: ()J<br>&nbsp;*/<br>JNIEXPORT jlong JNICALL<br>Java_com_vladium_utils_SystemInformation_getProcessCPUTime (JNIEnv * env, jclass cls)<br>{<br>&nbsp;&nbsp;&nbsp; FILETIME creationTime, exitTime, kernelTime, userTime;<br>&nbsp;&nbsp;&nbsp; DWORD errCode;<br>&nbsp;&nbsp;&nbsp; LPVOID lpMsgBuf;</p><p align="left">&nbsp;&nbsp;&nbsp; BOOL resultSuccessful = GetProcessTimes (s_currentProcess, &amp; creationTime, &amp; exitTime, &amp; kernelTime, &amp; userTime);<br>&nbsp;&nbsp;&nbsp; if (!resultSuccessful) {<br>&nbsp;&nbsp;&nbsp;&nbsp; errCode = GetLastError();<br>&nbsp;&nbsp;&nbsp;&nbsp; FormatMessage(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FORMAT_MESSAGE_ALLOCATE_BUFFER |<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FORMAT_MESSAGE_FROM_SYSTEM,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NULL,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; errCode,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (LPTSTR) &amp;lpMsgBuf,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0, NULL );</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp; printf("[CPUmon] An error occured while trying to get CPU time.<br>&nbsp; Error code: %ld<br>&nbsp; Error description: %s<br>",errCode,lpMsgBuf);</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp; fflush(stdout);<br>&nbsp;&nbsp;&nbsp;&nbsp; LocalFree(lpMsgBuf);<br>&nbsp;&nbsp;&nbsp;&nbsp; return -1;<br>&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; return (jlong) ((fileTimeToInt64 (&amp; kernelTime) + fileTimeToInt64 (&amp; userTime)) /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (s_numberOfProcessors * 10000));<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getMaxMem<br>&nbsp;* Signature: ()J<br>&nbsp;*/<br>JNIEXPORT jlong JNICALL<br>Java_com_vladium_utils_SystemInformation_getMaxMem (JNIEnv * env, jclass cls)<br>{<br>&nbsp;MEMORYSTATUS stat;<br>&nbsp;GlobalMemoryStatus (&amp;stat);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return (jlong)(stat.dwTotalPhys/1024);<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getFreeMem<br>&nbsp;* Signature: ()J<br>&nbsp;*/<br>JNIEXPORT jlong JNICALL<br>Java_com_vladium_utils_SystemInformation_getFreeMem (JNIEnv * env, jclass cls)<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MEMORYSTATUS stat;<br>&nbsp;GlobalMemoryStatus (&amp;stat);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return (jlong)(stat.dwAvailPhys/1024);<br>}<br>/* ......................................................................... */</p><p align="left"><br>/* define min elapsed time (in units of 10E-7 sec): */<br>#define MIN_ELAPSED_TIME (10000)</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getProcessCPUUsage<br>&nbsp;* Signature: ()D<br>&nbsp;*/<br>JNIEXPORT jdouble JNICALL<br>Java_com_vladium_utils_SystemInformation_getProcessCPUUsage (JNIEnv * env, jclass cls)<br>{<br>&nbsp;&nbsp;&nbsp; FILETIME creationTime, exitTime, kernelTime, userTime, nowTime;<br>&nbsp;&nbsp;&nbsp; LONGLONG elapsedTime;<br>&nbsp;&nbsp;&nbsp; DWORD errCode;<br>&nbsp;&nbsp;&nbsp; LPVOID lpMsgBuf;</p><p align="left">&nbsp;&nbsp;&nbsp; BOOL resultSuccessful = GetProcessTimes (s_currentProcess, &amp; creationTime, &amp; exitTime, &amp; kernelTime, &amp; userTime);<br>&nbsp;&nbsp;&nbsp; if (!resultSuccessful) {<br>&nbsp;&nbsp;&nbsp;&nbsp; errCode = GetLastError();<br>&nbsp;&nbsp;&nbsp;&nbsp; FormatMessage(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FORMAT_MESSAGE_ALLOCATE_BUFFER |<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FORMAT_MESSAGE_FROM_SYSTEM,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NULL,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; errCode,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (LPTSTR) &amp;lpMsgBuf,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0, NULL );</p><p align="left">&nbsp;&nbsp;&nbsp;&nbsp; printf("[CPUmon] An error occured while trying to get CPU time.<br>&nbsp; Error code: %ld<br>&nbsp; Error description: %s<br>",errCode,lpMsgBuf);<br>&nbsp;&nbsp;&nbsp;&nbsp; fflush(stdout);<br>&nbsp;&nbsp;&nbsp;&nbsp; LocalFree(lpMsgBuf);<br>&nbsp;&nbsp;&nbsp;&nbsp; return -1.0;<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; GetSystemTimeAsFileTime (&amp; nowTime);</p><p align="left">&nbsp;&nbsp;&nbsp; /*<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NOTE: win32 system time is not very precise [~10ms resolution], use<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sufficiently long sampling intervals if you make use of this method.<br>&nbsp;&nbsp;&nbsp; */</p><p align="left">&nbsp;&nbsp;&nbsp; elapsedTime = fileTimeToInt64 (&amp; nowTime) - fileTimeToInt64 (&amp; creationTime);</p><p align="left">&nbsp;&nbsp;&nbsp; if (elapsedTime &lt; MIN_ELAPSED_TIME)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0.0;<br>&nbsp;&nbsp;&nbsp; else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return ((jdouble) (fileTimeToInt64 (&amp; kernelTime) + fileTimeToInt64 (&amp; userTime))) /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (s_numberOfProcessors * elapsedTime);<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getProcessCPUPercentage<br>&nbsp;* Signature: ()D<br>&nbsp;*/<br>JNIEXPORT jdouble JNICALL<br>Java_com_vladium_utils_SystemInformation_getProcessCPUPercentage (JNIEnv * env, jclass cls)<br>{<br>&nbsp;// Not implemented on Windows<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return (jdouble)(-1.0);<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getMemoryUsage<br>&nbsp;* Signature: ()J<br>&nbsp;*/<br>JNIEXPORT jlong JNICALL<br>Java_com_vladium_utils_SystemInformation_getMemoryUsage (JNIEnv * env, jclass cls)<br>{<br>&nbsp;&nbsp;&nbsp; PROCESS_MEMORY_COUNTERS pmc;</p><p align="left">&nbsp;&nbsp;&nbsp; if (GetProcessMemoryInfo( s_currentProcess, &amp;pmc, sizeof(pmc)) )<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;return (jlong)(pmc.PagefileUsage/1024);<br>&nbsp;&nbsp;&nbsp; } else {<br>&nbsp;return (jlong)(0);<br>&nbsp;&nbsp;&nbsp; }<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getMemoryResident<br>&nbsp;* Signature: ()J<br>&nbsp;*/<br>JNIEXPORT jlong JNICALL<br>Java_com_vladium_utils_SystemInformation_getMemoryResident (JNIEnv * env, jclass cls)<br>{<br>&nbsp;&nbsp;&nbsp; PROCESS_MEMORY_COUNTERS pmc;</p><p align="left">&nbsp;&nbsp;&nbsp; if (GetProcessMemoryInfo( s_currentProcess, &amp;pmc, sizeof(pmc)) )<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;return (jlong)(pmc.WorkingSetSize/1024);<br>&nbsp;&nbsp;&nbsp; } else {<br>&nbsp;return (jlong)(0);<br>&nbsp;&nbsp;&nbsp; }<br>}</p><p align="left"><br>#undef MIN_ELAPSED_TIME</p><p align="left">/* ------------------------------------------------------------------------- */<br>/* end of file */</p></td></tr></tbody></table>
+
+    JNI 里有两个特殊的函数——JNI_OnLoad 和 JNI_OnUnload，它们分别在加载和卸载库的时候被调用。JNI_OnLoad 在调用其他任何方法之前被执行，而且能够很方便地用于初始化在这一进程的生命周期中没有发生变化的变量，并用于协调 JNI 规范的版本。在默认情况下，库会测量它自己的进程的参数，但是通过调用 systemInformation.setPid（）方法它可以从 Java 应用程序被重载。s_PID C 变量用来保存 PID，而 s_currentProcess 用来保存进程句柄（用于 Windows 的是 HANDLE 类型，而用于 Solaris 的是 int 类型）。为了读取的一些参数，应该首先打开进程句柄，我们需要在库关闭使用的时候停止同一个进程句柄（通常它在 JVM 因为相同的原因而关闭的时候发生）。 这就是 JNI_OnUnload（）函数起作用的地方。但是，JVM 的一些实现事实上没有调用 JNI_OnUnload（），还有发生句柄会永远打开的危险。为了降低这种可能性，我们应该在 Java 应用程序里加入一个明确调用 detachProcess（） C 函数的关闭挂钩。下面就是我们加入关闭挂钩的方法：
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">if (pid!=-1) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int result = SystemInformation.setPid(pid);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (result!=0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hasPid = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Create shutdown hook for proper process detach<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Runtime.getRuntime().addShutdownHook(new Thread() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public void run() {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SystemInformation.detachProcess();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p></td></tr></tbody></table>
+
+    通过调用 WinAPI 里的 GetSystemInfo（），我们还可以获得关于中央处理器的一些信息。只要它是 CPU 的占用率根据这个值来调节，测量进程最重要的值就是处理器的个数（s_numberOfProcessors）。SystemInformation.getSysInfo（）的 Win32 实现相当麻烦，因为在各个版本的 Windows 里，关于操作系统的版本、补丁、服务包以及相关硬件等信息被以不同的方式保存。所以需要读者来分析相关的源代码和代码中的注释。下面就是 Windows XP 上代码输出的示例：
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">System.out.println("SysInfo:”+SystemInformation.getSysInfo()):<br><br>SysInfo: WinXP Professional Service Pack 1 (Build 2600),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on DBMOSWS2132 (Intel(R) Xeon(TM) CPU 1.70GHz)</p><p align="left">And the same code on Solaris will give:</p><p align="left">SysInfo: SunOS 5.8 sxav-dev Generic_108528-29 sun4u sparc<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;SUNW,Ultra-Enterprise Sun_Microsystems</p></td></tr></tbody></table>
+
+    为了获得 CPU 上进程所占用的总时间，我们使用了 WinAPI 的函数 GetProcessTimes. 其他的函数实现都非常简单，直接调用 WinAPI， 所以没有什么必要讨论它们。列表 D 里是用于 Windows 版本的 GCC 的 make.bat 文件，用来帮助读者创建相关的。dll 库。
+
+**列表 D**
+
+    gcc -D_JNI_IMPLEMENTATION_ -Wl，——kill-at -IC：/jdk1.3.1_12/include -IC：/jdk1.3.1_12/include/win32 -shared C：/cpu_profile/src/native/com_vladium_utils_SystemInformation.c -o C：/cpu_profile/dll/silib.dll C：/MinGW/lib/libpsapi.a  这个库的 Solaris 实现见列表 E 和列表 F. 这两个都是 C 语言文件，应该被编译到一个共享库（.so）里。用于编译共享库的帮助器 make.sh 见列表 G. 所有基于 Solaris 系统的调用被移到列表 F 里，这使得列表 E 就是一个 JNI 的简单包装程序。Solaris 实现要比 Win32 实现更加复杂，要求 更多的临时数据结构、内核和进程表。列出的代码里有更多的注释。
+
+ **列表 E**
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">/* ------------------------------------------------------------------------- */<br>/*<br>&nbsp;* An implementation of JNI methods in com.vladium.utils.SystemInformation<br>&nbsp;* class.<br>&nbsp;* This is a ported version from Win32 to Solaris.<br>&nbsp;*<br>&nbsp;* For simplicity, this implementaion assumes JNI 1.2+ and omits error handling.<br>&nbsp;*<br>&nbsp;* Port from Win32 by Peter V. Mikhalenko (C) 2004, Deutsche Bank [peter@mikhalenko.ru]<br>&nbsp;* Original source (C) 2002, Vladimir Roubtsov [vlad@trilogy.com]<br>&nbsp;*/<br>/* ------------------------------------------------------------------------- */</p><p align="left">#include</p><p align="left">#include "com_vladium_utils_SystemInformation.h"</p><p align="left">// Helper Solaris8-dependent external routines<br>extern int sol_getCPUs();<br>extern int sol_getFreeMem();<br>extern int sol_getMaxMem();<br>extern long int sol_getProcessCPUTime(int pid,int nproc);<br>extern double sol_getProcessCPUPercentage(int pid);<br>extern long sol_getMemoryUsage(int pid);<br>extern long sol_getMemoryResident(int pid);<br>extern char* sol_getSysInfo();<br>extern void initKVM();</p><p align="left">static jint s_PID;<br>static int s_numberOfProcessors;<br>static int externalCPUmon;<br>static int alreadyDetached;</p><p align="left">/* ------------------------------------------------------------------------- */</p><p align="left">/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* This method was added in JNI 1.2. It is executed once before any other<br>&nbsp;* methods are called and is ostensibly for negotiating JNI spec versions, but<br>&nbsp;* can also be conveniently used for initializing variables that will not<br>&nbsp;* change throughout the lifetime of this process.<br>&nbsp;*/<br>JNIEXPORT jint JNICALL<br>JNI_OnLoad (JavaVM * vm, void * reserved)<br>{<br>&nbsp;&nbsp;&nbsp; s_PID = _getpid ();<br>&nbsp;&nbsp;&nbsp; externalCPUmon = 0;<br>&nbsp;&nbsp;&nbsp; alreadyDetached = 0;</p><p align="left">&nbsp;&nbsp;&nbsp; /* use kstat to update all processor information */<br>&nbsp;&nbsp;&nbsp; s_numberOfProcessors = sol_getCPUs();<br>&nbsp;&nbsp;&nbsp; initKVM();</p><p align="left">&nbsp;&nbsp;&nbsp; return JNI_VERSION_1_2;<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getCPUs<br>&nbsp;* Signature: ()I<br>&nbsp;*/<br>JNIEXPORT jint JNICALL<br>Java_com_vladium_utils_SystemInformation_getCPUs (JNIEnv * env, jclass cls)<br>{<br>&nbsp;&nbsp;&nbsp; return (jint)s_numberOfProcessors;<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getSysInfo<br>&nbsp;* Signature: ()S<br>&nbsp;*/<br>JNIEXPORT jstring JNICALL<br>Java_com_vladium_utils_SystemInformation_getSysInfo (JNIEnv * env, jclass cls)<br>{<br>&nbsp;&nbsp;&nbsp; char * buf = sol_getSysInfo();<br>&nbsp;&nbsp;&nbsp; jstring retval = (*env)-&gt;NewStringUTF(env,buf);<br>&nbsp;&nbsp;&nbsp; free(buf);<br>&nbsp;&nbsp;&nbsp; return retval;<br>}<br>/* ......................................................................... */</p><p align="left"><br>/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getProcessID<br>&nbsp;* Signature: ()I<br>&nbsp;*/<br>JNIEXPORT jint JNICALL<br>Java_com_vladium_utils_SystemInformation_getProcessID (JNIEnv * env, jclass cls)<br>{<br>&nbsp;&nbsp;&nbsp; return s_PID;<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; setPid<br>&nbsp;* Signature: ()I<br>&nbsp;*/<br>JNIEXPORT jint JNICALL<br>Java_com_vladium_utils_SystemInformation_setPid (JNIEnv * env, jclass cls, jint pid)<br>{<br>&nbsp;&nbsp;&nbsp; s_PID = pid;<br>&nbsp;&nbsp;&nbsp; externalCPUmon = 1;<br>&nbsp;&nbsp;&nbsp; printf("[CPUmon] Attached to process.<br>");<br>&nbsp;&nbsp;&nbsp; fflush(stdout);<br>&nbsp;&nbsp;&nbsp; return 0;<br>}<br>/* ......................................................................... */</p><p>/*</p><p>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation</p><p>&nbsp;* Method:&nbsp;&nbsp;&nbsp; detachProcess</p><p>&nbsp;* Signature: ()I</p><p>&nbsp;*/</p><p>JNIEXPORT jint JNICALL</p><p>Java_com_vladium_utils_SystemInformation_detachProcess (JNIEnv * env, jclass cls)</p><p>{</p><p>if (externalCPUmon &amp;&amp; !alreadyDetached) {</p><p>alreadyDetached = 1;<br>&nbsp;&nbsp;&nbsp;&nbsp; printf("[CPUmon] Detached from process.");<br>&nbsp;&nbsp;&nbsp;&nbsp; fflush(stdout);<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; return 0;<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getProcessCPUTime<br>&nbsp;* Signature: ()J<br>&nbsp;*/<br>JNIEXPORT jlong JNICALL<br>Java_com_vladium_utils_SystemInformation_getProcessCPUTime (JNIEnv * env, jclass cls)<br>{<br>&nbsp;return (jlong)sol_getProcessCPUTime((int)s_PID,s_numberOfProcessors);<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getMaxMem<br>&nbsp;* Signature: ()J<br>&nbsp;*/<br>JNIEXPORT jlong JNICALL<br>Java_com_vladium_utils_SystemInformation_getMaxMem (JNIEnv * env, jclass cls)<br>{<br>&nbsp;return (jlong)sol_getMaxMem();<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getFreeMem<br>&nbsp;* Signature: ()J<br>&nbsp;*/<br>JNIEXPORT jlong JNICALL<br>Java_com_vladium_utils_SystemInformation_getFreeMem (JNIEnv * env, jclass cls)<br>{<br>&nbsp;return (jlong)sol_getFreeMem();<br>}<br>/* ......................................................................... */</p><p align="left"><br>/* define min elapsed time (in units of 10E-7 sec): */<br>#define MIN_ELAPSED_TIME (10000)</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getProcessCPUUsage<br>&nbsp;* Signature: ()D<br>&nbsp;*/<br>JNIEXPORT jdouble JNICALL<br>Java_com_vladium_utils_SystemInformation_getProcessCPUUsage (JNIEnv * env, jclass cls)<br>{<br>&nbsp;return 0.0;<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getProcessCPUPercentage<br>&nbsp;* Signature: ()D<br>&nbsp;*/<br>JNIEXPORT jdouble JNICALL<br>Java_com_vladium_utils_SystemInformation_getProcessCPUPercentage (JNIEnv * env, jclass cls)<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return (jdouble)sol_getProcessCPUPercentage((int)s_PID);<br>}<br>/* ......................................................................... */</p><p align="left"><br>/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getMemoryUsage<br>&nbsp;* Signature: ()J<br>&nbsp;*/<br>JNIEXPORT jlong JNICALL<br>Java_com_vladium_utils_SystemInformation_getMemoryUsage (JNIEnv * env, jclass cls)<br>{<br>&nbsp;return (jlong)sol_getMemoryUsage((int)s_PID);<br>}<br>/* ......................................................................... */</p><p align="left">/*<br>&nbsp;* Class:&nbsp;&nbsp;&nbsp;&nbsp; com_vladium_utils_SystemInformation<br>&nbsp;* Method:&nbsp;&nbsp;&nbsp; getMemoryResident<br>&nbsp;* Signature: ()J<br>&nbsp;*/<br>JNIEXPORT jlong JNICALL<br>Java_com_vladium_utils_SystemInformation_getMemoryResident (JNIEnv * env, jclass cls)<br>{<br>&nbsp;return (jlong)sol_getMemoryResident((int)s_PID);<br>}</p><p align="left">#undef MIN_ELAPSED_TIME</p><p align="left">/* ------------------------------------------------------------------------- */<br>/* end of file */<br>列表 F/* ------------------------------------------------------------------------- */<br>/*<br>&nbsp;* Solaris-dependent system routines and kernel calls<br>&nbsp;* Used for getting memory and CPU consumption statistics<br>&nbsp;*<br>&nbsp;* Author: Peter V. Mikhalenko (C) 2004, Deutsche Bank [peter@mikhalenko.ru]<br>&nbsp;*/<br>/* ------------------------------------------------------------------------- */</p><p align="left">#include<br># ifndef KSTAT_DATA_UINT32<br>#&nbsp; define ui32 ul<br># endif<br>#include<br>#include<br>#include<br>#include<br>#include<br>#include<br>#include<br>#include</p><p align="left">#define _STRUCTURED_PROC 1<br>#include<br>#define prpsinfo psinfo<br>#define pr_fill pr_nlwp<br>/* These require an ANSI C compiler "Reisser cpp" doesn't like this */<br>#define pr_state pr_lwp.pr_state<br>#define pr_oldpri pr_lwp.pr_oldpri<br>#define pr_nice pr_lwp.pr_nice<br>#define pr_pri pr_lwp.pr_pri<br>#define pr_onpro pr_lwp.pr_onpro<br>#define ZOMBIE(p)&nbsp;((p)-&gt;pr_nlwp == 0)<br>#define SIZE_K(p)&nbsp;((p)-&gt;pr_size)<br>#define RSS_K(p)&nbsp;((p)-&gt;pr_rssize)<br>#define PROCFS "/proc"</p><p align="left"><br>/* definitions for indices in the nlist array */<br>#define X_V&nbsp;&nbsp;&nbsp; 0<br>#define X_MPID&nbsp;&nbsp;&nbsp; 1<br>#define X_ANONINFO&nbsp;&nbsp; 2<br>#define X_MAXMEM&nbsp;&nbsp; 3<br>#define X_SWAPFS_MINFREE&nbsp; 4<br>#define X_FREEMEM&nbsp;&nbsp; 5<br>#define X_AVAILRMEM&nbsp;&nbsp; 6<br>#define X_AVENRUN&nbsp;&nbsp; 7<br>#define X_CPU&nbsp;&nbsp;&nbsp; 8<br>#define X_NPROC&nbsp;&nbsp;&nbsp; 9<br>#define X_NCPUS&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;10</p><p align="left">static struct nlist nlst[] =<br>{<br>&nbsp; ,&nbsp;&nbsp;&nbsp;/* 0 */&nbsp;/* replaced by dynamic allocation */<br>&nbsp; ,&nbsp;&nbsp;&nbsp;/* 1 */<br>#if OSREV &gt;= 56<br>&nbsp; /* this structure really has some extra fields, but the first three match */<br>&nbsp; ,&nbsp;&nbsp;/* 2 */<br>#else<br>&nbsp; ,&nbsp;&nbsp;&nbsp;/* 2 */<br>#endif<br>&nbsp; ,&nbsp;&nbsp;&nbsp;/* 3 */ /* use sysconf */<br>&nbsp; ,&nbsp;&nbsp;/* 4 */&nbsp;/* used only w/ USE_ANONINFO */<br>&nbsp; ,&nbsp;&nbsp;&nbsp;/* 5 */&nbsp;/* available from kstat &gt;= 2.5 */<br>&nbsp; ,&nbsp;&nbsp;/* 6 */&nbsp;/* available from kstat &gt;= 2.5 */<br>&nbsp; ,&nbsp;&nbsp;&nbsp;/* 7 */ /* available from kstat */<br>&nbsp; ,&nbsp;&nbsp;&nbsp;/* 8 */ /* available from kstat */<br>&nbsp; ,&nbsp;&nbsp;&nbsp;/* 9 */ /* available from kstat */<br>&nbsp; ,&nbsp;&nbsp;&nbsp;/* 10 */ /* available from kstat */</p><p align="left">};</p><p align="left">static kstat_ctl_t *kc = NULL;<br>static kstat_t **cpu_ks;<br>static cpu_stat_t *cpu_stat;<br>static int ncpus;<br>kvm_t *kd;<br>static unsigned long freemem_offset;<br>static unsigned long maxmem_offset;<br>static unsigned long freemem = -1L;<br>static unsigned long maxmem = -1L;</p><p align="left">/* pagetok function is really a pointer to an appropriate function */<br>static int pageshift;<br>static int (*p_pagetok) ();<br>#define pagetok(size) ((*p_pagetok)(size))</p><p align="left">int pagetok_none(int size) {<br>&nbsp;&nbsp;&nbsp; return(size);<br>}</p><p align="left">int pagetok_left(int size) {<br>&nbsp;&nbsp;&nbsp; return(size &lt;&lt; pageshift);<br>}</p><p align="left">int pagetok_right(int size) {<br>&nbsp;&nbsp;&nbsp; return(size&gt;&gt; pageshift);<br>}</p><p align="left">#define UPDKCID(nk,ok)<br>if (nk == -1) {<br>&nbsp; perror("kstat_read");<br>&nbsp; exit(1);<br>}<br>if (nk != ok)<br>&nbsp; goto kcid_changed;</p><p align="left">void initKVM() {<br>&nbsp;&nbsp;&nbsp; int i;</p><p align="left">&nbsp;&nbsp;&nbsp; /* perform the kvm_open - suppress error here */<br>&nbsp;&nbsp;&nbsp; kd = kvm_open (NULL, NULL, NULL, O_RDONLY, NULL);</p><p align="left">&nbsp;&nbsp;&nbsp; /* calculate pageshift value */<br>&nbsp;&nbsp;&nbsp; i = sysconf(_SC_PAGESIZE);<br>&nbsp;&nbsp;&nbsp; pageshift = 0;<br>&nbsp;&nbsp;&nbsp; while ((i&gt;&gt;= 1) &gt; 0)<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;pageshift++;<br>&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; /* calculate an amount to shift to K values */<br>&nbsp;&nbsp;&nbsp; /* remember that log base 2 of 1024 is 10 (i.e.: 2^10 = 1024) */<br>&nbsp;&nbsp;&nbsp; pageshift -= 10;</p><p align="left">&nbsp;&nbsp;&nbsp; /* now determine which pageshift function is appropriate for the<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result (have to because x &lt;&lt; y is undefined for y &lt; 0) */<br>&nbsp;&nbsp;&nbsp; if (pageshift&gt; 0)<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;/* this is the most likely */<br>&nbsp;p_pagetok = pagetok_left;<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; else if (pageshift == 0)<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;p_pagetok = pagetok_none;<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; else<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;p_pagetok = pagetok_right;<br>&nbsp;pageshift = -pageshift;<br>&nbsp;&nbsp;&nbsp; }<br>}</p><p align="left">#define SI_LEN 512<br>#define BUFSIZE 256</p><p align="left">char * sol_getSysInfo() {<br>&nbsp;char * retbuf = (char*)malloc(SI_LEN);<br>&nbsp;int curend = 0;<br>&nbsp;int maxl = SI_LEN;<br>&nbsp;*retbuf=0;<br>&nbsp;char * buf = (char*)malloc(BUFSIZE);<br>&nbsp;long res = sysinfo(SI_SYSNAME,buf,BUFSIZE);<br>&nbsp;if (res&gt;0 &amp;&amp; res&lt;=maxl) {<br>&nbsp;&nbsp;strcat(retbuf,buf);<br>&nbsp;&nbsp;curend=res-1;<br>&nbsp;&nbsp;maxl=SI_LEN-curend;<br>&nbsp;}<br>&nbsp;if (curend0 &amp;&amp; res&lt;=maxl) {<br>&nbsp;&nbsp;strcat(retbuf,buf);<br>&nbsp;&nbsp;curend+=res-1;<br>&nbsp;&nbsp;maxl=SI_LEN-curend;<br>&nbsp;}<br>&nbsp;if (curend0 &amp;&amp; res&lt;=maxl) {<br>&nbsp;&nbsp;strcat(retbuf,buf);<br>&nbsp;&nbsp;curend+=res-1;<br>&nbsp;&nbsp;maxl=SI_LEN-curend;<br>&nbsp;}<br>&nbsp;if (curend0 &amp;&amp; res&lt;=maxl) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(retbuf,buf);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curend+=res-1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; maxl=SI_LEN-curend;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (curend0 &amp;&amp; res&lt;=maxl) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(retbuf,buf);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curend+=res-1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; maxl=SI_LEN-curend;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (curend0 &amp;&amp; res&lt;=maxl) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(retbuf,buf);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curend+=res-1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; maxl=SI_LEN-curend;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (curend0 &amp;&amp; res&lt;=maxl) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(retbuf,buf);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curend+=res-1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; maxl=SI_LEN-curend;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (curend0 &amp;&amp; res&lt;=maxl) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; strcat(retbuf,buf);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; curend+=res-1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; maxl=SI_LEN-curend;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (curendvalue.ui32&gt; ncpus) {<br>&nbsp;&nbsp;&nbsp;&nbsp; ncpus = kn-&gt;value.ui32;<br>&nbsp;&nbsp;&nbsp;&nbsp; cpu_ks = (kstat_t **) realloc (cpu_ks, ncpus * sizeof (kstat_t *));<br>&nbsp;&nbsp;&nbsp;&nbsp; cpu_stat = (cpu_stat_t *) realloc (cpu_stat,<br>&nbsp;&nbsp;&nbsp;ncpus * sizeof (cpu_stat_t));<br>&nbsp;}</p><p align="left">&nbsp;for (ks = kc-&gt;kc_chain; ks;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ks = ks-&gt;ks_next)<br>&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp; if (strncmp(ks-&gt;ks_name, "cpu_stat", 8) == 0)<br>&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;nkcid = kstat_read(kc, ks, NULL);<br>&nbsp;&nbsp;/* if kcid changed, pointer might be invalid */<br>&nbsp;&nbsp;UPDKCID(nkcid, kcid);</p><p align="left">&nbsp;&nbsp;cpu_ks[ncpu] = ks;<br>&nbsp;&nbsp;ncpu++;<br>&nbsp;&nbsp;if (ncpu&gt; ncpus)<br>&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fprintf(stderr, "kstat finds too many cpus: should be %d<br>",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ncpus);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit(1);<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;}<br>&nbsp;/* note that ncpu could be less than ncpus, but that's okay */<br>&nbsp;changed = 0;<br>&nbsp;&nbsp;&nbsp; }</p><p align="left">&nbsp;&nbsp;&nbsp; /* return the number of cpus found */<br>&nbsp;&nbsp;&nbsp; ncpus=ncpu;<br>&nbsp;&nbsp;&nbsp; return ncpu;<br>}</p><p align="left">unsigned long sol_getMaxMem() {<br>&nbsp;maxmem = pagetok(sysconf(_SC_PHYS_PAGES));<br>&nbsp;return maxmem;<br>}</p><p align="left">unsigned long sol_getFreeMem() {<br>&nbsp;kstat_t *ks;<br>&nbsp;kstat_named_t *kn;<br>&nbsp;ks = kstat_lookup(kc, "unix", 0, "system_pages");<br>&nbsp;if (kstat_read(kc, ks, 0) == -1) {<br>&nbsp;&nbsp;&nbsp;&nbsp; perror("kstat_read");<br>&nbsp;&nbsp;&nbsp;&nbsp; exit(1);<br>&nbsp;}<br>&nbsp;if (kd != NULL) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* always get freemem from kvm if we can*/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (void) getkval (freemem_offset, (int *) (&amp;freemem), sizeof (freemem), "freemem");<br>&nbsp;} else {<br>&nbsp;&nbsp; kn = kstat_data_lookup(ks, "freemem");<br>&nbsp;&nbsp; if (kn)<br>&nbsp;&nbsp;&nbsp;&nbsp; freemem = kn-&gt;value.ul;<br>&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return (unsigned long)pagetok(freemem);<br>}</p><p align="left">// Returns the number of milliseconds (not nanoseconds and seconds) elapsed on processor<br>// since process start. The returned value is adjusted for the number of processors in the system.<br>long int sol_getProcessCPUTime(int pid,int nproc) {<br>&nbsp;struct prpsinfo currproc;<br>&nbsp;int fd;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;char buf[30];<br>&nbsp;long int retval=0;<br>&nbsp;snprintf(buf, sizeof(buf), "%s/%d/psinfo", PROCFS, pid);<br>&nbsp;if ((fd = open (buf, O_RDONLY)) &lt; 0) {<br>&nbsp;&nbsp;return 0L;<br>&nbsp;}<br>&nbsp;if (read(fd, &amp;currproc, sizeof(psinfo_t)) != sizeof(psinfo_t)) {<br>&nbsp;&nbsp; &nbsp;(void)close(fd);<br>&nbsp;&nbsp;return 0L;<br>&nbsp;}<br>&nbsp;(void)close(fd);<br>&nbsp;retval = (currproc.pr_time.tv_sec * 1000 + currproc.pr_time.tv_nsec / 1000000) / nproc;<br>&nbsp;return retval;<br>}</p><p align="left">// Returns percentage CPU by pid<br>// In Solaris 8 it is contained in procfs<br>double sol_getProcessCPUPercentage(int pid) {<br>&nbsp;struct prpsinfo currproc;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int fd;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char buf[30];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double retval=0.0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; snprintf(buf, sizeof(buf), "%s/%d/psinfo", PROCFS, pid);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ((fd = open (buf, O_RDONLY)) &lt; 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (read(fd, &amp;currproc, sizeof(psinfo_t)) != sizeof(psinfo_t)) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (void)close(fd);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (void)close(fd);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; retval = ((double)currproc.pr_pctcpu)/0x8000*100;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return retval;<br>}</p><p align="left">// Returns current space allocated for the process, in bytes. Those pages may or may not be in memory.<br>long sol_getMemoryUsage(int pid) {<br>&nbsp;struct prpsinfo currproc;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int fd;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char buf[30];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double retval=0.0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; snprintf(buf, sizeof(buf), "%s/%d/psinfo", PROCFS, pid);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ((fd = open (buf, O_RDONLY)) &lt; 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (read(fd, &amp;currproc, sizeof(psinfo_t)) != sizeof(psinfo_t)) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (void)close(fd);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (void)close(fd);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; retval = currproc.pr_size;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return retval;<br>}</p><p align="left">// Returns current process space being resident in memory.<br>long sol_getMemoryResident(int pid) {<br>&nbsp;struct prpsinfo currproc;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int fd;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char buf[30];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double retval=0.0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; snprintf(buf, sizeof(buf), "%s/%d/psinfo", PROCFS, pid);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ((fd = open (buf, O_RDONLY)) &lt; 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (read(fd, &amp;currproc, sizeof(psinfo_t)) != sizeof(psinfo_t)) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (void)close(fd);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (void)close(fd);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; retval = currproc.pr_rssize;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return retval;<br>}</p><p align="left">/*<br>&nbsp;*&nbsp; getkval(offset, ptr, size, refstr) - get a value out of the kernel.<br>&nbsp;*&nbsp;"offset" is the byte offset into the kernel for the desired value,<br>&nbsp;*&nbsp; &nbsp;"ptr" points to a buffer into which the value is retrieved,<br>&nbsp;*&nbsp; &nbsp;"size" is the size of the buffer (and the object to retrieve),<br>&nbsp;*&nbsp; &nbsp;"refstr" is a reference string used when printing error meessages,<br>&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp; if "refstr" starts with a '!', then a failure on read will not<br>&nbsp;*&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; be fatal (this may seem like a silly way to do things, but I<br>&nbsp;*&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; really didn't want the overhead of another argument).<br>&nbsp;*<br>&nbsp;*/<br>int<br>getkval (unsigned long offset,<br>&nbsp; int *ptr,<br>&nbsp; int size,<br>&nbsp; char *refstr)<br>{<br>&nbsp; if (kvm_read (kd, offset, (char *) ptr, size) != size)<br>&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (*refstr == '!')<br>&nbsp;{<br>&nbsp;&nbsp; return (0);<br>&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else<br>&nbsp;{<br>&nbsp;&nbsp; fprintf (stderr, "top: kvm_read for %s: %s<br>", refstr, strerror(errno));<br>&nbsp;&nbsp; exit(23);<br>&nbsp;}<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp; return (1);<br>}</p></td></tr></tbody></table>
+
+ **列表 G**
+
+<table width="95%" border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><p align="left">#!/bin/sh<br>gcc -G -lkvm -lkstat com_vladium_utils_SystemInformation.c -o libsilib.so solaris-extern.c<br># com_vladium_utils_SystemInformation.c is in Listing-E<br># solaris-extern.c is in Listing-F</p></td></tr></tbody></table>
+
+    在本文里，我已告诉你如何编程测量 Java 进程的内存和 CPU 占用率。当然用户可以通过查看 Windows 任务管理器或者 ps 的输出来达到相同的目的，但是重要的一点是，用户现在能够进行任何长期运行和／或自动的软件性能[测试](http://softtest.chinaitlab.com/)，这对于开发一个分布式或者可伸缩的，或者实时的性能关键的应用程序十分重要。加入获取系统软件和硬件信息的能力对于开发人员同样十分有用。这个库可以在 Win32 和 Solaris 平台上实现。但是，把它移植到其他 UNIX 平台上应该也不是问题，比如 Linux.
+
+Ch25:C++ 调用 JAVA 方法详解
+=====================
+
+本文主要参考 [http://tech.ccidnet.com/art/1081/20050413/237901_1.html](http://tech.ccidnet.com/art/1081/20050413/237901_1.html) 上的文章。
+
+?
+
+  
+C++ 调用 JAVA 主要用到了 SUN 公司的 JNI 技术， JNI 是 Java Native Interface 的 缩写。从 Java 1.1 开始，Java Native Interface (JNI) 标准成为 java 平台的一部分，它允许 Java 代码和其他语言写的代码进行交互。相关资料见 [http://java.sun.com/j2se/1.5.0/docs/guide/jni/spec/jniTOC.html  
+](http://java.sun.com/j2se/1.5.0/docs/guide/jni/spec/jniTOC.html)
+
+?
+
+**开发环境安装及配置**
+
+?
+
+**1.1? 安装 JDK**  
+  
+??????? 到 SUN 公司网站可以下载到最新版的 JDK。下载下来后开始安装，一路选择默认配置即可，本文档中假定安装的是 JDK1.4，安装目录为 C:\j2sdk1.4.2_15。  
+  
+  
+  
+?  
+  
+**1.2? 配置 VC6.0**  
+  
+???????? 通过 Visual C++ 6 的菜单 Tools→Options 打开选项对话框。在 Directories 标签页下添加 JDK 的相关目录到 Include 和目录下。  
+????????????  
+  
+?  
+  
+
+?
+
+**  
+? 开发测试用到的 JAVA 类**
+
+**2.1? 开发 JAVA 类**
+
+??????? 在硬盘的任意地方新建一个名叫 test 的文件夹，本文档示例中将 test 文件夹建立在 C 盘根目录，然后在里面新建一个名称叫 Demo.java 的 JAVA 文件，将下面测试用的代码粘贴到该文件中。
+
+?
+
+?
+
+package test;
+
+/**
+
+* 该类是为了演示 JNI 如何访问各种对象属性等
+
+*/
+
+public class Demo
+
+{
+
+        // 用于演示如何访问静态的基本类型属性
+
+        public static int COUNT = 8;
+
+        // 演示对象型属性
+
+        private String msg;
+
+        private int[] counts;
+
+        public Demo()
+
+        {
+
+               this("缺省构造函数");
+
+        }
+
+        /**
+
+         * 演示如何访问构造器
+
+         */
+
+        public Demo(String msg)
+
+        {
+
+               this.msg = msg;
+
+               this.counts = null;
+
+        }
+
+        public String getMessage()
+
+        {
+
+               return msg;
+
+        }
+
+        /**
+
+         * 该方法演示如何访问一个静态方法
+
+         */
+
+        public static String getHelloWorld()
+
+        {
+
+               return "Hello world!";
+
+        }
+
+        /**
+
+         * 该方法演示参数的传入传出及中文字符的处理
+
+         */
+
+        public String append(String str, int i)
+
+        {
+
+               return str + i;
+
+        }
+
+        /**
+
+         * 演示数组对象的访问
+
+         */
+
+        public int[] getCounts()
+
+        {
+
+         return counts;
+
+        }
+
+        /**
+
+         * 演示如何构造一个数组对象
+
+        */
+
+        public void setCounts(int[] counts)
+
+        {
+
+         this.counts = counts;
+
+        }
+
+        /**
+
+         * 演示异常的捕捉
+
+        */
+
+        public void throwExcp()throws IllegalAccessException
+
+        {
+
+               throw new IllegalAccessException("exception occur.");
+
+        }
+
+}
+
+?
+
+**2.2 编译 JAVA 类**
+
+????? 运行 CMD 控制台程序进入命令行模式，输入命令 javac -classpath c:\ c:\test\Demo.java，-classpath 参数指定 classpath 的路径，这里就是 test 目录所在的路径。（注意：如果你没有将 JDK 的环境变量设置好，就需要先进入 JDK 的 bin 目录下，如下图所示。）
+
+?
+
+**2.3 查看方法的签名**
+
+????? 我们知道 Java 中允许方法的多态，仅仅是通过方法名并没有办法定位到一个具体的方法，因此需要一个字符串来唯一表示一个方法。但是怎么利用一个字符串来表示方法的具体定义呢？JDK 中已经准备好一个反编译工具 javap，通过这个工具就可以得到类中每个属性、方法的签名。在 CMD 下运行 javap -s -p -classpath c:\ test.Demo 即可看到属性和方法的签名。如下图红色矩形框起来的字符串为方法 String append(String str, int i) 的签名。
+
+?
+
+?
+
+**在 VC 中调用 JAVA 类**
+
+?
+
+**3.1 快速调用 JAVA 中的函**
+
+????? 在 VC 中新建一个控制台程序，然后新建一个 CPP 文件，将下面的代码添加到该文件中。运行该文件，即可得到 Demo 类中 String append(String str, int i) 函数返回的字符串。
+
+#include "windows.h"
+
+#include "jni.h"
+
+#include <string>
+
+#include <iostream>
+
+using namespace std;
+
+jstring NewJString(JNIEnv *env, LPCTSTR str);
+
+string  JStringToCString (JNIEnv *env, jstring str);
+
+int main()
+
+{
+
+    // 定义一个函数指针，下面用来指向 JVM 中的 JNI_CreateJavaVM 函数
+
+    typedef jint (WINAPI *PFunCreateJavaVM)(JavaVM **, void **, void *);
+
+    int res;
+
+    JavaVMInitArgs vm_args;
+
+    JavaVMOption options[3];
+
+    JavaVM *jvm;
+
+    JNIEnv *env;
+
+    /* 设置初始化参数 */
+
+    //disable JIT，这是 JNI 文档中的解释，具体意义不是很清楚 ，能取哪些值也不清楚。
+
+    // 从 JNI 文档里给的示例代码中搬过来的
+
+    options[0].optionString = "-Djava.compiler=NONE";
+
+    // 设置 classpath，如果程序用到了第三方的 JAR 包，也可以在这里面包含进来
+
+    options[1].optionString = "-Djava.class.path=.;c:\\";
+
+    // 设置显示消息的类型，取值有 gc、class 和 jni，如果一次取多个的话值之间用逗号格开，如 - verbose:gc,class
+
+    // 该参数可以用来观察 C++ 调用 JAVA 的过程，设置该参数后，程序会在标准输出设备上打印调用的相关信息
+
+    options[2].optionString = "-verbose:NONE";
+
+    // 设置版本号，版本号有 JNI_VERSION_1_1，JNI_VERSION_1_2 和 JNI_VERSION_1_4
+
+    // 选择一个根你安装的 JRE 版本最近的版本号即可，不过你的 JRE 版本一定要等于或者高于指定的版本号
+
+    vm_args.version = JNI_VERSION_1_4;
+
+    vm_args.nOptions = 3;
+
+    vm_args.options = options;
+
+    // 该参数指定是否忽略非标准的参数，如果填 JNI_FLASE，当遇到非标准参数时，JNI_CreateJavaVM 会返回 JNI_ERR
+
+    vm_args.ignoreUnrecognized = JNI_TRUE;
+
+    // 加载 JVM.DLL 动态库
+
+    HINSTANCE hInstance = ::LoadLibrary("C:\\j2sdk1.4.2_15\\jre\\bin\\client\\jvm.dll");
+
+    if (hInstance == NULL)
+
+    {
+
+        return false;
+
+    }
+
+    // 取得里面的 JNI_CreateJavaVM 函数指针
+
+    PFunCreateJavaVM funCreateJavaVM = (PFunCreateJavaVM)::GetProcAddress(hInstance, "JNI_CreateJavaVM");
+
+    // 调用 JNI_CreateJavaVM 创建虚拟机
+
+    res = (*funCreateJavaVM)(&jvm, (void**)&env, &vm_args);
+
+    if (res < 0)
+
+    {
+
+        return -1;
+
+    }
+
+    // 查找 test.Demo 类，返回 JAVA 类的 CLASS 对象
+
+    jclass cls = env->FindClass("test/Demo");
+
+    // 根据类的 CLASS 对象获取该类的实例
+
+    jobject obj = env->AllocObject(cls);
+
+    // 获取类中的方法，最后一个参数是方法的签名，通过 javap -s -p 文件名可以获得
+
+    jmethodID mid = env->GetMethodID(cls, "append","(Ljava/lang/String;I)Ljava/lang/String;");
+
+    // 构造参数并调用对象的方法
+
+    const char szTest[] = "电信";
+
+    jstring arg = NewJString(env, szTest);
+
+    jstring msg = (jstring) env->CallObjectMethod(obj, mid, arg, 12);
+
+    cout<<JStringToCString(env, msg);
+
+    // 销毁虚拟机并释放动态库
+
+    jvm->DestroyJavaVM();
+
+    ::FreeLibrary(hInstance);
+
+    return 0;
+
+}
+
+string  JStringToCString (JNIEnv *env, jstring str)// (jstring str, LPTSTR desc, int desc_len)
+
+{
+
+    if(str==NULL)
+
+    {
+
+        return "";
+
+    }
+
+    // 在 VC 中 wchar_t 是用来存储宽字节字符 (UNICODE) 的数据类型
+
+    int len = env->GetStringLength(str);
+
+    wchar_t *w_buffer = new wchar_t[len+1];
+
+    char *c_buffer = new char[2*len+1];
+
+    ZeroMemory(w_buffer,(len+1)*sizeof(wchar_t));
+
+    // 使用 **GetStringChars** 而不是 GetStringUTFChars
+
+    const jchar * jcharString = env->**GetStringChars**(str, 0);
+
+    wcscpy(w_buffer,jcharString);    
+
+    env->ReleaseStringChars(str,jcharString);
+
+    ZeroMemory(c_buffer,(2*len+1)*sizeof(char));
+
+    / 调用字符编码转换函数 (Win32 API) 将 UNICODE 转为 ASCII 编码格式字符串
+
+    len = WideCharToMultiByte(CP_ACP,0,w_buffer,len,c_buffer,2*len,NULL,NULL);
+
+    string cstr = c_buffer;
+
+    delete[] w_buffer;
+
+    delete[] c_buffer;
+
+    return cstr;
+
+}
+
+jstring NewJString(JNIEnv *env, LPCTSTR str)
+
+{
+
+    if(!env || !str)
+
+    {
+
+        return 0;
+
+    }
+
+    int slen = strlen(str);
+
+    jchar* buffer = new jchar[slen];
+
+    int len = MultiByteToWideChar(CP_ACP,0,str,strlen(str),buffer,slen);
+
+    if(len>0 && len < slen)
+
+    {
+
+        buffer[len]=0;
+
+    }
+
+    jstring js = env->NewString(buffer,len);
+
+    delete [] buffer;
+
+    return js;
+
+}
+
+?
+
+**3.2 调用步骤分析及注意事项**
+
+?
+
+???? a、加载 jvm.dll 动态库，然后获取里面的 JNI_CreateJavaVM 函数。这个步骤也可以通过在 VC 工程的 LINK 标签页里添加对 jvm.lib 的连接，然后在环境变量里把 jvm.dll 所在的路径加上去来实现。但后面这种方法在部署的时候会比前一个方法麻烦。
+
+  
+???? b、利用构造好的参数，调用 JNI_CreateJavaVM 函数创建 JVM。JNI_CreateJavaVM 函数内部会自动根据 jvm.dll 的路径 来获取 JRE 的环境，所以千万不要把 jvm.dll 文件拷贝到别的地方，然后再通过 LoadLibrary 函数导入。
+
+  
+???? c、JVM 创建成功后，JNI_CreateJavaVM 函数会传出一个 JNI 上下文环境对象（JNIEnv），利用该对象的相关函数就可以调用 JAVA 类的属性和方法了。
+
+  
+???? d、以上面的代码为例：先调用 JNIEnv 的 FindClass 方法，该函数传入一个参数，该参数就是 java 类的全局带包名的名称，如上面示例中的 test/Demo 表示 test 包中的 Demo 类。这个方法会在你创建 JVM 时设置的 classpath 路径下找相应的类，找到后就会返回该类的 class 对象。 Class 是 JAVA 中的一个类，每个 JAVA 类都有唯一的一个静态的 Class 对象，Class 对象包含类的相关信息。为了使 FindClass 方法能 找到你的类，请确保创建 JVM 时 - Djava.class.path = 参数设置正确。注意：系统环境变量中的 CLASSPATH 对这里创建 JVM 没有影 响，所以不要以为系统 CLASSPATH 设置好了相关路径后这里就不用设置了。
+
+  
+???? e、利用 FindClass 返回的 class 对象，调用 GetMethodID 函数可以获得里面方法的 ID，在这里 GetMethodID 函数传入了三个 参数：第一个参数是 class 对象，因为方法属于某个具体的类；第二个参数是方法的名称；第三个参数是方法的签名，这个签名可以在前面 3.3 中介绍的方法 获得。
+
+  
+???? f、利用 class 对象，可以通过调用 AllocObject 函数获得该 class 对象对应类的一个实例，即 Demo 类的对象。
+
+  
+???? g、利用上面获取的函数 ID 和 Demo 类的对象，就可以通过 CallObjectMethod 函数调用相应的方法，该函数的参数跟 printf 函数的参数一样，个数是不定的。第一个参数是类的对象；第二个参数是要调用的方法的 ID；后面的参数就是需要传给调用的 JAVA 类方法的参数，如果调用的 JAVA 类 方法没有参数，则调用 CallObjectMethod 时传前两个参数就可以了。
+
+  
+???? h、从上面的示例中可以看到，在调用 JAVA 的方法前，构造传入的字符串时，用到了 NewJString 函数；在调用该方法后，对传出的字符串调用了 JstringToCString 函数。这是由于 Java 中所有的字符都是 Unicode 编码，但是在本地方法中，例如用 VC 编写的程序，如果没有特殊的定义一般都没有使用 Unicode 的编码方式。为了让本地方法能够访问 Java 中定义的中文字符及 Java 访问本地方法产生的中文字符串，定义了两个方法 用来做相互转换。
+
+  
+?? ? i、避免在被调用的 JAVA 类中使用静态 final 成员变量，因为在 C++ 中生成一个 JAVA 类的对象时，静态 final 成员变量不会像 JAVA 中 new 对象时那样先赋值。如果出现这种情况，在 C++ 中调用该对象的方法时会发现该对象的静态 final 成员变量值全为 0 或者 null（根据成员变量的类型而 定）。
+
+?
+
+**3.3 调用 JAVA 中的静态方法**
+
+?
+
+// 调用静态方法
+
+jclass cls = env->FindClass("test/Demo");
+
+jmethodID mid = env->GetStaticMethodID(cls, "getHelloWorld","()Ljava/lang/String;");
+
+jstring msg = (jstring)env->CallStaticObjectMethod(cls, mid);       
+
+cout<<JStringToCString(env, msg);
+
+**?**
+
+**3.4 调用 JAVA 中的静态属性**
+
+?
+
+// 调用静态方法
+
+jclass cls = env->FindClass("test/Demo");
+
+jfieldID fid = env->GetStaticFieldID(cls, "COUNT","I");
+
+int count = (int)env->GetStaticIntField(cls, fid);  
+
+cout<<count<<endl;
+
+?
+
+**3.5 调用 JAVA 中的带参数构造函数**
+
+?
+
+// 调用构造函数
+
+jclass cls = env->FindClass("test/Demo");
+
+jmethodID mid = env->GetMethodID(cls,"<init>","(Ljava/lang/String;)V");
+
+const char szTest[] = "电信";
+
+jstring arg = NewJString(env, szTest);
+
+jobject demo = env->NewObject(cls,mid,arg);
+
+// 验证是否构造成功
+
+mid = env->GetMethodID(cls, "getMessage","()Ljava/lang/String;");
+
+jstring msg = (jstring)env->CallObjectMethod(demo, mid);    
+
+cout<<JStringToCString(env, msg);
+
+?
+
+**3.6 传入传出数组**
+
+?
+
+// 传入传出数组
+
+// 构造数组
+
+long           arrayCpp[] = {1,3,5,7,9};
+
+jintArray array = env->NewIntArray(5);
+
+env->SetIntArrayRegion(array, 0, 5, arrayCpp);
+
+// 传入数组
+
+jclass cls = env->FindClass("test/Demo");
+
+jobject obj = env->AllocObject(cls);
+
+jmethodID mid = env->GetMethodID(cls,"setCounts","([I)V");
+
+env->CallVoidMethod(obj, mid, array);
+
+// 获取数组
+
+mid = env->GetMethodID(cls,"getCounts","()[I");
+
+jintArray msg = (jintArray)env->CallObjectMethod(obj, mid, array);
+
+int len =env->GetArrayLength(msg);
+
+jint* elems =env-> GetIntArrayElements(msg, 0);
+
+for(int i=0; i< len; i++)
+
+{
+
+    cout<<"ELEMENT"<<i<<"IS"<<elems[i]<<endl;
+
+}
+
+env->ReleaseIntArrayElements(msg, elems, 0);
+
+?
+
+**3.7 异常处理**  
+???? 由于调用了 Java 的方法，因此难免产生操作的异常信息，如 JAVA 函数返回的异常，或者调用 JNI 方法（如 GetMethodID）时抛出的异常。这些 异常没有办法通过 C++ 本身的异常处理机制来捕捉到，但 JNI 可以通过一些函数来获取 Java 中抛出的异常信息。
+
+// 异常处理
+
+jclass cls = env->FindClass("test/Demo");
+
+jobject obj = env->AllocObject(cls);
+
+jmethodID mid = env->GetMethodID(cls,"throwExcp","()V");
+
+env->CallVoidMethod(obj, mid);
+
+// 获取异常信息
+
+string exceptionInfo = "";
+
+jthrowable excp = 0;
+
+excp = env->ExceptionOccurred();     
+
+if(excp)
+
+{
+
+    jclass cls = env->GetObjectClass(excp);
+
+    env->ExceptionClear();
+
+    jmethodID mid = env->GetMethodID(cls, "toString","()Ljava/lang/String;");
+
+    jstring msg = (jstring) env->CallObjectMethod(excp, mid);
+
+    out<<JStringToCString(env, msg)<<endl;   
+
+    env->ExceptionClear();
+
+}
+
+?
+
+Ch26:JNI 中文处理问题小结
+=================
+
+由于工作关系，需要利用 JNI 在 C++ 与 Java 程序之间进行方法调用和数据传递，但以前总是在英文环境下工作，对中文（其他语言编码同理）问题反倒没有太关注，最近抽了点时间研究了一下，将自己的体会整理如下，供大家讨论或参考。  
+在进一步讨论之前，有几点基础知识需要说明：
+
+在 Java 内部，所有的字符串编码采用的是 Unicode 即 UCS-2。Unicode 是用两个字节表示每个字符的字符编码方案。Unicode 有一个特 性：它包括了世界上所有的字符字形。所以，各个地区的语言都可以建立与 Unicode 的映射关系，而 Java 正是利用了这一点以达到异种语言之间的转换；
+
+UTF-8 是另一种不同于 UCS-2/UCS-4 的编码方案，其中 UTF 代表 UCS Transformation Format，它采用变长的方式进行编码，编码长度可以是 1~3（据说理论上最长可以到 6，不懂）。  
+由于 UCS-2/UCS-4 编码定长的原因，编码产生的字符串会包含一些特殊的字符，如 \ 0（即 0x0，所有 0~256 的字符 Unicode 编码的第一个 字节），这在有些情况下（如传输或解析时）会给我们带来一些麻烦，而且对于一般的英文字母浪费了太多的空间，此外，据说 UTF-8 还有 Unicode 所没 有的纠错能力（不懂！），因此，Unicode 往往只是被用作一种中间码，用于逻辑表示。关于 Unicode/UTF-8 的更多信息，见参考 1；
+
+Java 中文乱码问题在很多情况下都可能发生：不同应用间，不同平台间等等，但以上问题已有大量优秀的文章讨论过，这里不作深入探讨，详见参考 2、3、4、5。下面简要总结一下：
+
+当我们使用默认编码方式保存源文件时，文件内容实际上是按照我们的系统设定进行编码保存的，这个设定值即 file.encoding 可以通过下面的程序获得：
+
+public class Encoding {  
+
+ public static void main(String[] args) {       
+
+System.out.println(
+
+System.getProperty("file.encoding")
+
+);   
+
+}
+
+}
+
+javac 在不指定 encoding 参数时，如果区域设定不正确，则可能造成编 / 解码错误，这个问题在编译一个从别的环境传过来的文件时可能发生；
+
+2、虽然在 Java 内部（即运行期间，Runtime）字符串是以 Unicode 形式存在的，但在 class 文件中信息是以 UTF-8 形式存储的（Unicode 仅被用作逻辑表示中间码） ；
+
+3. 对 于 Web 应用，以 Tomcat 为例，JSP/Servlet 引擎提供的 JSP 转换工具（jspc）搜索 JSP 文件中用 <%@ page contentType ="text/html; charset=<Jsp-charset>"%> 指定的 charset。如果在 JSP 文件中未指定 < Jsp-charset& amp; gt;，则取系统默认的 file.encoding（这个值在中文平台上是 GBK），可通过控制面板的 Regional Options 进行修改；jspc 用相当于 “javac –encoding <Jsp-charset>” 的命令解释 JSP 文件中出现的所有字符，包括中文字符和 ASCII 字符，然后把这些字符转换成 Unicode 字 符，再转化成 UTF-8 格式，存为 JAVA 文件。  
+我曾经偶然将 jsp 文件存成 UTF-8，而在文件内部使用的 charset 却是 GB2312，结果运行时总是无法正常显示中文，后来转存为默认编码方式才 正常。只要文件存储格式与 JSP 开头的 charset 设置一致，就都可以正常显示（不过将文件保存成 UTF-16 的情况下我还没有试验成功）；
+
+4. 在 XML 文件中，encoding 表示的是文件本身的编码方式，如果这个参数设定与文件本身实际的编码方式不一致的话，则可能解码失败，所以应该总是将 encoding 设置成与文件编码方式一致的值；而 JSP/HTML 的 charset 则表示按照何种字符集来解码从文件中读取出来的字符串（在理解中文问 题时应该把字符串理解成一个二进制或 16 进制的串，按照不同的 charset 可能映射成不同的字符）。  
+我曾经在网上就 encoding 的具体含义跟别人讨论过：如果 encoding 指的是文件本身的编码方式，那么读取该文件的应用程序在不知道 encoding 设置的情况下如何正确解读该文件呢？  
+根据讨论及个人理解，处理程序（如 jspc）总是按 ISO8859-1 来读取输入文件，然后检查文件开始的几个字节（即 Byte Order Mark，BOM，具体如何判断，可以参考 Tomcat 源码 $SOURCE_DIR\jasper\jasper2\src\share\org \apache\jasper\xmlparser\XMLEncodingDetector.java 的 getEncodingName 方法，在 JSP Specification 的 Page Character Encoding 一节也有详细论述）以探测文件是以何种格式保存的，当解析到 encoding 选项时，若 encoding 设置与文件实际保存格式不一致， 会尝试进行转换，但这种转换可能在文件实际以 ISO8859-1/UTF-8 等单字节编码而 encoding 被设置成 Unicode、UTF-16 等双字 节编码时发生错误。
+
+下面重点讨论 JNI 中在 C++ 程序与 Java 程序间进行数据传递时需要注意的问题。  
+  
+　　在 JNI 中 jstring 采用的是 UCS-2 编码，与 Java 中 String 的编码方式一致。但是在 C++ 中，字符串是用 char（8 位）或者 wchar_t（16 位，Unicode 编码与 jchar 一致，但并非所有开发平台上都是 Unicode 编码，详见参考 6），下面的程序证明了这一点（编 译环境：VC6）：
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{   
+
+locale loc("Chinese-simplified");  
+
+  //locale loc("chs");  
+
+ //locale loc("ZHI");   
+
+//locale loc(".936");  
+
+ wcout.imbue(loc);   
+
+wcout << L"中文" << endl; // 若没有 L，会出问题   
+
+wchar_t wch[] = {0x4E2D, 0x6587, 0x0};
+
+//"中文" 二字的 Unicode 编码  
+
+ wcout << wch << endl;   
+
+return 0;
+
+}
+
+JNI 提供了几个方法来实现 jstring 与 char/wchar_t 之间的转换。
+
+jsize GetStringLength(jstring str)
+
+const jchar *GetStringChars(jstring str, jboolean *isCopy)void ReleaseStringChars(jstring str, const jchar *chars)
+
+此外，为了便于以 UTF-8 方式进行传输、存储，JNI 还提供了几个操作 UTF 格式的方法：
+
+jsize GetStringUTFLength(jstring str)const char* GetStringUTFChars(jstring str, jboolean *isCopy)void ReleaseStringUTFChars(jstring str, const char* chars)
+
+GetStringChars 返回的是 Unicode 格式的编码串，而 GetStringUTFChars 返回的是 UTF-8 格式的编码串。要创建一个 jstring，可以用如下方式：
+
+jstring NewJString(JNIEnv * env, LPCTSTR str)
+
+{   
+
+if (!env || !str)       
+
+return 0;   
+
+int slen = strlen(str);   
+
+jchar * buffer = new jchar[slen];   
+
+int len = MultiByteToWideChar(CP_ACP, 0,
+
+str, strlen(str), buffer, slen);   
+
+if (len> 0 && len < slen)       
+
+buffer[len] = 0;   
+
+jstring js = env->NewString(buffer, len);   
+
+delete [] buffer;   
+
+return js;
+
+}
+
+而要将一个 jstring 对象转为一个 char 字符串数组，可以：
+
+int JStringToChar( JNIEnv * env,
+
+jstring str,
+
+LPTSTR desc,
+
+int desc_len )
+
+{   
+
+int len = 0;   
+
+if (desc == NULL || str == NULL)       
+
+return -1;   
+
+// Check buffer size   
+
+if (env->GetStringLength(str) * 2 + 1 > desc_len)   
+
+{return -2;} 
+
+memset(desc, 0, desc_len);   
+
+const wchar_t * w_buffer = env->GetStringChars(str, 0);   
+
+len = WideCharToMultiByte(CP_ACP, 0,
+
+w_buffer, wcslen(w_buffer) + 1, desc, desc_len, NULL, NULL);   
+
+env->ReleaseStringChars(str, w_buffer);   
+
+if (len> 0 && len < desc_len)       
+
+desc[len] = 0;   
+
+return strlen(desc);
+
+}
+
+当然，按照上面的分析，你也可以直接将 GetStringChars 的返回结果作为 wchar_t 串来进行操作。或者，如果你愿意，你也可以将 GetStringUTFChars 的结果通过 MultiByteToWideChar 转换为 UCS2 编码串，再通过 WideCharToMultiByte 转换为多字节串。
+
+const char* pstr = env->GetStringUTFChars(str, false);
+
+int nLen = MultiByteToWideChar(CP_UTF8, 0, pstr, -1, NULL, NULL);
+
+// 得到 UTF-8 编码的字符串长度
+
+LPWSTR lpwsz = new WCHAR[nLen];   
+
+MultiByteToWideChar(CP_UTF8, 0, pstr, -1, lpwsz, nLen);
+
+// 转换的结果是 UCS2 格式的编码串
+
+int nLen1 = WideCharToMultiByte( CP_ACP,
+
+0, lpwsz, nLen,
+
+ NULL, NULL, NULL, NULL );   
+
+LPSTR lpsz = new CHAR[nLen1];
+
+WideCharToMultiByte(CP_ACP, 0, lpwsz, nLen, lpsz, nLen1, NULL, NULL);
+
+// 将 UCS2 格式的编码串转换为多字节
+
+cout << "Out:" << lpsz << endl;
+
+delete [] lpwsz;
+
+delete [] lpsz;
+
+当然，我相信很少有人想要或者需要这么做。这里需要注意一点，GetStringChars 的返回值是 jchar，而 GetStringUTFChars 的返回值是 const char*。
+
+除了上面的办法外，当需要经常在 jstring 和 char * 之间进行转换时我们还有一个选择，那就是下面的这个类。这个类本来是一个叫 Roger S. Reynolds 的老外提供的，想法非常棒，但用起来却不太灵光，因为作者将考虑的重心放在 UTF 格式串上，但在实际操作中，我们往往使用的却是 ACP（ANSI code page）串。下面是原作者的程序：
+
+class UTFString {
+
+private:    UTFString ();
+
+// Default ctor - disallowed
+
+public:   
+
+// Create a new instance from the specified jstring    
+
+UTFString(JNIEnv* env, const jstring& str) :       
+
+mEnv (env),       
+
+mJstr (str),      
+
+ mUtfChars ((char*)mEnv->GetStringUTFChars (mJstr, 0)),        mString (mUtfChars) { }   
+
+// Create a new instance from the specified string    
+
+UTFString(JNIEnv* env, const string& str) :      
+
+mEnv (env),       
+
+mString (str),       
+
+mJstr (env->NewStringUTF (str.c_str ())),       
+
+mUtfChars ((char*)mEnv->GetStringUTFChars (mJstr, 0)) { }   
+
+// Create a new instance as a copy of the specified UTFString
+
+UTFString(const UTFString& rhs) :      
+
+ mEnv (rhs.mEnv),      
+
+ mJstr (mEnv->NewStringUTF (rhs.mUtfChars)),       
+
+mUtfChars ((char*)mEnv->GetStringUTFChars (mJstr, 0)),        mString (mUtfChars) { }   
+
+// Delete the instance and release allocated storage    
+
+~UTFString() {
+
+mEnv->ReleaseStringUTFChars (mJstr, mUtfChars);
+
+}   
+
+// assign a new value to this instance from the given string     UTFString & operator =(const string& rhs) {       
+
+mEnv->ReleaseStringUTFChars (mJstr, mUtfChars);       
+
+mJstr = mEnv->NewStringUTF (rhs.c_str ());       
+
+mUtfChars = (char*)mEnv->GetStringUTFChars (mJstr, 0);        mString = mUtfChars;       
+
+return *this;   
+
+}   
+
+// assign a new value to this instance from the given char* 
+
+   UTFString & operator =(const char* ptr) {       
+
+mEnv->ReleaseStringUTFChars (mJstr, mUtfChars);       
+
+mJstr = mEnv->NewStringUTF (ptr);       
+
+mUtfChars = (char*)mEnv->GetStringUTFChars (mJstr, 0);        mString = mUtfChars;        
+
+return *this;   
+
+}   
+
+// Supply operator methods for converting the UTFString to a string
+
+// or char*, making it easy to pass UTFString arguments to functions     // that require string or char* parameters.    
+
+string & GetString() { return mString;}   
+
+operator string() { return mString;}   
+
+operator const char* () {
+
+return mString.c_str ();
+
+}   
+
+operator jstring() {
+
+return mJstr;
+
+}
+
+private:   
+
+JNIEnv* mEnv;   
+
+// The enviroment pointer for this native method.    
+
+jstring mJstr;  
+
+// A copy of the jstring object that this UTFString represents     char* mUtfChars;
+
+// Pointer to the data returned by GetStringUTFChars     string mString; 
+
+// string buffer for holding the "value" of this instance };
+
+我将它改了改：
+
+class JNIString {private:    JNIString (); // Default ctor - disallowedpublic:    // Create a new instance from the specified jstring    JNIString(JNIEnv* env, const jstring& str) :        mEnv (env) {        const jchar* w_buffer = env->GetStringChars (str, 0);        mJstr = env->NewString (w_buffer,                                wcslen (w_buffer)); // Deep Copy, in usual case we only need       // Shallow Copy as we just need this class to       // provide some convenience for handling jstring        mChars = new char[wcslen (w_buffer) * 2 + 1];        WideCharToMultiByte (CP_ACP, 0, w_buffer, wcslen (w_buffer) + 1, mChars, wcslen (w_buffer) * 2 + 1,                             NULL,   NULL);        env->ReleaseStringChars (str, w_buffer);        mString = mChars;    }    // Create a new instance from the specified string    JNIString(JNIEnv* env, const string& str) :        mEnv (env) {        int slen = str.length ();        jchar* buffer = new jchar[slen];        int len = MultiByteToWideChar (CP_ACP, 0, str.c_str (), str.length (), buffer, slen);        if (len > 0 && len < slen)            buffer[len] = 0;        mJstr = env->NewString (buffer, len);        delete [] buffer;        mChars = new char[str.length () + 1];        strcpy (mChars, str.c_str ());        mString.empty ();        mString = str.c_str ();    }    // Create a new instance as a copy of the specified JNIString    JNIString(const JNIString& rhs) :        mEnv (rhs.mEnv) {        const jchar* wstr = mEnv->GetStringChars (rhs.mJstr, 0);        mJstr = mEnv->NewString (wstr, wcslen (wstr));        mEnv->ReleaseStringChars (rhs.mJstr, wstr);        mChars = new char[strlen (rhs.mChars) + 1];        strcpy (mChars, rhs.mChars);        mString = rhs.mString.c_str ();    }    // Delete the instance and release allocated storage    ~JNIString() { delete [] mChars; }    // assign a new value to this instance from the given string    JNIString & operator =(const string& rhs) {        delete [] mChars;        int slen = rhs.length ();        jchar* buffer = new jchar[slen];        int len = MultiByteToWideChar (CP_ACP, 0, rhs.c_str (), rhs.length (), buffer, slen);        if (len > 0 && len < slen)            buffer[len] = 0;        mJstr = mEnv->NewString (buffer, len);        delete [] buffer;        mChars = new char[rhs.length () + 1];        strcpy (mChars, rhs.c_str ());        mString = rhs.c_str ();        return *this;    }    // Supply operator methods for converting the JNIString to a string    // or char*, making it easy to pass JNIString arguments to functions    // that require string or char* parameters.    string & GetString() { return mString; }    operator string() { return mString; }    operator const char* () { return mString.c_str (); }    operator jstring() { return mJstr; }private:    JNIEnv* mEnv;   // The enviroment pointer for this native method.    jstring mJstr;  // A copy of the jstring object that this JNIString represents    char* mChars;   // Pointer to a ANSI code page char array    string mString; // string buffer for holding the "value" of this instance (ANSI code page)};
+
+后者除了将面向 UTF 编码改成了面向 ANSI 编码外，还去掉了 operator =(const char* ptr) 的定义，因为 operator =(const string& rhs) 可以在需要的时候替代前者而无需任何额外编码。（因为按照 C++ 规范，const reference 可以自动转换，详见本人另一文章 “[关于 const reference 的几点说明](http://blog.vckbase.com/billdavid/archive/2004/11/11/1453.html)”）  
+　　如果你愿意，给 JNIString 再加个 JNIString(JNIEnv* env, const wstring& str) 和一个 operator =(const wstring& rhs) 操作符重载就比较完美了，:)，很简单，留给用得到的朋友自己加吧。
+
+  
+下面是一个使用该类的例子（真正跟用于演示的 code 很少，大部分都是些 routine code，:)）：
+
+#include <iostream>#include <string>#include <assert.h>#include <jni.h>using namespace std;int main() {    int res;    JavaVM* jvm;    JNIEnv* env;    JavaVMInitArgs vm_args;    JavaVMOption options[3];    options[0].optionString = "-Djava.compiler=NONE";    options[1].optionString = "-Djava.class.path=.;.."; // .. is specially for this project    options[2].optionString = "-verbose:jni";    vm_args.version = JNI_VERSION_1_4;    vm_args.nOptions = 3;    vm_args.options = options;    vm_args.ignoreUnrecognized = JNI_TRUE;    res = JNI_CreateJavaVM (& jvm, (void* * )& env, & vm_args);    if (res < 0) {        fprintf (stderr, "Can't create Java VM\n");        return 1;    }    jclass cls = env->FindClass ("jni/test/Demo");    assert (0 != cls);    jmethodID mid = env->GetMethodID (cls,"", "(Ljava/lang/String;)V");    assert (0 != mid);    wchar_t* p = L"中国";    jobject obj = env->NewObject (cls, mid, env->NewString (reinterpret_cast (p), wcslen (p)));    assert (0 != obj);    mid = env->GetMethodID (cls, "getMessage", "()Ljava/lang/String;");    assert (0 != mid);    jstring str = (jstring)env->CallObjectMethod (obj, mid);    // use JNIString for easier handling.    JNIString jnistr (env, str);    cout << "JNIString:" << jnistr.GetString () << endl;    jnistr = "中文";    cout << jnistr.GetString () << endl;    jvm->DestroyJavaVM ();    fprintf (stdout, "Java VM destory.\n");    return 0;}
+
+**参考资料：**
+
+1.  UTF-8 and Unicode FAQ for Unix/Linuxs，[http://www.cl.cam.ac.uk/~mgk25/unicode.html](http://www.cl.cam.ac.uk/~mgk25/unicode.html)，  
+    其中文翻译见 [http://www.linuxforum.net/books/UTF-8-Unicode.html](http://www.linuxforum.net/books/UTF-8-Unicode.html)
+2.  深入剖析 Java 编程中的中文问题及建议最优解决方法，[http://blog.csdn.net/abnerchai/archive/2004/04/28/18576.aspx](http://blog.csdn.net/abnerchai/archive/2004/04/28/18576.aspx)
+3.  关于 Java 中文问题的几条分析原则，[http://www-900.ibm.com/developerWorks/cn/java/l-javachinese/index.shtml](http://www-900.ibm.com/developerWorks/cn/java/l-javachinese/index.shtml)
+4.  Java 编程技术中汉字问题的分析及解决，[http://www-900.ibm.com/developerWorks/cn/java/java_chinese/index.shtml](http://www-900.ibm.com/developerWorks/cn/java/java_chinese/index.shtml)
+5.  深入剖析 JSP 和 Servlet 对中文的处理过程，[http://blog.csdn.net/deuso/archive/2005/12/01/541511.aspx](http://blog.csdn.net/deuso/archive/2005/12/01/541511.aspx)
+6.  宽字符标量 L"xx" 在 VC6.0/7.0 和 GNU g++ 中的不同实现，[http://blog.vckbase.com/smileonce/archive/2004/12/09/1972.html](http://blog.vckbase.com/smileonce/archive/2004/12/09/1972.html)
+
+XML Encoding，[http://www.w3schools.com/xml/xml_encoding.asp](http://www.w3schools.com/xml/xml_encoding.asp)
+
+最新评论  
+// 编码长度可以是 1~3（据说理论上最长可以到 6，不懂）。  
+  
+直到 Unicode 2.0，Unicode 还是一个很简单的编码，每个字符 16 位——两个字节  
+到了 Unicode 3.0，为了支持庞大的东亚象形文字，Unicode 编码空间增加为 0~10FFFF，提出代理对机制（用两个 w_char 存储一个图形字符）来支持 10000~10FFFF 之间的编码（这就是 UTF-16 的前身）  
+到了 Unicode 4.0，直接定义为 31 位空间——群、面、行、格 四级，并提出多种编码方案：UTF-7、UTF-8、UTF-16、UTF-32  
+  
+UTF-8 是变长编码，首字节标示了长度值，其余字节带有 6 位数据。由于设计得很巧妙，存在冗余位，所以可以纠错。  
+其携带信息：  
+1 Byte：7bit（7 位 ASCII）  
+2 Byte：5 + 6*1 = 11bit  
+3 Byte：4 + 6*2 = 16bit（16 位基本语义平面字符）  
+4 Byte：3 + 6*3 = 21bit（21 位代理对）  
+5 Byte：2 + 6*4 = 26bit  
+6 Byte：1 + 6*5 = 31bit
+
+Ch27:JNI 的 crash 终于搞定
+=====================
+
+今天终于搞定困扰我一周的一个问题了。  
+  
+我们的算法通过 jni 封装，在 java 调用的时候总是随机的 crash 掉，具体的位置在 jvm 里面，应该可以肯定是 jvm 做垃圾回收的时候死掉的。但是并不知道是在回收哪块内存出的问题，所以也就无从知道死的具体原因了。我们的程序是在 jni 层创建了一些 java 对象，然后返回给 java 层，大体结构像下面代码一样，我只能基本判断是我们的 jni 层在创建对象的时候（也就是 createInfo 函数）出问题了，至于具体什么问题，我也不清楚。  
+public class Test {  
+    public class Info {  
+        public int x;  
+        public int y;  
+        public Info() {  
+            x = 0;  
+            y = 0;  
+        }  
+    }  
+      
+    public native Info createInfo();  
+     
+    // ...  
+}  
+  
+因为我对 java 不是很熟悉，所以只好一边学，一边弄。最初就是在 local/glbal reference 这些概念上下功夫，来回的读 jni 的 specification，也没有发现自己的问题。后期又学着使用一些 java 的调试工具，比如 jhat 啊，hpjmeter 啊，但是仍然没有什么头绪。上周一周，就在这个问题上不断的尝试，也没结果。  
+  
+今天终于发现了问题所在，其实说来也很简单。jni 要 创建的那些返回对象，是作为内部类定义的，所以在构造的时候需要传一个外层类实例才能初始化。也就是说，虽然看上去 Info 类的构造函数是无参数的，但实 际上它是有一个隐含参数的，相当于 Info(Test outer)。如果在 java 层构造这个对象，那么 outer 参数会被自动传入，但我们在 jni 层构造，就需要自己传入这个参数了。如果没有给出这个参数，jni 编译运行都没有问题，但实际上，它是用了一个未知的对象（就是在栈里面的一个随机值）来作为这个 outer 参数的，所以当这个对象需要释放的时候（一般也就是在垃圾回收的时候）就会 crash 了。  
+  
+现在想起来，其实这个问题我原来曾经有过一次小遭遇，那时我在使用有参数构造函数来创建一个内部嵌套类，发现构造出来的对象值是错掉的。其实就是因为少传了一个 outer 参数啊，但是当时我没有去解决这个问题，而是绕过问题，采用构造函数无参数，然后在创建之后，再手工给每个数据字段赋值的方法。这样虽然表面上也达到了目的，但是隐藏了问题。  
+  
+事实一次次的告诉我们，遇到问题一定要解决。就算你暂时绕过这个问题，但早晚它还会出来的

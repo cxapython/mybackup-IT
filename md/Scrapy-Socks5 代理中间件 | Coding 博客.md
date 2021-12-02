@@ -1,8 +1,8 @@
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [leeyongda.github.io](https://leeyongda.github.io/coding/2018/01/05/Scrapy-Socks5%E4%BB%A3%E7%90%86%E4%B8%AD%E9%97%B4%E4%BB%B6/)
 
-> Scrapy-Socks5 代理中间件 Demo 环境： Python(2.7+) + Scrapy(1.1.1) + Twisted(16.6.0) 官网没直接提供 Socks 代理中间件 。
+> Scrapy-Socks5 代理中间件 Demo 环境： Python(2.7+) + Scrapy(1.8.0) + Twisted(19.7.0) 官网没直接提供 Socks 代理中间件 。
 
-环境： Python(2.7+) + Scrapy(1.1.1) + Twisted(16.6.0)  
+环境： Python(2.7+) + Scrapy(1.1.1) + Twisted(19.7.0)  
 官网没直接提供 Socks 代理中间件 。  
 所以写一个代理中间件 。  
 需要依赖库 txsocksx 。  
@@ -16,7 +16,7 @@ pip install txsocksx
 
 from txsocksx.http import SOCKS5Agent
 from twisted.internet import reactor
-from scrapy.xlib.tx import TCP4ClientEndpoint
+from twisted.internet.endpoints import TCP4ClientEndpoint
 from scrapy.core.downloader.webclient import _parse
 from scrapy.core.downloader.handlers.http11 import HTTP11DownloadHandler, ScrapyAgent
 

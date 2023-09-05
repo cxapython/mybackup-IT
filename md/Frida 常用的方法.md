@@ -1,6 +1,5 @@
-> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [zhuanlan.zhihu.com](https://zhuanlan.zhihu.com/p/339504595)
 
-Frida 使用
+Frida 常用的方法
 --------
 
 安装运行

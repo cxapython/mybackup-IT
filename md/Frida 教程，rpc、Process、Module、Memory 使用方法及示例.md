@@ -1,23 +1,5 @@
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [article.itxueyuan.com](https://article.itxueyuan.com/1j8kRK)
 
-> 抖音数据采集 Frida 教程，rpc、Process、Module、Memory 使用方法及示例 前言 大家好，窝又来写文章了，咱们现在在这篇文章中，我们来对其官方的一些非常常用的 API 进行学习
-
-1.  [技术文章](https://article.itxueyuan.com/)
-2.  [数据库](https://article.itxueyuan.com/category/database)
-3.  [大数据](https://article.itxueyuan.com/category/bigdata)
-4.  正文
-
-抖音数据采集 Frida 教程，rpc、Process、Module、Memory 使用方法及示例
--------------------------------------------------
-
- ![](https://imgs.itxueyuan.com/advPicture/adv-1660633707-3577-pic.jpeg) 
-
-前言
---
-
-大家好，窝又来写文章了，咱们现在在这篇文章中，我们来对其官方的一些非常常用的`API`进行学习。所谓工欲善其事，必先利其器。想要好好学习`FRIDA`我们就必须对`FRIDA API`深入的学习以对其有更深的了解和使用，通常大部分核心原理也在官方`API`中写着，我们学会来使用一些案例来结合`API`的使用。  
-注意，运行以下任何代码时都需要提前启动手机中的`frida-server`文件。
-
 1.1 FRIDA 输出打印
 --------------
 
@@ -228,8 +210,6 @@ session.detach()
 `Process.id`：返回附加目标进程的`PID`
 
 ### 1.4.2 Process.isDebuggerAttached()
-
-![](http://imgs.itxueyuan.com/imgs/1-7927-20220816150743)
 
 `Process.isDebuggerAttached()`：检测当前是否对目标程序已经附加
 
@@ -714,21 +694,3 @@ setImmediate(frida_Memory,0);
 
 
 ```
-
-结语
---
-
-在这篇中我们学会了在 FRIDACLI 中如何输出想要输出格式，也学会如何声明变量，一步步的学习。在逐步的学习的过程，总是会遇到不同的问题。歌曲 <奇迹再现> 我相信你一定听过吧~，新的风暴已经出现, 怎么能够停止不前.. 遇到问题不要怕，总会解决的。  
-
-> 短视频、直播数据实时采集接口，请查看文档： [TiToData](https://www.titodata.com/?from=douyinarticle)
-
-  
-免责声明：本文档仅供学习与参考，请勿用于非法用途！否则一切后果自负。
-
-内容来源于网络如有侵权请私信删除
-
-### 相关课程
-
- [![](https://imgs.itxueyuan.com/coursePicture/large-20181010151145-course-142-picure.jpg)](https://course.itxueyuan.com/142) 
-
- [![](https://imgs.itxueyuan.com/coursePicture/large-20171009104725-course-107-picure.jpg)](https://course.itxueyuan.com/107)

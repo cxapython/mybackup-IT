@@ -1,5 +1,13 @@
 # mybackup-IT
 技术文章备份
+### 知识星球分享
+跟着蔡老板学习JS的AST逆向
+![ast.img](ast.jpg)
+
+跟着龙哥学习App逆向主打Unidbg
+![android.img](android.jpg)
+
+
 
 ### FileTreeInfo
 ```

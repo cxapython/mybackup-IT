@@ -202,21 +202,4 @@
 └── 【转载】第一讲——从黑盒攻击模型到白盒攻击模型 - qinless.md
 ```
 
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="
-      https://api.star-history.com/svg?repos=star-history/star-history&type=Date&theme=dark
-    "
-  />
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="
-      https://api.star-history.com/svg?repos=star-history/star-history&type=Date
-    "
-  />
-  <img
-    alt="Star History Chart"
-    src="https://api.star-history.com/svg?repos=star-history/star-history&type=Date"
-  />
-</picture>
+[![Star History Chart](https://api.star-history.com/svg?repos=cxapython/mybackup-IT&type=Date)](https://star-history.com/#cxapython/mybackup-IT&Date)

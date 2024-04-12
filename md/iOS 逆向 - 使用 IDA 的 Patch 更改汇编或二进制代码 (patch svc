@@ -1,0 +1,37 @@
+> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [www.jianshu.com](https://www.jianshu.com/p/cf751c7aec87)
+
+##### 1. 定位`svc 0x80`
+
+1.1 首先将可执行文件拖入 IDA, 全局搜索`0x80`（命令`alt + T`)：  
+
+![](http://upload-images.jianshu.io/upload_images/2204330-380b751ea9566c0f.png) 搜索框
+
+1.2 在结果中找出
+
+`svc 0x80`
+
+, 结果如下：
+
+![](http://upload-images.jianshu.io/upload_images/2204330-9c5db95ee09bf607.png) 搜索结果
+
+1.3 点击查看汇编代码
+
+![](http://upload-images.jianshu.io/upload_images/2204330-a9d53b8107bf46c1.png) 汇编代码
+
+##### 3. 修改二进制
+
+将光标保留在`SVC 0x80`代码行，然后工具栏 Edit----Patch Program ---- Change byte  
+
+![](http://upload-images.jianshu.io/upload_images/2204330-ff9d70c6c14cae12.png) 修改二进制前
+
+前四位就是指令的 16 进制编码，SVC 是 01 10 00 D4，而 NOP 的编码是 1F 20 03 D5。直接修改二进制，修改后如图：
+
+![](http://upload-images.jianshu.io/upload_images/2204330-95feb7c6e44b7eed.png) 修改二进制后
+
+点击 OK , 查看汇编代码：
+
+![](http://upload-images.jianshu.io/upload_images/2204330-98b161c651eb04ad.png) 将 svc 修改为 nop 命令后
+
+##### 4. 保存可执行文件
+
+点击`Edit----Patch Program ---- Apply Patches to input file`, 替换掉原来包中的可执行文件，这个时候就可以进行附加调试

@@ -208,4 +208,4 @@
 ```
 ## star 趋势图
 - 如果该项目对你有帮助，star一下 ❤️❤️❤️
-[![Star History Chart](https://api.star-history.com/svg?repos=cxapython/mybackup-IT&type=Date)](https://star-history.com/#cxapython/mybackup-IT&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=cxapython/mybackup-IT&type=Date)](https://star-history.dera.page/#cxapython/mybackup-IT&Date)
